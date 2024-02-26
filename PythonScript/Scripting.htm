@@ -1,0 +1,663 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>Scripting GSAS-II</title>
+</head>
+
+<body>
+<h1>Running a GSAS-II Refinement From a Python Script</h1>
+
+<P><BL>
+  <LI>Exercise files are found <A href="./data/" target="_blank">here</a>
+</BL></P><P></P>
+
+ To demonstrate the use of the 
+<A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html" target="_blank">
+GSASIIscriptable module</A>. This uses a Python script
+to perform a refinement or computation, but without use of the GSAS-II
+graphical user interface. Note that the
+<A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html" target="_blank">
+GSASIIscriptable module</A> does not offer access to all of the
+features within GSAS-II, but over time it is expected to grow in
+capabilities. Much of the initial development for this module was done
+by Jackson O'Donnell, as a summer undergraduate visitor under
+supervisor Dr. Maria Chan. Other programming contributions are welcome. 
+<P>
+This tutorial has three sections:
+<OL type="A">
+<LI><a href="#multistep"> Create a Multi-step Script</A></LI>
+<LI><a href="#SingleStep">Single-Step Refinement</a></LI>
+<LI><a href="#Simulate">Powder Pattern Simulation</a></LI>
+</OL>
+The first section duplicates the refinement in the
+<A
+href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/CWCombined/Combined%20refinement.htm"
+target="_blank">GSAS-II CW Combined Refinement</A>
+tutorial as a multi-step process. The second section repeats the previous
+refinement, but demonstrates how a complex process can be entered into
+a single Python dict and the refinement executed with a single
+function call. The third section shows how a pattern simulation,
+rather than refinement can be executed from a script. 
+
+
+<h2>Prerequisites</h2>
+This exercise assumes that the reader has reasonable familiarity with
+the Python language. 
+Also, the documentation on the
+<A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html"
+target="_blank">
+Scripting Tools in the GSAS-II GSASIIscriptable module</A> should be
+read from here: <A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html"
+target="_blank">http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html</A>. It
+is also wise to read the <A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/CWCombined/Combined%20refinement.htm"
+target="_blank">GSAS-II CW Combined Refinement</A> tutorial that this
+exercise is modeled upon, which explains why each refinement step is
+being used.
+The exercise will require downloading of the same files needed for the
+Combined Refinement tutorial: "PBSO4.XRA", "INST_XRY.PRM", "PBSO4.CWN", 
+"inst_d1a.prm" and "PbSO4-Wyckoff.cif", 
+which can be downloaded from
+<A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/data/">
+https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/data/</A>)
+or will be downloaded with this tutorial if that is requested. 
+<P>
+The exercise can be performed by placing all of the Python commands
+into a script, 
+but a more pedagogical approach will be to enter the
+commands into a Python interpreter. Use of IPython or Jupyter to run
+Python will make this a more pleasant experience. 
+
+<a name="multistep">
+<h2>A. Create a Multi-step Script</h2></a>
+
+Note that the script in this section is supplied for 
+<A href="https://subversion.xray.aps.anl.gov/trac/pyGSAS/browser/Tutorials/PythonScript/data/example.py?format=txt">
+download here</A>, but some editing will be needed to match where files
+are found on your computer.
+
+<h4>0: Load the GSASIIscriptable module</H4>
+<blockquote>
+The first step in writing any Python module is to load the modules
+that will be needed. Here we will need the <tt>os</tt> and
+<tt>sys</tt> modules from the Python standard library and the
+GSASIIscriptable from the GSAS-II code. The location where the
+GSAS-II source code is installed must usually be hard-coded into the
+script as is done in the example below. Note that a common location
+for this will be
+<TT>os.path.expanduser("~/g2conda/GSASII/")</TT> or
+<tt>'/Users/toby/software/GSASII'</tt>, etc. 
+Thus the script will begin with something like this:
+
+<blockquote><textarea rows="3" cols="60" readonly>
+import os,sys
+sys.path.insert(0,os.path.expanduser("~/g2conda/GSASII/"))
+import GSASIIscriptable as G2sc</textarea></blockquote>
+
+If a <tt>ImportError: No module named GSASIIscriptable</tt> error
+occurs, then the wrong directory location has been supplied for the
+GSAS-II files.
+</blockquote>
+
+<h4>1: Define some other prerequisite code</H4>
+<blockquote>
+To simplify this example, we will define the location where files will
+be written as <tt>workdir</tt> (this directory must exist, but it may
+be empty) and the location where the input files for this exercise
+("PBSO4.XRA", "INST_XRY.PRM", "PBSO4.CWN", 
+"inst_d1a.prm" and "PbSO4-Wyckoff.cif") will 
+be found as <tt>datadir</tt>. (As discussed previously,
+these files can be 
+<A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/data/">
+downloaded from here. </A>)
+<P>
+We also define here a short function to display the weighted profile R
+factor for every histogram in a project, <tt>HistStats</tt>. This will
+be <A href="#HistStats">discussed later</A>.
+
+<blockquote><textarea rows="10" cols="70" readonly>
+workdir = "/Users/toby/Scratch/PythonScript"
+datadir = "/Users/toby/software/G2/Tutorials/PythonScript/data"
+
+def HistStats(gpx):
+    '''prints profile rfactors for all histograms'''
+    print(u"*** profile Rwp, "+os.path.split(gpx.filename)[1])
+    for hist in gpx.histograms():
+        print("\t{:20s}: {:.2f}".format(hist.name,hist.get_wR()))
+    print("")
+    gpx.save()</textarea></blockquote>
+
+</blockquote>
+
+<h4>2: Create a GSAS-II project</H4>
+<blockquote>
+The first step in creating a GSASIIscriptable script to to create or
+access a GSAS-II project, which is done with a call to
+<TT>GSASIIscriptable.G2Project()</tt>. This can be done in one of two
+ways: a call with <tt>G2sc.G2Project(newgpx=</tt><I>file</I><tt>)</tt> creates a new
+(empty) project, while a call with
+<tt>G2sc.G2Project(gpxfile=</tt><I>file</I><tt>)</tt> opens and
+reads an existing project (.gpx) file. Both return a <tt>G2Project</tt> wrapper
+object that is used to access a number of methods and variables. 
+Note that <TT>GSASIIscriptable.G2Project()</tt> can read .gpx files
+written by both previous <TT>GSASIIscriptable.G2Project()</tt> runs or
+the GSAS-II GUI.
+<P>
+In this example, we create a new project by using the
+<tt>newgpx=</tt><I>file</I> argument with this code:
+    
+<blockquote><textarea rows="3" cols="70" readonly>
+# create a project with a default project name
+gpx = G2sc.G2Project(newgpx='PbSO4.gpx')</textarea></blockquote>
+
+Note that the file will not actually be created until an operation
+that saves the project is called.
+</blockquote>
+
+<h4>3: Add Histograms and Phase to the GSAS-II project</H4>
+<blockquote>
+To add two powder diffraction datasets (histograms) and a phase to the
+project using this code:
+
+<blockquote><textarea rows="10" cols="70" readonly>
+# setup step 1: add two histograms to the project
+hist1 = gpx.add_powder_histogram(os.path.join(datadir,"PBSO4.XRA"),
+                          os.path.join(datadir,"INST_XRY.PRM"))
+hist2 = gpx.add_powder_histogram(os.path.join(datadir,"PBSO4.CWN"),
+                          os.path.join(datadir,"inst_d1a.prm"))
+# setup step 2: add a phase and link it to the previous histograms
+phase0 = gpx.add_phase(os.path.join(datadir,"PbSO4-Wyckoff.cif"),
+                      phasename="PbSO4",
+                      histograms=[hist1,hist2])</textarea></blockquote>
+
+  
+We use the <I>project</I><tt>.add_powder_histogram()</tt> method in
+the <TT>GSASIIscriptable</tt> class to read in the powder data.
+The two arguments to
+<tt>.add_powder_histogram()</tt> are the powder dataset and the
+  instrument parameter file. Note that these files are both "GSAS
+  powder data" files and the importer for this format (and many
+  others) allows files with arbitrary extensions to be read.
+All importers that allow for extensions .XRA and .CWN will be
+used to attempt to read the file, producing a number of warning
+messages. To specify that only the GSAS powder data importer be
+used, include a third argument, <tt>fmthint="GSAS powder"</tt> or
+something similar (<tt>fmthint="GSAS"</tt> is also fine, but will
+cause both the "GSAS powder data" and the "GSAS-II .gpx" importer to be considered.) 
+<UL><LI>
+  Note that <I>project</I><tt>.add_powder_histogram()</tt> returns a
+  powder histogram objects, which here are saved for later reference. It is
+  also possible to obtain these using <tt>gpx.histograms()</tt>, which
+  returns a list of defined histograms. 
+</UL>
+<P>
+Then we add a phase to the project using
+  <I>project</I><tt>.add_phase()</tt>. This specifies a CIF containing the
+  structural information, a name for the phase and specifies that the
+  two histograms are "added" (linked) to the phase. The
+<tt>fmthint="CIF"</tt> parameter can also optionally be specified to limit the
+importers that will be tried.
+
+  <UL><LI>
+  Note that <I>project</I><tt>.add_phase()</tt>
+  returns a phase object</li>
+  <LI>Also, the previously saved histogram objects are used in the 
+  <I>project</I><tt>.add_phase()</tt> call. Note that it is
+  also possible to reference the two histgrams by their numbers in the
+  project (here <tt>histograms=[0,1]</tt>) or by the histogram names
+  (here <BR><TT>histograms=['PWDR PBSO4.XRA Bank 1', 'PWDR PBSO4.CWN
+  Bank 1']</TT>).
+  These three ways to use the <tt>histograms</tt> parameter produce
+  the same result.
+</blockquote>
+    
+<A name="ChangeCycles">
+<h4>4: Change the number of refinement cycles</H4>
+</A><blockquote>
+While this is not noted in the original tutorial, this exercise will
+  not complete properly if more variables are added to the refinement
+  without converging the refinement (or at least coming close to
+  convergence) at each refinement step. This is best accomplished by
+  increasing the number of least-squares cycles. No supplied method (at
+  present) allows this parameter to be set straightforwardly, but this
+  code will do this:
+  
+ <blockquote><textarea rows="3" cols="70" readonly>
+# not in tutorial: increase # of cycles to improve convergence
+gpx.data['Controls']['data']['max cyc'] = 8 # not in API </textarea></blockquote>
+
+<P>
+  To find this parameter in the GSAS-II data structure, I followed
+  these steps: In the GUI, Controls is the tree item
+  corresponding to the section where Least Squares cycles are
+  set. Executing the command <tt>gpx.data.keys()</tt> shows the names of the
+  entries in the dictionary corresponding to the GSAS-II tree and
+  indeed one entry is 'Controls'.
+  Command <tt>gpx.data['Controls'].keys()</tt> shows that all
+  values are located in an entry labeled 'data' and
+  <tt>gpx.data['Controls']['data'].keys()</tt> shows the entries in
+this section. Examination of
+<tt>gpx.data['Controls']['data']['max cyc']</tt> shows the value 3,
+which is default number of cycles. Thus, 
+the number of cycles is changed with the Python command above.
+
+</blockquote>
+
+<h4>5: Set initial variables and refine</H4>
+<blockquote>
+
+In Step 4 of the original tutorial, the refinement is performed with
+the variables that are on by default. These variables are the two
+histogram scale factors and three background parameters for each
+histogram (8 in total). With GSASIIscriptable, the background
+refinement flags are not turned on by default, so a dictionary must be
+created to set these histogram variables. This code:
+<blockquote><textarea rows="5" cols="75" readonly>
+# tutorial step 4: turn on background refinement (Hist)
+refdict0 = {"set": {"Background": { "no. coeffs": 3, "refine": True }}}
+gpx.save('step4.gpx')
+gpx.do_refinements([refdict0])
+HistStats(gpx)</textarea></blockquote>
+<UL>
+<LI>defines a dictionary (refdict0) that will be used to set the number of background coefficients (not really
+needed, since the default is 3) and sets the background refinement
+flag "on".</li>
+<LI>The project is saved under a new name, so that we can later look at
+the results from each step separately.</li>
+<LI>The parameters in refdict0 are set using
+<I>project</i><tt>.do_refinements()</tt> for both histograms in the
+project and the a refinement is run.
+<LI>The weighted profile R-factor values for all histograms in the project
+are printed using the previously defined <tt>HistStats()</tt> function.
+</UL>
+
+<A name="HistStats">
+Function <tt>HistStats()</tt> works by using <tt>gpx.histograms()</tt>
+to iterate over all histograms in the project, setting <tt>hist</tt> to each histogram
+object. Class member <tt>hist.name</tt> provides the histogram name
+and method <tt>hist.get_wR()</tt> looks up the profile R-factor and
+prints them. The function also writes the final refinement results
+into the current project file. </A>
+
+The output from this will be:<blockquote><pre>
+ Hessian Levenburg-Marquardt SVD refinement on 8 variables:
+initial chi^2 9.6912e+06
+ Cycle: 0, Time: 1.88s, Chi**2: 6.7609e+05, Lambda: 0.001,  Delta: 0.93
+initial chi^2 6.7609e+05
+ Cycle: 1, Time: 1.84s, Chi**2: 6.7602e+05, Lambda: 0.001,  Delta: 0.000104
+converged
+Found 0 SVD zeros
+Read from file: /Users/toby/software/G2/Tutorials/PythonScript/step4.bak0.gpx
+Save to file  : /Users/toby/software/G2/Tutorials/PythonScript/step4.gpx
+GPX file save successful
+ Refinement results are in file: /Users/toby/software/G2/Tutorials/PythonScript/step4.lst
+ ***** Refinement successful *****
+*** profile Rwp, step4.gpx
+	PWDR PBSO4.XRA Bank 1: 40.88
+	PWDR PBSO4.CWN Bank 1: 18.65
+</pre></blockquote>Note that the Rwp values agree with what is
+ expected from the original tutorial. 
+<P>
+<B>Note:</B> that there are several equivalent ways to set the histogram
+parameters using 
+<tt>G2PwdrData.set_refinements()</tt>,
+<tt>G2Project.set_refinement()</tt> or
+<tt>my_project.do_refinements()</tt>, as
+<A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html#refinement-parameters">
+described here</A>. Thus, the <tt>gpx.do_refinements([refdict0])</tt>
+statement above could be replaced with:
+<blockquote><pre>
+gpx.set_refinement({"Background": { "no. coeffs": 3, "refine": True }})
+gpx.do_refinements([{}])
+</pre></blockquote>
+or
+<blockquote><pre> 
+for hist in gpx.histograms():
+    hist.set_refinements({"Background": { "no. coeffs": 3, "refine": True }})
+gpx.do_refinements([{}])
+</pre></blockquote>
+
+</blockquote>
+<h4>6: Add unit cell parameters to refinement</h4>
+<blockquote>
+
+In Step 5 of the original tutorial, the refinement is performed again,
+but the unit cell is refined in the phase. 
+
+<blockquote><textarea rows="6" cols="75" readonly>
+# tutorial step 5: add unit cell refinement (Phase)
+gpx.save('step5.gpx')
+refdict1 = {"set": {"Cell": True}} # set the cell flag (for all phases)
+gpx.set_refinement(refdict1)
+gpx.do_refinements([{}])
+HistStats(gpx)</textarea></blockquote>
+
+In this case the <tt>gpx.set_refinement(refdict1)</tt> statement can
+be replaced with:<blockquote><pre>
+phase0.set_refinements({"Cell": True})
+</pre></blockquote>
+
+Note that it is also possible to combine the refinement in the current
+and previous section using
+<blockquote><pre>
+gpx.do_refinements([refdict0,refdict1])
+</pre></blockquote>
+but then the results are not saved in separate project files and it is
+not possible to see the Rwp values after each refinement. 
+
+</blockquote>
+<h4>7: Add hydrostatic strain for just one histogram</h4>
+<blockquote>
+
+In Step 6 of the original tutorial, the refinement is performed again
+after adding Histogram/Phase (HAP) parameters so that the lattice
+constants for the first histogram (only) can vary. This is done with
+this code:
+
+<blockquote><textarea rows="6" cols="75" readonly>
+# tutorial step 6: add Dij terms (HAP) for histogram 1 only
+gpx.save('step6.gpx')
+refdict2 = {"set": {"HStrain": True}} # set HAP parameters
+gpx.set_refinement(refdict2,phase=phase0,histogram=[hist1])
+gpx.do_refinements([{}]) # refine after setting
+HistStats(gpx)</textarea></blockquote>
+
+Here we cannot use <tt>gpx.do_refinements([refdict2])</tt> with
+<tt>refdict2</tt> defined as above because
+that would turn on refinement of the Hstrain terms for all histograms
+and all phases. There are several ways to restrict the parameter
+changes to specified histogram(s) and phase(s). One is to call a
+method in the phase object(s) directly, such as 
+replacing the <tt>gpx.set_refinement(...)</tt>
+statement with this:
+<blockquote><pre>
+phase0.set_HAP_refinements({"HStrain": True},histograms=[hist1])
+</pre></blockquote>
+
+It is also possible to add "histograms" and/or "phases" values into
+the <tt>refdict2</tt> dict, as will be <a href="#SingeStep">described below.</a>
+</blockquote>
+
+<h4>8: Add X-ray Sample broadening terms</h4>
+<blockquote>
+The next step in the original tutorial is to treat sample broadening
+by turning on refinement of the "Mustrain" (microstrain) and
+"Size" (Scherrer broadening) terms using an isotropic (single-term)
+model. As described in the
+<A
+href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html#histogram-and-phase-parameters">
+documentation for Histogram/Phase parameters</A>, type must always be
+specfied even as in this case where it is not being changed from the
+existing default. Again, since these parameters are being set only for
+one histogram, either <tt>phase0.set_HAP_refinements()</tt> or
+<tt>gpx.set_refinement()</tt> must be called or to use
+<tt>gpx.do_refinements([refdict3])</tt> the "histograms" element must be
+included inside <tt>refdict3</tt>.
+
+<blockquote><textarea rows="8" cols="75" readonly>
+# tutorial step 7: add size & strain broadening (HAP) for histogram 1 only 
+gpx.save('step7.gpx')
+refdict3 = {"set": {"Mustrain": {"type":"isotropic","refine":True},
+                    "Size":{"type":"isotropic","refine":True},
+                    }}
+gpx.set_refinement(refdict3,phase=phase0,histogram=[hist1])
+gpx.do_refinements([{}]) # refine after setting
+HistStats(gpx)</textarea></blockquote>
+
+</blockquote>
+<h4>9: Add Structural and Sample Displacement Parameters</h4>
+<blockquote>
+The step 8 in the original tutorial is to treat sample displacement
+for each histogram/phase. These parameters are different because of
+the differing diffractometer geometries. We also add refinement of
+sample parameters using <tt>phase0.set_refinements()</tt> to set the
+"X" (coordinate) and "U" (displacement) refinement flags for all
+atoms. This is done with this code: 
+
+<blockquote><textarea rows="9" cols="75" readonly>
+# tutorial step 8: add sample parameters & set radius (Hist); refine atom parameters (phase)
+gpx.save('step8.gpx')
+hist1.set_refinements({'Sample Parameters': ['Shift']})
+hist2.set_refinements({'Sample Parameters': ['DisplaceX', 'DisplaceY']})
+hist2.data['Sample Parameters']['Gonio. radius'] = 650. # not in API
+phase0.set_refinements({"Atoms":{"all":"XU"}})
+gpx.do_refinements([{}]) # refine after setting
+HistStats(gpx)</textarea></blockquote>
+
+Note that the original tutorial
+calls for the diffractometer radius to be changed to the correct value
+so that the displacement value is in the correct units. This parameter
+cannot be set from any GSASIIscriptable routines, but following a
+similar process, 
+<A href="#ChangeCycles">as before</A>, the location for this
+setting can be located in the histogram's 'Sample Parameters' section
+(as <tt>hist2.data['Sample Parameters']['Gonio. radius']</tt>).
+
+Also note that the settings provided in the
+<tt>phase0.set_refinements()</tt> and statements
+<tt>gpx.do_refinements()</tt> could have
+been combined into this single statement:
+<blockquote><pre>
+gpx.do_refinements({"set":{"Atoms":{"all":"XU"}})
+</pre></blockquote>
+
+</blockquote>
+<h4>10: Change Data Limits; Vary Gaussian Profile Terms</h4>
+<blockquote>
+The final step in the original tutorial is to trim the range of data
+used in the refinement to exclude data where no reflections occur and
+where the peaks are cut off at high angle. Also, additional parameters
+are refined here because the supplied instrumental profile parameters
+are not very accurate descriptions for the datasets that are used
+here. It is not possible to refine the Lorentzian x-ray instrumental
+broadening terms, since this broadening is treated as sample
+broadening. The Lorentzian neutron broadening is negligible. 
+
+<blockquote><textarea rows="6" cols="75" readonly>
+# tutorial step 9: change data limits & inst. parm refinements (Hist) 
+gpx.save('step9.gpx')
+hist1.set_refinements({'Limits': [16.,158.4]})
+hist2.set_refinements({'Limits': [19.,153.]})
+gpx.do_refinements([{"set": {'Instrument Parameters': ['U', 'V', 'W']}}])
+HistStats(gpx)</textarea></blockquote>
+
+Note that the final <tt>gpx.do_refinements()</tt> statement can be
+replaced with calls to
+<tt>hist</tt><I>X</I><tt>.set_refinements()</tt> or
+<tt>gpx.set_refinement()</tt>, such as 
+<blockquote><pre>
+hist1.set_refinements({'Instrument Parameters': ['U', 'V', 'W']})
+hist2.set_refinements({'Instrument Parameters': ['U', 'V', 'W']})
+gpx.do_refinements([{}])
+</pre></blockquote>
+
+</blockquote>
+<a name="SingleStep">
+<h2>B. Single-Step Refinement</h2></a>
+<blockquote>
+
+As is noted in the
+<A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html" target="_blank">
+GSASIIscriptable module documentation</A>,
+the <I>project</i><tt>.do_refinements()</tt> method can be used to
+perform multiple refinement steps.
+Note that this version of the exercise can be 
+<A href="https://subversion.xray.aps.anl.gov/trac/pyGSAS/browser/Tutorials/PythonScript/data/SingleStep.py?format=txt">
+downloaded here</A>.
+To duplicate the above steps into a
+single call, a more complex set of dicts must be created, as shown
+below: 
+
+<blockquote><textarea rows="38" cols="75" readonly>
+# tutorial step 4: turn on background refinement (Hist)
+refdict0 = {"set": {"Background": { "no. coeffs": 3, "refine": True }},
+            "output":'step4.gpx',
+            "call":HistStats,"callargs":[gpx]} # callargs actually unneeded
+                                               # as [gpx] is the default
+# tutorial step 5: add unit cell refinement (Phase)
+refdict1 = {"set": {"Cell": True},    # set the cell flag (for all phases)
+            "output":'step5.gpx', "call":HistStats}
+# tutorial step 6: add Dij terms (HAP) for phase 1 only
+refdict2 = {"set": {"HStrain": True},  # set HAP parameters
+            "histograms":[hist1],      # histogram 1 only
+            "phases":[phase0],         # unneeded (default is all
+                                       # phases) included as a example
+            "output":'step6.gpx', "call":HistStats}
+# tutorial step 7: add size & strain broadening (HAP) for histogram 1 only 
+refdict3 = {"set": {"Mustrain": {"type":"isotropic","refine":True},
+                    "Size":{"type":"isotropic","refine":True},},
+            "histograms":[hist1],      # histogram 1 only
+            "output":'step7.gpx', "call":HistStats}
+# tutorial step 8: add sample parameters & set radius (Hist); refine
+#                  atom parameters (phase)
+refdict4a = {"set": {'Sample Parameters': ['Shift']},
+            "histograms":[hist1],      # histogram 1 only
+             "skip": True}
+refdict4b = {"set": {"Atoms":{"all":"XU"}, # not affected by histograms
+             'Sample Parameters': ['DisplaceX', 'DisplaceY']},
+            "histograms":[hist2],      # histogram 2 only 
+            "output":'step8.gpx', "call":HistStats}
+# tutorial step 9: change data limits & inst. parm refinements (Hist) 
+refdict5a = {"set": {'Limits': [16.,158.4]},
+            "histograms":[hist1],      # histogram 1 only
+             "skip": True,}
+refdict5b = {"set": {'Limits': [19.,153.]},
+            "histograms":[hist2],      # histogram 2 only
+             "skip": True}
+refdict5c = {"set": {'Instrument Parameters': ['U', 'V', 'W']},
+            "output":'step9.gpx', "call":HistStats}
+</textarea></blockquote>
+
+Note that above the "call" and "callargs" dict entries are
+defined to run <tt>HistStats</tt> and "output" is used to designate
+the .gpx file that will be needed. When parameters should be changed
+in specific histograms, the entries <tt>"histograms":[hist1]</tt> and
+<tt>"histograms":[hist2]</tt> are used
+(equivalent would be <tt>"histograms":[0]</tt> and
+<tt>"histograms":[1]</tt>).
+Since there is only one phase present, use of <tt>"phase":[0]</tt> is
+superfluous, but in a more complex refinement, this could be needed. 
+<p>
+A list of dicts is then prepared here:
+<blockquote><textarea rows="3" cols="75" readonly>
+dictList = [refdict0,refdict1,refdict2,refdict3,
+            refdict4a,refdict4b,
+            refdict5a,refdict5b,refdict5c]</textarea></blockquote>
+
+Steps 4 through 10, above then can be performed with these few commands:
+<blockquote><textarea rows="4" cols="75" readonly>
+# Change number of cycles and radius
+gpx.data['Controls']['data']['max cyc'] = 8 # not in API
+hist2.data['Sample Parameters']['Gonio. radius'] = 650. # not in API
+gpx.do_refinements(dictList)</textarea></blockquote>
+
+</blockquote>
+<a name="Simulate">
+<h2>C. Powder Pattern Simulation</h2></a>
+<blockquote>
+Use of the 
+<A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html" target="_blank">
+GSASIIscriptable module</A> makes it very simple to simulate a powder
+diffraction pattern using GSAS-II. This is demonstrated in this
+section. 
+
+Note that the Python commands can be 
+<A
+href="https://subversion.xray.aps.anl.gov/trac/pyGSAS/browser/Tutorials/PythonScript/data/sim.py?format=txt">downloaded here</A>.
+<P>
+As before, the location of the GSASIIscripts Python module must be
+defined and the module must be loaded:
+
+<blockquote><textarea rows="3" cols="60" readonly>
+import os,sys
+sys.path.insert(0,os.path.expanduser("~/g2conda/GSASII/"))
+import GSASIIscriptable as G2sc</textarea></blockquote>
+
+To simplify this example, as before we will define the location where files will
+be read from and written (as <tt>datadir</tt> and
+<tt>workdir</tt>). Note that files "inst_d1a.prm" and
+"PbSO4-Wyckoff.cif" from <A
+href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/data/">here</A>
+are needed. 
+
+<blockquote><textarea rows="2" cols="70" readonly>
+workdir = "/Users/toby/Scratch/PythonScript"
+datadir = "/Users/toby/software/G2/Tutorials/PythonScript/data"</textarea></blockquote>
+
+We then need to create a project and for this example we choose to
+define the phase first. (It would work equally well to create the
+histogram first and then define the phase.)
+
+<blockquote><textarea rows="4" cols="70" readonly>
+gpx = G2sc.G2Project(newgpx='PbSO4sim.gpx') # create a project
+# step 1, setup: add a phase to the project
+phase0 = gpx.add_phase(os.path.join(datadir,"PbSO4-Wyckoff.cif"),
+                      phasename="PbSO4",fmthint='CIF') </textarea></blockquote>
+
+We then add a "dummy" histogram to the project. Note that an
+instrument parameter file is specified, but not a data file. The range
+of data to be used and the step size must be specified. The phases
+parameter is specified as ``gpx.phases()`` which creates a list of all
+the previously read phases, which in this case is equivalent to
+``[phase0]``.
+
+<blockquote><textarea rows="6" cols="80" readonly>
+# step 2, setup: add a simulated histogram and link it to the previous phase(s)
+hist1 = gpx.add_simulated_powder_histogram("PbSO4 simulation",
+                          os.path.join(datadir,"inst_d1a.prm"),
+                          5.,120.,0.01,
+                          phases=gpx.phases())</textarea></blockquote>
+
+Note that the computed pattern cannot be seen above "simulated noise"
+unless the intensities are large enough. We can change the pattern
+scale factor using the Scale factor (parameter
+<tt>hist1.data['Sample Parameters']['Scale'][0]</tt>), as shown below.
+
+<blockquote><textarea rows="3" cols="70" readonly>
+# Step 3: Set the scale factor to adjust the y scale
+hist1.SampleParameters['Scale'][0] = 1000000.
+</textarea></blockquote>
+
+Next, to perform the simulation computation, a refinement is
+needed:
+
+<blockquote><textarea rows="4" cols="80" readonly>
+# step 4, compute: turn off parameter optimization and calculate pattern
+gpx.data['Controls']['data']['max cyc'] = 0 # refinement not needed
+gpx.do_refinements([{}])
+gpx.save()</textarea></blockquote>
+
+However, there is no need to actually optimize any variables,
+so the number of refinement cycles is set to zero. Refinement is
+initiated then with <I>proj</i>.<tt>do_refinements</tt>. To keep the
+results in a .gpx file, the
+project is saved. 
+
+<P>
+Finally, we want to do something with the results. The histogram could
+be written to a file with the <A href=
+"http://gsas-ii.readthedocs.io/en/latest/GSASIIscriptable.html#GSASIIscriptable.G2PwdrData.Export">
+<i>histogram.</i><tt>Export()</tt></A> command. Note that the first time
+a refinement computation is done with a dummy histogram the "observed"
+pattern is set from the calculated intensities. Here an alternate option is
+used, where the values are retrieved and plotted.
+
+<blockquote><textarea rows="6" cols="70" readonly>
+# step 5, retrieve results & plot
+x = gpx.histogram(0).getdata('x')
+y = gpx.histogram(0).getdata('ycalc')
+import matplotlib.pyplot as plt
+plt.plot(x,y)
+plt.savefig('PbSO4.png') # to show on screen use: plt.show()</textarea></blockquote>
+
+Note that in the above, <tt>gpx.histogram(0)</tt> is used to show how
+to reference <tt>hist1</tt> when the histogram object is not
+known. The generated two-theta values and computed intensity values
+are retrieved and the remaining lines generate a very simple plot
+which is saved to a file, as shown below.
+</blockquote>
+
+<img src="PbSO4.png">
+
+<hr>
+<address></address>
+<!-- hhmts start -->Last modified: Mon Jun  1 15:09:36 CDT 2020 <!-- hhmts end -->
+</body> </html>

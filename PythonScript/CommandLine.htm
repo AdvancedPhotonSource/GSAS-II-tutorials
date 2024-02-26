@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>GSAS-II from the Command Line</title>
+</head>
+
+<body>
+<h1>Running a GSAS-II Refinement from the Command Line</h1>
+
+<P><BL>
+  <LI>Exercise files are found <A href="./data/" target="_blank">here</a>
+</BL></P><P></P>
+
+
+In this training example we show a unix script that duplicates the Python
+<A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/Scripting.htm"
+target="_blank">Scripting GSAS-II</A> tutorial 
+(which shows how to script the <A
+href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/CWCombined/Combined%20refinement.htm"
+target="_blank">GSAS-II CW Combined Refinement</A>
+tutorial refinement.) 
+
+<h2>Prerequisites</h2>
+This exercise assumes that the reader has reviewed 
+the software documentation on the
+<A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html"
+target="_blank"> 
+GSASIIscriptable module</A> (http://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html)
+with special attention to the 
+<A
+href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscriptable.html#gsasiiscriptable-command-line-interface">Command-line
+Interface</A> section. Note that this tutorial duplicates the
+<A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/Scripting.htm#SingleStep"
+target="_blank">Single Step Approach</A> section of the Scripting
+GSAS-II tutorial, which should be reviewed before this tutorial is
+read. It may also be useful to review the <A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/CWCombined/Combined%20refinement.htm"
+target="_blank">GSAS-II CW Combined Refinement</A> tutorial that this
+exercise is modeled upon, which explains why each refinement step is
+being used.
+<P>
+The exercise can be performed by placing all of the shell commands
+into a script, (which can also be
+<A href="https://subversion.xray.aps.anl.gov/trac/pyGSAS/export/3131/Tutorials/PythonScript/data/example.sh">
+downloaded here</A>),
+but it is also possible to use copy and paste to execute the commands
+into a terminal window on a Mac or Linux computer (this likely works
+but has not been tried with <A
+href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows
+Subsystem for Linux</a>).
+<P>
+Finally, download from
+<A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/data/">
+https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/data/</A> 
+the following files: "PBSO4.XRA", "INST_XRY.PRM", "PBSO4.CWN", 
+"inst_d1a.prm" and "PbSO4-Wyckoff.cif" and make a note of their
+location for the next step.
+
+<h4>0: Create variables for paths</H4>
+<blockquote>
+To simplify the subsequent commands, let's define variables with the path of the
+data files and the path to where GSAS-II is installed:
+<blockquote><textarea rows="3" cols="70" readonly>
+datadir="/Users/toby/software/G2/Tutorials/PythonScript/data"
+gsaspath="/Users/toby/GSASII"
+</textarea></blockquote>
+
+Note that we will run the Python found in the path. If Python needs to be
+executed from a different location, it might be useful to also define
+a variable that points to that. 
+</blockquote>
+<h4>1: Create a GSAS-II project and add a phase and histogram</H4>
+<blockquote> 
+The first step in this exercise is to create the GSAS-II project and
+then add this two powder datasets and a phase to the project. Note
+that in this example, it is possible to do all this in a single step,
+but this is done here with two commands, in part to demonstrate command options only
+available with the "add" command (<tt>-hf</tt>, <tt>-pf</tt> and <tt>-l</tt>, which 
+select formats for the histogram and phase files, as well as, designate
+which histograms are linked to the phase, respectively.)
+
+<blockquote><textarea rows="6" cols="70" readonly>
+python $gsaspath/GSASIIscriptable.py create test.gpx 
+python $gsaspath/GSASIIscriptable.py add test.gpx \
+    -d $datadir/PBSO4.XRA $datadir/PBSO4.CWN -hf GSAS \
+    -i $datadir/INST_XRY.PRM $datadir/inst_d1a.prm \
+    -p $datadir/PbSO4-Wyckoff.cif -pf CIF -l 0 1
+</textarea></blockquote>
+
+Note since the "add" command offers the "-l" (or "--histlist")
+option and "create" does not, if the added phase(s) will be linked to
+only some histograms, the "add" command is required.
+</blockquote>
+
+<h4>2: Create a JSON file to conduct the refinement</H4>
+<blockquote> 
+The following single command creates a JSON file. This contains a
+representation of Python dict structure. <A
+href="http://json.org/">JSON syntax</A> is quite close to Python,
+except that the boolean key words (true and false) are all lower case
+and that while use of extra commas at ends of dicts and lists is
+allowed in Python, it is not in JSON.
+<blockquote><textarea rows="42" cols="70" readonly>
+cat > example.json <<EOF
+{"refinements": 
+  [
+    {"skip":true, "call":"SetParams"},
+    { "set": {"Background": {"no. coeffs": 3, "refine": true}}, 
+      "call":"HistStats", "output": "step4.gpx"}, 
+    { "set": {"Cell": true}, "call":"HistStats", "output": "step5.gpx"}, 
+    { "set": {"HStrain": true}, 
+      "histograms": [0], "phases": [0], "call":"HistStats", "output": "step6.gpx"}, 
+    { "set": {"Mustrain": {"type": "isotropic", "refine": true}, 
+             "Size": {"type": "isotropic", "refine": true}}, 
+      "histograms": [0], "call":"HistStats", "output": "step7.gpx"}, 
+    { "set": {"Sample Parameters": ["Shift"]}, 
+      "histograms": [0], "skip": true}, 
+    { "set": {"Atoms": {"all": "XU"}, 
+             "Sample Parameters": ["DisplaceX", "DisplaceY"]}, 
+      "histograms": [1], "call":"HistStats", "output": "step8.gpx"}, 
+    { "set": {"Limits": [16.0, 158.4]}, 
+      "histograms": [0], "skip": true}, 
+    { "set": {"Limits": [19.0, 153.0]}, 
+      "histograms": [1], "skip": true}, 
+    { "set": {"Instrument Parameters": ["U", "V", "W"]}, 
+      "call":"HistStats", "output": "step9.gpx"}
+  ],
+"code":
+  ["global HistStats",
+   "def HistStats(gpx):",
+   "    '''prints profile rfactors for all histograms'''",
+   "    print(u'*** profile Rwp, '+os.path.split(gpx.filename)[1])",
+   "    for hist in gpx.histograms():",
+   "        print('\t{:20s}: {:.2f}'.format(hist.name,hist.get_wR()))",
+   "    print()",
+   "proj.data['Controls']['data']['max cyc'] = 8 # not in API",
+   "proj.histogram(1).data['Sample Parameters']['Gonio. radius'] = 650. # not in API"
+  ]
+}
+EOF
+</textarea></blockquote>
+
+This code example requires a fair amount of explaination. Note that
+the first and last lines (<tt>cat</tt> and <tt>EOF</tt>) are used to
+create the file (<tt>example.json</tt>) 
+from the shell and could be eliminated if the file were to be created
+directly in an editor. 
+<P>
+There are two entries in the dict, <tt>refinements</tt>, which defines
+the steps to be followed in the refinement, and
+<tt>code</tt>, which defines Python code to be executed after the
+GSAS-II project is read in, but before the refinement is performed.
+<P>
+<DL><DT><tt>refinements</tt></DT>
+<DD>Performs the same actions as are described in steps 5-10 in the 
+  <A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/Scripting.htm"
+target="_blank">Scripting GSAS-II</A> tutorial. The
+<A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/Scripting.htm#SingleStep"
+target="_blank">Single Step</A> section shows these steps collapsed to
+  a list of dicts.
+</DD>
+<DT><tt>code</tt></DT>
+<DD>Note that since JSON does not offer a method to quote multiline
+  strings, this dict entry is defined as a list of strings, which are
+  concatenated as separate Python lines. This Python code will be
+  evaluated [using expr()] inside function
+  <A href="http://gsas-ii.readthedocs.io/en/latest/GSASIIscriptable.html#GSASIIscriptable.refine">
+  <tt>refine</tt></a> where variable <tt>proj</tt> is defined as the current
+  G2Project. 
+<P>
+In this example, the function <tt>HistStats</tt> is defined as before,
+  but now a global statement is needed so that this function is
+  visible where it will be used. Note that the two statements used to
+  set GSAS-II parameters directly (from steps 4 and 9 in the 
+  <A href="https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/Scripting.htm"
+target="_blank">Scripting GSAS-II</A> tutorial) are moved here and are
+  referenced with the variable <tt>proj</tt> rather than <tt>gpx</tt>.
+</DD></DL>
+</blockquote>
+
+<h4>3: Execute the refinement</H4>
+<blockquote> 
+The final command executes the contents of the JSON file:
+
+<blockquote><textarea rows="1" cols="70" readonly>
+python $gsaspath/GSASIIscriptable.py refine test.gpx example.json
+</textarea></blockquote>
+
+</blockquote>
+
+<h2>Command Line Scripts in Windows</h2>
+
+While scripting is more commonly done in unix-type environments (Mac
+and Linux), it is also possible to use the GSASIIscriptable capability
+from a Windows batch (.bat) file. Note that the syntax is slightly
+different, but follows the same general rules. The following commands
+reproduce the above exercise in Windows. 
+
+<blockquote><textarea rows="10" cols="70" readonly>
+@REM example script that uses cmd.exe to run a GSAS-II script
+set datadir=C:\Users\toby.WIN10-VM\temp\
+set gsaspath=c:\GSASII\
+set python=C:\conda3\python.exe
+%python% %gsaspath%GSASIIscriptable.py create test.gpx 
+%python% %gsaspath%GSASIIscriptable.py add test.gpx ^
+    -d %datadir%PBSO4.XRA %datadir%PBSO4.CWN ^
+        -i %datadir%INST_XRY.PRM %datadir%inst_d1a.prm -hf GSAS ^
+    -p %datadir%PbSO4-Wyckoff.cif -pf CIF -l 0 1
+%python% %gsaspath%GSASIIscriptable.py refine test.gpx example.json
+</textarea></blockquote>
+
+Note that for simplicity, it is assumed
+that the <tt>example.JSON</tt> file has been created in a text editor
+or has been downloaded along with the required data files 
+(<A href="https://subversion.xray.aps.anl.gov/trac/pyGSAS/browser/Tutorials/PythonScript/data/example.JSON?format=txt">download link</A>).
+<hr>
+<address></address>
+<!-- hhmts start -->Last modified: Mon Jun  1 15:08:36 CDT 2020 <!-- hhmts end -->
+</body> </html>

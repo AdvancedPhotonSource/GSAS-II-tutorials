@@ -1,0 +1,1970 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List
+href="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/filelist.xml">
+<link rel=Edit-Time-Data
+href="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Von Dreele</o:Author>
+  <o:LastAuthor>vondreele</o:LastAuthor>
+  <o:Revision>23</o:Revision>
+  <o:TotalTime>2178</o:TotalTime>
+  <o:Created>2014-01-13T15:39:00Z</o:Created>
+  <o:LastSaved>2017-09-02T12:47:00Z</o:LastSaved>
+  <o:Pages>19</o:Pages>
+  <o:Words>1430</o:Words>
+  <o:Characters>8151</o:Characters>
+  <o:Company>Argonne National Laboratory</o:Company>
+  <o:Lines>67</o:Lines>
+  <o:Paragraphs>19</o:Paragraphs>
+  <o:CharactersWithSpaces>9562</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData
+href="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>124</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="59" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h2
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h3
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h4
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 4 Char";
+	mso-style-next:Normal;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:13.0pt;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;
+	font-style:italic;}
+h5
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 5 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	color:#4F4FFF;
+	font-weight:bold;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-noshow:yes;
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Title Char";
+	mso-style-next:Normal;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:15.0pt;
+	margin-left:0in;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-bottom-alt:solid #4F81BD 1.0pt;
+	mso-border-bottom-themecolor:accent1;
+	padding:0in;
+	mso-padding-alt:0in 0in 4.0pt 0in;
+	font-size:26.0pt;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Document Map Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.MsoPlaceholderText
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	color:gray;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-noshow:yes;
+	mso-style-priority:1;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.MsoIntenseReference
+	{mso-style-priority:32;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	font-variant:small-caps;
+	color:#C0504D;
+	mso-themecolor:accent2;
+	letter-spacing:.25pt;
+	font-weight:bold;
+	text-decoration:underline;
+	text-underline:single;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:24.0pt;
+	mso-bidi-font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:18.0pt;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:18.0pt;
+	mso-bidi-font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:13.5pt;
+	mso-bidi-font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 4";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 5";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	color:#4F4FFF;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-priority:10;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:Title;
+	mso-ansi-font-size:26.0pt;
+	mso-bidi-font-size:26.0pt;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#17365D;
+	mso-themecolor:text2;
+	mso-themeshade:191;
+	letter-spacing:.25pt;
+	mso-font-kerning:14.0pt;}
+span.DocumentMapChar
+	{mso-style-name:"Document Map Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Document Map";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;
+	mso-ascii-font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;
+	mso-ascii-font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<h1>Strain fitting of 2D data in GSAS-II</h1>
+
+<P><BL>
+  <LI><B>A video version of this tutorial is available at 
+<A href="https://anl.box.com/v/Strainfittingof2DdatainGSAS-II" target="_blank">
+https://anl.box.com/v/Strainfittingof2DdatainGSAS-II</A></B>
+  <LI>Exercise files are found <A href="./data/" target="_blank">here</a>
+</BL></P><P></P>  
+
+<p class=MsoNormal>For this tutorial, data were collected with a MAR2300 area
+detector at APS 1-ID-C with a wavelength 0.12398 Å (100<span style='font-family:
+Symbol'>m</span>m diameter beam) from a 1.5mm square hot rolled steel test specimen;
+the front surface has been dusted with some CeO<sub>2</sub> to aid in
+calibration. Three images are used here; one is with no load on the sample and
+the other two are with the sample under tension along the y-axis (vertical).
+The loading will distort the steel (ferrite &amp; austenite) diffraction rings
+and our purpose here is to characterize this distortion via a strain model by
+B. B. He &amp; K. L. Smith (Adv. in X-ray Anal. 41, 501, 1997). Note that menu
+entries are listed in <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>bold face</span></b>
+below as <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>Help/About GSAS-II</span></b>, which lists first the name of the
+menu (here <b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin;mso-bidi-theme-font:minor-latin'>Help</span></b>) and second the
+name of the entry in the menu (here <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>About GSAS-II</span></b>).</p>
+
+<h2>Step 1: Start GSAS-II and read the images</h2>
+
+<p class=MsoNormal>Use the <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Data/Read image data</span></b> menu item to
+read the data file into a new GSAS-II project. A file selection dialog will be
+shown; its appearance will depend on your OS. Change the search directory to <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>2Dstrain/data</span></b> and then select the files <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>nx09_strain_001.mar2300<span class=GramE>, <span style='font-family:
+"Times New Roman",serif;font-weight:normal'><span
+style='mso-spacerun:yes'> </span></span>nx09</span>_strain_006.mar2300 </span></b>and
+<b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>nx09_strain_011.mar2300</span></b>
+and press <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>Open</span></b>.<span style='mso-no-proof:yes'> Select the 1<sup>st</sup>
+image (001) from the GSAS-II data tree and select </span><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-no-proof:yes'>Image Controls</span></b><span
+style='mso-no-proof:yes'>; adjust the </span><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-no-proof:yes'>Max intensity</span></b><span
+style='mso-no-proof:yes'> so that the CeO2 rings are visible (~1500 will
+suffice or 99%). You should see:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_22" o:spid="_x0000_i1046" type="#_x0000_t75"
+ style='width:468pt;height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image002.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image001.png"
+v:shapes="Picture_x0020_22"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>For the image and <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_23" o:spid="_x0000_i1045" type="#_x0000_t75" style='width:468pt;
+ height:225.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image005.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=301
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image003.png"
+v:shapes="Picture_x0020_23"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'>for the controls.<o:p></o:p></span></p>
+
+<h2>Step 2: Calibration of the detector position</h2>
+
+<p class=MsoNormal>This image is a superposition of three diffraction patterns;
+CeO<sub>2</sub> calibrant, ferrite (BCC iron) and austenite (FCC iron).
+Consequently the calibration needs to be done with some care; the steps are as
+follows:</p>
+
+<p class=MsoNormal>Set the wavelength to <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>0.12398</span></b></p>
+
+<p class=MsoNormal>Set the calibrant to <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>CeO2 SRM674b<o:p></o:p></span></b></p>
+
+<p class=MsoNormal>Set <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Min <span class=SpellE>calib</span> d-spacing</span></b>
+to <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>1.09</span></b>;
+this avoids picking a CeO<sub>2</sub> ring that overlaps one of the steel ones.</p>
+
+<p class=MsoNormal>Pick <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Show ring picks?</span></b> check box</p>
+
+<p class=MsoNormal>Set <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Pixel search range</span></b> to <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>5</span></b>;
+the rings are fairly widely separated will little chance for overlap.</p>
+
+<p class=MsoNormal>Use <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Calibration/Calibrate</span></b>, select 5
+points on the inner CeO<sub>2</sub> ring with left mouse button and start
+calibration with right mouse button. The result should be something like</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_24" o:spid="_x0000_i1044" type="#_x0000_t75" style='width:468pt;
+ height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image021.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image006.png"
+v:shapes="Picture_x0020_24"><![endif]></span></p>
+
+<p class=MsoNormal>I’ve zoomed in to show that the CeO2 rings are well fitted
+and don’t overlap any of the more intense steel ones. The calibration results
+show on the data window</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_25" o:spid="_x0000_i1043" type="#_x0000_t75" style='width:468pt;
+ height:321pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image028.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=428
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image007.png"
+v:shapes="Picture_x0020_25"><![endif]></span><span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal>and the console</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_5" o:spid="_x0000_i1042" type="#_x0000_t75" style='width:461.25pt;
+ height:122.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image030.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=615 height=163
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image030.png"
+v:shapes="Picture_x0020_5"><![endif]></span></p>
+
+<p class=MsoNormal>You should now copy these results to the other images. Use <span
+class=SpellE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'>Parms</span></b></span><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>/Copy controls</span></b>; a popup dialog
+will appear; select <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Set </span></b><span
+class=GramE><b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'>All</span></b></span> and <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>OK</span></b>.</p>
+
+<h2 style='tab-stops:2.3in'>Step 3: Fitting unstrained steel</h2>
+
+<p class=MsoNormal>In this step you will select the diffraction rings to be
+analyzed for strain; it is best to pick a few CeO<sub>2</sub> ones as well to
+confirm that the sample position does not shift during loading. Select the
+first image (001) and the <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Stress/Strain</span></b> tree item. An empty
+plot (“Strain”) will appear and the initial Stress/Strain data window</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_34" o:spid="_x0000_i1041" type="#_x0000_t75" style='width:468pt;
+ height:237pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image029.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=316
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image008.png"
+v:shapes="Picture_x0020_34"><![endif]></span><span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal>Change <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Sample delta-z</span></b> to <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>-0.75</span></b>
+since center of the steel sample is that much closer to the detector than the
+CeO<sub>2</sub> calibrant. Then select <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>2D Powder Image</span></b> and follow the
+instruction to add a ring; press <span class=GramE><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>a</span></b> and</span> use the
+mouse left button to select a ring. Do as many as you like but be sure to
+select some CeO<sub>2</sub> rings as well; it is useful to zoom in to help with
+the selection, but make sure zoom buttons are off for the selection. You can
+control the image display with the <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Image Controls</span></b>. Each time you pick
+a ring, GSAS-II show the <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>2D Powder Image</span></b> zoomed in where
+you were looking before your selection. I chose 12 rings. Do <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>Operations/Fit stress/strain;</span></b> the Strain plot is
+updated to show</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_35" o:spid="_x0000_i1040" type="#_x0000_t75" style='width:468pt;
+ height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image034.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image010.png"
+v:shapes="Picture_x0020_35"><![endif]></span></p>
+
+<p class=MsoNormal>Notice that each ring is plotted in different colors (they
+may be somewhat mixed for the two lines ~2Å! We will fix this next). The 2D
+Powder Image shows the picks as well</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_36" o:spid="_x0000_i1039" type="#_x0000_t75" style='width:468pt;
+ height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image038.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image011.png"
+v:shapes="Picture_x0020_36"><![endif]></span></p>
+
+<p class=MsoNormal>And the rings are listed on the <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>Stress/Strain</span></b> data window;
+a scroll bar allows easy access to all the entries.</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_37" o:spid="_x0000_i1038" type="#_x0000_t75" style='width:468pt;
+ height:300.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image042.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=401
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image012.png"
+v:shapes="Picture_x0020_37"><![endif]></span></p>
+
+<p class=MsoNormal>If necessary, we can now fix the mixing of the two 2Å lines;
+change the <b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin'>Pixel search range</span></b> to <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>5</span></b> for both. Do <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>Operations/Fit Stress <span class=GramE>Strain.</span></span></b>
+After you are done the <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Strain</span></b> plot should look like</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_38" o:spid="_x0000_i1037" type="#_x0000_t75" style='width:468pt;
+ height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image046.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image013.png"
+v:shapes="Picture_x0020_38"><![endif]></span></p>
+
+<p class=MsoNormal>We are now ready for the first strain fit; do <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Operations/Fit
+stress/strain</span></b>. Each ring will be fitted to the three strain tensor
+elements (&#949;<sub>11</sub>, &#949;<sub>12</sub> &amp; &#949;<sub>22</sub>)
+that can be determined from a single 2D diffraction ring. The resulting Strain
+plot now shows curves calculated from the fitted tensor elements; these are
+very nearly straight lines as expected from an unloaded sample.<span
+style='mso-spacerun:yes'>  </span>In particular the austenite 111 line (~2.08Å)
+is much flatter than the ferrite 200 line (~2.03Å); this reflects the sample
+history (hot rolled steel). The tensor elements with <span class=SpellE>esds</span>
+are shown on the console and in the data window</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_39" o:spid="_x0000_i1036" type="#_x0000_t75" style='width:468pt;
+ height:300.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image048.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=401
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image014.png"
+v:shapes="Picture_x0020_39"><![endif]></span><span
+style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal>The <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>d-zero <span class=SpellE>ave</span></span></b>
+is the average d-spacing around each ring; this can be used as the reference
+d-spacing. If <b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin;mso-bidi-theme-font:minor-latin'>Poisson <span class=SpellE>ave</span></span></b>
+is checked then <b style='mso-bidi-font-weight:normal'><span style='font-family:
+"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin;mso-bidi-theme-font:minor-latin'>d-zero <span class=SpellE>ave</span></span></b>
+is determined from <span style='mso-spacerun:yes'> </span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>If <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>e<sub>11</sub></span></b>
+&lt; <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>e<sub>22</sub></span></b>: <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>d-zero <span
+class=SpellE>ave</span></span></b> <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>= <span
+class=SpellE>d<sub>min</sub></span>-(<span class=SpellE>d<sub>max</sub>-d<sub>min</sub></span>)/4</span></b>;
+else: <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>d-zero <span class=SpellE>ave</span> = dmin+3*(<span class=SpellE>dmax-dmin</span>)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal>Where <span class=SpellE><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>d<sub>min</sub><span
+class=GramE>,d<sub>max</sub></span></span></b></span><b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'> </span></b>are
+the minimum and maximum d-<span class=SpellE>spacings</span> for a given
+diffraction ring, thus selecting the place where the diffraction ring under
+load would give a strain free value.</p>
+
+<p class=MsoNormal>Each d-zero value for this no load sample can be set to this
+value; this will suppress any residual stress offset. To update all the d-zero
+values to the calculated ones do <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Operations/Update d-zero</span></b> then
+repeat <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Operations/Fit
+stress/strain</span></b>. Repeat as needed to make <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>d-zero</span></b> match <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>d-zero <span
+class=SpellE>ave</span></span></b> for all lines so that <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>h-<span
+class=SpellE>mustrain</span></span></b> (= <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>d-zero/d-zero
+<span class=SpellE>ave</span></span></b> -1) is small (less than ~±250). I got
+for the no load sample</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_40" o:spid="_x0000_i1035" type="#_x0000_t75" style='width:468pt;
+ height:221.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image050.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=295
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image015.png"
+v:shapes="Picture_x0020_40"><![endif]></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Ivar</span></b>
+is the variance in the normalized ring intensity; <span class=GramE>if <span
+style='mso-spacerun:yes'> </span>&gt;</span>0 the sample is textured in some
+way. Finally you want this set of d-zero values to be applied to the images
+from the loaded sample; do <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Operations/Copy stress/strain</span></b> to
+apply them to the other images.</p>
+
+<h2 style='tab-stops:2.3in'>Step 4: Sequential fitting of steel under load</h2>
+
+<p class=MsoNormal>For the result of the sequential fitting to make sense, we
+need to enter the applied load for each image. Unfortunately, this must be done
+by hand here because the load value is not in the image header. The loads are:
+001: - 2.17425, 006: 527.917 and 011: 1004.41 all in <span class=SpellE>newtons</span>
+(N). Each needs to be divided by the cross section area (2.25mm<sup>2</sup>) of
+the sample; GSAS-II will do this bit of math for you, and this gives the values
+in MPa. For image <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>001</span></b> enter <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>-2.17425/2.25</span></b> in the <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Sample load
+(MPa)</span></b> box, <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>527.917/2.25</span></b> for image <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>006</span></b>
+and <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>1004.41/2.25</span></b>
+for image <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>011</span></b>.
+When done the data window for image 011 should look like</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_41" o:spid="_x0000_i1034" type="#_x0000_t75" style='width:468pt;
+ height:221.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image052.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=295
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image016.png"
+v:shapes="Picture_x0020_41"><![endif]></span></p>
+
+<p class=MsoNormal>Note that if the beam line software has prepared the
+appropriate file containing this information, it could be loaded via the <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Operations/Load
+sample data</span></b> menu item.</p>
+
+<p class=MsoNormal>Next, we do the sequential refinement. Do <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Operations/All
+image fit</span></b> from the <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Stress/Strain</span></b> data window menu
+from any of the images. A popup window will show the selection of images</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_14" o:spid="_x0000_i1033" type="#_x0000_t75" style='width:204.75pt;
+ height:251.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image024.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=273 height=335
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image024.png"
+v:shapes="Picture_x0020_14"><![endif]></span></p>
+
+<p class=MsoNormal>Press <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Set <span class=GramE>All</span></span></b>, all
+boxes will be checked showing selection of the data sets. This also allows you
+to instruct the sequential refinement to start at the last data set and proceed
+backwards through them (<b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Reverse order</span></b>). It also allows you
+to instruct the sequential refinement to use the current parameters as starting
+values for the next data set. This works in either direction and facilitates
+the initial sequential refinements. Select just <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>Copy to next</span></b> and press
+<b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>OK</span></b>;
+the sequential refinement will proceed very rapidly displaying results for each
+data set on the console and finally ending by displaying the <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Sequential strain
+fit result.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_42" o:spid="_x0000_i1032" type="#_x0000_t75" style='width:371.25pt;
+ height:442.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image054.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=495 height=590
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image054.png"
+v:shapes="Picture_x0020_42"><![endif]></span></p>
+
+<p class=MsoNormal>I only show the bottom of the listing. The data window shows
+the results of the sequential fit.</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_43" o:spid="_x0000_i1031" type="#_x0000_t75" style='width:468pt;
+ height:206.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image055.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=275
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image017.png"
+v:shapes="Picture_x0020_43"><![endif]></span></p>
+
+<p class=MsoNormal>This table is the results of the sequential fit to the three
+images. There are columns for each parameter. If you double click on a column
+heading (try a steel e11 or e22 – I selected <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>1<span class=GramE>;e22</span></span></b>
+from my list). The plot shows the variation of this parameter with image
+sequence; <span class=GramE>press ‘<b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>s</span></b>’</span> and select <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Sample load</span></b>
+and the plot will show (you’ll have to pick something else &amp; then back to <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
+minor-latin'>1:e22</span></b>).</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_44" o:spid="_x0000_i1030" type="#_x0000_t75" style='width:468pt;
+ height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image057.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image018.png"
+v:shapes="Picture_x0020_44"><![endif]></span></p>
+
+<p class=MsoNormal>We can next fit this to a straight line. Select <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Parametric
+fit/Add equation</span></b>, select a variable (<b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>Global</span></b>) in the 1<sup>st</sup>
+pull down box (I chose <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>1<span class=GramE>;e22</span></span></b>)
+and enter <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>m*<span
+class=SpellE>x+b</span></span></b> in the equation box; the frame will change
+to give selections for <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>m</span></b>, <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>x</span></b> &amp; <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>b</span></b>.
+Use <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Free</span></b>
+for <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>m</span></b>
+&amp; <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>b</span></b>
+and <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Global/Sample
+load</span></b> (at the bottom of list) for <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>x</span></b>. Then press <b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Fit</span></b>.
+The <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Expression
+Editor</span></b> window should look like; press <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin'>OK</span></b> to exit this
+window.</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_45" o:spid="_x0000_i1029" type="#_x0000_t75" style='width:465pt;
+ height:255pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image059.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=620 height=340
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image059.png"
+v:shapes="Picture_x0020_45"><![endif]></span></p>
+
+<p class=MsoNormal>And the console shows the parameters with <span
+class=SpellE>esds</span></p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_46" o:spid="_x0000_i1028" type="#_x0000_t75" style='width:450.75pt;
+ height:128.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image060.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=601 height=171
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image060.png"
+v:shapes="Picture_x0020_46"><![endif]></span></p>
+
+<p class=MsoNormal>The plot will show the best fit line</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_27" o:spid="_x0000_i1027" type="#_x0000_t75" style='width:468pt;
+ height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image061.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image019.png"
+v:shapes="Picture_x0020_27"><![endif]></span></p>
+
+<p class=MsoNormal>You can explore other features of this facility; pick more
+than one column (single click on the label) and the <span class=GramE><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Selected</span></b></span><b
+style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'> cols/Plot
+selected</span></b> menu item to plot them together. </p>
+
+<p class=MsoNormal>To see the effect of stress on one diffraction line, select
+the <b style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
+mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin'>Strain</span></b>
+plot and zoom in on one line (I zoomed in on just one line; ferrite 211) from
+image 011.</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_28" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:468pt;
+ height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image063.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image020.png"
+v:shapes="Picture_x0020_28"><![endif]></span></p>
+
+<p class=MsoNormal>The dashed line gives the d-zero position. When you look at
+the other lines, you should notice that the ones at ca. 3.13Å, 1.63Å, and 1.24Å
+remain straight lines; these are from CeO<sub>2</sub> and should be unchanged
+under load.</p>
+
+<p class=MsoNormal>Finally we can investigate the appearance of texture in the
+ring intensities, do Operations/Plot intensity distribution. A new plot
+appears; the ‘u’ key will change the curve offsets to get</p>
+
+<p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_47" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:468pt;
+ height:401.25pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image022.png"
+  o:title=""/>
+</v:shape><![endif]--><![if !vml]><img width=624 height=535
+src="Strain%20fitting%20of%202D%20data%20in%20GSAS-II_files/image023.png"
+v:shapes="Picture_x0020_47"><![endif]></span></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal>The CeO<sub>2</sub> lines are straight (MRD=1.0) while lines
+from the two steel phases show the effect of texture but little graininess.</p>
+
+<p class=MsoNormal>Again you could save the project with <b style='mso-bidi-font-weight:
+normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>File/Save
+project</span></b> on the main <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>GSAS-II data
+tree</span></b> menu <span class=GramE>although</span> it is not needed for any
+further tutorials. The strain results from each image can be exported as a
+comma delimited set of values which can easily be read by Microsoft Excel and
+other spread sheet programs; see <b style='mso-bidi-font-weight:normal'><span
+style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
+mso-hansi-theme-font:minor-latin'>Export/Image data as/Strain CSV file</span></b>.</p>
+
+</div>
+
+</body>
+
+</html>
