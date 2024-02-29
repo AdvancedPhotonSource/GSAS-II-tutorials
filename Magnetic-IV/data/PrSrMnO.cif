@@ -1,0 +1,445 @@
+
+#=======================================================================
+data_global
+#=======================================================================
+
+_audit_creation_method                   'Jana2006 Version : 09/02/2011'
+
+
+# 1. PROCESSING SUMMARY (IUCr Office Use Only)
+
+_journal_date_recd_electronic            ?
+_journal_date_to_coeditor                ?
+_journal_date_from_coeditor              ?
+_journal_date_accepted                   ?
+_journal_date_printers_first             ?
+_journal_date_printers_final             ?
+_journal_date_proofs_out                 ?
+_journal_date_proofs_in                  ?
+_journal_coeditor_name                   ?
+_journal_coeditor_code                   ?
+_journal_coeditor_notes
+; ?
+;
+_journal_techeditor_code                 ?
+_journal_paper_category                  ?
+_journal_techeditor_notes
+; ?
+;
+_journal_coden_ASTM                      ?
+_journal_name_full                       'Acta Crystallographica Section C'
+_journal_year                            ?
+_journal_volume                          ?
+_journal_issue                           ?
+_journal_page_first                      ?
+_journal_page_last                       ?
+_journal_suppl_publ_number               ?
+_journal_suppl_publ_pages                ?
+
+#=======================================================================
+
+# 2. SUBMISSION DETAILS
+
+_publ_contact_author_name                ?
+_publ_contact_author_address
+; ?
+;
+_publ_contact_author_email               ?
+_publ_contact_author_fax                 ?
+_publ_contact_author_phone               ?
+
+_publ_requested_journal                  'Acta Crystallographica Section C'
+_publ_requested_category                 ?
+
+_publ_contact_letter
+; ?
+;
+
+#=======================================================================
+
+# 3. TITLE AND AUTHOR LIST
+
+_publ_section_title
+; ?
+;
+_publ_section_title_footnote
+; ?
+;
+loop_
+ _publ_author_name
+ _publ_author_footnote
+ _publ_author_address
+ ?       # name
+; ?      # footnote
+;
+; ?      # address
+;
+
+#=======================================================================
+
+# 4. TEXT
+
+_publ_section_synopsis
+; ?
+;
+_publ_section_abstract
+; ?
+;
+_publ_section_comment
+; ?
+;
+_publ_section_introduction
+; ?
+;
+_publ_section_experimental
+; ?
+;
+_publ_section_exptl_prep
+; ?
+;
+_publ_section_exptl_refinement
+; ?
+;
+_publ_section_exptl_solution
+; ?
+;
+_publ_section_discussion
+; ?
+;
+_publ_section_acknowledgements
+; ?
+;
+_publ_section_references
+;
+;
+_publ_section_figure_captions
+; ?
+;
+_publ_section_table_legends
+; ?
+;
+
+#=======================================================================
+data_I
+#=======================================================================
+
+# 5. CHEMICAL DATA
+
+_chemical_name_systematic
+; ?
+;
+_chemical_name_common                    ?
+_chemical_formula_moiety                 ?
+_chemical_formula_structural             ?
+_chemical_formula_analytical             ?
+_chemical_formula_iupac                  ?
+_chemical_formula_sum                    'Mn1 O3 Pr0.5 Sr0.5'
+_chemical_formula_weight                 217.2
+_chemical_melting_point                  ?
+_chemical_compound_source                ?
+_chemical_absolute_configuration         .
+
+#=======================================================================
+
+# 6. CRYSTAL DATA
+
+_symmetry_cell_setting                   orthorhombic
+_symmetry_space_group_name_H-M           'F m m m'
+_symmetry_space_group_name_Hall          '-F -2x;-2y;-2z'
+_symmetry_Int_Tables_number              69
+loop_
+ _symmetry_equiv_pos_site_id
+ _symmetry_equiv_pos_as_xyz
+ 1   x,y,z
+ 2   -x,-y,z
+ 3   -x,y,-z
+ 4   x,-y,-z
+ 5   -x,-y,-z
+ 6   x,y,-z
+ 7   x,-y,z
+ 8   -x,y,z
+ 9   x,y+1/2,z+1/2
+ 10  -x,-y+1/2,z+1/2
+ 11  -x,y+1/2,-z+1/2
+ 12  x,-y+1/2,-z+1/2
+ 13  -x,-y+1/2,-z+1/2
+ 14  x,y+1/2,-z+1/2
+ 15  x,-y+1/2,z+1/2
+ 16  -x,y+1/2,z+1/2
+ 17  x+1/2,y,z+1/2
+ 18  -x+1/2,-y,z+1/2
+ 19  -x+1/2,y,-z+1/2
+ 20  x+1/2,-y,-z+1/2
+ 21  -x+1/2,-y,-z+1/2
+ 22  x+1/2,y,-z+1/2
+ 23  x+1/2,-y,z+1/2
+ 24  -x+1/2,y,z+1/2
+ 25  x+1/2,y+1/2,z
+ 26  -x+1/2,-y+1/2,z
+ 27  -x+1/2,y+1/2,-z
+ 28  x+1/2,-y+1/2,-z
+ 29  -x+1/2,-y+1/2,-z
+ 30  x+1/2,y+1/2,-z
+ 31  x+1/2,-y+1/2,z
+ 32  -x+1/2,y+1/2,z
+_cell_length_a                           7.5083
+_cell_length_b                           7.8315
+_cell_length_c                           7.6841
+_cell_angle_alpha                        90
+_cell_angle_beta                         90
+_cell_angle_gamma                        90
+_cell_volume                             451.8347
+
+loop_
+ _jana_cell_twin_matrix_id
+ _jana_cell_twin_volume_fraction
+ _jana_cell_twin_matrix_1_1
+ _jana_cell_twin_matrix_1_2
+ _jana_cell_twin_matrix_1_3
+ _jana_cell_twin_matrix_2_1
+ _jana_cell_twin_matrix_2_2
+ _jana_cell_twin_matrix_2_3
+ _jana_cell_twin_matrix_3_1
+ _jana_cell_twin_matrix_3_2
+ _jana_cell_twin_matrix_3_3
+ ? ? ? ? ? ? ? ? ? ? ?
+_cell_formula_units_Z                    16
+
+_cell_measurement_reflns_used            ?
+_cell_measurement_theta_min              ?
+_cell_measurement_theta_max              ?
+_cell_measurement_temperature            0
+_cell_special_details
+; ?
+;
+
+_exptl_crystal_density_diffrn            12.7675
+_exptl_crystal_density_meas              ?
+_exptl_crystal_density_method            ?
+_exptl_crystal_F_000                     ?
+
+_exptl_absorpt_coefficient_mu            55.48
+_exptl_crystal_description               ?
+_exptl_crystal_size_max                  ?
+_exptl_crystal_size_mid                  ?
+_exptl_crystal_size_min                  ?
+_exptl_crystal_size_rad                  ?
+_exptl_crystal_colour                    ?
+_exptl_absorpt_correction_type           ?
+_exptl_absorpt_process_details           ?
+_exptl_absorpt_correction_T_min          ?
+_exptl_absorpt_correction_T_max          ?
+
+#=======================================================================
+
+# 7. EXPERIMENTAL DATA
+
+_exptl_special_details                   ?
+
+_diffrn_ambient_temperature              0
+_diffrn_source                           ?
+_diffrn_source_power                     ?
+_diffrn_source_voltage                   ?
+_diffrn_source_current                   ?
+_diffrn_radiation_type                   'Mo K\a'
+_diffrn_radiation_source                 ?
+_diffrn_radiation_wavelength             0.71069
+_diffrn_radiation_monochromator          ?
+_diffrn_measurement_device               ?
+_diffrn_measurement_device_type          ?
+_diffrn_detector                         ?
+_diffrn_detector_area_resol_mean         ?
+_diffrn_measurement_method               ?
+_diffrn_measurement_specimen_support     ?
+
+_diffrn_reflns_number                    ?
+_diffrn_reflns_theta_min                 ?
+_diffrn_reflns_theta_max                 ?
+_diffrn_reflns_theta_full                ?
+_diffrn_measured_fraction_theta_max      ?
+_diffrn_measured_fraction_theta_full     ?
+_diffrn_reflns_av_R_equivalents          ?
+_diffrn_reflns_av_sigmaI/netI            ?
+_diffrn_reflns_limit_h_min               ?
+_diffrn_reflns_limit_h_max               ?
+_diffrn_reflns_limit_k_min               ?
+_diffrn_reflns_limit_k_max               ?
+_diffrn_reflns_limit_l_min               ?
+_diffrn_reflns_limit_l_max               ?
+_diffrn_reflns_reduction_process         ?
+
+_diffrn_standards_number                 ?
+_diffrn_standards_interval_count         ?
+_diffrn_standards_interval_time          ?
+_diffrn_standards_decay_%                ?
+loop_
+_diffrn_standard_refln_index_h
+_diffrn_standard_refln_index_k
+_diffrn_standard_refln_index_l
+  ? ? ?
+
+#=======================================================================
+
+# 8. REFINEMENT DATA
+
+_refine_special_details
+; ?
+;
+
+_reflns_number_total                     ?
+_reflns_number_gt                        ?
+_reflns_threshold_expression             ?
+
+_refine_ls_structure_factor_coef         ?
+_refine_ls_R_factor_gt                   ?
+_refine_ls_wR_factor_gt                  ?
+_refine_ls_R_factor_all                  ?
+_refine_ls_wR_factor_ref                 ?
+_refine_ls_goodness_of_fit_ref           ?
+_refine_ls_goodness_of_fit_gt            ?
+_refine_ls_restrained_S_gt               ?
+_refine_ls_restrained_S_all              ?
+_refine_ls_number_reflns                 ?
+_refine_ls_number_parameters             ?
+_refine_ls_number_restraints             ?
+_refine_ls_number_constraints            ?
+_refine_ls_weighting_scheme              ?
+_refine_ls_weighting_details             ?
+_refine_ls_hydrogen_treatment            ?
+_refine_ls_shift/su_max                  ?
+_refine_ls_shift/su_mean                 ?
+_refine_diff_density_max                 ?
+_refine_diff_density_min                 ?
+_refine_ls_extinction_method             ?
+_refine_ls_extinction_coef               ?
+_refine_ls_abs_structure_details         ?
+_refine_ls_abs_structure_Flack           ?
+_refine_ls_abs_structure_Rogers          ?
+
+loop_
+ _atom_type_symbol
+ _atom_type_scat_dispersion_real
+ _atom_type_scat_dispersion_imag
+ _atom_type_scat_source
+ Pr -0.2180  2.8214
+ 'International Tables Vol C tables 4.2.6.8 and 6.1.1.1'
+ Sr -1.5307  3.2498
+ 'International Tables Vol C tables 4.2.6.8 and 6.1.1.1'
+ Mn  0.3368  0.7283
+ 'International Tables Vol C tables 4.2.6.8 and 6.1.1.1'
+ O   0.0106  0.0060
+ 'International Tables Vol C tables 4.2.6.8 and 6.1.1.1'
+
+_computing_data_collection               ?
+_computing_cell_refinement               ?
+_computing_data_reduction                ?
+_computing_structure_solution            ?
+_computing_structure_refinement          ?
+_computing_molecular_graphics            ?
+_computing_publication_material          ?
+
+#=======================================================================
+
+# 9. ATOMIC COORDINATES AND DISPLACEMENT PARAMETERS
+
+loop_
+ _atom_site_label
+ _atom_site_type_symbol
+ _atom_site_fract_x
+ _atom_site_fract_y
+ _atom_site_fract_z
+ _atom_site_adp_type
+ _atom_site_U_iso_or_equiv
+ _atom_site_symmetry_multiplicity
+ _atom_site_occupancy
+ _atom_site_calc_flag
+ _atom_site_refinement_flags
+ _atom_site_disorder_assembly
+ _atom_site_disorder_group
+  Pr Pr 0 0.2506(3) 0 Uiso 0.005 8 0.5 d . . .
+  Sr Sr 0 0.2506(3) 0 Uiso 0.005 8 0.5 d . . .
+  Mn Mn 0.25 0 0.25 Uiso 0.005 8 1 d . . .
+  O1 O 0.2130(2) 0 0 Uiso 0.005 8 1 d . . .
+  O2 O 0 0 0.2884(2) Uiso 0.005 8 1 d . . .
+  O3 O 0.25 0.25 0.25 Uiso 0.005 8 1 d . . .
+
+loop_
+ _atom_site_aniso_label
+ _atom_site_aniso_type_symbol
+ _atom_site_aniso_U_11
+ _atom_site_aniso_U_22
+ _atom_site_aniso_U_33
+ _atom_site_aniso_U_12
+ _atom_site_aniso_U_13
+ _atom_site_aniso_U_23
+ ? ? ? ? ? ? ? ?
+
+
+#=======================================================================
+
+# 10. MOLECULAR GEOMETRY
+
+
+loop_
+ _geom_bond_atom_site_label_1
+ _geom_bond_atom_site_label_2
+ _geom_bond_site_symmetry_1
+ _geom_bond_site_symmetry_2
+ _geom_bond_distance
+ _geom_bond_publ_flag
+ ? ? ? ? ? ?
+
+loop_
+ _geom_angle_atom_site_label_1
+ _geom_angle_atom_site_label_2
+ _geom_angle_atom_site_label_3
+ _geom_angle_site_symmetry_1
+ _geom_angle_site_symmetry_2
+ _geom_angle_site_symmetry_3
+ _geom_angle
+ _geom_angle_publ_flag
+ ? ? ? ? ? ? ? ?
+
+loop_
+ _geom_torsion_atom_site_label_1
+ _geom_torsion_atom_site_label_2
+ _geom_torsion_atom_site_label_3
+ _geom_torsion_atom_site_label_4
+ _geom_torsion_site_symmetry_1
+ _geom_torsion_site_symmetry_2
+ _geom_torsion_site_symmetry_3
+ _geom_torsion_site_symmetry_4
+ _geom_torsion
+ _geom_torsion_publ_flag
+ ? ? ? ? ? ? ? ? ? ?
+
+loop_
+ _geom_hbond_atom_site_label_D
+ _geom_hbond_atom_site_label_H
+ _geom_hbond_atom_site_label_A
+ _geom_hbond_site_symmetry_D
+ _geom_hbond_site_symmetry_H
+ _geom_hbond_site_symmetry_A
+ _geom_hbond_distance_DH
+ _geom_hbond_distance_HA
+ _geom_hbond_distance_DA
+ _geom_hbond_angle_DHA
+ _geom_hbond_publ_flag
+ ? ? ? ? ? ? ? ? ? ? ?
+
+
+#=======================================================================
+
+# 11. STRUCTURE-FACTOR LIST
+
+loop_
+ _refln_index_h
+ _refln_index_k
+ _refln_index_l
+ _refln_F_squared_calc
+ _refln_F_squared_meas
+ _refln_F_squared_sigma
+ _refln_observed_status
+ ? ? ? ? ? ? ?
+
+

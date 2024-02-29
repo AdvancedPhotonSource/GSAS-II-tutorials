@@ -1,0 +1,184 @@
+     VERSION   6                                                                
+      DESCR                                                                     
+    HSTRY  1 created readexp.tcl 1237 2014-05-20T14:24:05                       
+    HSTRY  2 EXPTOOL  Win32  May 20 14:24:31 2014 P P                           
+    HSTRY  3 EXPTOOL  Win32  May 20 14:24:38 2014 P  A                          
+    HSTRY  4 EXPTOOL Win32  May 20 14:24:54 2014 Bombed                         
+    HSTRY  5 EXPTOOL Win32  May 20 14:25:11 2014 Bombed                         
+    HSTRY  6 EXPTOOL Win32  May 20 14:27:11 2014 Bombed                         
+    HSTRY  7 EXPTOOL Win32  May 20 14:27:47 2014 Bombed                         
+    HSTRY  8 EXPTOOL Win32  May 20 14:28:59 2014 Bombed                         
+    HSTRY  9 EXPTOOL Win32  May 20 14:33:14 2014 Bombed                         
+    HSTRY 10 EXPTOOL Win32  May 20 14:34:05 2014 Bombed                         
+    HSTRY 11 EXPTOOL Win32  May 20 14:34:14 2014 Bombed                         
+    HSTRY 12 EXPTOOL  Win32  May 20 14:48:59 2014 P  H                          
+    HSTRY 13 POWPREF Win32  May 20 14:49:08 2014                                
+    HSTRY 14 EXPGUI 1225 1237 (4 changes) -- 05/20/14 14:49:40                  
+    HSTRY 15 POWPREF Win32  May 20 14:49:40 2014                                
+    HSTRY 16 GENLES  Win32  May 20 14:49:43 2014 Sdsq= 0.761E+04 S/E= 0.420E-05 
+    HSTRY 17 EXPGUI 1225 1237 (1 changes) -- 05/20/14 14:52:09                  
+    HSTRY 18 POWPREF Win32  May 20 14:52:10 2014                                
+    HSTRY 19 GENLES  Win32  May 20 14:52:11 2014 Sdsq= 0.558E+04 S/E= 0.412E-07 
+    HSTRY 20 EXPGUI 1225 1237 (2 changes) -- 05/20/14 15:10:37                  
+    HSTRY 21 POWPREF Win32  May 20 15:10:37 2014                                
+    HSTRY 22 GENLES  Win32  May 20 15:10:39 2014 Sdsq= 0.502E+04 S/E= 0.104E-08 
+    HSTRY 23 GENLES  Win32  May 20 15:10:45 2014 Sdsq= 0.502E+04 S/E= 0.341E-06 
+    HSTRY 24 POWPREF Win32  May 20 15:10:48 2014                                
+    HSTRY 25 EXPGUI 1225 1237 (1 changes) -- 05/20/14 15:10:58                  
+    HSTRY 26 GENLES  Win32  May 20 15:10:58 2014 Sdsq= 0.352E+04 S/E= 0.349E-07 
+    HSTRY 27 EXPGUI 1225 1237 (5 changes) -- 05/20/14 15:11:07                  
+    HSTRY 28 GENLES  Win32  May 20 15:11:10 2014 Sdsq= 0.346E+04 S/E= 0.277E-02 
+    HSTRY 29 GENLES  Win32  May 20 15:11:22 2014 Sdsq= 0.346E+04 S/E= 0.757E-03 
+    HSTRY 30 EXPGUI 1225 1237 (2 changes) -- 05/20/14 15:11:27                  
+    HSTRY 31 GENLES  Win32  May 20 15:11:31 2014 Sdsq= 0.335E+04 S/E= 0.377E-02 
+    HSTRY 32 EXPGUI 1225 1237 (2 changes) -- 05/20/14 15:11:41                  
+    HSTRY 33 EXPGUI 1225 1237 (3 changes) -- 05/20/14 15:11:59                  
+    HSTRY 34 GENLES  Win32  May 20 15:12:03 2014 Sdsq= 0.330E+04 S/E= 0.369E-02 
+    HSTRY 35 EXPGUI 1225 1237 (2 changes) -- 05/20/14 15:12:14                  
+    HSTRY 36 GENLES  Win32  May 20 15:12:17 2014 Sdsq= 0.287E+04 S/E= 0.825E-02 
+    HSTRY 37 EXPGUI 1225 1237 (2 changes) -- 05/20/14 15:12:27                  
+    HSTRY 38 GENLES  Win32  May 20 15:12:29 2014 Sdsq= 0.286E+04 S/E= 0.352E-02 
+    HSTRY 39 EXPGUI 1225 1237 (2 changes) -- 05/20/14 15:12:36                  
+    HSTRY 40 GENLES  Win32  May 20 15:12:39 2014 Sdsq= 0.283E+04 S/E= 0.328E-02 
+    HSTRY 41 EXPGUI 1225 1237 (1 changes) -- 05/20/14 15:13:15                  
+    HSTRY 42 POWPREF Win32  May 20 15:13:15 2014                                
+    HSTRY 43 GENLES  Win32  May 20 15:13:18 2014 Sdsq= 0.258E+04 S/E= 0.934E-02 
+    HSTRY 44 GENLES  Win32  May 20 15:13:46 2014 Sdsq= 0.258E+04 S/E= 0.226E-02 
+    HSTRY 45 EXPGUI 1225 1237 (4 changes) -- 05/20/14 15:14:32                  
+    HSTRY 46 GENLES  Win32  May 20 15:14:33 2014 Sdsq= 0.258E+04 S/E= 0.334E-02 
+    HSTRY 47 EXPGUI 1225 1237 (1 changes) -- 05/20/14 15:14:46                  
+    HSTRY 48 GENLES  Win32  May 20 15:14:46 2014 Sdsq= 0.258E+04 S/E= 0.395E-04 
+    HSTRY 49 EXPGUI 1225 1237 (6 changes) -- 05/20/14 15:15:21                  
+    HSTRY 50 GENLES  Win32  May 20 15:15:24 2014 Sdsq= 0.223E+04 S/E= 0.551E-02 
+    HSTRY 51 POWPREF Win32  May 20 15:15:33 2014                                
+    HSTRY 52 GENLES  Win32  May 20 15:15:35 2014 Sdsq= 0.223E+04 S/E= 0.163E-02 
+    HSTRY 53 EXPGUI 1225 1237 (1 changes) -- 05/20/14 15:23:07                  
+    HSTRY 54 POWPREF Win32  May 20 15:23:31 2014                                
+    HSTRY 55 EXPGUI 1225 1237 (2 changes) -- 05/20/14 15:23:34                  
+    HSTRY 56 GENLES  Win32  May 20 15:23:34 2014                                
+    HSTRY 57 EXPGUI 1225 1237 (2 changes) -- 05/20/14 15:23:38                  
+    HSTRY 58 EXPGUI 1225 1237 (1 changes) -- 05/20/14 15:23:44                  
+    HSTRY 59 POWPREF Win32  May 20 15:35:24 2014                                
+  DSGL CDAT1  DRAD ARAD NOFO                                                    
+  GNLS  RUN on May 20 15:35:24 2014    Total cycles run  74       2231.5        
+  GNLS CDAT1  MXCY   3                                                          
+  GNLS SHFTS      0.01      0.01                                                
+ AFAC  O     3.048513.2771 2.2868 5.7011 1.5463  .3239  .867032.9089  .2508 RHF 
+ AFAC  O_    15.999 .5803      .00019                                           
+ AFAC  O_SIZ      1.09      0.89 1.40   96 1.40                                 
+ AFAC  O_XAB  988.0 590.6 293.1 30.48 17.21 1730. 478.0                         
+ AFAC  O_XF1  0.093 0.072 0.049 0.011 0.006 0.121 0.063-0.002-0.003-0.003       
+ AFAC  O_XF2  0.073 0.052 0.032 0.006 0.004 0.106 0.044 0.000 0.000 0.000       
+ AFAC  P     6.4345 1.9067 4.179127.1570 1.7800  .5260 1.490868.1645 1.1149 RHF 
+ AFAC  P_    30.974  .513        .172                                           
+ AFAC  P_SIZ      1.48      1.28 1.90    1                                      
+ AFAC  P_XAB  12110  7590  3975 404.8 201.2 19500 5930.                         
+ AFAC  P_XF1  0.390 0.359 0.296 0.102 0.067 0.382 0.339-0.000-0.001-0.005       
+ AFAC  P_XF2  0.898 0.663 0.434 0.094 0.058 1.242 0.573 0.008 0.007 0.005       
+ AFAC GA    15.2354 3.0669 6.7006  .2412 4.359110.7805 2.962361.4135 1.7189 RHF 
+ AFAC GA_     69.72 .7288        2.9                                            
+ AFAC GA_SIZ      1.61      1.41 2.15  007                                      
+ AFAC GA_XAB  21640 13580  7193  6587  3465 34600 10800                         
+ AFAC GA_XF1 -0.499-0.770-1.285 0.231 0.318-0.252-0.920 0.080 0.072 0.039       
+ AFAC GA_XF2  1.567 1.166 0.776 1.608 1.059 2.152 1.014 0.174 0.164 0.122       
+ EXPR  HTYP1  PXC                                                               
+ EXPR  NATYP    3                                                               
+ EXPR  NHST     1                                                               
+ EXPR ATYP 1  GA          1      1.61      1.41 2.15  007                       
+ EXPR ATYP 2  P           1      1.48      1.28 1.90    1                       
+ EXPR ATYP 3  O           2      1.098.900E-001 1.40   96 1.40                  
+ EXPR NPHAS     1    0    0    0    0    0    0    0    0                       
+ REFN GDNFT  Reduced CHI**2 =  1.959     for   11 variables                     
+ REFN RPOWD     0.0482    0.0342   1150  2231.5        0.0000    0.0000     0   
+ REFN STATS  Cycle  74 There were  1150 observations. Total CHI**2 = 2.2315E+03 
+CIF AUTHOR    HYP                                                               
+CRS1    PNAM  from C:/Users/jjm23479/Documents/Work/Polaris/AlPO4_GaPO4/gsas/AlP
+CRS1   NATOM    4                                                               
+CRS1  ABC     4.900632  4.900632 11.048085    Y    5                            
+CRS1  ABCSIG  0.000158  0.000158  0.000609                                      
+CRS1  ANGLES   90.0000   90.0000  120.0000                                      
+CRS1  ANGSIG    0.0000    0.0000    0.0000                                      
+CRS1  AT  1A  GA        0.457022  0.000000  0.333300  1.000000Ga1        3 055  
+CRS1  AT  1B  0.005701                                                    I     
+CRS1  AT  2A  P         0.455279  0.000000  0.833300  1.000000P1         3 055  
+CRS1  AT  2B  0.006864                                                    I     
+CRS1  AT  3A  O         0.416131  0.312158  0.390855  1.000000O1         6 055  
+CRS1  AT  3B  0.013466                                                    I     
+CRS1  AT  4A  O         0.406003  0.271356  0.877500  1.000000O2         6 055  
+CRS1  AT  4B  0.007855                                                    I     
+CRS1  CELVOL        229.785          0.013                                      
+CRS1  CHMF 1  GA            1.00                                                
+CRS1  CHMF 2  P             1.00                                                
+CRS1  CHMF 3  O             4.00                                                
+CRS1  SG SYM  P 31 2 1                                                          
+CRS1  SPAXIS    0    0    1                                                     
+HAP1 1 ZONE     0    0    0    0                                                
+HAP1 1EXTPOW    0.00000E+00    N    0                                           
+HAP1 1NAXIS     1                                                               
+HAP1 1PHSFR      1.0000        N    0                                           
+HAP1 1PRCF      2   18   0.00100    5   NN                                      
+HAP1 1PRCF 1   0.135284E+02   0.315047E+01   0.737172E+01   0.159440E+01        
+HAP1 1PRCF 2   0.472144E+01   0.000000E+00   0.000000E+00   0.000000E+00        
+HAP1 1PRCF 3   0.000000E+00   0.000000E+00   0.000000E+00   0.000000E+00        
+HAP1 1PRCF 4   0.000000E+00   0.000000E+00   0.000000E+00   0.000000E+00        
+HAP1 1PRCF 5   0.000000E+00   0.000000E+00                                      
+HAP1 1PREFO1  1.000000  1.000000  0.000000  0.000000  1.000000   NN    0    0   
+HAP1 1RADDAM    0.00000E+00    N    0      0.00                                 
+HST  1  HFIL  105870-pe-GaPO4_ed.gsas                                           
+HST  1  HNAM  Sample ID - 105870-pe-GaPO4.tif                                   
+HST  1  IFIL  inst_i15_pdf_april14.prm                                          
+HST  1 BANK     1                                                               
+HST  1 BIGFO   0.192845E+06                                                     
+HST  1 CHANS         0         1      1250  79572992      2250    0    0        
+HST  1 EPHAS    0    0    0    0    0    0    0    0    0    Y                  
+HST  1 ICONR    0.1722    0.0000    0.0568               0.950    0     0.      
+HST  1 ICONS    0.1722    0.0000    0.0568               0.950    0     0.      
+HST  1 IRAD     0                                                               
+HST  1 MAXRF  311                                                               
+HST  1 NEXC     2                                                               
+HST  1 NFOBS 1662    0    0    0    0    0    0    0    0                       
+HST  1 NPHAS    1    0    0    0    0    0    0    0    0                       
+HST  1 NREF  1662    0.3978    Y    Y                                           
+HST  1 R-FAC 1662   0.06066   1.520213E+04                                      
+HST  1 RPOWD    0.0482    0.0342   1150  2231.5        0.0000    0.0000    0    
+HST  1 TRNGE   2.01000  24.99000                                                
+HST  1 WREXP    0.0346                                                          
+HST  1ABSCOR   0.000000E+00   0.000000E+00    N    0                            
+HST  1BAKGD     1    8    Y    5    Y                                           
+HST  1BAKGD1   0.436698E+03  -0.176637E+03   0.103769E+03  -0.591306E+02        
+HST  1BAKGD2   0.436101E+02  -0.364725E+02   0.207606E+02  -0.124695E+02        
+HST  1CHI      90.0000                                                          
+HST  1EXC  1     0.000     2.000                                                
+HST  1EXC  2    25.000  1000.000                                                
+HST  1EXMNMX   1.00000   1.00000                                                
+HST  1FFANS1  GA           0.000     0.000   NN    0                            
+HST  1FFANS2  P            0.000     0.000   NN    0                            
+HST  1FFANS3  O            0.000     0.000   NN    0                            
+HST  1HSCALE    0.68541        Y    0                                           
+HST  1I HEAD  Inst params for I15 PDF runs                                      
+HST  1I ITYP    0    0.0000  180.0000         1                                 
+HST  1INAME   I15                                                               
+HST  1MNREF     0    1.0000                                                     
+HST  1ODMNMX   1.00000   1.00000                                                
+HST  1OMEGA     0.0000                                                          
+HST  1PHI       0.0000                                                          
+HST  1PRCF1     2   18   0.01000                                                
+HST  1PRCF11      13.528400       3.150470       7.371720       1.932420        
+HST  1PRCF12       0.122605  0.000000E+000  0.000000E+000  0.000000E+000        
+HST  1PRCF13  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+HST  1PRCF14  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+HST  1PRCF15  0.000000E+000  0.000000E+000                                      
+HST  1PRCF2     3   19   0.01000                                                
+HST  1PRCF21  0.000000E+000  0.000000E+000  0.000000E+000       0.198335        
+HST  1PRCF22  0.000000E+000  0.000000E+000       0.008700       0.014787        
+HST  1PRCF23  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+HST  1PRCF24  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+HST  1PRCF25  0.000000E+000  0.000000E+000  0.000000E+000                       
+HST  1RSP    0.0513 0.0435 0.0425 0.0333 0.0285 0.0137 0.0158 0.0095 0.0093     
+HST  1RSPA   0.0345 0.0374 0.0380 0.0323 0.0264 0.0144 0.0168 0.0103 0.0092     
+HST  1RSPTT   0.00  2.77  5.55  8.33 11.11 13.87 16.65 19.43 22.21 24.99        
+HST  1RSPW   0.0772 0.0576 0.0526 0.0422 0.0335 0.0169 0.0187 0.0120 0.0112     
+HST  1RSPWA  0.0395 0.0442 0.0441 0.0394 0.0305 0.0178 0.0201 0.0138 0.0111     
+HST  1TRMNMX   1.00000   1.00000                                                
+ZZZZZZZZZZZZ  Last EXP file record                                              
+    HSTRY 60 GENLES  Win32  May 20 15:35:24 2014 Sdsq= 0.223E+04 S/E= 0.418E-03 

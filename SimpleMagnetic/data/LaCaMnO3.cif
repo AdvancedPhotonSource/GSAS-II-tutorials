@@ -1,0 +1,54 @@
+ 
+######################################################################
+data_LaCaMnO3
+
+# phase info for La0.8Ca0.2MnO3 at 50K, FM-Pbn'm' follows
+_pd_phase_name  "La0.8Ca0.2MnO3 at 50K, FM-Pbn'm'"
+_cell_length_a  5.480704
+_cell_length_b  5.466561
+_cell_length_c  7.726836
+_cell_angle_alpha  90
+_cell_angle_beta   90
+_cell_angle_gamma  90
+_cell_volume  231.501
+_symmetry_cell_setting  orthorhombic
+_symmetry_space_group_name_H-M  "P b n m"
+loop_
+    _space_group_symop_id
+    _space_group_symop_operation_xyz
+     1  x,y,z
+     2  1/2-x,1/2+y,z
+     3  1/2+x,1/2-y,1/2+z
+     4  -x,-y,1/2+z
+     5  -x,-y,-z
+     6  1/2+x,1/2-y,-z
+     7  1/2-x,1/2+y,1/2-z
+     8  x,y,1/2-z
+
+# ATOMIC COORDINATES AND DISPLACEMENT PARAMETERS
+loop_ 
+   _atom_site_label
+   _atom_site_type_symbol
+   _atom_site_fract_x
+   _atom_site_fract_y
+   _atom_site_fract_z
+   _atom_site_occupancy
+   _atom_site_adp_type
+   _atom_site_U_iso_or_equiv
+   _atom_site_symmetry_multiplicity
+La     La   -0.0053(4)  0.02294(20) 0.25000     0.785      Uiso 0.00415(30) 4   
+Mn     Mn3+ 0.50000     0.00000     0.00000     1.000      Uiso 0.00348(29) 4   
+O1     O    0.0652(3)   0.4919(3)   0.25000     1.000      Uiso 0.0059(3)  4   
+O2     O    0.72364(22) 0.27509(22) 0.03332(14) 1.000      Uiso 0.00579(26) 8   
+Ca     Ca   -0.0053     0.02294     0.25000     0.215      Uiso 0.00415    4   
+
+loop_  _atom_type_symbol _atom_type_number_in_cell
+  Ca   0.862
+  La   3.138
+  Mn   4
+  O    12
+
+# Note that Z affects _cell_formula_sum and _weight
+_cell_formula_units_Z  4
+_chemical_formula_sum  "Ca0.215 La0.785 Mn O3"
+_chemical_formula_weight  220.55

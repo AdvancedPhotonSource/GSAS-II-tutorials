@@ -1,0 +1,93 @@
+ 
+######################################################################
+data_LaMnO3
+
+# phase info for LaMnO3 follows
+_pd_phase_name  LaMnO3
+_cell_measurement_temperature  ?
+_cell_length_a  4
+_cell_length_b  4
+_cell_length_c  4
+_cell_angle_alpha  90
+_cell_angle_beta   90
+_cell_angle_gamma  90
+_cell_volume  64
+_exptl_crystal_density_diffrn  6.2748
+_symmetry_cell_setting  cubic
+_symmetry_space_group_name_H-M  "P m 3 m"
+loop_
+    _space_group_symop_id
+    _space_group_symop_operation_xyz
+     1  x,y,z
+     2  z,x,y
+     3  y,z,x
+     4  x,y,-z
+     5  -z,x,y
+     6  y,-z,x
+     7  -z,x,-y
+     8  -y,-z,x
+     9  y,-z,-x
+    10  -x,y,-z
+    11  -z,-x,y
+    12  x,-y,-z
+    13  y,x,z
+    14  z,y,x
+    15  x,z,y
+    16  y,x,-z
+    17  -z,y,x
+    18  x,-z,y
+    19  -z,y,-x
+    20  -x,-z,y
+    21  x,-z,-y
+    22  -y,x,-z
+    23  -z,-y,x
+    24  y,-x,-z
+    25  -x,-y,-z
+    26  -z,-x,-y
+    27  -y,-z,-x
+    28  -x,-y,z
+    29  z,-x,-y
+    30  -y,z,-x
+    31  z,-x,y
+    32  y,z,-x
+    33  -y,z,x
+    34  x,-y,z
+    35  z,x,-y
+    36  -x,y,z
+    37  -y,-x,-z
+    38  -z,-y,-x
+    39  -x,-z,-y
+    40  -y,-x,z
+    41  z,-y,-x
+    42  -x,z,-y
+    43  z,-y,x
+    44  x,z,-y
+    45  -x,z,y
+    46  y,-x,z
+    47  z,y,-x
+    48  -y,x,z
+
+# ATOMIC COORDINATES AND DISPLACEMENT PARAMETERS
+loop_ 
+   _atom_site_label
+   _atom_site_type_symbol
+   _atom_site_fract_x
+   _atom_site_fract_y
+   _atom_site_fract_z
+   _atom_site_occupancy
+   _atom_site_adp_type
+   _atom_site_U_iso_or_equiv
+   _atom_site_site_symmetry_multiplicity
+La1    La   0.50000     0.50000     0.50000     1.0000     Uiso 0.0100     1   
+Mn2    Mn   0.00000     0.00000     0.00000     1.0000     Uiso 0.0100     1   
+O3     O    0.00000     0.00000     0.50000     1.0000     Uiso 0.0100     3   
+
+loop_  _atom_type_symbol _atom_type_number_in_cell
+  La      1
+  Mn      1
+  O       3
+
+# Note that Z affects _cell_formula_sum and _weight
+_cell_formula_units_Z  1
+_chemical_formula_sum  "La Mn O3"
+_chemical_formula_weight  241.84

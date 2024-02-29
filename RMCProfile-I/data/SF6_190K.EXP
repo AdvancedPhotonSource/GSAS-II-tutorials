@@ -1,0 +1,346 @@
+     VERSION    6                                                               
+      DESCR    SF6 190K                                                         
+    HSTRY  1 EXPEDT  Irix62 Sep  6 14:45:19 2000 P PH        LAB O              
+    HSTRY  2 POWPREF Irix62 Sep  6 14:45:22 2000                                
+    HSTRY  3 EXPEDT  Irix62 Sep  6 14:51:12 2000             L   O              
+    HSTRY  4 POWPREF Irix62 Sep  6 14:51:16 2000                                
+    HSTRY  5 GENLES  Irix62 Sep  6 14:51:22 2000 Sdsq= 0.129E+05 S/E= 0.229E-04 
+    HSTRY  6 EXPEDT  Irix62 Sep  6 15:27:07 2000 P  H                           
+    HSTRY  7 EXPEDT  Irix62 Sep  6 15:38:53 2000 P  H                           
+    HSTRY  8 POWPREF Irix62 Sep  6 15:38:59 2000                                
+    HSTRY  9 GENLES  Irix62 Sep  6 15:39:26 2000 Sdsq= 0.193E+06 S/E=  3.00     
+    HSTRY 10 EXPEDT  Irix62 Sep 12 12:01:54 2000 Bombed                         
+    HSTRY 11 EXPEDT  Irix62 Sep 12 12:16:05 2000 Bombed                         
+    HSTRY 12 EXPEDT  Irix62 Sep 12 12:26:04 2000 P  H        LA  O              
+    HSTRY 13 POWPREF Irix62 Sep 12 12:26:11 2000                                
+    HSTRY 14 GENLES  Irix62 Sep 12 12:26:18 2000 Sdsq= 0.245E+06 S/E= 0.251E-06 
+    HSTRY 15 EXPEDT  Irix62 Sep 12 12:27:31 2000             L   O              
+    HSTRY 16 POWPREF Irix62 Sep 12 12:27:34 2000                                
+    HSTRY 17 GENLES  Irix62 Sep 12 12:27:39 2000 Sdsq= 0.579E+06 S/E= 0.109E-03 
+    HSTRY 18 EXPEDT  Irix62 Sep 12 12:28:24 2000             L   O              
+    HSTRY 19 POWPREF Irix62 Sep 12 12:28:33 2000                                
+    HSTRY 20 GENLES  Irix62 Sep 12 12:28:40 2000 Sdsq= 0.575E+06 S/E=  7.79     
+    HSTRY 21 EXPEDT  Irix62 Sep 12 12:29:11 2000             L   O              
+    HSTRY 22 POWPREF Irix62 Sep 12 12:29:13 2000                                
+    HSTRY 23 GENLES  Irix62 Sep 12 12:29:20 2000 Sdsq= 0.237E+06 S/E=  481.     
+    HSTRY 24 GENLES  Irix62 Sep 12 12:29:29 2000 Sdsq= 0.240E+06 S/E=  26.1     
+    HSTRY 25 EXPEDT  Irix62 Sep 12 12:30:22 2000             L   O              
+    HSTRY 26 POWPREF Irix62 Sep 12 12:30:27 2000                                
+    HSTRY 27 GENLES  Irix62 Sep 12 12:30:34 2000 Sdsq= 0.450E+06 S/E=  35.1     
+    HSTRY 28 GENLES  Irix62 Sep 12 12:30:39 2000 Sdsq= 0.422E+06 S/E=  67.2     
+    HSTRY 29 GENLES  Irix62 Sep 12 12:30:45 2000 Sdsq= 0.379E+06 S/E=  167.     
+    HSTRY 30 GENLES  Irix62 Sep 12 12:30:50 2000 Sdsq= 0.302E+06 S/E=  529.     
+    HSTRY 31 GENLES  Irix62 Sep 12 12:30:55 2000 Sdsq= 0.186E+06 S/E=  540.     
+    HSTRY 32 GENLES  Irix62 Sep 12 12:30:59 2000 Sdsq= 0.153E+06 S/E=  83.6     
+    HSTRY 33 EXPEDT  Irix62 Sep 12 12:33:57 2000 P  H        L   O              
+    HSTRY 34 POWPREF Irix62 Sep 12 12:34:05 2000                                
+    HSTRY 35 GENLES  Irix62 Sep 12 12:34:08 2000 Sdsq= 0.113E+06 S/E=  8.40     
+    HSTRY 36 GENLES  Irix62 Sep 12 12:34:14 2000 Sdsq= 0.112E+06 S/E= 0.512     
+    HSTRY 37 GENLES  Irix62 Sep 12 12:34:22 2000 Sdsq= 0.112E+06 S/E= 0.118     
+    HSTRY 38 EXPEDT  Irix62 Sep 12 12:37:12 2000             LA LO              
+    HSTRY 39 POWPREF Irix62 Sep 12 12:37:15 2000                                
+    HSTRY 40 GENLES  Irix62 Sep 12 12:37:21 2000 Sdsq= 0.568E+05 S/E=  7.56     
+    HSTRY 41 EXPEDT  Irix62 Sep 12 14:16:14 2000             LA  O              
+    HSTRY 42 POWPREF Irix62 Sep 12 14:16:17 2000                                
+    HSTRY 43 GENLES  Irix62 Sep 12 14:16:21 2000 Sdsq= 0.289E+05 S/E= 0.283E-02 
+    HSTRY 44 EXPEDT  Irix62 Feb  2 17:24:52 2001 P  H        LA  O              
+    HSTRY 45 POWPREF Irix62 Feb  2 17:24:59 2001                                
+    HSTRY 46 EXPEDT  Irix62 Feb  2 17:26:52 2001 P  H        LA  O              
+    HSTRY 47 POWPREF Irix62 Feb  2 17:26:55 2001                                
+    HSTRY 48 GENLES  Irix62 Feb  2 17:27:13 2001 Sdsq= 0.270E+05 S/E=  16.7     
+    HSTRY 49 EXPEDT  Irix62 Feb  2 18:54:25 2001 P  H                           
+    HSTRY 50 POWPREF Irix62 Feb  2 18:54:28 2001                                
+    HSTRY 51 EXPEDT  Irix62 Feb  2 18:55:05 2001 P  H                           
+    HSTRY 52 POWPREF Irix62 Feb  2 18:55:09 2001                                
+    HSTRY 53 GENLES  Irix62 Feb  2 18:55:26 2001 Sdsq= 0.180E+07 S/E=  96.4     
+    HSTRY 54 EXPEDT  Irix62 Feb  2 18:56:41 2001 Bombed                         
+    HSTRY 55 EXPEDT  Irix62 Feb  5 09:55:12 2001             L   O              
+    HSTRY 56 POWPREF Irix62 Feb  5 09:55:15 2001                                
+    HSTRY 57 GENLES  Irix62 Feb  5 09:55:26 2001 Sdsq= 0.143E+07 S/E=  100.     
+    HSTRY 58 GENLES  Irix62 Feb  5 09:55:36 2001 Sdsq= 0.114E+07 S/E=  96.6     
+    HSTRY 59 GENLES  Irix62 Feb  5 09:55:45 2001 Sdsq= 0.921E+06 S/E=  92.0     
+    HSTRY 60 GENLES  Irix62 Feb  5 09:55:56 2001 Sdsq= 0.751E+06 S/E=  86.8     
+    HSTRY 61 GENLES  Irix62 Feb  5 09:56:05 2001 Sdsq= 0.620E+06 S/E=  80.9     
+    HSTRY 62 GENLES  Irix62 Feb  5 09:56:15 2001 Sdsq= 0.519E+06 S/E=  74.2     
+    HSTRY 63 GENLES  Irix62 Feb  5 09:56:26 2001 Sdsq= 0.442E+06 S/E=  67.1     
+    HSTRY 64 EXPEDT  Irix62 Feb  5 09:57:54 2001 P  H                           
+    HSTRY 65 POWPREF Irix62 Feb  5 09:57:58 2001                                
+    HSTRY 66 GENLES  Irix62 Feb  5 09:58:02 2001 Sdsq= 0.142E+06 S/E= 0.495E-02 
+    HSTRY 67 GENLES  Irix62 Feb  5 09:58:05 2001 Sdsq= 0.142E+06 S/E= 0.103E-03 
+    HSTRY 68 EXPEDT  Irix62 Feb  5 09:59:00 2001             L   O              
+    HSTRY 69 POWPREF Irix62 Feb  5 09:59:05 2001                                
+    HSTRY 70 GENLES  Irix62 Feb  5 09:59:08 2001 Sdsq= 0.140E+06 S/E= 0.182E+05 
+    HSTRY 71 EXPEDT  Irix62 Feb  5 10:00:01 2001             L   O              
+    HSTRY 72 POWPREF Irix62 Feb  5 10:00:05 2001                                
+    HSTRY 73 GENLES  Irix62 Feb  5 10:00:10 2001 Sdsq= 0.582E+05 S/E=  4.54     
+    HSTRY 74 GENLES  Irix62 Feb  5 10:00:15 2001 Sdsq= 0.576E+05 S/E=  5.15     
+    HSTRY 75 GENLES  Irix62 Feb  5 10:00:19 2001 Sdsq= 0.569E+05 S/E=  4.12     
+    HSTRY 76 GENLES  Irix62 Feb  5 10:00:24 2001 Sdsq= 0.562E+05 S/E=  3.90     
+    HSTRY 77 GENLES  Irix62 Feb  5 10:00:29 2001 Sdsq= 0.557E+05 S/E=  3.17     
+    HSTRY 78 GENLES  Irix62 Feb  5 10:00:33 2001 Sdsq= 0.551E+05 S/E=  3.54     
+    HSTRY 79 GENLES  Irix62 Feb  5 10:00:39 2001 Sdsq= 0.546E+05 S/E=  3.63     
+    HSTRY 80 GENLES  Irix62 Feb  5 10:00:44 2001 Sdsq= 0.541E+05 S/E=  3.54     
+    HSTRY 81 GENLES  Irix62 Feb  5 10:00:48 2001 Sdsq= 0.536E+05 S/E=  3.38     
+    HSTRY 82 GENLES  Irix62 Feb  5 10:00:55 2001 Sdsq= 0.531E+05 S/E=  2.60     
+    HSTRY 83 GENLES  Irix62 Feb  5 10:01:01 2001 Sdsq= 0.527E+05 S/E=  3.18     
+    HSTRY 84 EXPEDT  Irix62 Feb  5 10:01:33 2001             L   O              
+    HSTRY 85 POWPREF Irix62 Feb  5 10:01:38 2001                                
+    HSTRY 86 GENLES  Irix62 Feb  5 10:01:41 2001 Sdsq= 0.290E+05 S/E= 0.914E-04 
+    HSTRY 87 GENLES  Irix62 Feb  5 10:01:45 2001 Sdsq= 0.290E+05 S/E= 0.101E-04 
+    HSTRY 88 EXPEDT  Irix62 Feb  5 10:04:49 2001 P  H        L   O              
+    HSTRY 89 POWPREF Irix62 Feb  5 10:04:51 2001                                
+    HSTRY 90 GENLES  Irix62 Feb  5 10:04:54 2001 Sdsq= 0.104E+06 S/E= 0.219E-03 
+    HSTRY 91 GENLES  Irix62 Feb  5 10:04:59 2001 Sdsq= 0.104E+06 S/E= 0.123E-04 
+    HSTRY 92 EXPEDT  Irix62 Feb  5 10:06:15 2001             LA                 
+    HSTRY 93 POWPREF Irix62 Feb  5 10:06:21 2001                                
+    HSTRY 94 GENLES  Irix62 Feb  5 10:06:26 2001 Sdsq= 0.968E+05 S/E= 0.698E-02 
+    HSTRY 95 GENLES  Irix62 Feb  5 10:06:30 2001 Sdsq= 0.968E+05 S/E= 0.233E-02 
+    HSTRY 96 EXPEDT  Irix62 Feb  5 10:09:18 2001             LA                 
+    HSTRY 97 POWPREF Irix62 Feb  5 10:09:21 2001                                
+    HSTRY 98 GENLES  Irix62 Feb  5 10:09:24 2001 Sdsq= 0.968E+05 S/E= 0.248E-03 
+    HSTRY 99 GENLES  Irix62 Feb  5 10:09:29 2001 Sdsq= 0.968E+05 S/E= 0.136E-03 
+    HSTRY100 EXPEDT  Irix62 Feb  5 10:09:57 2001             LA                 
+    HSTRY101 POWPREF Irix62 Feb  5 10:10:00 2001                                
+    HSTRY102 GENLES  Irix62 Feb  5 10:10:03 2001 Sdsq= 0.285E+06 S/E=  295.     
+    HSTRY103 GENLES  Irix62 Feb  5 10:10:07 2001 Sdsq= 0.108E+05 S/E= 0.817E-02 
+    HSTRY104 EXPEDT  Irix62 Feb  5 10:12:23 2001             LA  O              
+    HSTRY105 POWPREF Irix62 Feb  5 10:12:27 2001                                
+    HSTRY106 GENLES  Irix62 Feb  5 10:12:31 2001 Sdsq= 0.770E+04 S/E= 0.594E-02 
+    HSTRY107 GENLES  Irix62 Feb  5 10:12:35 2001 Sdsq= 0.770E+04 S/E= 0.173E-02 
+    HSTRY108 EXPEDT  Irix62 Feb  5 10:25:22 2001             LA LO              
+    HSTRY109 POWPREF Irix62 Feb  5 10:25:28 2001                                
+    HSTRY110 GENLES  Irix62 Feb  5 10:25:33 2001 Sdsq= 0.769E+04 S/E= 0.671E-03 
+    HSTRY111 EXPEDT  Irix62 Feb  5 10:27:15 2001 P  H        LA  O              
+    HSTRY112 EXPEDT  Irix62 Feb  5 10:29:58 2001 P  H        L   O              
+    HSTRY113 POWPREF Irix62 Feb  5 10:34:48 2001                                
+    HSTRY114 GENLES  Irix62 Feb  5 10:34:54 2001 Sdsq= 0.247E+05 S/E= 0.233     
+    HSTRY115 EXPEDT  Irix62 Feb  5 10:36:16 2001             L   O              
+    HSTRY116 POWPREF Irix62 Feb  5 10:36:19 2001                                
+    HSTRY117 GENLES  Irix62 Feb  5 10:36:23 2001 Sdsq= 0.207E+05 S/E= 0.569E-03 
+    HSTRY118 GENLES  Irix62 Feb  5 10:36:29 2001 Sdsq= 0.207E+05 S/E= 0.457E-03 
+    HSTRY119 EXPEDT  Irix62 Feb  5 10:37:47 2001             L   O              
+    HSTRY120 POWPREF Irix62 Feb  5 10:37:52 2001                                
+    HSTRY121 GENLES  Irix62 Feb  5 10:37:56 2001 Sdsq= 0.202E+05 S/E= 0.326E-03 
+    HSTRY122 GENLES  Irix62 Feb  5 10:37:59 2001 Sdsq= 0.202E+05 S/E= 0.543E-03 
+    HSTRY123 GENLES  Irix62 Feb  5 10:38:03 2001 Sdsq= 0.202E+05 S/E= 0.468E-03 
+    HSTRY124 EXPEDT  Irix62 Feb  5 10:39:08 2001             L   O              
+    HSTRY125 POWPREF Irix62 Feb  5 10:39:16 2001                                
+    HSTRY126 GENLES  Irix62 Feb  5 10:39:20 2001 Sdsq= 0.205E+05 S/E= 0.605E-04 
+    HSTRY127 GENLES  Irix62 Feb  5 10:39:24 2001 Sdsq= 0.205E+05 S/E= 0.541E-03 
+    HSTRY128 EXPEDT  Irix62 Feb  5 10:40:37 2001             LA  O              
+    HSTRY129 POWPREF Irix62 Feb  5 10:40:41 2001                                
+    HSTRY130 GENLES  Irix62 Feb  5 10:40:47 2001 Sdsq= 0.257E+05 S/E=  409.     
+    HSTRY131 GENLES  Irix62 Feb  5 10:40:53 2001 Sdsq= 0.111E+05 S/E= 0.989E-01 
+    HSTRY132 GENLES  Irix62 Feb  5 10:40:58 2001 Sdsq= 0.111E+05 S/E= 0.711E-02 
+    HSTRY133 EXPEDT  Irix62 Feb  5 10:50:53 2001 P  H        LA  O              
+    HSTRY134 POWPREF Irix62 Feb  5 10:51:00 2001                                
+    HSTRY135 GENLES  Irix62 Feb  5 10:51:07 2001 Sdsq= 0.158E+05 S/E= 0.875E-02 
+    HSTRY136 EXPEDT  Irix62 Feb  5 11:06:04 2001             L   O              
+    HSTRY137 POWPREF Irix62 Feb  5 11:06:07 2001                                
+    HSTRY138 GENLES  Irix62 Feb  5 11:06:12 2001 Sdsq= 0.150E+05 S/E= 0.538E-02 
+    HSTRY139 GENLES  Irix62 Feb  5 11:06:15 2001 Sdsq= 0.150E+05 S/E= 0.208E-02 
+    HSTRY140 EXPEDT  Irix62 Feb  5 11:07:03 2001 Bombed                         
+    HSTRY141 EXPGUI 1.75 1.42 (1 changes) -- 09/15/06 10:27:31                  
+    HSTRY142 POWPREF Win32  Sep 15 10:27:31 2006                                
+    HSTRY143 POWPREF Win32  Sep 15 10:33:51 2006                                
+    HSTRY144 GENLES  Win32  Sep 15 10:33:59 2006 Sdsq= 0.147E+05 S/E= 0.500E-02 
+    HSTRY145 EXPGUI 1.75 1.42 (9 changes) -- 09/15/06 10:35:23                  
+    HSTRY146 GENLES  Win32  Sep 15 10:35:24 2006 Sdsq= 0.147E+05 S/E= 0.153E-02 
+    HSTRY147 EXPGUI 1.75 1.42 (8 changes) -- 09/15/06 14:13:23                  
+    HSTRY148 GENLES  Win32  Sep 15 14:13:24 2006 Sdsq= 0.148E+05 S/E= 0.974E-02 
+    HSTRY149 EXPGUI 1.75 1.42 (4 changes) -- 09/15/06 14:13:54                  
+    HSTRY150 POWPREF Win32  Sep 15 14:13:56 2006                                
+    HSTRY151 GENLES  Win32  Sep 15 14:13:58 2006 Sdsq= 0.148E+05 S/E= 0.103E-02 
+    HSTRY152 EXPGUI 1.75 1.42 (3 changes) -- 09/27/06 14:49:03                  
+  DSGL CDAT1  DRAD ARAD NOFO                                                    
+  GNLS  RUN on Sep 15 14:13:58 2006    Total cycles run 349       14769.        
+  GNLS CDAT1  MXCY  9 MARQ1.00CVRG-200                                          
+  GNLS SHFTS      0.02      0.00                                                
+ AFAC  F     3.539210.2825 2.6412 4.2944 1.5170  .2615 1.024326.1476  .2776 RHF 
+ AFAC  F_    18.998  .565       .0096                                           
+ AFAC  F_SIZ      1.30      1.10 1.35   67                                      
+ AFAC  F_XAB   1676  1008 503.2 49.99 26.84                                     
+ AFAC  F_XAN   .129  .119  .100  .085  .069  .053  .014  .010  .006  .006       
+ AFAC  S     6.9053 1.4679 5.203422.2151 1.4379  .2536 1.586356.1720  .8669 RHF 
+ AFAC  S_    32.064 .2847         .53                                           
+ AFAC  S_SIZ      1.47      1.27 1.85  119                                      
+ AFAC  S_XAB  15010  9402  4927 512.5 256.4                                     
+ AFAC  S_XAN   .374 1.142  .370  .847  .319  .557  .110  .124  .068  .076       
+ EXPR  HTYP1  PNT  PNT  PNT                                                     
+ EXPR  NATYP    2                                                               
+ EXPR  NHST     3                                                               
+ EXPR ATYP 1  S           1      1.47      1.27 1.85  119                       
+ EXPR ATYP 2  F           1      1.30      1.10 1.35   67                       
+ EXPR NPHAS     1    0    0    0    0    0    0    0    0                       
+ REFN GDNFT  Reduced CHI**2 =  3.259     for   33 variables                     
+ REFN RPOWD     0.0076    0.0070   4565  15040.        0.0131    0.0101    36   
+ REFN STATS  Cycle 349 There were  4565 observations. Total CHI**2 = 1.4769E+04 
+CRS1    PNAM  SF6                                                               
+CRS1   NATOM    2                                                               
+CRS1  ABC     5.887670  5.887670  5.887670    N    0                            
+CRS1  ABCSIG  0.000218  0.000218  0.000218                                      
+CRS1  ANGLES   90.0000   90.0000   90.0000                                      
+CRS1  ANGSIG    0.0000    0.0000    0.0000                                      
+CRS1  AT  1A  S         0.000000  0.000000  0.000000  1.000000S          2 055  
+CRS1  AT  1B  0.060148                                                    I  U  
+CRS1  AT  2A  F         0.251020  0.000000  0.000000  1.000000F         12 055  
+CRS1  AT  2B  0.060259  0.222518  0.222518  0.000000  0.000000  0.000000  A  U  
+CRS1  CELVOL        204.097          0.023                                      
+CRS1  CHMF 1  S             1.00                                                
+CRS1  CHMF 2  F             6.00                                                
+CRS1  SG SYM  I m -3 m                                                          
+CRS1  SPAXIS    0    0    1                                                     
+HAP1 1 ZONE     0    0    0    0                                                
+HAP1 1EXTPOW    0.00000E+00    N    0                                           
+HAP1 1NAXIS     1                                                               
+HAP1 1PHSFR      1.0000        N    0                                           
+HAP1 1PRCF      2   15   0.00100    0NNNNNYNNYNNNNNNNNNNNNNNNNNNNNNNNNNNN       
+HAP1 1PRCF 1   0.000000E+00   0.398500E+01   0.359500E+02   0.408200E+02        
+HAP1 1PRCF 2   0.000000E+00   0.224639E+03   0.000000E+00   0.000000E+00        
+HAP1 1PRCF 3   0.949546E+01   0.000000E+00   0.000000E+00   0.000000E+00        
+HAP1 1PRCF 4   0.000000E+00   0.000000E+00   0.000000E+00                       
+HAP1 1PREFO1  1.000000  1.000000  0.000000  0.000000  1.000000   NN    0    0   
+HAP1 2 ZONE     0    0    0    0                                                
+HAP1 2EXTPOW    0.00000E+00    N    0                                           
+HAP1 2NAXIS     1                                                               
+HAP1 2PHSFR      1.0000        N    0                                           
+HAP1 2PRCF      2   15   0.00100    0NNNNNYNNYNNNNNNNNNNNNNNNNNNNNNNNNNNN       
+HAP1 2PRCF 1   0.000000E+00   0.398500E+01   0.359500E+02   0.408200E+02        
+HAP1 2PRCF 2   0.000000E+00   0.117364E+03   0.000000E+00   0.000000E+00        
+HAP1 2PRCF 3   0.930138E+01   0.000000E+00   0.000000E+00   0.000000E+00        
+HAP1 2PRCF 4   0.000000E+00   0.000000E+00   0.000000E+00                       
+HAP1 2PREFO1  1.000000  1.000000  0.000000  0.000000  1.000000   NN    0    0   
+HAP1 3 ZONE     0    0    0    0                                                
+HAP1 3EXTPOW    0.00000E+00    N    0                                           
+HAP1 3NAXIS     1                                                               
+HAP1 3PHSFR      1.0000        N    0                                           
+HAP1 3PRCF      2   15   0.00100    0NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN       
+HAP1 3PRCF 1   0.000000E+00   0.261400E+01   0.337400E+02   0.495700E+02        
+HAP1 3PRCF 2   0.000000E+00   0.103499E+03   0.000000E+00   0.000000E+00        
+HAP1 3PRCF 3   0.596991E+01   0.000000E+00   0.000000E+00   0.000000E+00        
+HAP1 3PRCF 4   0.000000E+00   0.000000E+00   0.000000E+00                       
+HAP1 3PREFO1  1.000000  1.000000  0.000000  0.000000  1.000000   NN    0    0   
+HST  1  HFIL  sf6_190gsas.dat                                                   
+HST  1  HNAM  een     SF6 190K                 3-FEB-2000 12:38:37         scale
+HST  1  IFIL  gem_995.ipf                                                       
+HST  1 BANK     1                                                               
+HST  1 BIGFO   0.000000E+00                                                     
+HST  1 CHANS         0         1      1813 170244445      2720    1    0        
+HST  1 EPHAS    0    0    0    0    0    0    0    0    0    F                  
+HST  1 ICONR   1477.07      0.50      6.08                                      
+HST  1 ICONS   1477.07      0.50     10.94    Z    0                  0.50000   
+HST  1 MAXRF    5                                                               
+HST  1 NEXC     2                                                               
+HST  1 NPHAS    1    0    0    0    0    0    0    0    0                       
+HST  1 NREF    28    1.0771                                                     
+HST  1 RPOWD    0.0190    0.0128   1797  3322.6        0.0161    0.0099   16    
+HST  1 TRNGE   2.58181  10.99594                                                
+HST  1 WREXP    0.0140                                                          
+HST  1ABSCOR   0.000000E+00   0.000000E+00    N    0                            
+HST  1BAKGD     1    5    Y    0    Y    0000000000000                          
+HST  1BAKGD1   0.888965E+00  -0.572682E-01   0.585604E-01  -0.355538E-01        
+HST  1BAKGD2   0.746101E-02                                                     
+HST  1BAKGD3  -0.465722E-01  -0.358047E-01                                      
+HST  1BNKPAR    1.7750     17.95      0.00    .00000     .3000    1    1        
+HST  1CHI      90.0000                                                          
+HST  1EXC  1     0.000     1.598                                                
+HST  1EXC  2    11.000  1000.000                                                
+HST  1EXMNMX   1.00000   1.00000                                                
+HST  1HSCALE     41.891        Y    0                                           
+HST  1I ITYP    0    1.000    300.000       2                                   
+HST  1MNREF     0    1.0771                                                     
+HST  1ODMNMX   1.00000   1.00000                                                
+HST  1OMEGA     0.0000                                                          
+HST  1PHI       0.0000                                                          
+HST  1PRCF      2   15   0.001000                                               
+HST  1PRCF 1    .000000E+00    .258800E+01    .368000E+02    .425900E+02        
+HST  1PRCF 2    .000000E+00    .253200E+03    .000000E+00    .000000E+00        
+HST  1PRCF 3    .541700E+01    .000000E+00    .000000E+00    .000000E+00        
+HST  1PRCF 4    .000000E+00    .000000E+00    .000000E+00                       
+HST  1TRMNMX   1.00000   1.00000                                                
+HST  2  HFIL  sf6_190gsas.dat                                                   
+HST  2  HNAM  een     SF6 190K                 3-FEB-2000 12:38:37         scale
+HST  2  IFIL  gem_995.ipf                                                       
+HST  2 BANK     2                                                               
+HST  2 BIGFO   0.000000E+00                                                     
+HST  2 CHANS       881         1      1605 182317251      2720    1    0        
+HST  2 EPHAS    0    0    0    0    0    0    0    0    0    F                  
+HST  2 ICONR   4850.45     -2.57     -3.52                                      
+HST  2 ICONS   4850.45     -2.57     -2.46    Z    0                  0.50000   
+HST  2 MAXRF    6                                                               
+HST  2 NEXC     2                                                               
+HST  2 NPHAS    1    0    0    0    0    0    0    0    0                       
+HST  2 NREF    21    1.0303                                                     
+HST  2 RPOWD    0.0104    0.0064   1592  3726.7        0.0289    0.0145   12    
+HST  2 TRNGE   4.99336  17.99345                                                
+HST  2 WREXP    0.0068                                                          
+HST  2ABSCOR   0.000000E+00   0.000000E+00    N    0                            
+HST  2BAKGD     1   15    Y    0    Y    0000000000000                          
+HST  2BAKGD1   0.103427E+01  -0.790137E-01  -0.750149E-02   0.251836E-01        
+HST  2BAKGD2   0.135281E-01  -0.200783E-01   0.123807E-01  -0.148010E-02        
+HST  2BAKGD3   0.673317E-02  -0.224057E-02  -0.645326E-02   0.144137E-01        
+HST  2BAKGD4  -0.161376E-02  -0.370099E-02   0.666140E-02                       
+HST  2BNKPAR    1.2212     63.62      0.00    .00000     .3000    1    1        
+HST  2CHI      90.0000                                                          
+HST  2EXC  1     0.000     4.991                                                
+HST  2EXC  2    18.000  1000.000                                                
+HST  2EXMNMX   1.00000   1.00000                                                
+HST  2HSCALE     37.630        Y    0                                           
+HST  2I ITYP    0    1.000    300.000       2                                   
+HST  2MNREF     0    1.0303                                                     
+HST  2ODMNMX   1.00000   1.00000                                                
+HST  2OMEGA     0.0000                                                          
+HST  2PHI       0.0000                                                          
+HST  2PRCF      2   15   0.001000                                               
+HST  2PRCF 1    .000000E+00    .398500E+01    .359500E+02    .408200E+02        
+HST  2PRCF 2    .000000E+00    .114800E+03    .000000E+00    .000000E+00        
+HST  2PRCF 3    .410800E+01    .000000E+00    .000000E+00    .000000E+00        
+HST  2PRCF 4    .000000E+00    .000000E+00    .000000E+00                       
+HST  2TRMNMX   1.00000   1.00000                                                
+HST  3  HFIL  sf6_190gsas.dat                                                   
+HST  3  HNAM  een     SF6 190K                 3-FEB-2000 12:38:37         scale
+HST  3  IFIL  gem_995.ipf                                                       
+HST  3 BANK     3                                                               
+HST  3 BIGFO   0.000000E+00                                                     
+HST  3 CHANS      1413         1      1186  24084330      2720    1    0        
+HST  3 EPHAS    0    0    0    0    0    0    0    0    0    F                  
+HST  3 ICONR   6644.63     -3.99     -2.68                                      
+HST  3 ICONS   6644.63     -3.99     -2.92    Z    0                  0.50000   
+HST  3 MAXRF    4                                                               
+HST  3 NEXC     2                                                               
+HST  3 NPHAS    1    0    0    0    0    0    0    0    0                       
+HST  3 NREF    19    1.0523                                                     
+HST  3 RPOWD    0.0061    0.0042   1176  7991.2        0.0064    0.0051    8    
+HST  3 TRNGE   6.98814  17.99775                                                
+HST  3 WREXP    0.0023                                                          
+HST  3ABSCOR   0.000000E+00   0.000000E+00    N    0                            
+HST  3BAKGD     1   10    N    0    Y    0000000000000                          
+HST  3BAKGD1   0.124840E+01  -0.617876E-01  -0.556794E-01  -0.112379E-01        
+HST  3BAKGD2   0.165951E-01  -0.887929E-02   0.169252E-01   0.420097E-02        
+HST  3BAKGD3  -0.110550E-01   0.812182E-02                                      
+HST  3BNKPAR    1.3793      91.37     0.00    .00000     .3000    1    1        
+HST  3CHI      90.0000                                                          
+HST  3EXC  1     0.000     6.985                                                
+HST  3EXC  2    18.000  1000.000                                                
+HST  3EXMNMX   1.00000   1.00000                                                
+HST  3HSCALE     41.000        Y    0                                           
+HST  3I ITYP    0    1.000    300.000       2                                   
+HST  3MNREF     0    1.0523                                                     
+HST  3ODMNMX   1.00000   1.00000                                                
+HST  3OMEGA     0.0000                                                          
+HST  3PHI       0.0000                                                          
+HST  3PRCF      2   15   0.001000                                               
+HST  3PRCF 1    .000000E+00    .261400E+01    .337400E+02    .495700E+02        
+HST  3PRCF 2    .000000E+00    .765300E+02    .000000E+00    .000000E+00        
+HST  3PRCF 3    .370900E+01    .000000E+01    .000000E+00    .000000E+00        
+HST  3PRCF 4    .000000E+00    .000000E+00    .000000E+00                       
+HST  3TRMNMX   1.00000   1.00000                                                
+ZZZZZZZZZZZZ  Last EXP file record                                              
+CIF AUTHOR    matt                                                              
+HST  1 INAME  gem                                                               
+HST  2 INAME  gem                                                               
+HST  3 INAME  gem                                                               
+    HSTRY153 POWPREF MacOSX Jun 21 09:41:57 2012                                
+    HSTRY154 POWPREF MacOSX Jun 21 12:34:06 2012                                
+    HSTRY155 POWPREF MacOSX Jun 21 12:34:26 2012                                
+    HSTRY156 POWPREF MacOSX Jun 21 12:38:30 2012                                

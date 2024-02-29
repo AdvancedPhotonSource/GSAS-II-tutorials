@@ -1,0 +1,189 @@
+********************************************************************************
+   General Structure Analysis System-II Crystal Structure Refinement
+              by Robert B. Von Dreele & Brian H. Toby
+                Argonne National Laboratory(C), 2010
+ This product includes software developed by the UChicago Argonne, LLC,
+            as Operator of Argonne National Laboratory.
+                          Please cite:
+   B.H. Toby & R.B. Von Dreele, J. Appl. Cryst. 46, 544-549 (2013)
+********************************************************************************
+ Least squares controls:
+ Refinement type: analytic Hessian
+ Maximum number of cycles: 10
+ Regularize hydrogens (if any): False
+ Initial shift factor: 1.000
+ Sequential refinement controls:
+ Copy of histogram results to next: False
+ Process histograms in reverse order: False
+
+ Starting refinement with 18 Frozen variables
+
+
+ Refinement results for histogram id 0: PWDR OH_00.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ The following refined variables have previously been frozen due to exceeding limits:
+	0::AUiso:2
+ Number of function calls: 4 No. of observations: 10708 No. of parameters: 25 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    2.257s,    2.257s/cycle, for 1 cycles
+ wR =   13.60%, chi**2 =      11902.4, GOF =   1.06
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 13.60% on 10708 observations in this histogram
+ Other residuals: R = 10.23%, R-bkg = 8.93%, wR-bkg = 13.60% wRmin = 12.90%
+
+ Refinement results for histogram id 1: PWDR OH_04.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ The following refined variables have previously been frozen due to exceeding limits:
+	0::AUiso:2
+ Number of function calls: 3 No. of observations: 10708 No. of parameters: 25 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    2.086s,    2.086s/cycle, for 1 cycles
+ wR =   13.26%, chi**2 =      11345.2, GOF =   1.03
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 13.26% on 10708 observations in this histogram
+ Other residuals: R = 9.99%, R-bkg = 8.64%, wR-bkg = 13.26% wRmin = 12.89%
+
+ Refinement results for histogram id 2: PWDR OH_09.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ The following refined variables have previously been frozen due to exceeding limits:
+	0::AUiso:2
+ Number of function calls: 8 No. of observations: 10708 No. of parameters: 25 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    5.272s,    2.636s/cycle, for 2 cycles
+ wR =   12.94%, chi**2 =      10846.6, GOF =   1.01
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 12.94% on 10708 observations in this histogram
+ Other residuals: R = 9.60%, R-bkg = 8.11%, wR-bkg = 12.94% wRmin = 12.86%
+
+ Refinement results for histogram id 3: PWDR OH_14.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ The following refined variables have previously been frozen due to exceeding limits:
+	0::AUiso:2
+ Number of function calls: 8 No. of observations: 10708 No. of parameters: 25 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    4.205s,    2.102s/cycle, for 2 cycles
+ wR =   12.96%, chi**2 =      10711.5, GOF =   1.00
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 12.96% on 10708 observations in this histogram
+ Other residuals: R = 9.66%, R-bkg = 8.10%, wR-bkg = 12.96% wRmin = 12.96%
+
+ Refinement results for histogram id 4: PWDR OH_19.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ The following refined variables have previously been frozen due to exceeding limits:
+	0::AUiso:2
+ Number of function calls: 4 No. of observations: 10708 No. of parameters: 25 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    2.713s,    2.713s/cycle, for 1 cycles
+ wR =   13.16%, chi**2 =      10875.4, GOF =   1.01
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 13.16% on 10708 observations in this histogram
+ Other residuals: R = 9.64%, R-bkg = 8.03%, wR-bkg = 13.16% wRmin = 13.06%
+
+ Refinement results for histogram id 5: PWDR OH_22.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 8 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    5.012s,    2.506s/cycle, for 2 cycles
+ wR =   13.98%, chi**2 =      11925.9, GOF =   1.06
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 13.98% on 10708 observations in this histogram
+ Other residuals: R = 10.33%, R-bkg = 8.88%, wR-bkg = 13.98% wRmin = 13.24%
+
+ Refinement results for histogram id 6: PWDR OH_24.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ The following refined variables have previously been frozen due to exceeding limits:
+	0::AUiso:2
+ Number of function calls: 3 No. of observations: 10708 No. of parameters: 25 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    2.690s,    2.690s/cycle, for 1 cycles
+ wR =   14.48%, chi**2 =      12638.7, GOF =   1.09
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 14.48% on 10708 observations in this histogram
+ Other residuals: R = 10.83%, R-bkg = 9.62%, wR-bkg = 14.48% wRmin = 13.33%
+
+ Refinement results for histogram id 7: PWDR OH_26.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ The following refined variables have previously been frozen due to exceeding limits:
+	0::AUiso:2
+ Number of function calls: 8 No. of observations: 10708 No. of parameters: 25 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    4.857s,    2.428s/cycle, for 2 cycles
+ wR =   15.48%, chi**2 =      14157.5, GOF =   1.15
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 15.48% on 10708 observations in this histogram
+ Other residuals: R = 11.59%, R-bkg = 10.44%, wR-bkg = 15.48% wRmin = 13.46%
+
+ Refinement results for histogram id 8: PWDR OH_28.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 3 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    2.352s,    2.352s/cycle, for 1 cycles
+ wR =   15.18%, chi**2 =      13338.8, GOF =   1.12
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 15.18% on 10708 observations in this histogram
+ Other residuals: R = 11.58%, R-bkg = 10.76%, wR-bkg = 15.18% wRmin = 13.60%
+
+ Refinement results for histogram id 9: PWDR OH_30.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 5 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    3.118s,    3.118s/cycle, for 1 cycles
+ wR =   15.16%, chi**2 =      13262.8, GOF =   1.11
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 15.16% on 10708 observations in this histogram
+ Other residuals: R = 11.28%, R-bkg = 10.27%, wR-bkg = 15.16% wRmin = 13.62%
+
+ Refinement results for histogram id 10: PWDR OH_32.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 4 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    3.121s,    3.121s/cycle, for 1 cycles
+ wR =   15.66%, chi**2 =      13991.6, GOF =   1.14
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 15.66% on 10708 observations in this histogram
+ Other residuals: R = 11.98%, R-bkg = 10.94%, wR-bkg = 15.66% wRmin = 13.70%
+
+ Refinement results for histogram id 11: PWDR OH_35.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 11 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    7.358s,    2.453s/cycle, for 3 cycles
+ wR =   15.19%, chi**2 =      13036.5, GOF =   1.10
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 15.19% on 10708 observations in this histogram
+ Other residuals: R = 11.77%, R-bkg = 11.01%, wR-bkg = 15.19% wRmin = 13.77%
+
+ Refinement results for histogram id 12: PWDR OH_38.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 8 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    5.510s,    2.755s/cycle, for 2 cycles
+ wR =   15.41%, chi**2 =        13270, GOF =   1.11
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 15.41% on 10708 observations in this histogram
+ Other residuals: R = 12.12%, R-bkg = 11.43%, wR-bkg = 15.41% wRmin = 13.84%
+
+ Refinement results for histogram id 13: PWDR OH_41.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 5 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    3.448s,    3.448s/cycle, for 1 cycles
+ wR =   14.99%, chi**2 =      12476.4, GOF =   1.08
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 14.99% on 10708 observations in this histogram
+ Other residuals: R = 11.69%, R-bkg = 10.95%, wR-bkg = 14.99% wRmin = 13.89%
+
+ Refinement results for histogram id 14: PWDR OH_45.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 4 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    3.075s,    3.075s/cycle, for 1 cycles
+ wR =   16.10%, chi**2 =        14359, GOF =   1.16
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 16.10% on 10708 observations in this histogram
+ Other residuals: R = 12.84%, R-bkg = 12.45%, wR-bkg = 16.10% wRmin = 13.91%
+
+ Refinement results for histogram id 15: PWDR OH_49.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 4 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    3.057s,    3.057s/cycle, for 1 cycles
+ wR =   16.19%, chi**2 =      14574.8, GOF =   1.17
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 16.19% on 10708 observations in this histogram
+ Other residuals: R = 13.12%, R-bkg = 12.90%, wR-bkg = 16.19% wRmin = 13.88%
+
+ Refinement results for histogram id 16: PWDR OH_53.fxye Bank 1
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 11 No. of observations: 10708 No. of parameters: 26 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    7.420s,    2.473s/cycle, for 3 cycles
+ wR =   16.54%, chi**2 =      15393.6, GOF =   1.20
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 16.54% on 10708 observations in this histogram
+ Other residuals: R = 13.39%, R-bkg = 13.24%, wR-bkg = 16.54% wRmin = 13.79%
+
+Ending refinement with 18 Frozen variables (0 added now)

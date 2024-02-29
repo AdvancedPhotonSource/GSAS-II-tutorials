@@ -1,0 +1,26 @@
+type:PWDR
+wavelength:0.177
+calibrant:
+distance:1057.3
+center:[204.839, 206.452]
+tilt:0.817
+rotation:-102.16
+azmthOff:0.0
+fullIntegrate:True
+LRazimuth:[0, 360]
+IOtth:[2.0, 10.6]
+outChannels:1500
+outAzimuths:36
+invert_x:False
+invert_y:True
+DetDepth:0.0
+calibskip:0
+pixLimit:20
+cutoff:10
+calibdmin:0.5
+binType:2-theta
+SampleShape:Cylinder
+PolaVal:[0.99, False]
+SampleAbs:[0.0, False]
+dark image:['', -1.0]
+background image:['', -1.0]

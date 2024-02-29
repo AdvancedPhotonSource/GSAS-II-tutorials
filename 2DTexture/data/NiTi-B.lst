@@ -1,0 +1,77 @@
+********************************************************************************
+   General Structure Analysis System-II Crystal Structure Refinement
+              by Robert B. Von Dreele & Brian H. Toby
+                Argonne National Laboratory(C), 2010
+ This product includes software developed by the UChicago Argonne, LLC,
+            as Operator of Argonne National Laboratory.
+                          Please cite:
+   B.H. Toby & R.B. Von Dreele, J. Appl. Cryst. 46, 544-549 (2013)
+********************************************************************************
+ Least squares controls:
+ Refinement type: analytic Hessian
+ Maximum number of cycles: 3
+ Regularize hydrogens (if any): False
+ Initial shift factor: 1.000
+ Sequential refinement controls:
+ Copy of histogram results to next: False
+ Process histograms in reverse order: False
+
+ Refinement results for histogram id 0: PWDR NDC5_01588_1.ge2 #0001 Azm= 0.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 7 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    2.062s,    0.516s/cycle, for 4 cycles
+ wR =    5.36%, chi**2 =       804.25, GOF =   0.74
+
+ Refinement results for histogram id 1: PWDR NDC5_01588_1.ge2 #0001 Azm= 10.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 5 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    1.422s,    0.711s/cycle, for 2 cycles
+ wR =    3.96%, chi**2 =      389.385, GOF =   0.51
+
+ Refinement results for histogram id 2: PWDR NDC5_01588_1.ge2 #0001 Azm= 20.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 5 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    1.619s,    0.810s/cycle, for 2 cycles
+ wR =    4.28%, chi**2 =      410.489, GOF =   0.53
+
+ Refinement results for histogram id 3: PWDR NDC5_01588_1.ge2 #0001 Azm= 30.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 3 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    0.695s,    0.695s/cycle, for 1 cycles
+ wR =    4.45%, chi**2 =      444.877, GOF =   0.55
+
+ Refinement results for histogram id 4: PWDR NDC5_01588_1.ge2 #0001 Azm= 40.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 4 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    0.906s,    0.906s/cycle, for 1 cycles
+ wR =    5.92%, chi**2 =      821.166, GOF =   0.75
+
+ Refinement results for histogram id 5: PWDR NDC5_01588_1.ge2 #0001 Azm= 50.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 6 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    1.234s,    1.234s/cycle, for 1 cycles
+ wR =    6.36%, chi**2 =      978.744, GOF =   0.82
+
+ Refinement results for histogram id 6: PWDR NDC5_01588_1.ge2 #0001 Azm= 60.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 6 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    1.234s,    1.234s/cycle, for 1 cycles
+ wR =    7.83%, chi**2 =      1433.97, GOF =   0.99
+
+ Refinement results for histogram id 7: PWDR NDC5_01588_1.ge2 #0001 Azm= 70.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 3 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    0.703s,    0.703s/cycle, for 1 cycles
+ wR =    7.71%, chi**2 =      1262.47, GOF =   0.93
+
+ Refinement results for histogram id 8: PWDR NDC5_01588_1.ge2 #0001 Azm= 80.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 7 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    1.954s,    0.489s/cycle, for 4 cycles
+ wR =    8.10%, chi**2 =      1394.97, GOF =   0.97
+
+ Refinement results for histogram id 9: PWDR NDC5_01588_1.ge2 #0001 Azm= 90.00
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 5 No. of observations: 1500 No. of parameters: 29 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    1.062s,    1.062s/cycle, for 1 cycles
+ wR =   10.69%, chi**2 =      2561.53, GOF =   1.32

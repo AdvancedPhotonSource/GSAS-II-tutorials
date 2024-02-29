@@ -1,0 +1,31 @@
+type:PWDR
+color:Paired
+wavelength:0.241591903732
+calibrant:Si    SRM640c
+distance:799.996
+center:[207.19238005247112, 204.69313574215306]
+Oblique:[0.5, False]
+tilt:-0.208383931505
+rotation:3.38243362973
+azmthOff:0.0
+fullIntegrate:True
+LRazimuth:[0.0, 360.0]
+setdist:799.996
+IOtth:[5.0, 50.0]
+outChannels:2500
+outAzimuths:1
+invert_x:False
+invert_y:True
+DetDepth:0.0629011186503
+calibskip:0
+pixLimit:2
+cutoff:5.0
+calibdmin:0.997023782168
+Flat Bkg:0.0
+varyList:{'dist': False, 'det-X': True, 'det-Y': True, 'tilt': True, 'phi': True, 'dep': True, 'wave': True}
+binType:2-theta
+SampleShape:Cylinder
+PolaVal:[1.0, False]
+SampleAbs:[0.0, False]
+dark image:['', -1.0]
+background image:['', -1.0]

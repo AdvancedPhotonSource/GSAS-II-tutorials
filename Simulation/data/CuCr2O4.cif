@@ -1,0 +1,74 @@
+data_2p10h
+
+# phase info for CuCr2O4 follows
+_pd_phase_name  CuCr2O4
+_cell_length_a  7.712699
+_cell_length_b  8.543299
+_cell_length_c  8.536427
+_cell_angle_alpha  90
+_cell_angle_beta   90
+_cell_angle_gamma  90
+_cell_volume  562.481
+_symmetry_cell_setting  orthorhombic
+_symmetry_space_group_name_H-M  Fddd
+loop_
+    _space_group_symop_id
+    _space_group_symop_operation_xyz
+     1  x,y,z
+     2  -x,1/4+y,1/4+z
+     3  1/4+x,-y,1/4+z
+     4  3/4-x,1/4-y,1/2+z
+     5  -x,-y,-z
+     6  x,3/4-y,3/4-z
+     7  3/4-x,y,3/4-z
+     8  1/4+x,3/4+y,1/2-z
+     9  x,1/2+y,1/2+z
+    10  -x,3/4+y,3/4+z
+    11  1/4+x,1/2-y,3/4+z
+    12  3/4-x,3/4-y,z
+    13  -x,1/2-y,1/2-z
+    14  x,1/4-y,1/4-z
+    15  3/4-x,1/2+y,1/4-z
+    16  1/4+x,1/4+y,-z
+    17  1/2+x,y,1/2+z
+    18  1/2-x,1/4+y,3/4+z
+    19  3/4+x,-y,3/4+z
+    20  1/4-x,1/4-y,z
+    21  1/2-x,-y,1/2-z
+    22  1/2+x,3/4-y,1/4-z
+    23  1/4-x,y,1/4-z
+    24  3/4+x,3/4+y,-z
+    25  1/2+x,1/2+y,z
+    26  1/2-x,3/4+y,1/4+z
+    27  3/4+x,1/2-y,1/4+z
+    28  1/4-x,3/4-y,1/2+z
+    29  1/2-x,1/2-y,-z
+    30  1/2+x,1/4-y,3/4-z
+    31  1/4-x,1/2+y,3/4-z
+    32  3/4+x,1/4+y,1/2-z
+
+# ATOMIC COORDINATES AND DISPLACEMENT PARAMETERS
+loop_ 
+   _atom_site_label
+   _atom_site_type_symbol
+   _atom_site_fract_x
+   _atom_site_fract_y
+   _atom_site_fract_z
+   _atom_site_occupancy
+   _atom_site_adp_type
+   _atom_site_U_iso_or_equiv
+   _atom_site_symmetry_multiplicity
+Cu     Cu   0.12500     0.12500     0.12500     1.000      Uiso 0.000      8   
+Cr     Cr   0.50000     0.50000     0.50000     1.000      Uiso 0.000      16  
+O      O    0.24582     0.26828     0.26736     1.000      Uiso -0.004     32  
+
+loop_  _atom_type_symbol _atom_type_number_in_cell
+  Cr   16
+  Cu   8
+  O    32
+
+# Note that Z affects _cell_formula_sum and _weight
+_cell_formula_units_Z  8
+_chemical_formula_sum  "Cr2 Cu O4"
+_chemical_formula_weight  231.53
+#--eof--eof--eof--eof--eof--eof--eof--eof--eof--eof--eof--eof--eof--eof--eof--#

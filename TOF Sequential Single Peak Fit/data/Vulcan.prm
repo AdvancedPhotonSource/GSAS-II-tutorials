@@ -1,0 +1,40 @@
+#Vulcan prm file from HR template
+#ID Si 5mm loadframe fall 2013 Si 26299 Vanadium 26298 30 Hz
+INS   BANK      2                                                               
+INS   FPATH1     43.754                                                         
+INS   HTYPE   PNTR                                                              
+INS   NSPEC     6                                                               
+INS  1 ICONS  16369.20     -0.52      0.0000    0     0.000                     
+INS  1 IRAD     0                                                               
+INS  1BNKPAR    2.0000    -90.00      0.00    .00000     .3000    1    1        
+INS  1I HEAD  No title                                                          
+INS  1I ITYP   10    7.5000   42.0000     42432                                 
+INS  1INAME   Vulcan                                                            
+INS  1PRCF1     3   21   0.00050                                                
+INS  1PRCF11   0.100000E+01   0.106100E+00   0.790989E-02   0.000000E+00        
+INS  1PRCF12   0.111320E+04   0.929803E+02   0.000000E+00   0.859223E+01        
+INS  1PRCF13  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+INS  1PRCF14  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+INS  1PRCF15  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+INS  1PRCF16  0.000000E+000                                                     
+INS  1  MFIL  26298-s.gda                                                       
+INS  1BAKGD     1    6    Y    0    Y                                           
+INS  1BAKGD1   1.000000E+01   0.000000E+00   0.000000E+00   0.000000E+00        
+INS  1BAKGD2   0.000000E+00   0.000000E+00                                      
+INS  2 ICONS  16385.10      0.05      0.0000    0     0.000                     
+INS  2 IRAD     0                                                               
+INS  2BNKPAR    2.0000     90.00      0.00    .00000     .3000    1    1        
+INS  2I HEAD  No title                                                          
+INS  2I ITYP   10    7.5000   42.0000     40348                                 
+INS  2INAME   Vulcan                                                            
+INS  2PRCF1     3   21   0.00050                                                
+INS  2PRCF11   0.100000E+01   0.393652E-01   0.913634E-02   0.000000E+00        
+INS  2PRCF12   0.604307E+03   0.136579E+03   0.000000E+00   0.632257E+01        
+INS  2PRCF13  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+INS  2PRCF14  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+INS  2PRCF15  0.000000E+000  0.000000E+000  0.000000E+000  0.000000E+000        
+INS  2PRCF16  0.000000E+000                                                     
+INS  2  MFIL  26298-s.gda                                                       
+INS  2BAKGD     1    6    Y    0    Y                                           
+INS  2BAKGD1   1.000000E+01   0.000000E+00   0.000000E+00   0.000000E+00        
+INS  2BAKGD2   0.000000E+00   0.000000E+00                                      

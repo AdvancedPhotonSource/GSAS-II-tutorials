@@ -1,0 +1,262 @@
+********************************************************************************
+   General Structure Analysis System-II Crystal Structure Refinement
+              by Robert B. Von Dreele & Brian H. Toby
+                Argonne National Laboratory(C), 2010
+ This product includes software developed by the UChicago Argonne, LLC,
+            as Operator of Argonne National Laboratory.
+                          Please cite:
+   B.H. Toby & R.B. Von Dreele, J. Appl. Cryst. 46, 544-549 (2013)
+********************************************************************************
+ Least squares controls:
+ Refinement type: analytic Hessian
+ Maximum number of cycles: 3
+ Regularize hydrogens (if any): False
+ Initial shift factor: 1.000
+
+ Phases:
+
+ Phase name: CuCr2O4
+=======================================================================================================================================
+
+ X-ray scattering factors:
+   Symbol     fa                                      fb                                      fc
+---------------------------------------------------------------------------------------------------
+ Cu        13.33800   7.16760   5.61580   1.67350   3.58280   0.24700  11.39660  64.81260   1.19100
+ Cr        10.64060   7.35370   3.32400   1.49220   6.10380   0.39200  20.26260  98.73990   1.18320
+ O          3.04850   2.28680   1.54630   0.86700  13.27710   5.70110   0.32390  32.90890   0.25080
+
+ Neutron scattering factors:
+   Symbol   isotope       mass       b       resonant terms
+---------------------------------------------------------------------------------------------------
+ Cu      Nat. Abund.     63.546    0.772
+ Cr      Nat. Abund.     51.996    0.363
+ O       Nat. Abund.     15.999    0.581
+
+ Space Group: F d d d
+ The lattice is centrosymmetric F-centered orthorhombic
+ The Laue symmetry is mmm
+ The lattice point group is mmm
+ Multiplicity of a general site is 32
+ The inversion center is located at 0,0,0
+ 
+ The equivalent positions are:
+
+ (0,0,0; 0,1/2,1/2; 1/2,0,1/2; 1/2,1/2,0)+
+
+ ( 1)     X,     Y,     Z 
+ ( 2)    -X, 1/4+Y, 1/4+Z 
+ ( 3) 1/4+X,    -Y, 1/4+Z 
+ ( 4) 3/4-X, 1/4-Y, 1/2+Z 
+
+ Atoms:
+   name    type  refine?   x         y         z      frac site sym  mult I/A   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+     Cu     Cu     XU   0.12500   0.12500   0.12500   1.000    222    8    I 0.00015                                                
+     Cr     Cr     XU   0.50000   0.50000   0.50000   1.000     -1   16    I 0.00005                                                
+      O      O     XU   0.24576   0.26834   0.26731   1.000      1   32    I-0.00419                                                
+
+ Unit cell: a = 7.71269 b = 8.54329 c = 8.53643 alpha = 90.000 beta = 90.000 gamma = 90.000 volume = 562.480 Refine? True
+
+ Spherical harmonics texture: Order:0
+
+ Phase name: CuO
+=======================================================================================================================================
+
+ X-ray scattering factors:
+   Symbol     fa                                      fb                                      fc
+---------------------------------------------------------------------------------------------------
+ Cu+2      11.81680   7.11181   5.78135   1.14523   3.37484   0.24408   7.98760  19.89700   1.14431
+ O-2        3.76936   2.53342   1.91579   1.55094  15.07970   6.30430  40.34450   0.31291   0.22789
+
+ Neutron scattering factors:
+   Symbol   isotope       mass       b       resonant terms
+---------------------------------------------------------------------------------------------------
+ Cu+2    Nat. Abund.     63.546    0.772
+ O-2     Nat. Abund.     15.999    0.581
+
+ Space Group: C 1 2/c 1
+ The lattice is centrosymmetric C-centered monoclinic
+ The Laue symmetry is 2/m
+ The lattice point group is 2/m
+ Multiplicity of a general site is 8
+ The unique monoclinic axis is b
+ The inversion center is located at 0,0,0
+ 
+ The equivalent positions are:
+
+ (0,0,0; 1/2,1/2,0)+
+
+ ( 1)     X,     Y,     Z 
+ ( 2)    -X,     Y, 1/2-Z 
+
+ Atoms:
+   name    type  refine?   x         y         z      frac site sym  mult I/A   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+    Cu1   Cu+2          0.25000   0.25000   0.00000   1.000     -1    4    I 0.00100                                                
+     O1    O-2          0.00000   0.41840   0.25000   1.000   2(y)    4    I 0.00100                                                
+
+ Unit cell: a = 4.67959 b = 3.42073 c = 5.12526 alpha = 90.000 beta = 99.828 gamma = 90.000 volume = 80.839 Refine? True
+
+ Spherical harmonics texture: Order:0
+
+ Phase: CuCr2O4 in histogram: PWDR OH_00.fxye Bank 1
+=======================================================================================================================================
+ Phase fraction  :     1.0000 Refine? False
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       3.196 Refine? True
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model:  uniaxial equatorial:      1823.4 Refine? True axial:       978.5 Refine? True
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33
+ values:           0           0           0
+ refine:       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: CuO in histogram: PWDR OH_00.fxye Bank 1
+=======================================================================================================================================
+ Phase fraction  :     0.0283 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D13
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Histogram: PWDR OH_00.fxye Bank 1 histogram Id: 0
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     4.68 deg to    26.10 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 0.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        0.5162        0.0000       21.6484        0.0000
+ refine:          True         False          True         False
+
+ Instrument Parameters:
+ name  :     Azimuth        Bank         Lam    Polariz.        SH/L           U           V
+ value :    0.000000    1.000000    0.413263    0.990000    0.002000    1.163000   -0.126000
+ refine:                   False       False       False       False       False       False
+
+ name  :           W           X           Y           Z        Zero
+ value :    0.063000    0.000000    0.000000    0.000000    0.000000
+ refine:       False       False       False       False       False
+
+ Background function: chebyschev-1 Refine? True
+ Coefficients:     12.117    -3.093    -2.064     1.007    -2.356     0.188
+
+ Single peak coefficients
+ names :   BkPkpos refine? BkPkint refine? BkPksig refine? BkPkgam refine?
+ peak 0:       5.066  True   37197.208  True   14317.430  True       0.100 False
+
+ Refinement results:
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 5 No. of observations: 10708 No. of parameters: 28 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    2.168s,    2.168s/cycle, for 1 cycles
+ wR =   13.99%, chi**2 =      12594.1, GOF =   1.09
+
+ Phases:
+ Result for phase: CuCr2O4
+=======================================================================================================================================
+ Reciprocal metric tensor: 
+  names :            A11            A22            A33            A12            A13            A23
+  values:    0.016810777    0.013700923    0.013722957    0.000000000    0.000000000    0.000000000
+  esds  :    0.000000151    0.000000125    0.000000148                                             
+ New unit cell:
+  names :           a           b           c       alpha        beta       gamma      Volume
+  values:    7.712694    8.543289    8.536427     90.0000     90.0000     90.0000     562.480
+  esds  :    0.000035    0.000039    0.000046                                           0.006
+
+ Atoms:
+   name      x         y         z      frac   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+     Cu     Cu:
+ values:   0.12500   0.12500   0.12500   1.000 0.00018
+ sig   :                                       0.00022
+     Cr     Cr:
+ values:   0.50000   0.50000   0.50000   1.000 0.00008
+ sig   :                                       0.00023
+      O      O:
+ values:   0.24575   0.26835   0.26730   1.000-0.00419
+ sig   :   0.00022   0.00042   0.00045         0.00048
+
+ Density: 5.468230.4 g/cm**3
+ Result for phase: CuO
+=======================================================================================================================================
+ Reciprocal metric tensor: 
+  names :            A11            A22            A33            A12            A13            A23
+  values:    0.047035002    0.085458418    0.039210963    0.000000000    0.014659677    0.000000000
+  esds  :    0.000007356    0.000013335    0.000007412                   0.000008278               
+ New unit cell:
+  names :           a           b           c       alpha        beta       gamma      Volume
+  values:    4.679605    3.420760    5.125261     90.0000     99.8273     90.0000      80.840
+  esds  :    0.001025    0.000267    0.001246                  0.0056                   0.007
+
+ Atoms:
+   name      x         y         z      frac   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+    Cu1   Cu+2:
+ values:   0.25000   0.25000   0.00000   1.000 0.00100
+ sig   :                                              
+     O1    O-2:
+ values:   0.00000   0.41840   0.25000   1.000 0.00100
+ sig   :                                              
+
+ Density: 6.535732.4 g/cm**3
+
+ Phase: CuCr2O4 in histogram: PWDR OH_00.fxye Bank 1
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 3.68%, 7.31% on 102 reflections
+ Durbin-Watson statistic = 0.776
+ Bragg intensity sum = 4.25e+05
+
+ Size model:     isotropic equatorial:     3.19039, sig:  0.4131 LG mix coeff.:      1.0000
+
+ Mustrain model:  uniaxial
+ equatorial:      1823.3, sig:    19.8 axial:       978.3, sig:    15.6 LG mix coeff.:      1.0000
+
+ Phase: CuO in histogram: PWDR OH_00.fxye Bank 1
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 23.01%, 57.96% on 55 reflections
+ Durbin-Watson statistic = 0.776
+ Bragg intensity sum = 2.56e+03
+ Phase fraction  :    0.02829, sig    0.00108 Weight fraction  :  0.00484, sig    0.00018
+
+ Histogram: PWDR OH_00.fxye Bank 1 histogram Id: 0
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 13.99% on 10708 observations in this histogram
+ Other residuals: R = 10.32%, R-bkg = 8.87%, wR-bkg = 13.99% wRmin = 12.90%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Cu       Cr        O     Cu+2      O-2
+ f'     :    0.244    0.162    0.002    0.244    0.002
+ f"     :    0.471    0.222    0.002    0.471    0.002
+
+ Sample Parameters:
+ names :         Scale    Absorption     DisplaceX     DisplaceY
+ values:        0.5165        0.0000       21.6424        0.0000
+ sig   :        0.0016                      1.5933              
+
+ Background function: chebyschev-1
+ value :      12.03    -2.919    -2.199     1.104    -2.409    0.2122
+ sig   :     0.8414     1.604     1.269    0.9119    0.4867    0.2409
+
+ Single peak coefficients:
+ peak no.    BkPkpos        esd        BkPkint        esd        BkPksig        esd        BkPkgam        esd     
+    0         5.0589      0.1482     37660.928    9942.746     14428.059    2616.655         0.100            
+ Background sums: empirical 1.38e+05, Debye 0, peaks 3.77e+04, Total 1.76e+05

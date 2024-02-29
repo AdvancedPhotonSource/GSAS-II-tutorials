@@ -1,0 +1,267 @@
+********************************************************************************
+   General Structure Analysis System-II Crystal Structure Refinement
+              by Robert B. Von Dreele & Brian H. Toby
+                Argonne National Laboratory(C), 2010
+ This product includes software developed by the UChicago Argonne, LLC,
+            as Operator of Argonne National Laboratory.
+                          Please cite:
+   B.H. Toby & R.B. Von Dreele, J. Appl. Cryst. 46, 544-549 (2013)
+********************************************************************************
+ Least squares controls:
+ Refinement type: analytic Hessian
+ Maximum number of cycles: 3
+ Regularize hydrogens (if any): False
+ Initial shift factor: 1.000
+
+ Phases:
+
+ Phase name: La0.8Ca0.2MnO3 at 50 mag
+=======================================================================================================================================
+
+ X-ray scattering factors:
+   Symbol     fa                                      fb                                      fc
+---------------------------------------------------------------------------------------------------
+ Mn+3       9.84521   7.87194   3.56531   0.32361   4.91797   0.29439  10.81710  24.12810   0.39397
+
+ Neutron scattering factors:
+   Symbol   isotope       mass       b       resonant terms
+---------------------------------------------------------------------------------------------------
+ Mn+3    Nat. Abund.     54.938   -0.375
+
+ <j0> Magnetic scattering factors:
+   Symbol     mfa                                    mfb                                     mfc
+---------------------------------------------------------------------------------------------------
+ Mn+3       0.41980   0.60540   0.92410   0.00000  14.28300   5.46900  -0.00900   0.00000  -0.94980
+
+ <j2> Magnetic scattering factors:
+   Symbol     nfa                                    nfb                                     nfc
+---------------------------------------------------------------------------------------------------
+ Mn+3       1.24270   1.95670   0.57320   0.00000  14.99700   6.11800   2.25800   0.00000   0.00310
+
+ Space Group: P b n m
+ The lattice is centrosymmetric primitive orthorhombic
+ The Laue symmetry is mmm
+ The lattice point group is mmm
+ Multiplicity of a general site is 8
+ The inversion center is located at 0,0,0
+ 
+ The equivalent positions are:
+
+ ( 1)     X,     Y,     Z 
+ ( 2) 1/2-X, 1/2+Y,     Z 
+ ( 3) 1/2+X, 1/2-Y, 1/2+Z 
+ ( 4)    -X,    -Y, 1/2+Z 
+
+ Atoms:
+   name    type  refine?   x         y         z      frac site sym  mult I/A   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+     Mn   Mn+3     UM   0.50000   0.00000   0.00000   1.000     -1    4    I 0.00317                                                
+
+ Magnetic moments:
+   name    type  refine?  Mx        My        Mz    
+---------------------------------------------------------------------------------------------------------------------------------------
+     Mn   Mn+3     UM   3.27005   0.00000   0.50000
+
+ Unit cell: a = 5.48275 b = 5.46679 c = 7.72499 alpha = 90.000 beta = 90.000 gamma = 90.000 volume = 231.541 Refine? True
+
+ Spherical harmonics texture: Order:0
+
+ Phase name: La0.8Ca0.2MnO3 at 50
+=======================================================================================================================================
+
+ X-ray scattering factors:
+   Symbol     fa                                      fb                                      fc
+---------------------------------------------------------------------------------------------------
+ Ca         8.62660   7.38730   1.58990   1.02110  10.44210   0.65990  85.74840 178.43700   1.37510
+ Mn+3       9.84521   7.87194   3.56531   0.32361   4.91797   0.29439  10.81710  24.12810   0.39397
+ O          3.04850   2.28680   1.54630   0.86700  13.27710   5.70110   0.32390  32.90890   0.25080
+ La        20.57800  19.59900  11.37270   3.28719   2.94817   0.24447  18.77260 133.12400   2.14678
+
+ Neutron scattering factors:
+   Symbol   isotope       mass       b       resonant terms
+---------------------------------------------------------------------------------------------------
+ Ca      Nat. Abund.     40.080    0.470
+ Mn+3    Nat. Abund.     54.938   -0.375
+ O       Nat. Abund.     15.999    0.581
+ La      Nat. Abund.    138.906    0.824
+
+ Space Group: P b n m
+ The lattice is centrosymmetric primitive orthorhombic
+ The Laue symmetry is mmm
+ The lattice point group is mmm
+ Multiplicity of a general site is 8
+ The inversion center is located at 0,0,0
+ 
+ The equivalent positions are:
+
+ ( 1)     X,     Y,     Z 
+ ( 2) 1/2-X, 1/2+Y,     Z 
+ ( 3) 1/2+X, 1/2-Y, 1/2+Z 
+ ( 4)    -X,    -Y, 1/2+Z 
+
+ Atoms:
+   name    type  refine?   x         y         z      frac site sym  mult I/A   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+     La     La     XU  -0.00641   0.02820   0.25000   0.785   m(z)    4    I 0.00285                                                
+     Mn   Mn+3     XU   0.50000   0.00000   0.00000   1.000     -1    4    I 0.00317                                                
+     O1      O     XU   0.06292   0.49109   0.25000   1.000   m(z)    4    I 0.00624                                                
+     O2      O     XU   0.72427   0.27605   0.03359   1.000      1    8    I 0.00678                                                
+     Ca     Ca     XU  -0.00044  -0.01833   0.25000   0.215   m(z)    4    I 0.00138                                                
+
+ Unit cell: a = 5.48275 b = 5.46679 c = 7.72499 alpha = 90.000 beta = 90.000 gamma = 90.000 volume = 231.541 Refine? True
+
+ Spherical harmonics texture: Order:0
+
+ Phase: La0.8Ca0.2MnO3 at 50 mag in histogram: PWDR La7Ca3MnO3_50k.gsas Bank 1
+=======================================================================================================================================
+ Phase fraction  :     1.0000 Refine? 0.0
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33
+ values:           0           0           0
+ refine:       False       False       False
+
+ Phase: La0.8Ca0.2MnO3 at 50 in histogram: PWDR La7Ca3MnO3_50k.gsas Bank 1
+=======================================================================================================================================
+ Phase fraction  :     1.0000 Refine? False
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33
+ values:           0           0           0
+ refine:       False       False       False
+
+ Histogram: PWDR La7Ca3MnO3_50k.gsas Bank 1 histogram Id: 0
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     9.35 deg to   157.50 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 0.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :     5491.0507        0.0000      781.8110      -44.3239
+ refine:          True         False          True          True
+
+ Instrument Parameters:
+ name  :     Azimuth        Bank         Lam    Polariz.        SH/L           U           V
+ value :    0.000000    1.000000    1.540300    0.000000    0.002000  239.700000 -298.200000
+ refine:                   False       False       False       False       False       False
+
+ name  :           W           X           Y           Z        Zero
+ value :  180.800000    0.000000    0.000000    0.000000    0.000400
+ refine:       False       False       False       False       False
+
+ Background function: chebyschev Refine? True
+ Coefficients:    135.580    22.744     2.645   -70.292    52.464    47.631
+
+ Refinement results:
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 3 No. of observations: 2963 No. of parameters: 28 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =    4.822s,    4.822s/cycle, for 1 cycles
+ wR =    7.55%, chi**2 =      5638.16, GOF =   1.39
+----------------------------------------------------------------------------------------------------------------------------------
+Variables generated by constraints
+
+ name  :     1::AUiso:0          1::A0          1::A1          1::A2
+ value :         0.0031         0.0333         0.0335         0.0168
+ sig   :         0.0003         0.0000         0.0000         0.0000
+
+ Phases:
+ Result for phase: La0.8Ca0.2MnO3 at 50 mag
+=======================================================================================================================================
+ Reciprocal metric tensor: 
+  names :            A11            A22            A33            A12            A13            A23
+  values:    0.033266353    0.033460887    0.016757347    0.000000000    0.000000000    0.000000000
+  esds  :    0.000001523    0.000001656    0.000000774                                             
+ New unit cell:
+  names :           a           b           c       alpha        beta       gamma      Volume
+  values:    5.482737    5.466776    7.724980     90.0000     90.0000     90.0000     231.540
+  esds  :    0.000126    0.000135    0.000179                                           0.012
+
+ Atoms:
+   name      x         y         z      frac   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+     Mn   Mn+3:
+ values:   0.50000   0.00000   0.00000   1.000 0.00315
+ sig   :                                       0.00033
+
+ Magnetic Moments:
+   name       Mx        My        Mz       |Mag|
+---------------------------------------------------------------------------------------------------------------------------------------
+     Mn   Mn+3:
+ values:     3.250     0.000     0.533     3.293
+ sig   :     0.026               0.115          
+ Result for phase: La0.8Ca0.2MnO3 at 50
+=======================================================================================================================================
+ Reciprocal metric tensor: 
+  names :            A11            A22            A33            A12            A13            A23
+  values:    0.033266353    0.033460887    0.016757347    0.000000000    0.000000000    0.000000000
+  esds  :    0.000001523    0.000001656    0.000000774                                             
+ New unit cell:
+  names :           a           b           c       alpha        beta       gamma      Volume
+  values:    5.482737    5.466776    7.724980     90.0000     90.0000     90.0000     231.540
+  esds  :                                                                                    
+
+ Atoms:
+   name      x         y         z      frac   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+     La     La:
+ values:  -0.00639   0.02824   0.25000   0.785 0.00284
+ sig   :   0.00040   0.00061                   0.00068
+     Mn   Mn+3:
+ values:   0.50000   0.00000   0.00000   1.000 0.00315
+ sig   :                                 0.000 0.00033
+     O1      O:
+ values:   0.06281   0.49111   0.25000   1.000 0.00620
+ sig   :   0.00034   0.00038                   0.00034
+     O2      O:
+ values:   0.72423   0.27608   0.03358   1.000 0.00679
+ sig   :   0.00024   0.00024   0.00015         0.00027
+     Ca     Ca:
+ values:  -0.00008  -0.01836   0.25000   0.215 0.00107
+ sig   :   0.00281   0.00361                   0.00398
+
+ Phase: La0.8Ca0.2MnO3 at 50 mag in histogram: PWDR La7Ca3MnO3_50k.gsas Bank 1
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 1.99%, 7.35% on 166 reflections
+ Durbin-Watson statistic = 0.691
+ Bragg intensity sum = 3.17e+04
+ Phase fraction  :    1.00000, sig    0.00000 Weight fraction  :  0.00000, sig    0.00000
+
+ Phase: La0.8Ca0.2MnO3 at 50 in histogram: PWDR La7Ca3MnO3_50k.gsas Bank 1
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 2.44%, 2.76% on 262 reflections
+ Durbin-Watson statistic = 0.691
+ Bragg intensity sum = 4.82e+05
+
+ Histogram: PWDR La7Ca3MnO3_50k.gsas Bank 1 histogram Id: 0
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 7.55% on 2963 observations in this histogram
+ Other residuals: R = 5.55%, R-bkg = 4.79%, wR-bkg = 7.55% wRmin = 5.47%
+ Instrument type: Debye-Scherrer
+
+ Sample Parameters:
+ names :         Scale    Absorption     DisplaceX     DisplaceY
+ values:     5485.2968        0.0000      773.7339      -39.1339
+ sig   :       28.8039                     30.5073       51.2204
+
+ Background function: chebyschev
+ value :      135.6     23.05     2.653    -71.14     52.52     48.13
+ sig   :     0.6705     2.625     4.518     10.87     5.185     9.965
+ Background sums: empirical 4.35e+05, Debye 0, peaks 0, Total 4.35e+05

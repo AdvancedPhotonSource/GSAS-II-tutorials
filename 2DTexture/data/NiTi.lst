@@ -1,0 +1,1096 @@
+********************************************************************************
+   General Structure Analysis System-II Crystal Structure Refinement
+              by Robert B. Von Dreele & Brian H. Toby
+                Argonne National Laboratory(C), 2010
+ This product includes software developed by the UChicago Argonne, LLC,
+            as Operator of Argonne National Laboratory.
+                          Please cite:
+   B.H. Toby & R.B. Von Dreele, J. Appl. Cryst. 46, 544-549 (2013)
+********************************************************************************
+ Least squares controls:
+ Refinement type: analytic Hessian
+ Maximum number of cycles: 3
+ Regularize hydrogens (if any): False
+ Initial shift factor: 1.000
+
+ Phases:
+
+ Phase name: B2
+=======================================================================================================================================
+
+ X-ray scattering factors:
+   Symbol     fa                                      fb                                      fc
+---------------------------------------------------------------------------------------------------
+ Ni        12.83760   7.29200   4.44380   2.38000   3.87850   0.25650  12.17630  66.34210   1.03410
+ Ti         9.75950   7.35580   1.69910   1.90210   7.85080   0.50000  35.63380 116.10500   1.28070
+
+ Neutron scattering factors:
+   Symbol   isotope       mass       b       resonant terms
+---------------------------------------------------------------------------------------------------
+ Ni      Nat. Abund.     58.700    1.030
+ Ti      Nat. Abund.     47.900   -0.337
+
+ Space Group: P m 3 m
+ The lattice is centrosymmetric primitive cubic
+ The Laue symmetry is m3m
+ The lattice point group is m3m
+ Multiplicity of a general site is 48
+ The inversion center is located at 0,0,0
+ 
+ The equivalent positions are:
+
+ ( 1)     X,     Y,     Z 
+ ( 2)     Z,     X,     Y 
+ ( 3)     Y,     Z,     X 
+ ( 4)     X,     Y,    -Z 
+ ( 5)    -Z,     X,     Y 
+ ( 6)     Y,    -Z,     X 
+ ( 7)    -Z,     X,    -Y 
+ ( 8)    -Y,    -Z,     X 
+ ( 9)     Y,    -Z,    -X 
+ (10)    -X,     Y,    -Z 
+ (11)    -Z,    -X,     Y 
+ (12)     X,    -Y,    -Z 
+ (13)     Y,     X,     Z 
+ (14)     Z,     Y,     X 
+ (15)     X,     Z,     Y 
+ (16)     Y,     X,    -Z 
+ (17)    -Z,     Y,     X 
+ (18)     X,    -Z,     Y 
+ (19)    -Z,     Y,    -X 
+ (20)    -X,    -Z,     Y 
+ (21)     X,    -Z,    -Y 
+ (22)    -Y,     X,    -Z 
+ (23)    -Z,    -Y,     X 
+ (24)     Y,    -X,    -Z 
+
+ Atoms:
+   name    type  refine?   x         y         z      frac site sym  mult I/A   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+    Ni1     Ni          0.00000   0.00000   0.00000   1.000    m3m    1    I 0.00500                                                
+    Ti2     Ti          0.25000   0.25000   0.00000   1.000mm2(xy)   12    I 0.00500                                                
+
+ Unit cell: a = 3.01000 b = 3.01000 c = 3.01000 alpha = 90.000 beta = 90.000 gamma = 90.000 volume = 27.271 Refine? False
+
+ Spherical harmonics texture: Order:8 Refine? True
+
+ SH omega:      0.0000 Refine? False SH chi:      0.0000 Refine? False SH phi:      0.0000 Refine? False
+
+ Texture coefficients:
+ names :    C(4,0,1)    C(6,0,1)    C(8,0,1)
+ values:      0.0000      0.0000      0.0000
+
+ Phase name: B19'
+=======================================================================================================================================
+
+ X-ray scattering factors:
+   Symbol     fa                                      fb                                      fc
+---------------------------------------------------------------------------------------------------
+ Ni        12.83760   7.29200   4.44380   2.38000   3.87850   0.25650  12.17630  66.34210   1.03410
+ Ti         9.75950   7.35580   1.69910   1.90210   7.85080   0.50000  35.63380 116.10500   1.28070
+
+ Neutron scattering factors:
+   Symbol   isotope       mass       b       resonant terms
+---------------------------------------------------------------------------------------------------
+ Ni      Nat. Abund.     58.700    1.030
+ Ti      Nat. Abund.     47.900   -0.337
+
+ Space Group: P 1 1 21/m
+ The lattice is centrosymmetric primitive monoclinic
+ The Laue symmetry is 2/m
+ The lattice point group is 2/m
+ Multiplicity of a general site is 4
+ The unique monoclinic axis is c
+ The inversion center is located at 0,0,0
+ 
+ The equivalent positions are:
+
+ ( 1)     X,     Y,     Z 
+ ( 2)    -X,    -Y, 1/2+Z 
+
+ Atoms:
+   name    type  refine?   x         y         z      frac site sym  mult I/A   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+    Ni1     Ni          0.97000   0.82090   0.25000   1.000   m(z)    2    I 0.00500                                                
+    Ti2     Ti          0.57870   0.28410   0.25000   1.000   m(z)    2    I 0.00500                                                
+
+ Unit cell: a = 2.88530 b = 4.63530 c = 4.13680 alpha = 90.000 beta = 90.000 gamma = 96.821 volume = 54.935 Refine? False
+
+ Spherical harmonics texture: Order:6 Refine? True
+
+ SH omega:      0.0000 Refine? False SH chi:      0.0000 Refine? False SH phi:      0.0000 Refine? False
+
+ Texture coefficients:
+ names :   C(2,0,-2)    C(2,0,0)    C(2,0,2)   C(4,0,-4)   C(4,0,-2)    C(4,0,0)    C(4,0,2)    C(4,0,4)   C(6,0,-6)   C(6,0,-4)
+ values:      0.0000      0.0000      0.0000      0.0000      0.0000      0.0000      0.0000      0.0000      0.0000      0.0000
+ names :   C(6,0,-2)    C(6,0,0)    C(6,0,2)    C(6,0,4)    C(6,0,6)
+ values:      0.0000      0.0000      0.0000      0.0000      0.0000
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 0.00
+=======================================================================================================================================
+ Phase fraction  :      1e-05 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 10.00
+=======================================================================================================================================
+ Phase fraction  :      1e-05 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 20.00
+=======================================================================================================================================
+ Phase fraction  :  3.628e-05 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 30.00
+=======================================================================================================================================
+ Phase fraction  :  0.0001413 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 40.00
+=======================================================================================================================================
+ Phase fraction  :  0.0001277 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 50.00
+=======================================================================================================================================
+ Phase fraction  :      1e-05 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 60.00
+=======================================================================================================================================
+ Phase fraction  :      1e-05 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 70.00
+=======================================================================================================================================
+ Phase fraction  :      1e-05 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 80.00
+=======================================================================================================================================
+ Phase fraction  :      1e-05 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 90.00
+=======================================================================================================================================
+ Phase fraction  :      1e-05 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11          eA
+ values:           0           0
+ refine:       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 0.00
+=======================================================================================================================================
+ Phase fraction  :    0.01366 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 10.00
+=======================================================================================================================================
+ Phase fraction  :     0.0115 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 20.00
+=======================================================================================================================================
+ Phase fraction  :    0.00965 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 30.00
+=======================================================================================================================================
+ Phase fraction  :    0.01085 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 40.00
+=======================================================================================================================================
+ Phase fraction  :    0.01412 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 50.00
+=======================================================================================================================================
+ Phase fraction  :    0.01838 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 60.00
+=======================================================================================================================================
+ Phase fraction  :    0.01527 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 70.00
+=======================================================================================================================================
+ Phase fraction  :    0.00708 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 80.00
+=======================================================================================================================================
+ Phase fraction  :   0.002965 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 90.00
+=======================================================================================================================================
+ Phase fraction  :   0.002566 Refine? True
+ Extinction coeff:     0.0000 Refine? False
+ March-Dollase PO:     1.0000 Refine? False Axis: 0 0 1
+
+ Size model    : isotropic equatorial:       1.000 Refine? False
+	 LG mixing coeff.:       1.0000 Refine? False
+
+ Mustrain model: isotropic equatorial:      1000.0 Refine? False
+	 LG mixing coeff.:      1.0000 Refine? False
+
+ Hydrostatic/elastic strain:
+ names :         D11         D22         D33         D12
+ values:           0           0           0           0
+ refine:       False       False       False       False
+ Layer Displacement:      0.000 Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 0.00 histogram Id: 0
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :    0.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    137.975     3.449   -10.154
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 10.00 histogram Id: 1
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   10.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    134.788     0.394   -10.928
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 20.00 histogram Id: 2
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   20.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    131.922     1.030   -11.937
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 30.00 histogram Id: 3
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   30.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    129.635    -0.783   -14.961
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 40.00 histogram Id: 4
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   40.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    127.567    -3.916   -14.626
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 50.00 histogram Id: 5
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   50.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    126.434    -8.109    -9.924
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 60.00 histogram Id: 6
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   60.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    124.600    -9.990    -6.927
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 70.00 histogram Id: 7
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   70.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    120.814    -5.966    -9.459
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 80.00 histogram Id: 8
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   80.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    117.309    -7.150   -17.937
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 90.00 histogram Id: 9
+=======================================================================================================================================
+ Instrument type: Debye-Scherrer
+ Histogram limits:     2.00 deg to    10.59 deg
+
+ Sample Parameters:
+ Goniometer omega = 0.00, chi = 90.00, phi = 0.00
+ name  :         Scale    Absorption     DisplaceX     DisplaceY
+ value :        1.0000        0.0000        0.0000        0.0000
+ refine:         False         False         False         False
+
+ Instrument Parameters:
+ name  :     Azimuth         Lam    Polariz.        SH/L           U           V           W           X
+ value :   90.000000    0.177000    0.990000    0.000500    1.000000   -0.100000    0.400000    0.300000
+ refine:                   False       False       False       False       False       False       False
+
+ name  :           Y           Z        Zero
+ value :    1.000000    0.000000    0.000000
+ refine:       False       False       False
+
+ Background function: chebyschev-1 Refine? 1
+ Coefficients:    116.263    -9.104   -19.148
+ Fixed background file: ; mult: 1.000  Refine? False
+
+ Refinement results:
+---------------------------------------------------------------------------------------------------------------------------------------
+ Number of function calls: 10 No. of observations: 15000 No. of parameters: 68 User rejected: 0 Sp. gp. extinct: 0
+ Refinement time =   20.716s,    5.179s/cycle, for 4 cycles
+ wR =   31.94%, chi**2 =       238268, GOF =   3.99
+
+ Phases:
+ Result for phase: B2
+=======================================================================================================================================
+
+ Atoms:
+   name      x         y         z      frac   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+    Ni1     Ni:
+ values:   0.00000   0.00000   0.00000   1.000 0.00500
+ sig   :                                              
+    Ti2     Ti:
+ values:   0.25000   0.25000   0.00000   1.000 0.00500
+ sig   :                                              
+
+ Density: 38.5742 g/cm**3
+
+ Spherical harmonics texture: Order: 8
+  names :       omega         chi         phi
+  values:       0.000       0.000       0.000
+  esds  :                                    
+
+ Texture coefficients:
+  names :    C(4,0,1)    C(6,0,1)    C(8,0,1)
+  values:      -7.986      21.831      -0.864
+  esds  :       3.394       6.719       3.082
+ Texture index J = 44.792(23359) Result for phase: B19'
+=======================================================================================================================================
+
+ Atoms:
+   name      x         y         z      frac   Uiso     U11     U22     U33     U12     U13     U23
+---------------------------------------------------------------------------------------------------------------------------------------
+    Ni1     Ni:
+ values:   0.97000   0.82090   0.25000   1.000 0.00500
+ sig   :                                              
+    Ti2     Ti:
+ values:   0.57870   0.28410   0.25000   1.000 0.00500
+ sig   :                                              
+
+ Density: 6.4445 g/cm**3
+
+ Spherical harmonics texture: Order: 6
+  names :       omega         chi         phi
+  values:       0.000       0.000       0.000
+  esds  :                                    
+
+ Texture coefficients:
+  names :   C(2,0,-2)    C(2,0,0)    C(2,0,2)   C(4,0,-4)   C(4,0,-2)    C(4,0,0)    C(4,0,2)    C(4,0,4)   C(6,0,-6)   C(6,0,-4)
+  values:      -0.077      -2.151      -0.769      -0.878       0.146       2.224       0.483       1.508       1.958       0.869
+  esds  :       0.052       0.066       0.066       0.125       0.122       0.086       0.157       0.130       0.331       0.161
+  names :   C(6,0,-2)    C(6,0,0)    C(6,0,2)    C(6,0,4)    C(6,0,6)
+  values:      -0.648      -1.595      -0.387      -1.204      -0.481
+  esds  :       0.147       0.088       0.167       0.139       0.304
+ Texture index J = 3.682(143)
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 0.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 78.98%, 97.50% on 9 reflections
+ Durbin-Watson statistic = 0.057
+ Bragg intensity sum = -105
+ Phase fraction  :      1e-05, sig 7.0534e-05 Weight fraction  :  0.00115, sig    0.00814
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 10.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 84.99%, 97.84% on 9 reflections
+ Durbin-Watson statistic = 0.061
+ Bragg intensity sum = -35.4
+ Phase fraction  :      1e-05, sig 8.9331e-05 Weight fraction  :  0.00165, sig    0.01477
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 20.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 91.79%, 98.86% on 9 reflections
+ Durbin-Watson statistic = 0.082
+ Bragg intensity sum = -44.9
+ Phase fraction  :  0.0013687, sig 0.00039426 Weight fraction  :  0.27105, sig    0.07808
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 30.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 65.41%, 97.97% on 9 reflections
+ Durbin-Watson statistic = 0.088
+ Bragg intensity sum = 364
+ Phase fraction  : 0.00051755, sig 0.00038766 Weight fraction  :  0.09360, sig    0.07011
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 40.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 78.89%, 98.27% on 9 reflections
+ Durbin-Watson statistic = 0.063
+ Bragg intensity sum = 195
+ Phase fraction  : 5.6978e-05, sig 3.6328e-05 Weight fraction  :  0.00956, sig    0.00610
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 50.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 71.29%, 92.81% on 9 reflections
+ Durbin-Watson statistic = 0.055
+ Bragg intensity sum = -73.6
+ Phase fraction  :      1e-05, sig 1.5776e-05 Weight fraction  :  0.00173, sig    0.00273
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 60.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 74.17%, 96.74% on 9 reflections
+ Durbin-Watson statistic = 0.059
+ Bragg intensity sum = -84.6
+ Phase fraction  :      1e-05, sig 1.6834e-05 Weight fraction  :  0.00188, sig    0.00317
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 70.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 80.38%, 97.01% on 9 reflections
+ Durbin-Watson statistic = 0.081
+ Bragg intensity sum = -586
+ Phase fraction  : 0.00030577, sig 0.00017854 Weight fraction  :  0.07847, sig    0.04582
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 80.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 69.11%, 93.27% on 9 reflections
+ Durbin-Watson statistic = 0.084
+ Bragg intensity sum = 270
+ Phase fraction  :      1e-05, sig 5.9362e-05 Weight fraction  :  0.00204, sig    0.01212
+
+ Phase: B2 in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 90.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 81.08%, 99.95% on 9 reflections
+ Durbin-Watson statistic = 0.086
+ Bragg intensity sum = 175
+ Phase fraction  :      1e-05, sig 3.8079e-05 Weight fraction  :  0.00161, sig    0.00614
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 0.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 50.30%, 77.26% on 74 reflections
+ Durbin-Watson statistic = 0.057
+ Bragg intensity sum = 1.53e+04
+ Phase fraction  :   0.025715, sig 0.00097019 Weight fraction  :  0.99885, sig    0.03769
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 10.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 50.67%, 76.18% on 74 reflections
+ Durbin-Watson statistic = 0.061
+ Bragg intensity sum = 1e+04
+ Phase fraction  :   0.017942, sig 0.00082895 Weight fraction  :  0.99835, sig    0.04613
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 20.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 64.88%, 98.38% on 74 reflections
+ Durbin-Watson statistic = 0.082
+ Bragg intensity sum = 5.32e+03
+ Phase fraction  :   0.010938, sig 0.00071843 Weight fraction  :  0.72895, sig    0.04788
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 30.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 47.29%, 73.94% on 74 reflections
+ Durbin-Watson statistic = 0.088
+ Bragg intensity sum = 6.83e+03
+ Phase fraction  :   0.014892, sig 0.00080872 Weight fraction  :  0.90640, sig    0.04922
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 40.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 42.36%, 73.30% on 74 reflections
+ Durbin-Watson statistic = 0.063
+ Bragg intensity sum = 8.94e+03
+ Phase fraction  :   0.017532, sig 0.00085191 Weight fraction  :  0.99044, sig    0.04813
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 50.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 55.02%, 97.48% on 74 reflections
+ Durbin-Watson statistic = 0.055
+ Bragg intensity sum = 1.02e+04
+ Phase fraction  :   0.017142, sig 0.00084968 Weight fraction  :  0.99827, sig    0.04948
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 60.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 52.18%, 88.53% on 74 reflections
+ Durbin-Watson statistic = 0.059
+ Bragg intensity sum = 9.96e+03
+ Phase fraction  :   0.015753, sig 0.00080925 Weight fraction  :  0.99812, sig    0.05127
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 70.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 63.63%, 99.13% on 74 reflections
+ Durbin-Watson statistic = 0.081
+ Bragg intensity sum = 6.21e+03
+ Phase fraction  :   0.010671, sig  0.0006333 Weight fraction  :  0.92153, sig    0.05469
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 80.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 62.94%, 97.79% on 74 reflections
+ Durbin-Watson statistic = 0.084
+ Bragg intensity sum = 7.13e+03
+ Phase fraction  :   0.014522, sig 0.00069264 Weight fraction  :  0.99796, sig    0.04760
+
+ Phase: B19' in histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 90.00
+=======================================================================================================================================
+ Final refinement RF, RF^2 = 75.39%, 99.69% on 74 reflections
+ Durbin-Watson statistic = 0.086
+ Bragg intensity sum = 8.22e+03
+ Phase fraction  :   0.018413, sig 0.00074958 Weight fraction  :  0.99839, sig    0.04064
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 0.00 histogram Id: 0
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 40.21% on 1500 observations in this histogram
+ Other residuals: R = 27.25%, R-bkg = 54.06%, wR-bkg = 40.21% wRmin = 7.32%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      135.7     1.469    -9.429
+ sig   :      1.414     2.115     2.028
+ Background sums: empirical 2.08e+05, Debye 0, peaks 0, Total 2.08e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 10.00 histogram Id: 1
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 31.73% on 1500 observations in this histogram
+ Other residuals: R = 20.61%, R-bkg = 45.02%, wR-bkg = 31.73% wRmin = 7.78%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      133.6   -0.5148    -10.18
+ sig   :      1.393     2.079     2.002
+ Background sums: empirical 2.05e+05, Debye 0, peaks 0, Total 2.05e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 20.00 histogram Id: 2
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 22.95% on 1500 observations in this histogram
+ Other residuals: R = 15.28%, R-bkg = 30.08%, wR-bkg = 22.95% wRmin = 8.18%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      131.5    0.1065    -11.67
+ sig   :      1.376      2.06     1.985
+ Background sums: empirical 2.03e+05, Debye 0, peaks 0, Total 2.03e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 30.00 histogram Id: 3
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 21.75% on 1500 observations in this histogram
+ Other residuals: R = 15.53%, R-bkg = 28.50%, wR-bkg = 21.75% wRmin = 8.18%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      129.5    -1.671    -14.17
+ sig   :      1.366     2.044     1.985
+ Background sums: empirical 2.01e+05, Debye 0, peaks 0, Total 2.01e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 40.00 histogram Id: 4
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 29.44% on 1500 observations in this histogram
+ Other residuals: R = 19.89%, R-bkg = 39.10%, wR-bkg = 29.44% wRmin = 8.00%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      127.5    -5.026    -14.68
+ sig   :      1.354     2.026     1.979
+ Background sums: empirical 1.99e+05, Debye 0, peaks 0, Total 1.99e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 50.00 histogram Id: 5
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 34.11% on 1500 observations in this histogram
+ Other residuals: R = 23.10%, R-bkg = 45.52%, wR-bkg = 34.11% wRmin = 7.87%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      126.9    -8.197    -10.89
+ sig   :      1.359     2.033     1.985
+ Background sums: empirical 1.96e+05, Debye 0, peaks 0, Total 1.96e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 60.00 histogram Id: 6
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 33.58% on 1500 observations in this histogram
+ Other residuals: R = 22.61%, R-bkg = 45.78%, wR-bkg = 33.58% wRmin = 8.01%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      124.2    -9.702    -7.463
+ sig   :       1.35     2.015     1.953
+ Background sums: empirical 1.9e+05, Debye 0, peaks 0, Total 1.9e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 70.00 histogram Id: 7
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 30.34% on 1500 observations in this histogram
+ Other residuals: R = 19.68%, R-bkg = 40.89%, wR-bkg = 30.34% wRmin = 8.41%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      119.4    -6.046    -9.371
+ sig   :      1.312     1.971     1.899
+ Background sums: empirical 1.84e+05, Debye 0, peaks 0, Total 1.84e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 80.00 histogram Id: 8
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 30.37% on 1500 observations in this histogram
+ Other residuals: R = 20.62%, R-bkg = 41.80%, wR-bkg = 30.37% wRmin = 8.40%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      114.6    -7.864    -17.27
+ sig   :      1.276     1.915     1.871
+ Background sums: empirical 1.8e+05, Debye 0, peaks 0, Total 1.8e+05
+
+ Histogram: PWDR NDC5_01588_1.ge2 #0001 Azm= 90.00 histogram Id: 9
+=======================================================================================================================================
+ PWDR histogram weight factor = 1.000
+ Final refinement wR = 37.57% on 1500 observations in this histogram
+ Other residuals: R = 25.70%, R-bkg = 49.31%, wR-bkg = 37.57% wRmin = 8.18%
+ Instrument type: Debye-Scherrer
+
+ Resonant form factors:(ref: D.T. Cromer & D.A. Liberman (1981), Acta Cryst. A37, 267-268.)
+ Element:       Ni       Ti
+ f'     :    0.021    0.002
+ f"     :    0.077    0.027
+
+ Background function: chebyschev-1
+ value :      113.1    -10.72    -19.09
+ sig   :      1.267     1.904     1.862
+ Background sums: empirical 1.79e+05, Debye 0, peaks 0, Total 1.79e+05
