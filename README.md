@@ -18,7 +18,7 @@ DIFFaX, NIST*LATTICE and PDFfit2.
 ### scripts
 The scripts directory contains a script (makeGitTutorial.py) used to build the web page referenced above. 
 
-### URLs
+## URLs
 * At present the home page for the software is here:
   https://subversion.xray.aps.anl.gov/trac/pyGSAS. Note installation
   instructions and tutorials at that URL.
