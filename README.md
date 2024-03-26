@@ -4,7 +4,7 @@
 This repository contains tutorials that demonstrate how different functionality
 in GSAS-II works. The tutorials are usually accessed from the Help->Tutorials
 menu in the GSAS-II program (this will ease downloading the files needed to
-run the tutorials), but tutorials can also be accessed from this repository via URL [https://gsasii.github.io/TutorialTest/](https://advancedphotonsource.github.io/GSAS-II-tutorials/)
+run the tutorials), but tutorials can also be accessed from this repository via [this URL](https://advancedphotonsource.github.io/GSAS-II-tutorials/)
 
 ## Contents
 Each tutorial is placed here in its own subdirectory. In that subdirectory, there will be a web page for that tutorial (extension .html or .htm) and two additional subdirectories, one named `data`, with the input file(s) needed for that tutorial and another with a name generated from the web page file name that contains images for the web page. 
