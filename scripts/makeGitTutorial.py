@@ -22,7 +22,7 @@ how to retrieve this automatically any more.
 def makeDataIndex(datadir,title):
     '''Create an index.html file in the specified directory, listing the contents
     '''
-    fp = open(os.path.join(datadir,'index.html'),'w')
+    fp = open(os.path.join(datadir,'tutorials.html'),'w')
     fp.write(f'''<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html> <head>
 <title>Data: {title}</title>
