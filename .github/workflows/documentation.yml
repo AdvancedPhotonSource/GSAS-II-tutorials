@@ -20,7 +20,8 @@ jobs:
 #
       - name: Old Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-#	with:
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 #          token: ${{ secrets.GITHUB_TOKEN }}
 #          timeout: 600000
 #          error_count: 10
