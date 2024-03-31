@@ -20,13 +20,13 @@ jobs:
 #
       - name: Old Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-	with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          timeout: 600000
-          error_count: 10
-          reporting_interval: 5000
-          artifact_name: github-pages
-          preview: false
+#	with:
+#          token: ${{ secrets.GITHUB_TOKEN }}
+#          timeout: 600000
+#          error_count: 10
+#          reporting_interval: 5000
+#          artifact_name: github-pages
+#          preview: false
 #
 #      - name: Copy tutorials
 #        run: |
