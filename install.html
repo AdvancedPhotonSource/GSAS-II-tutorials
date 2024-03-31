@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation overview &mdash; GSAS-II web documentation 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Available Documentation for GSAS-II" href="documentation.html" />
+    <link rel="prev" title="Welcome to the GSAS-II home page" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GSAS-II web documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#gsas2full-installer">GSAS2FULL installer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macos-and-linux">MacOS and Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gsas2pkg-conda-package">GSAS2PKG Conda Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-a-system-supplied-python">Using a system-supplied Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-gsas-ii-software-developers">For GSAS-II Software Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#older-methods">Older methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Available Documentation for GSAS-II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mailinglist.html">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bug.html">Reporting GSAS-II Bugs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install-g2f-win.html">Detailed Description of the Windows Installation Process</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GSAS-II web documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installation overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <a class="reference internal image-reference" href="_images/gsas2.png"><img alt="GSAS-II logo" class="align-right" src="_images/gsas2.png" style="width: 64.0px; height: 64.0px;" /></a>
+<section id="installation-overview">
+<h1>Installation overview<a class="headerlink" href="#installation-overview" title="Link to this heading"></a></h1>
+<p>Running GSAS-II requires a number of coordinated installation steps and there are many different ways this can be accomplished. One needs not only the necessary Python source code for GSAS-II, but a Python interpreter that includes a number of “add-on” Python packages for additonal capabilities. This much match the computer where the software will be run. Further, GSAS-II requires that a small amount of its code be compiled, typically for speed and this must be matched both the computer OS and to the Python version. Here I outline different a few different approaches.</p>
+<section id="gsas2full-installer">
+<h2>GSAS2FULL installer<a class="headerlink" href="#gsas2full-installer" title="Link to this heading"></a></h2>
+<p>Most users of GSAS-II are seeking a simple way to install and run the software and can live with the idea that they may have duplicated Python installations (several hundreds of MB each) on their computer. The GSAS2FULL self-installer provides that and can be found <a class="reference external" href="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/latest">here</a>. Brief instructions follow:</p>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
+<p>For Windows download file and run file  <a class="reference external" href="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Windows-x86_64.exe">https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Windows-x86_64.exe</a>.
+You will have a choice for where to install the software (the default is usually OK, but something like <code class="docutils literal notranslate"><span class="pre">c:\software</span></code> might be better, if your computer security allows that.)</p>
+<p>More complete installation instructions <a class="reference external" href="install-g2f-win.html">are here</a>.</p>
+</section>
+<section id="macos-and-linux">
+<h3>MacOS and Linux<a class="headerlink" href="#macos-and-linux" title="Link to this heading"></a></h3>
+<p>For MacOS and Linux use a command such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">g2</span><span class="o">=</span><span class="s2">&quot;https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-&lt;platform&gt;&quot;</span>
+<span class="n">curl</span> <span class="s2">&quot;$g2&quot;</span> <span class="o">&gt;</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">g2</span><span class="o">.</span><span class="n">sh</span><span class="p">;</span> <span class="n">bash</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">g2</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">install</span><span class="o">-</span><span class="n">loc</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>&lt;platform&gt; is replaced by <code class="docutils literal notranslate"><span class="pre">Linux-x86_64.sh</span></code> for Linux, <code class="docutils literal notranslate"><span class="pre">MacOSX-arm64.sh</span></code> for MacOS with “Apple Silicon”  (M1, etc.) processors and <code class="docutils literal notranslate"><span class="pre">MacOSX-x86_64.sh</span></code> is for older Intel-based machines. Note that the <code class="docutils literal notranslate"><span class="pre">MacOSX-x86_64.sh</span></code> installer will run on “Apple Silicon” processors, but significantly more slowly.</p></li>
+<li><p>&lt;install-loc&gt; is where you want to install the software. (Use of <code class="docutils literal notranslate"><span class="pre">~/g2full</span></code> (a subdirectory named <code class="docutils literal notranslate"><span class="pre">g2full</span></code> in your home directory is a good choice.) After installation is complete, you may be asked if you want to place a shortcut for GSAS-II into the MacOS dock.</p></li>
+</ul>
+</div></blockquote>
+<p>More complete installation instructions are provided for [TBD MacOS] and [TBD Linux].</p>
+</section>
+</section>
+<section id="gsas2pkg-conda-package">
+<h2>GSAS2PKG Conda Package<a class="headerlink" href="#gsas2pkg-conda-package" title="Link to this heading"></a></h2>
+<p>Users who work extensively with Python and use the conda Python installer may prefer to utilize their existing conda installation to obtain GSAS-II along with the Python configuration that GSAS-II prefers. This can be done with this command (on all platforms):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">GSASII</span> <span class="n">briantoby</span><span class="p">::</span><span class="n">gsas2pkg</span>  <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+</pre></div>
+</div>
+<p>This creates a conda virtual environment named <code class="docutils literal notranslate"><span class="pre">GSASII</span></code> (this can be changed) for use by GSAS-II. While it is also possible to install GSAS-II into the conda base environment, this is not recommended as it can create conflicts between Python and package versions needed by GSAS-II and those required by other packages.</p>
+</section>
+<section id="using-a-system-supplied-python">
+<h2>Using a system-supplied Python<a class="headerlink" href="#using-a-system-supplied-python" title="Link to this heading"></a></h2>
+<p>A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages, or using <a class="reference external" href="https://pypi.org/PyPI">PyPi</a>, etc). It is the user’s responsibility to configure Python (at a minimum, GUI use requires wxPython, matplotlib,
+PyOpenGL, NumPy and SciPy while for scripting use, only NumPy and SciPy are required) but a number of other optional packages needed for
+full functionality, <a class="reference external" href="https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements">as discussed here</a>.
+If versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or run the compilation yourself.</p>
+<p>A simple way to install GSAS-II with a supplied Python environment is to use these commands (on all platforms):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">G2</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">AdvancedPhotonSource</span><span class="o">/</span><span class="n">GSAS</span><span class="o">-</span><span class="n">II</span><span class="o">-</span><span class="n">buildtools</span><span class="o">/</span><span class="n">raw</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">gitstrap</span><span class="o">.</span><span class="n">py</span>
+<span class="n">python</span> <span class="n">gitstrap</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This will place the install script in directory <code class="docutils literal notranslate"><span class="pre">~/G2</span></code> (which you may wish to change) and will place all GSAS-II files in subdirectory <code class="docutils literal notranslate"><span class="pre">~/G2/GSAS-II</span></code></p>
+</section>
+<section id="for-gsas-ii-software-developers">
+<h2>For GSAS-II Software Developers<a class="headerlink" href="#for-gsas-ii-software-developers" title="Link to this heading"></a></h2>
+<p>While all of the above approaches will clone a copy of the GSAS-II repository from GitHub, software developers will likely wish to clone the repo themselves from
+<code class="docutils literal notranslate"><span class="pre">git&#64;github.com:AdvancedPhotonSource/GSAS-II.git</span></code> or <code class="docutils literal notranslate"><span class="pre">https://github.com/AdvancedPhotonSource/GSAS-II.git</span></code>.</p>
+<p>If the repo is cloned at <code class="docutils literal notranslate"><span class="pre">~/myProjects/myGSASII</span></code> then the local copy of GSAS-II can be
+run as a GUI using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">~/</span><span class="n">myProjects</span><span class="o">/</span><span class="n">myGSASII</span><span class="o">/</span><span class="n">GSASII</span><span class="o">/</span><span class="n">GSASII</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Installation scripts used inside the above-listed approaches can still be used for GitHub repo installation. See discussion of makeMacApp.py, makeLinux.py and makeBat.py (for MacOS, Linux and Windows, respectively) in the <a class="reference external" href="https://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html#gsas-ii-misc-scripts">Developer’s Documentation</a>.
+Also, to simplify use of your local clone of the GSAS-II repo when scripting GSAS-II, see this <a class="reference external" href="https://gsas-ii.readthedocs.io/en/latest/GSASIIscriptable.html#shortcut-for-scripting-access">note on scripting shortcuts</a>.</p>
+</section>
+<section id="older-methods">
+<h2>Older methods<a class="headerlink" href="#older-methods" title="Link to this heading"></a></h2>
+<p>Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. While the installers for those processes are still available. Also, updates will be provided for those past svn installations for the immediate future. However, it is encouraged that users reinstall GSAS-II via one of the above methods. When svn updates will be phased out, GSAS-II will provide warning messages.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the GSAS-II home page" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="documentation.html" class="btn btn-neutral float-right" title="Available Documentation for GSAS-II" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024 by Argonne National Laboratory.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
