@@ -17,14 +17,26 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-build webdocs _build
-      - name: Copy tutorials
-        run: |
-           cp -v tutorials.html _build/
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        #if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        with:
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/
-          force_orphan: true
+#
+      - name: Old Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+#  with:
+#    token: ***
+#    timeout: 600000
+#    error_count: 10
+#    reporting_interval: 5000
+#    artifact_name: github-pages
+#    preview: false
+#
+#
+#      - name: Copy tutorials
+#        run: |
+#           cp -v tutorials.html _build/
+#      - name: Deploy to GitHub Pages
+#        uses: peaceiris/actions-gh-pages@v3
+#        #if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+#        with:
+#          publish_branch: gh-pages
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: _build/
+#          force_orphan: true
