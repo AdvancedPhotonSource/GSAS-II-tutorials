@@ -20,7 +20,7 @@ Windows
 For Windows download file and run file  https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Windows-x86_64.exe.
 You will have a choice for where to install the software (the default is usually OK, but something like ``c:\software`` might be better, if your computer security allows that.)
 
-More complete installation instructions are here [TBD].
+More complete installation instructions `are here <install-g2f-win.html>`_.
 
 MacOS and Linux
 --------------------
@@ -33,7 +33,7 @@ For MacOS and Linux use a command such as::
 where:
 
  * <platform> is replaced by ``Linux-x86_64.sh`` for Linux, ``MacOSX-arm64.sh`` for MacOS with "Apple Silicon"  (M1, etc.) processors and ``MacOSX-x86_64.sh`` is for older Intel-based machines. Note that the ``MacOSX-x86_64.sh`` installer will run on "Apple Silicon" processors, but significantly more slowly. 
- * <install-loc> is where you want to install the software. ``~/g2full`` (a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you may be asked if you want to place a shortcut for GSAS-II into the MacOS dock.
+ * <install-loc> is where you want to install the software. (Use of ``~/g2full`` (a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you may be asked if you want to place a shortcut for GSAS-II into the MacOS dock.
 
 More complete installation instructions are provided for [TBD MacOS] and [TBD Linux].
 
