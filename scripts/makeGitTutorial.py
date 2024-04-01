@@ -8,9 +8,6 @@ import os
 import sys
 import glob
 import datetime
-#import requests
-import GSASIIpath
-#GSASIIpath.SetBinaryPath()  # removes warning messages
 import GSASIIctrlGUI as G2G
 
 script = sys.argv[0]
@@ -141,7 +138,6 @@ if __name__ == '__main__':
             # check for video tutorial
             videoName = f"{os.path.splitext(l[1])[0].replace(' ','')[:30]:-<12s}"
             vname = f'https://anl.box.com/v/{videoName}'
-            #if requests.get(vname).status_code == 200:
             if vname in onlineVideos:
                 videocount += 1
                 video = f'<A href="{vname}">video</A>'
