@@ -52,7 +52,7 @@ Installing GSAS-II after Python Installation
 =============================================
 
 A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages) or using `PyPi <https://pypi.org/ PyPI>`_, etc. or prefer to handle use of conda on their own. Some discussion on Python installation is
-`found here<install_pip.html>`_. Independent of how Python is installed, multiple packages are needed, please see the
+`found here <install-pip.html>`_. Independent of how Python is installed, multiple packages are needed, please see the
 `discussion on Python package requirements <https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_, noting that the GSAS-II GUI requires at a minimum wxPython, matplotlib,
 PyOpenGL, NumPy and SciPy, while for scripting use, only NumPy and SciPy are required.  For full functionality, several other optional packages are needed.
 If versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or run the compilation yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
