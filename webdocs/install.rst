@@ -12,12 +12,13 @@ Running GSAS-II requires a number of coordinated installation steps and there ar
 GSAS2FULL installer
 =======================
 
-Most users of GSAS-II are seeking a simple way to install and run the software and can live with the idea that they may have duplicated Python installations (several hundreds of MB each) on their computer. The GSAS2FULL self-installer provides that and can be found `here <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/latest>`_. Brief instructions follow:
+Most users of GSAS-II are seeking a simple way to install and run the software and can live with the idea that they may have duplicated Python installations (several hundreds of MB each) on their computer. The GSAS2FULL self-installer provides that and can be `downloaded from here <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/latest>`_. Brief installation instructions are outlined below with links to more complete instructions:
 
 Windows
 -----------
 
-For Windows download file and run file  https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Windows-x86_64.exe.
+For Windows download file https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Windows-x86_64.exe and run it.
+After the installer is started 
 You will have a choice for where to install the software (the default is usually OK, but something like ``c:\software`` might be better, if your computer security allows that.)
 
 More complete installation instructions `are here <install-g2f-win.html>`_.
@@ -28,7 +29,7 @@ MacOS and Linux
 For MacOS and Linux use a command such as:: 
 
   g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-<platform>"
-  curl "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+  curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
 
 where:
 
@@ -47,15 +48,16 @@ Users who work extensively with Python and use the conda Python installer may pr
 
 This creates a conda virtual environment named ``GSASII`` (this can be changed) for use by GSAS-II. While it is also possible to install GSAS-II into the conda base environment, this is not recommended as it can create conflicts between Python and package versions needed by GSAS-II and those required by other packages.
 
-Using a system-supplied Python
-=================================
+Installing GSAS-II after Python Installation
+=============================================
 
-A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages, or using `PyPi <https://pypi.org/ PyPI>`_, etc). It is the user's responsibility to configure Python (at a minimum, GUI use requires wxPython, matplotlib,
-PyOpenGL, NumPy and SciPy while for scripting use, only NumPy and SciPy are required) but a number of other optional packages needed for
-full functionality, `as discussed here <https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_.
-If versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or run the compilation yourself.
+A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages) or using `PyPi <https://pypi.org/ PyPI>`_, etc. or prefer to handle use of conda on their own. Some discussion on Python installation is
+`found here<install_pip.html>`_. Independent of how Python is installed, multiple packages are needed, please see the
+`discussion on Python package requirements <https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_, noting that the GSAS-II GUI requires at a minimum wxPython, matplotlib,
+PyOpenGL, NumPy and SciPy, while for scripting use, only NumPy and SciPy are required.  For full functionality, several other optional packages are needed.
+If versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or run the compilation yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
 
-A simple way to install GSAS-II with a supplied Python environment is to use these commands (on all platforms)::
+A simple way to install GSAS-II with a supplied Python environment uses the `gitstrap.py` script provided for this purpose. Use these commands (on any platform) to install GSAS-II::
 
   cd ~/G2
   curl -L -O https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/raw/main/install/gitstrap.py
@@ -63,10 +65,11 @@ A simple way to install GSAS-II with a supplied Python environment is to use the
 
 This will place the install script in directory ``~/G2`` (which you may wish to change) and will place all GSAS-II files in subdirectory ``~/G2/GSAS-II``
 
-For GSAS-II Software Developers
-=================================
+Installation for GSAS-II Software Developers
+==============================================
 
-While all of the above approaches will clone a copy of the GSAS-II repository from GitHub, software developers will likely wish to clone the repo themselves from
+While all of the above approaches do clone a copy of the GSAS-II repository from GitHub, software developers will likely wish to clone the repo themselves. This will also require This is done
+from 
 ``git@github.com:AdvancedPhotonSource/GSAS-II.git`` or ``https://github.com/AdvancedPhotonSource/GSAS-II.git``.
 
 If the repo is cloned at ``~/myProjects/myGSASII`` then the local copy of GSAS-II can be 

@@ -28,4 +28,6 @@ We add new features to GSAS-II quite frequently, so we may break things from tim
    documentation.rst
    mailinglist.rst
    bug.rst
+   compile.rst
    install-g2f-win.rst
+   install-pip.rst
