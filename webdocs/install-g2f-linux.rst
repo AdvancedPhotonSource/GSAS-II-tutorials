@@ -19,7 +19,7 @@ The exact details for how the installation is performed will depend on "flavor" 
 
    as seen to right. Note that I have chosen to install in location ``~/g2full`` (which is subdirectory ``g2full`` in my home directory), but you can install this where you prefer.
    
-   .. image:: ./linux_inst_images/1.png
+.. image:: ./linux_inst_images/1.png
    :scale: 25 %
    :alt: commands in terminal window 
    :align: right
@@ -30,7 +30,7 @@ The exact details for how the installation is performed will depend on "flavor" 
 	   
 2) This will run for a few minutes (or longer depending on download speeds) and then the conda installation process will start, with the display of lots of text. At the end, the terminal window will appear as seen to the right. Note the addition of the GSASII file on the desktop (this may not happen on all Linux desktop managers.). The installation has been completed. 
 
-   .. image:: ./linux_inst_images/2.png
+.. image:: ./linux_inst_images/2.png
    :scale: 25 %
    :alt: completion commands in terminal window 
    :align: right
@@ -43,7 +43,7 @@ The exact details for how the installation is performed will depend on "flavor" 
 
    Clicking on the icon will open GSAS-II. Likewise a GSAS-II project (.gpx) file can be dragged onto the icon to open that file in GSAS-II.
 
-   .. image:: ./linux_inst_images/3.png
+.. image:: ./linux_inst_images/3.png
    :scale: 25 %
    :alt: activate terminal icon
    :align: right
