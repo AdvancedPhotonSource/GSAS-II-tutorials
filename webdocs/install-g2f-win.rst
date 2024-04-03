@@ -68,7 +68,7 @@ Detailed Description of the Windows Installation Process
    :alt: Select installation folder
    :align: right
 	 
-6) The default installation folder is usually fine, but I often prefer to change this to `C:\G2` or something short. Some compters have been set so you must place the GSAS-II files within your account, however.
+6) The default installation folder is usually fine, but I often prefer to change this to ``C:\G2`` or something short. Some compters have been set so you must place the GSAS-II files within your account, however.
 
 .. raw:: html
 

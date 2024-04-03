@@ -36,7 +36,7 @@ where:
  * <platform> is replaced by ``Linux-x86_64.sh`` for Linux, ``MacOSX-arm64.sh`` for MacOS with "Apple Silicon"  (M1, etc.) processors and ``MacOSX-x86_64.sh`` is for older Intel-based machines. Note that the ``MacOSX-x86_64.sh`` installer will run on "Apple Silicon" processors, but significantly more slowly. 
  * <install-loc> is where you want to install the software. (Use of ``~/g2full`` (a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you may be asked if you want to place a shortcut for GSAS-II into the MacOS dock.
 
-More complete installation instructions are provided for [TBD MacOS] and [TBD Linux].
+More complete installation instructions are provided for `MacOS <install-g2f-mac.html>`_ and `Linux <install-g2f-linux.html>`_.
 
 
 GSAS2PKG Conda Package
@@ -51,13 +51,13 @@ This creates a conda virtual environment named ``GSASII`` (this can be changed) 
 Installing GSAS-II after Python Installation
 =============================================
 
-A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages) or using `PyPi <https://pypi.org/ PyPI>`_, etc. or prefer to handle use of conda on their own. Some discussion on Python installation is
+A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages) or using `PyPi <https://pypi.org>`_, etc. or prefer to handle use of conda on their own. Some discussion on Python installation is
 `found here <install-pip.html>`_. Independent of how Python is installed, multiple packages are needed, please see the
 `discussion on Python package requirements <https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_, noting that the GSAS-II GUI requires at a minimum wxPython, matplotlib,
 PyOpenGL, NumPy and SciPy, while for scripting use, only NumPy and SciPy are required.  For full functionality, several other optional packages are needed.
-If versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or run the compilation yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
+If versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or compile them yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
 
-A simple way to install GSAS-II with a supplied Python environment uses the `gitstrap.py` script provided for this purpose. Use these commands (on any platform) to install GSAS-II::
+A simple way to install GSAS-II with a supplied Python environment uses the ``gitstrap.py`` script provided for this purpose. Use these commands (on any platform) to install GSAS-II::
 
   cd ~/G2
   curl -L -O https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/raw/main/install/gitstrap.py
