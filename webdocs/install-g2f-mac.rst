@@ -18,17 +18,17 @@ Detailed Description of the Mac Installation Process
 
 1) The first step in this process is to open a terminal window. There are many ways on a Mac to do this, but one of the most easy is to click on the magnifying glass for Spotlight, as shown to the right, and then type terminal and finally click on the terminal application. 
 
-
 .. raw:: html
 
 	 <div class="clear"></div>
 
+	 
 .. image:: ./mac_inst_images/2.png
    :scale: 40 %
    :alt: terminal commands
    :align: right
 
- 2) Into the terminal window paste these commands (for an ARM aka "Apple Silicon" or M1, M2,... Mac)::
+2) Into the terminal window paste these commands (for an ARM aka "Apple Silicon" or M1, M2,... Mac)::
      
      g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-arm64.sh"
      curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2full
@@ -50,7 +50,7 @@ Detailed Description of the Mac Installation Process
    :alt: start of download
    :align: right
 
- 3) Once Return is pressed, the download of the installation kit file is started, which may take a while (typically minutes), depending on your internet connection speed.
+3) Once Return is pressed, the download of the installation kit file is started, which may take a while (typically minutes), depending on your internet connection speed.
 
 .. raw:: html
 
@@ -61,7 +61,7 @@ Detailed Description of the Mac Installation Process
    :alt: download complete
    :align: right
 
- 4) After the download is complete, the installation starts and that usually completes in a minute or two, as seen to the right.
+4) After the download is complete, the installation starts and that usually completes in a minute or two, as seen to the right.
 
 .. raw:: html
 
@@ -72,7 +72,7 @@ Detailed Description of the Mac Installation Process
    :alt: drag to doc
    :align: right
 
- 5) The installer will create a Mac app as a shortcut for running GSAS-II and will open the folder containing it. You cannot move that app from the folder. You can start GSAS-II by double-clicking this icon or by dropping a GSAS-II project (.gpx) file on it. 
+5) The installer will create a Mac app as a shortcut for running GSAS-II and will open the folder containing it. You cannot move that app from the folder. You can start GSAS-II by double-clicking this icon or by dropping a GSAS-II project (.gpx) file on it. 
 
    You can, if you wish, drag it to the doc, as seen to the right. In the doc, you can also start GSAS-II by single-clicking this icon or by dropping a GSAS-II project (.gpx) file on it. 
 
@@ -80,12 +80,12 @@ Detailed Description of the Mac Installation Process
 
 	 <div class="clear"></div>
 
-. image:: ./mac_inst_images/6.png
+.. image:: ./mac_inst_images/6.png
    :scale: 40 %
    :alt: download complete
    :align: right
 
- 6) Alternately, if you do want to place the shortcut somewhere, for example in the desktop, you can create an alias of the app by control-clicking on the icon (or right-clicking with a three-button mouse) and select "Make Alias" in the pop-up menu. This will create a new copy of the GSAS-II icon labeled "GSAS-II alias". You can then start GSAS-II by double-clicking this icon or by dropping a GSAS-II project (.gpx) file on it. 
+6) Alternately, if you do want to place the shortcut somewhere, for example in the desktop, you can create an alias of the app by control-clicking on the icon (or right-clicking with a three-button mouse) and select "Make Alias" in the pop-up menu. This will create a new copy of the GSAS-II icon labeled "GSAS-II alias". You can then start GSAS-II by double-clicking this icon or by dropping a GSAS-II project (.gpx) file on it. 
 
 .. raw:: html
 
@@ -96,7 +96,7 @@ Detailed Description of the Mac Installation Process
    :alt: download complete
    :align: right
 
- 7) Once the alias icon is created, it can be dragged to any folder or the desktop. Once moved, it can be renamed if desired. 
+7) Once the alias icon is created, it can be dragged to any folder or the desktop. Once moved, it can be renamed if desired. 
 	   
 .. raw:: html
 

@@ -20,7 +20,10 @@ Help pages
 -----------------------
 
 The GSAS-II GUI provides context-based help via several web files that are
-distributed with the program, :strike:`as well as can be` `viewed here  <https://subversion.xray.aps.anl.gov/pyGSAS/trunk/help/gsasII-index.html>`_. This help is not always complete, but does provide some information on how different sections of the program work. 
+distributed with the program, as well as can be `viewed here
+<help/gsasII-index.html>`_. These help pages are not always complete,
+but do provide information on how different sections of the program
+work.  
 
 Developer's Documentation
 ----------------------------

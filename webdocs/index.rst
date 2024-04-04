@@ -28,7 +28,7 @@ Please help us by citing
  
 Also, please do sign up for the ​GSAS-II mailing list `see below <mailinglist.html>`_.
 We add new features to GSAS-II quite frequently, so we may break
-things from time to time `(see bug reporting, below <bug.html>)`_. Be
+things from time to time (`(see bug reporting, below <bug.html>`_). Be
 sure to use the Help-->Update capability frequently to stay abreast of
 new features and fixes as they are added and please make sure to use
 the latest version before reporting a bug to us, but *please* do report

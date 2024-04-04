@@ -33,6 +33,17 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-build webdocs .  # place output into root dir
+
+      # get the help pages from the GSAS-II sources into the web site
+      - name: Get GSAS-II
+        run: |
+          git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git _gsas2
+      - name: move help into site
+        run: |
+          mv _gsas2/GSASII/help ./help
+      - name: Get rid of the rest of the GSAS-II files
+        run: |
+          rm -rf _gsas2
         
       - name: Upload artifact  # creates zip file with website contents
         uses: actions/upload-pages-artifact@v3
