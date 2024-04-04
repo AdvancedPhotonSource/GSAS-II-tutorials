@@ -85,3 +85,11 @@ Older methods
 =================================
 
 Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. While the installers for those processes are still available. Also, updates will be provided for those past svn installations for the immediate future. However, it is encouraged that users reinstall GSAS-II via one of the above methods. When svn updates will be phased out, GSAS-II will provide warning messages.
+
+.. include:: install-g2f-win.rst
+
+.. include:: install-g2f-mac.rst
+
+.. include:: install-g2f-linux.rst
+
+	     

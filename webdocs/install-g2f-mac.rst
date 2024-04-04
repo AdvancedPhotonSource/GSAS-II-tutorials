@@ -7,8 +7,7 @@
    :alt: GSAS-II logo
    :align: right
 
-========================================================
-Detailed Description of the Mac Installation Process
+MacOS GSAS2FULL Installation Details
 ========================================================
 
 .. image:: ./mac_inst_images/1.png

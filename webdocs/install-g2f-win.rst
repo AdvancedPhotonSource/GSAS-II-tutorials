@@ -7,8 +7,7 @@
    :alt: GSAS-II logo
    :align: right
 
-========================================================
-Detailed Description of the Windows Installation Process
+Windows GSAS2FULL Installation Details
 ========================================================
 
 1 ) In your favorite browser click on the link to the download file, https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Windows-x86_64.exe.

@@ -7,8 +7,7 @@
    :alt: GSAS-II logo
    :align: right
 
-========================================================
-Detailed Description of the Linux Installation Process
+Linux GSAS2FULL Installation Details
 ========================================================
 The exact details for how the installation is performed will depend on "flavor" of Linux in use. Here I am using Ubuntu.
 

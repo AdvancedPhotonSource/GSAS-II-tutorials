@@ -43,7 +43,4 @@ bugs.
    mailinglist.rst
    bug.rst
    compile.rst
-   install-g2f-win.rst
-   install-g2f-mac.rst
-   install-g2f-linux.rst
    install-pip.rst
