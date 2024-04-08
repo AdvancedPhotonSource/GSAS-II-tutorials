@@ -32,6 +32,14 @@ When reporting a bug,
 How to report
 ------------------
 
-** `GitHub Issues Tracker <https://github.com/AdvancedPhotonSource/GSAS-II/issues>`_. **
-
 Our preferred mechanism for bug reporting is to use the GitHub `Issues tracker <https://github.com/AdvancedPhotonSource/GSAS-II/issues>`_. If you do not already have an account on GitHub, you will need one (it's free) to create or comment on a report, but anyone can see what is there. When creating an issue report, please describe the problem and add files and images to help us duplicate and fix the problem (see above). We will accept bug reports by e-mail, but would rather not get them that way. 
+
+ * **GitHub Issues Tracker**: https://github.com/AdvancedPhotonSource/GSAS-II/issues
+
+ * **uploading files**: GitHub is very restrictive in the types of files that can be attached to a issue, but there are two ways to attach GSAS-II project (.gpx) files, as well as image and data files. They can be placed in a zip archive, which can be created through a number of freely available software products. The .zip can be attached to the GitHub issue.
+
+   Alternately, on Mac and Linux computers the gzip program usually is installed as part of the basic OS and can be called as::
+
+        gzip project.gpx
+
+   which replaces the ``project.gpx`` file with a compressed version of the file ``project.gpx.gz``. The ``.gz`` files can also be attached to an issue. (To retain the original file use ``gzip -k`` in place of ``gzip``.)

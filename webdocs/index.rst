@@ -44,3 +44,4 @@ bugs.
    bug.rst
    compile.rst
    install-pip.rst
+   developers.rst
