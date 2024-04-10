@@ -39,7 +39,6 @@ jobs:
       
       - name: see changes
         run: |
-          diff tutorials.html tutorials.html.original
           git diff
   
       - name: prepare to push changes back
