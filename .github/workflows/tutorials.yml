@@ -27,16 +27,17 @@ jobs:
           curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
           ls -lt scripts
           pwd
-
+          
       - name: save old tutorials index 
         run: |
           cp tutorials.html tutorials.html.original
           git status
+          
       - name: build tutorials index 
         run: |
           cd scripts
           python makeGitTutorial.py ..
-	  
+	      
       - name: see what has been done
         run: |
           git status
