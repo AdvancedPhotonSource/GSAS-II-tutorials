@@ -2,9 +2,8 @@
 # with tutorials and the web pages output from SphinxDocs with
 # installation & build info etc.
 #
-# TODO: add run of scripts/makeGitTutorial here. Requires access to
-# GSASII source code (via import of GSASIIctrlGUI or could pull TutorialIndex
-# out for direct import here)
+# Before that is done, the tutorials.html file and the */data/index.html
+# files are updated by running scripts/makeGitTutorial
 # 
 name: build web documentation
 
@@ -24,6 +23,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
+      - name: Get tutorials index from source code
+        run: |
+          curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
+
+      - name: build tutorials index 
+        run: |
+          cd scripts
+          python makeGitTutorial.py ..
+      
+      - name: prepare to push changes back
+        run: |
+          git add tutorials.html
+          git add */data/index.html
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Changes from makeGitTutorials.py"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+
       - name: Sphinx setup
         uses: actions/setup-python@v3
       - name: Install dependencies
