@@ -17,9 +17,12 @@ onlineVideos = []
 how to retrieve this automatically any more. 
 '''
 def makeDataIndex(datadir,title):
-    '''Create an index.html file in the specified directory, listing the contents
+    '''Create an index.html file in the specified directory, 
+    with a URL for each file in the directory. This is run on 
+    every <tutorial>/data directory to provide web browser access to 
+    the contents since GitHub does not offer allow directory views
     '''
-    fp = open(os.path.join(datadir,'tutorials.html'),'w')
+    fp = open(os.path.join(datadir,'index.html'),'w')
     fp.write(f'''<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html> <head>
 <title>Data: {title}</title>
@@ -87,7 +90,7 @@ if __name__ == '__main__':
     
     tutURL = '' # URL of Tutorials directories, either absolute
                 # or relative to the page being created here
-    outname = os.path.join(TutorialsDir,'index.html')
+    outname = os.path.join(TutorialsDir,'tutorials.html')
 
     dirList = [l[0] for l in G2G.tutorialIndex if len(l) >= 3]
 

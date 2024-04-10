@@ -21,27 +21,30 @@ jobs:
     
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Get tutorials index 
         run: |
           curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
           ls -lt scripts
           pwd
-          
+
       - name: save old tutorials index 
         run: |
           cp tutorials.html tutorials.html.original
-          git status
-          
+
       - name: build tutorials index 
         run: |
           cd scripts
           python makeGitTutorial.py ..
-	      
-      - name: see what has been done
+      
+      - name: see changes
         run: |
           git status
+          diff ../tutorials.html ../tutorials.html.original
+  
+      - name: prepare to push changes back
+        run: |
           cd ..
           git add tutorials.html
+          git add */index.html
           git status
-          diff tutorials.html tutorials.html.original
