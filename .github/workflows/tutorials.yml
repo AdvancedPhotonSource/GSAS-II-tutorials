@@ -39,12 +39,11 @@ jobs:
       
       - name: see changes
         run: |
-          git status
-          diff ../tutorials.html ../tutorials.html.original
+          diff tutorials.html tutorials.html.original
+          git diff
   
       - name: prepare to push changes back
         run: |
-          cd ..
           git add tutorials.html
           git add */index.html
           git status
