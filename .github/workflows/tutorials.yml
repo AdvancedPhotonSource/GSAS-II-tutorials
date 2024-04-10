@@ -25,12 +25,14 @@ jobs:
       - name: Get tutorials index 
         run: |
           curl -L https://github.com/AdvancedPhotonSource/GSAS-II/blob/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
+          ls -lt scripts
+          pwd
 
       - name: build tutorials index 
         run: |
           cp tutorials.html tutorials.html.original
-          python scripts/makeGitTutorials.py
           git status
+          python script/makeGitTutorials.py
           git add tutorials.html
           git status
           diff tutorials.html tutorials.html.original
