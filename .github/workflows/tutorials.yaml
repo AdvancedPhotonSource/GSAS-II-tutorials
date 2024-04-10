@@ -4,7 +4,7 @@
 # GSASII source code (via import of GSASIIctrlGUI or could pull TutorialIndex
 # out for direct import here)
 # 
-name: build web documentation
+name: build tutorials web index
 
 #on: [push, pull_request, workflow_dispatch]
 #on: [push, workflow_dispatch]  # why build on pull request?
