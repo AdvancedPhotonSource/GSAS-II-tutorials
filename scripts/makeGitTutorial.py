@@ -8,7 +8,7 @@ import os
 import sys
 import glob
 import datetime
-import GSASIIctrlGUI as G2G
+import tutorialIndex as G2G
 
 script = sys.argv[0]
 timestamp = datetime.datetime.ctime(datetime.datetime.now())

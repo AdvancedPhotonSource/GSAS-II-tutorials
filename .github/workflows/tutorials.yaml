@@ -1,0 +1,33 @@
+# this is a start in running the makegittutorials.py script
+#
+# TODO: add run of scripts/makeGitTutorial here. Requires access to
+# GSASII source code (via import of GSASIIctrlGUI or could pull TutorialIndex
+# out for direct import here)
+# 
+name: build web documentation
+
+#on: [push, pull_request, workflow_dispatch]
+#on: [push, workflow_dispatch]  # why build on pull request?
+on: [workflow_dispatch]
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  create:       # creates a the tutorials.html web page
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Get tutorials index 
+        run: |
+	  curl -L https://github.com/AdvancedPhotonSource/GSAS-II/blob/master/GSASII/tutorialIndex.py > scripts/tutorialIndex.py
+	  cp tutorials.html tutorials.html.original
+	  python scripts/makeGitTutorials.py
+	  git status
+	  git add tutorials.html
+	  git status
+	  diff tutorials.html tutorials.html.original
