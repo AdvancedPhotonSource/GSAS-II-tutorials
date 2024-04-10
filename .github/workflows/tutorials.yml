@@ -28,12 +28,17 @@ jobs:
           ls -lt scripts
           pwd
 
-      - name: build tutorials index 
+      - name: save old tutorials index 
         run: |
           cp tutorials.html tutorials.html.original
           git status
+      - name: build tutorials index 
+        run: |
           cd scripts
-          python makeGitTutorial.py
+          python makeGitTutorial.py ..
+	  
+      - name: see what has been done
+        run: |
           git status
           cd ..
           git add tutorials.html
