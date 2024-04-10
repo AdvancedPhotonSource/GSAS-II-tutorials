@@ -32,10 +32,10 @@ jobs:
         run: |
           cp tutorials.html tutorials.html.original
           git status
-	  cd scripts
+          cd scripts
           python makeGitTutorial.py
           git status
-	  cd ..
+          cd ..
           git add tutorials.html
           git status
           diff tutorials.html tutorials.html.original
