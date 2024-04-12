@@ -45,3 +45,4 @@ bugs.
    compile.rst
    install-pip.rst
    developers.rst
+   proxy.rst

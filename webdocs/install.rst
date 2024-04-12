@@ -46,7 +46,13 @@ Users who work extensively with Python and use the conda Python installer may pr
 
   conda create -n GSASII briantoby::gsas2pkg  -c conda-forge
 
-This creates a conda virtual environment named ``GSASII`` (this can be changed) for use by GSAS-II. While it is also possible to install GSAS-II into the conda base environment, this is not recommended as it can create conflicts between Python and package versions needed by GSAS-II and those required by other packages.
+This creates a conda virtual environment named ``GSASII`` (this can be changed) for use by GSAS-II. While it is also possible to install GSAS-II into the conda base environment, this is not recommended as it can create conflicts between Python and package versions needed by GSAS-II and those required by other packages. (If you choose to do this anyway, be sure to specify ``conda install python=3.11 briantoby::gsas2pkg`` as Python is likely to be pinned to a different version.)
+
+After this command is run, use command ``conda activate GSASII`` to access the
+conda environment that has been created. On Linux and MacOS computers, two shortcut commands will then be available in the path, The first command, ``gsasII.sh``, which will start GSAS-II. This can optionally be used as ``gsasII.sh project.gpx`` to open existing project file ``project.gpx`` in GSAS-II. The second command, ``reset-gsasII.sh``  will rarely be used. This command will download the latest version of GSAS-II and update to that version, replacing any locally modified files with the original versions. This can be used to update GSAS-II when the program will not start, so the normal Help->Update menu command cannot be accessed. (Shortcuts available with gsas2pkg v5.1+.)
+
+Note that on MacOS, a Mac app is also created and is displayed in the Finder
+`see steps 5 & 6 here <install.html#macos-gsas2full-installation-details>`_. This app can be used to start GSAS-II from the dock or desktop.
 
 Installing GSAS-II after Python Installation
 =============================================
