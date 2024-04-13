@@ -35,10 +35,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 #html_theme = 'sphinx_rtd_theme'
-#html_static_path = ['_static']
 import sphinx_readable_theme
 html_theme = 'readable'
 html_theme_path = [sphinx_readable_theme.get_html_theme_path()]
+# forces tables from being too wide in the HTML rendering (probably not needed)
+# also removes bullet from toc lists
+html_static_path = ['_static']
 html_css_files = [
-    '../../../webdocs.css',
+    'theme_overrides.css',
 ]
