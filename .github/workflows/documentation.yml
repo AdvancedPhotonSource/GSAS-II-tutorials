@@ -46,8 +46,8 @@ jobs:
         uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme sphinxnotes.strike
-          
+          pip install sphinx sphinx_readable_theme
+#          pip install sphinx_rtd_theme sphinxnotes.strike # not used anymore
       - name: Sphinx build
         run: |
           sphinx-build webdocs .  # place output into root dir

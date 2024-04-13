@@ -7,6 +7,8 @@
  Available Documentation for GSAS-II
 ====================================
 
+.. index:: GSAS-II tutorials
+
 Tutorials
 -----------------------
 
@@ -16,6 +18,8 @@ Use ones that relate to your work is a strongly-encouraged way to start with GSA
 best accessed from within the GSAS-II GUI (in the Help menu), but can also be `found here <https://advancedphotonsource.github.io/GSAS-II-tutorials/tutorials.html>`_.
 Some older tutorials have video copies, so you can see the computer screen as the tutorial is being run.
 
+.. index:: GSAS-II help pages
+
 Help pages
 -----------------------
 
@@ -24,6 +28,8 @@ distributed with the program, as well as can be `viewed here
 <help/gsasII-index.html>`_. These help pages are not always complete,
 but do provide information on how different sections of the program
 work.  
+
+.. index:: Source code documentation
 
 Developer's Documentation
 ----------------------------

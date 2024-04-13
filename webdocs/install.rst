@@ -3,11 +3,15 @@
    :alt: GSAS-II logo
    :align: right
 
-======================= 
-Installation overview
-=======================
+============================ 
+GSAS-II Installation Options
+============================
+
+.. index:: Installation overview
 
 Running GSAS-II requires a number of coordinated installation steps and there are many different ways this can be accomplished. One needs not only the necessary Python source code for GSAS-II, but a Python interpreter that includes a number of "add-on" Python packages for additonal capabilities. This much match the computer where the software will be run. Further, GSAS-II requires that a small amount of its code be compiled, typically for speed and this must be matched both the computer OS and to the Python version. Here I outline different a few different approaches.
+
+.. index:: gsas2full installer
 
 GSAS2FULL installer
 =======================
@@ -38,6 +42,7 @@ where:
 
 More complete installation instructions are provided for `MacOS <install-g2f-mac.html>`_ and `Linux <install-g2f-linux.html>`_.
 
+.. index:: gsas2pkg installer
 
 GSAS2PKG Conda Package
 =======================
@@ -53,6 +58,8 @@ conda environment that has been created. On Linux and MacOS computers, two short
 
 Note that on MacOS, a Mac app is also created and is displayed in the Finder
 `see steps 5 & 6 here <install.html#macos-gsas2full-installation-details>`_. This app can be used to start GSAS-II from the dock or desktop.
+
+.. index:: Installing GSAS-II with ``gitstrap.py`` 
 
 Installing GSAS-II after Python Installation
 =============================================
@@ -70,6 +77,8 @@ A simple way to install GSAS-II with a supplied Python environment uses the ``gi
   python gitstrap.py
 
 This will place the install script in directory ``~/G2`` (which you may wish to change) and will place all GSAS-II files in subdirectory ``~/G2/GSAS-II``
+
+.. index:: Installing GSAS-II from GitHub
 
 Installation for GSAS-II Software Developers
 ==============================================

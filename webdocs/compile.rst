@@ -7,6 +7,8 @@
    :alt: GSAS-II logo
    :align: right
 
+.. index:: Compiling GSAS-II
+
 ====================== 
 Compiling GSAS-II
 ======================

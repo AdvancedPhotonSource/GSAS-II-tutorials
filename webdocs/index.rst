@@ -2,10 +2,26 @@
    :scale: 25 %
    :alt: GSAS-II logo
    :align: right
-
+	   
+.. index:: Home
+	   
 ====================================
  Home Page for GSAS-II
 ====================================
+
+.. toctree::
+   :caption: Contents
+   :maxdepth: 1
+   :numbered:     
+      
+   install.rst
+   documentation.rst
+   mailinglist.rst
+   bug.rst
+   developers.rst 
+   compile.rst
+   install-pip.rst
+   proxy.rst
 
 Welcome to the home page for GSAS-II, a unique and comprehensive open
 source Python project for determination of crystal structures and
@@ -18,31 +34,87 @@ neutron sources. It provides structure solution and refinement, as
 well as extensive visualization capabilities. 
 
 GSAS-II is made available for free use (`see license <https://raw.githubusercontent.com/AdvancedPhotonSource/GSAS-II/master/LICENSE>`_) with open access to ​the `source code <https://github.com/AdvancedPhotonSource/GSAS-II>`_.  
-Please help us by citing
 
+.. tip::
+    Please help us by citing:
+
+     .. index:: Citation
+    
     Toby, B. H., & Von Dreele, R. B. (2013). "GSAS-II: the genesis of a modern open-source all purpose crystallography software package". *Journal of Applied Crystallography*, **46**\(2), 544-549. ​doi:10.1107/S0021889813003531
 
-    Note that some sections of the program utilize externally provided
-    codes or reference later work, with citations provided
-    as they are used. *Please* cite them as well.
+       Note that some sections of the program utilize externally provided
+       codes or reference later work, with citations provided
+       as they are used. *Please* cite them as well.
  
 Also, please do sign up for the ​GSAS-II mailing list `see below <mailinglist.html>`_.
 We add new features to GSAS-II quite frequently, so we may break
-things from time to time (`(see bug reporting, below <bug.html>`_). Be
-sure to use the Help-->Update capability frequently to stay abreast of
+things from time to time (`see bug reporting <bug.html>`_). Be
+sure to use the ``Help-->Update`` capability frequently to stay abreast of
 new features and fixes as they are added and please make sure to use
 the latest version before reporting a bug to us, but *please* do report
-bugs. 
+bugs.
+
+Installation overview
+=======================
+
+There are several different ways to install GSAS-II, as are outlined below. Most people will use the GSAS2FULL installer
+ 
+.. toctree::
+   :caption: Installation information:
+      
+   install.rst
+
+Available Documentation
+====================================
+
+While there is no manual for GSAS-II, there is quite a bit of
+web-based documentation, as listed below.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-	     
-   install.rst
+      
    documentation.rst
+
+Mailing List
+====================================
+
+If you use  GSAS-II, please join the mailing list so we can tell you
+about what is new and changing. 
+
+.. toctree::
+
    mailinglist.rst
+
+Reporting Bugs
+====================================
+
+If something is not working properly in GSAS-II, please let us
+know. If we don't know its broken, its not going to be
+fixed. Information on how to report bugs is here. 
+
+.. toctree::
+
    bug.rst
+
+
+Information for code developers  
+====================================
+
+We encourage you to improve GSAS-II or to use the code in your own
+projects. Some starting information is here:
+
+.. toctree::
+
+   developers.rst 
+
+Installation details
+====================================
+
+Most people will not need these details, but some specific
+installation details are discussed in the topics below.
+
+.. toctree::
+   :maxdepth: 3
+	      
    compile.rst
    install-pip.rst
-   developers.rst
    proxy.rst
