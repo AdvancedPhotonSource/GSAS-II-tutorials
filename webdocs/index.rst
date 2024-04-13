@@ -2,11 +2,11 @@
    :scale: 25 %
    :alt: GSAS-II logo
    :align: right
-	   
+
 .. index:: Home
 	   
 ====================================
- Home Page for GSAS-II
+GSAS-II Home Page
 ====================================
 
 .. toctree::
