@@ -53,7 +53,7 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-build webdocs .  # place output into root dir
-	  cp webdocs/_static/fix.css _static/fix.css # should be done by sphinx
+          cp webdocs/_static/fix.css _static/fix.css # should be done by sphinx
 
       # get the help pages from the GSAS-II sources into the web site
       - name: Get GSAS-II
