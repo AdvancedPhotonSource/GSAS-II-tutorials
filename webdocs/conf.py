@@ -42,5 +42,5 @@ html_theme_path = [sphinx_readable_theme.get_html_theme_path()]
 # also removes bullet from toc lists
 html_static_path = ['_static']
 html_css_files = [
-    'theme_overrides.css',
+    'fix.css',
 ]
