@@ -95,21 +95,25 @@ This will place the install script in directory ``~/G2`` (which you may wish to 
 Installation for GSAS-II Software Developers
 ==============================================
 
-While all of the above approaches do clone a copy of the GSAS-II repository from GitHub, software developers will likely wish to clone the repo themselves. This will also require This is done
-from 
+While all of the above approaches do clone a copy of the GSAS-II repository from GitHub, software developers may find it more convenient to clone the repo themselves
+in a location that they prefer.
+This will also require a properly configured Python, as described immediately above. 
+Cloning is done from 
 ``git@github.com:AdvancedPhotonSource/GSAS-II.git`` or ``https://github.com/AdvancedPhotonSource/GSAS-II.git``.
+with a command like::
 
-If the repo is cloned at ``~/myProjects/myGSASII`` then the local copy of GSAS-II can be 
-run as a GUI using::
+   git clone git@github.com:AdvancedPhotonSource/GSAS-II.git ~/myProjects/myGSASII
+
+If the repo is cloned at ``~/myProjects/myGSASII`` then the local copy of GSAS-II can be run as a GUI using::
 
   python ~/myProjects/myGSASII/GSASII/GSASII.py
 
-Installation scripts used inside the above-listed approaches can still be used for GitHub repo installation. See discussion of makeMacApp.py, makeLinux.py and makeBat.py (for MacOS, Linux and Windows, respectively) in the `Developer's Documentation <https://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html#gsas-ii-misc-scripts>`_.
+Installation scripts used inside the previously described installers are available for creating shortcuts to run GSAS-II from a GitHub repo that has been manually installed. See discussion of ``makeMacApp.py``, ``makeLinux.py`` and ``makeBat.py`` (for MacOS, Linux and Windows, respectively) in the `Developer's Documentation <https://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html#gsas-ii-misc-scripts>`_.
 Also, to simplify use of your local clone of the GSAS-II repo when scripting GSAS-II, see this `note on scripting shortcuts
 <https://gsas-ii.readthedocs.io/en/latest/GSASIIscriptable.html#shortcut-for-scripting-access>`_. 
 
 Older methods
 =================================
 
-Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. While the installers for those processes are still available. Also, updates will be provided for those past svn installations for the immediate future. However, it is encouraged that users reinstall GSAS-II via one of the above methods. When svn updates will be phased out, GSAS-II will provide warning messages.
+Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. While the installers for those processes are still available, this is not encouraged. Also, updates will be provided for those past svn installations for the immediate future, this will not be continued indefinitely. Thus, we are encouraging users to reinstall GSAS-II via one of the above methods if they previously installed GSAS-II via svn. When updates via svn will be phased out, GSAS-II will provide warning messages.
 	     
