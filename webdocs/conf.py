@@ -44,3 +44,7 @@ html_static_path = ['_static']
 html_css_files = [
     'fix.css',
 ]
+html_favicon = 'favicon.ico'
+html_last_updated_fmt = ''
+html_copy_source = False
+html_scaled_image_link = True

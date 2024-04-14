@@ -53,14 +53,14 @@ Scripting Documentation
 ----------------------------
 
 The documentation on scripting GSAS-II is contained in the Developer's
-Documentation described immediately above, but a
+Documentation described immediately above, but an
 `abridged version of the ​web site
 <https://gsas-ii-scripting.readthedocs.io/en/latest/>`_ with 
 only sections relevant to scripting is also available. This abridged
 version can also be downloaded as a `PDF document
-<https://gsas-ii.readthedocs.io/_/downloads/en/latest/pdf/>`_ or as
+<https://gsas-ii-scripting.readthedocs.io/_/downloads/en/latest/pdf/>`_ or as
 `an electronic book
-<https://gsas-ii.readthedocs.io/_/downloads/en/latest/epub/>`_  (Epub
+<https://gsas-ii-scripting.readthedocs.io/_/downloads/en/latest/epub/>`_  (Epub
 format). 
 
 
