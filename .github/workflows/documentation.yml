@@ -53,6 +53,7 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-build webdocs .  # place output into root dir
+	  cp webdocs/_static/fix.css _static/fix.css # should be done by sphinx
 
       # get the help pages from the GSAS-II sources into the web site
       - name: Get GSAS-II
@@ -61,9 +62,9 @@ jobs:
       - name: move help into site
         run: |
           mv _gsas2/GSASII/help ./help
-      - name: Get rid of the rest of the GSAS-II files
+      - name: Get rid of the rest of the GSAS-II files & other stuff not needed on web
         run: |
-          rm -rf _gsas2
+          rm -rf _gsas2 webdocs scripts
         
       - name: Upload artifact  # creates zip file with website contents
         uses: actions/upload-pages-artifact@v3
