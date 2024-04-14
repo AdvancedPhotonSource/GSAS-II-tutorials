@@ -32,12 +32,14 @@ jobs:
           cd scripts
           python makeGitTutorial.py ..
       
-      - name: prepare to push changes back
-        run: |
-          git add tutorials.html
-          git add */data/index.html
-          git config --local user.name "github-actions[bot]"
-          git commit -m "Changes from makeGitTutorials.py"
+ # removing this. Broken w/i e-mail and makes too many changes to repo
+ #     - name: prepare to push changes back
+ #       run: |
+ #         git add tutorials.html
+ #         git add */data/index.html
+ #         git config --local user.name "github-actions[bot]"
+ #         need to config e-mail address too 
+ #         git commit -m "Changes from makeGitTutorials.py"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
