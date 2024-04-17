@@ -18,6 +18,6 @@ In addition, there are a few special directories:
 * **docs**: The docs directory contains documentation for externally generated codes, such as
 DIFFaX, NIST*LATTICE and PDFfit2.
 
-* **scripts**: The scripts directory contains a script (`makeGitTutorial.py`) used to build the [tutorials table of contents page](https://advancedphotonsource.github.io/GSAS-II-tutorials/tutorials.html). Note that when a new tutorial is created, in addition to placing that in a new directory here, it needs to be added to the tutorialsIndex content, found in file [GSASIIctrlGUI.py](https://github.com/AdvancedPhotonSource/GSAS-II/blob/master/GSASII/GSASIIctrlGUI.py) before `makeGitTutorial.py` is run. 
+* **scripts**: The scripts directory contains a script (`makeGitTutorial.py`) used to build the [tutorials table of contents page](https://advancedphotonsource.github.io/GSAS-II-tutorials/tutorials.html). Note that when a new tutorial is created, in addition to placing that in a new directory here, it needs to be added to the tutorials list, found in file [tutorialsIndex.py](https://github.com/AdvancedPhotonSource/GSAS-II/blob/master/GSASII/tutorialsIndex.py). This is used to display tutorials when the Tutorials menu commands is used and by `makeGitTutorial.py` as part of the "Build web documentation" GitHub Action. Note that this should probably be run manually as well to check in an updated .html file to git. 
 
 * **webdocs**: Contains RestructuredText (.rst) files, used to produce the GSAS-II home page, installation instructions and related web content. 
