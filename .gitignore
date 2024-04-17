@@ -1,2 +1,5 @@
 # from local runs of sphinxdocs
 webdocs/_build/
+
+# from python imports
+__pycache__
