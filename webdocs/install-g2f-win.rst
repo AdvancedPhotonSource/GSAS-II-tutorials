@@ -126,3 +126,24 @@ Installation then starts and may take at least a few minutes to complete, depend
    :align: right
 	   
 Note that this installer will associate the .gpx extension (used for GSAS-II projects) with the newly installed GSAS-II program. Clicking on a .gpx file will open that in GSAS-II. Also, a desktop icon for starting GSAS-II is created. If GSAS-II has already been installed in a separate location, the icon will be named by the directory. 
+
+Notes
+-----
+
+If you want to install on multiple machines, one can install GSAS-II
+into shared directory or a file server, but the path where the
+software is installed is recorded in the files that are
+installed. This means that the path used to access GSAS-II
+should be the same on all systems
+where GSAS-II will be used. Likewise, it is possible to install GSAS-II
+on one computer and then copy the directory where GSAS-II has been
+installed to other computers, but again the full path for installation
+should be the same on all computers. E.g., if GSAS-II is installed
+in ``C:\software\GSASII`` it can be copied to a directory with the
+same name on other computers and used from that location, but not to 
+``E:\software\GSASII`` or ``C:\Users\someone\GSASII``.
+
+It should be possible to run the GSAS-II self-installer in NSIS "silent
+mode," which would allow it to be run inside a script, but that does
+not seem to work and I am not sure why. Ref: 
+https://github.com/conda/constructor/blob/main/CONSTRUCT.md#installer_type

@@ -1,0 +1,132 @@
+.. raw:: html
+
+	 <style> .clear {clear: both;}</style>
+
+.. image:: ./images/gsas2.png
+   :scale: 25 %
+   :alt: GSAS-II logo
+   :align: right
+	   
+==============================================
+ Installing GSAS-II for code development
+==============================================
+
+This section describes the steps needed so that changes can be made to the GSAS-II code so that those changes can be submitted to be included in future updates. This process is known as creating a "pull request" on GitHub. To do this "fork a copy" of the GSAS-II repository in your own GitHub account, 
+meaning you will establish a private copy of GSAS-II and when you have reached a good point to share what you have done, you can provide access to your work via something called a "pull request." From the pull request the GSAS-II developers can consider including your changes into the main distribution.
+
+Note that since you can have multiple copies of GSAS-II installed on your computer, or use the git command to quickly switch between different versions of GSAS-II in a single installation (branches with git), it is easy to get back to the distributed version of GSAS-II, so there is no danger of breaking GSAS-II in some way that would be hard to fix. At worst you can discontinue work on a broken version and start again. You are very much encouraged to try your hand at working on improvements to GSAS-II.
+
+The steps needed to establish a development version of GSAS-II are outlined below. I am still learning my way around pull requests, so let me know about problems or better ways to do things. 
+
+---------------------------------------------------
+ Create a GitHub account
+---------------------------------------------------
+
+It is free. Use this link: https://github.com/signup?source=login. 
+
+---------------------------------------------------
+ Establish a connection
+---------------------------------------------------
+
+You will need to establish an authorized connection between your computer and GitHub in order to have the ability to send files from your computer to GitHub.  While the files in GSAS-II are all publically available and do not need a GitHub account to access, if you have made changes and want to allow others to see what you have done, you need to send those changed files back to GitHub. This does require that the git program be authorized to access your GitHub account. There are multiple ways to do this, as discussed here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github.
+
+The method I have used has been to use ssh authentication. In a nutshell this requires creating a ssh public key (if one does not already exist) and providing that key to GitHub. To see if you already have an ssh key, see this: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys. If you do not, see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent.
+
+To upload the key you generated to GitHub, see this page: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account 
+
+   For Windows with tortoiseGit and its default PuTTy ssh program, use program PuTTygen. If a key has been generated it will be shown; if not pressing the Generate button will create this. The public key can be copied and pasted into the Settings/SSH and GPG keys setting page. 
+   
+---------------------------------------------------
+ create a fork of GSAS-II
+---------------------------------------------------
+
+There is GitHub documentation on creating a fork here: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo
+   
+---------------------------------------------------
+ Install GSAS-II from your forked copy
+---------------------------------------------------
+
+There are two choices here, you can create a GSAS-II installation directly from GitHub using the a git clone command. Or, you can install GSAS-II using one of the standard  installation methods (`see here <install.html>`_) and then switch the "upstream repository" associated with that to the forked copy.
+
+Install directly from your forked copy
+---------------------------------------------------
+
+If you will clone GSAS-II directly, you will need to consider how git and Python are installed. One way to do this is to use the Python installed with one copy of GSAS-II, installed with the gsas2full self-installer, to run another. To do that you will need to use a command to make that Python available, as below.
+
+  For Windows, if GSAS-II is installed at location ``C:\Users\Me\gsas2full`` then use this command to setup Python::
+
+      C:\Users\Me\gsas2full\Scripts\activate
+
+  For Linux and MacOS, if GSAS-II is installed at location ``~/G2/g2full`` then use this command to setup Python::
+
+      source ~/G2/g2full/bin/activate 
+
+  Note that once the above command has been run, in addition to the ``python`` command, one can also run ``git`` and ``conda``.
+
+To clone GSAS-II from your forked copy use commands similar to the following::
+    
+    mkdir dev
+    cd dev
+    git clone git@github.com:MyRepo/GSAS-II.git
+    cd GSAS-II
+
+This will create directory ``dev/GSAS-II`` with a copy of your fork. The GSAS-II Python files will be in ``dev/GSAS-II/GSASII``. Note that when the GSAS-II Python files are cloned from a GitHub repo, the GSAS-II binary files are not be installed. However, when GSAS-II is first run, it will provide an opportunity to do this.  To run this copy of GSAS-II, you will use a command such as::
+
+    python GSASII/GSASII.py
+ 
+Use of that command can get tiresome, so you may want to set up a shortcut method to access your development version. Note that the GSAS-II installers (gsas2full &  gsas2pkg) run installation scripts to create shortcuts. This can also be done manually for your development version. See discussion of ``makeMacApp.py``, ``makeLinux.py`` and ``makeBat.py`` (for MacOS, Linux and Windows, respectively) in the `Developer's Documentation <https://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html#gsas-ii-misc-scripts>`_. If you will use your development version of GSAS-II for scripting GSAS-II, see this `note on scripting shortcuts <https://gsas-ii.readthedocs.io/en/latest/GSASIIscriptable.html#shortcut-for-scripting-access>`_.     
+
+  Note that if you set up for ssh authorization and clone using http rather than ssh, using a command like this::
+    
+      git clone https://github.com/MyRepo/GSAS-II.git
+
+  you will need to change the upstream repo, as described in the next section.
+
+
+Repurpose a standard GSAS-II installation
+---------------------------------------------------
+
+A potentially simpler way to set up a development version of GSAS-II is to run one of the installation scripts that are typically used inside the self-installers. 
+This can greatly simply installation of the GSAS-II source code, but you then need to make some changes to work using your forked copy of GSAS-II. This requires changing the git settings to you to write your changes back to your copy of the repository and to access multiple branches.
+
+  This can be done by editing the ``.../GSAS-II/.git/config`` file from::
+
+   [remote "origin"]
+	url = https://github.com/AdvancedPhotonSource/GSAS-II.git
+	fetch = +refs/heads/master:refs/remotes/origin/master
+
+  to::
+
+   [remote "origin"]
+	url = git@github.com:MyPersonalRepo/GSAS-II.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+
+  These changes can be done directly by editing this file. Alternately, these git commands will do the same thing::
+
+     git config remote.origin.url git@github.com:MyPersonalRepo/GSAS-II.git 
+     git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+
+---------------------------------------------------
+ Make changes and submit them
+---------------------------------------------------
+
+You are strongly encouraged to create a separate branch for each development project that you have with GSAS-II.
+
+  The command to do this is::
+
+     git checkout -b g2newfeature
+
+  Note that this creates a branch named ``g2newfeature`` -- do choose a better name.
+
+When your changes are complete and you are ready to communicate them back, you will commit them locally and use ``git push`` to upload them to GitHub. From the web interface to GitHub you can then submit that branch as a pull request to the main GSAS-II repository. Once you have submiited your pull request, you likely will want to switch to a different branch to do any further development work, as if changes are uploaded for the branch used for the pull request, those changes will be added to the code in the pull request. 
+
+==============================================
+ Code development tip
+==============================================
+   
+One nice trick for working with GSAS-II is that if you locate a place where you want to insert code into the program, you can run commands in that environment. To do this, two prerequisite steps are needed. First, use the conda command to install iPython (this assumes you have already used the activate command, as above)::
+
+    conda install ipython
+
+Then run GSAS-II and use the Preferences command (File menu or on MacOs on the first menu, named GSAS-II or python) and set the debug option to True. One can then place a
+``breakpoint()`` statement into GSAS-II at a location where one wants to develop code. When that statement is executed, GSAS-II will enter iPython but in the local environment where your code will be executed, so you can see what variables and functions are defined and try running code that can then be placed into GSAS-II. Remember to remove the breakpoint statement when you are done. 

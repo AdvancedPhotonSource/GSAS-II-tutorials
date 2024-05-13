@@ -37,11 +37,11 @@ Developer's Documentation
 450+ pages of code documentation generated from comments in the code
 and RestructuredText documentation files are found on the `​"Read The
 Docs" web site <https://gsas-ii.readthedocs.io>`_. The documentation
-can also be downloaded as a `PDF document
-<https://gsas-ii.readthedocs.io/_/downloads/en/latest/pdf/>`_ or as
-`an electronic book
-<https://gsas-ii.readthedocs.io/_/downloads/en/latest/epub/>`_  (Epub
-format). 
+can also be downloaded as a
+`PDF document <https://gsas-ii.readthedocs.io/_/downloads/en/latest/pdf/>`_
+or as
+`an electronic book <https://gsas-ii.readthedocs.io/_/downloads/en/latest/epub/>`_
+(Epub format). 
 Regardless of the format, this provides very useful documentation for
 code developers, for people interested in creating GSAS-II scripts, or
 incorporating GSAS-II capabilities into their software, or for those
