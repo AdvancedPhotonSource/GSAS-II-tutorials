@@ -73,8 +73,8 @@ Note that on MacOS, a Mac app is also created and is displayed in the Finder
 
 .. index:: Installing GSAS-II with gitstrap.py
 
-Installing GSAS-II after Python Installation
-=============================================
+Installing GSAS-II with separate Python Installation
+======================================================
 
 A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages) or using `PyPi <https://pypi.org>`_, etc. or prefer to handle use of conda on their own. Some discussion on Python installation is
 `found here <install-pip.html>`_. Independent of how Python is installed, multiple packages are needed, please see the
@@ -89,6 +89,9 @@ A simple way to install GSAS-II with a supplied Python environment uses the ``gi
   python gitstrap.py
 
 This will place the install script in directory ``~/G2`` (which you may wish to change) and will place all GSAS-II files in subdirectory ``~/G2/GSAS-II``
+
+Note that you can also clone the GitHub repo. If you do this, the GSAS-II binary files
+will not be installed. However, when GSAS-II is first run, it will provide an opportunity to do this. 
 
 .. index:: Installing GSAS-II from GitHub
 
