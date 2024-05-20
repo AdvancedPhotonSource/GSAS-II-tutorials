@@ -42,7 +42,7 @@ Installation of compilers is highly depend on the computer system being used, bu
       conda install gfortran_osx-64 scons
 
 Use the ``conda search gfortran`` command to find the name for the package. 
-On most linux systems, one can use a command such as ``sudo apt-get gfortran`` or ``yum install gcc-gfortran``. Also see ​https://gcc.gnu.org/wiki/GFortranBinaries for more information.
+On most linux systems, one can use a command such as ``sudo apt-get gfortran`` or ``yum install gcc-gfortran``. Also see https://gcc.gnu.org/wiki/GFortranBinaries for more information.
 
 Note that the intent is that this Scons-based process will be replaced with one to run under meson in mid-2024. In the meantime, some older web pages discussing compiling GSAS-II may be of use:
 

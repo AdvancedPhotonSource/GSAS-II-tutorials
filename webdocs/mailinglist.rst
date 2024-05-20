@@ -8,14 +8,14 @@ Mailing List
 =======================
 
 We provide a mailing list for GSAS-II users to ask questions and more importantly, **so that we can reach users with news about GSAS-II**. Please do subscribe. The level of traffic on this list is pretty low, perhaps a few e-mails a month; Bob and I usually reply to directly to the sender to further reduce this traffic, unless the answer will be valuable to many people.
-You can also search the `archives of the mailing list <​http://www.mail-archive.com/gsas-ii@mailman.aps.anl.gov/>`_.
+You can also search the `archives of the mailing list <http://www.mail-archive.com/gsas-ii@mailman.aps.anl.gov/>`_.
 
 .. index:: Subscribe to mailing list
 
 Subscribing
 -------------------
 To subscribe, use
-`​this link <https://mailman.aps.anl.gov/mailman/listinfo/GSAS-II>`_
+`this link <https://mailman.aps.anl.gov/mailman/listinfo/GSAS-II>`_
 or send an e-mail to `GSAS-II-request@mailman.aps.anl.gov  <GSAS-II-request@mailman.aps.anl.gov?subject=subscribe>`_.
 Set the subject as "Subscribe" (or "Subscribe <password>" where <password> is your preference for a mailing list login password). You can also use "Help" as the subject to get a list of options 
 

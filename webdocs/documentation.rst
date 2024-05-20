@@ -35,7 +35,7 @@ Developer's Documentation
 ----------------------------
 
 450+ pages of code documentation generated from comments in the code
-and RestructuredText documentation files are found on the `​"Read The
+and RestructuredText documentation files are found on the `"Read The
 Docs" web site <https://gsas-ii.readthedocs.io>`_. The documentation
 can also be downloaded as a
 `PDF document <https://gsas-ii.readthedocs.io/_/downloads/en/latest/pdf/>`_
@@ -54,7 +54,7 @@ Scripting Documentation
 
 The documentation on scripting GSAS-II is contained in the Developer's
 Documentation described immediately above, but an
-`abridged version of the ​web site
+`abridged version of the web site
 <https://gsas-ii-scripting.readthedocs.io/en/latest/>`_ with 
 only sections relevant to scripting is also available. This abridged
 version can also be downloaded as a `PDF document
@@ -68,6 +68,6 @@ Crystallography/Powder Diffraction Intro
 -----------------------------------------------
 
 For background material on powder diffraction crystallography, see the links
-on our ​
+on our 
 `Powder Diffraction Crystallography Educational Materials page <https://www.aps.anl.gov/Education/Powder-Diffraction-Educational-Materials>`_,
 in addition to the very considerable amount of material found on other sites.

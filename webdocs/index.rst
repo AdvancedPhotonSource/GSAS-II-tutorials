@@ -33,20 +33,20 @@ synchrotron x-rays, as well as constant wavelength or time-of-flight
 neutron sources. It provides structure solution and refinement, as
 well as extensive visualization capabilities. 
 
-GSAS-II is made available for free use (`see license <https://raw.githubusercontent.com/AdvancedPhotonSource/GSAS-II/master/LICENSE>`_) with open access to ​the `source code <https://github.com/AdvancedPhotonSource/GSAS-II>`_.  
+GSAS-II is made available for free use (`see license <https://raw.githubusercontent.com/AdvancedPhotonSource/GSAS-II/master/LICENSE>`_) with open access to the `source code <https://github.com/AdvancedPhotonSource/GSAS-II>`_.  
 
 .. tip::
     Please help us by citing:
 
      .. index:: Citation
     
-    Toby, B. H., & Von Dreele, R. B. (2013). "GSAS-II: the genesis of a modern open-source all purpose crystallography software package". *Journal of Applied Crystallography*, **46**\(2), 544-549. ​doi:10.1107/S0021889813003531
+    Toby, B. H., & Von Dreele, R. B. (2013). "GSAS-II: the genesis of a modern open-source all purpose crystallography software package". *Journal of Applied Crystallography*, **46**\(2), 544-549. doi:10.1107/S0021889813003531
 
        Note that some sections of the program utilize externally provided
        codes or reference later work, with citations provided
        as they are used. *Please* cite them as well.
  
-Also, please do sign up for the ​GSAS-II mailing list `see below <mailinglist.html>`_.
+Also, please do sign up for the GSAS-II mailing list `see below <mailinglist.html>`_.
 We add new features to GSAS-II quite frequently, so we may break
 things from time to time (`see bug reporting <bug.html>`_). Be
 sure to use the ``Help-->Update`` capability frequently to stay abreast of
