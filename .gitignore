@@ -3,3 +3,7 @@ webdocs/_build/
 
 # from python imports
 __pycache__
+
+# cruft from MacOS
+.DS_Store
+
