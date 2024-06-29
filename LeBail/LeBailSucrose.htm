@@ -1120,9 +1120,9 @@ break-word'>
 Extraction in GSAS-II - Sucrose<o:p></o:p></span></h1>
 
 <p class=MsoNormal><BL><span style='font-family:Symbol;mso-ascii-font-family:
-"Times New Roman";mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin'>∑</span><span
+"Times New Roman";mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin'>¬∑</span><span
 style='mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin'><span
-style='mso-spacerun:yes'>† </span>Exercise files are found <a href="data/"
+style='mso-spacerun:yes'>¬† </span>Exercise files are found <a href="data/"
 target="_blank">here</a>. The data files are also used in the 3rd section of
 the <a href="../FitPeaks/Fit%20Peaks.htm#sucrose_peak_fit" target="_blank">Fit
 Peaks/Autoindexing tutorial</a>. <o:p></o:p></span></p>
@@ -1134,7 +1134,7 @@ Peaks/Autoindexing tutorial</a>. <o:p></o:p></span></p>
 <p class=MsoNormal><span style='mso-fareast-font-family:Calibri;mso-fareast-theme-font:
 minor-latin'>In a Rietveld fit, a number of different items are fit,
 potentially at the same time. These include the lattice parameters, atomic positions
-and displacement (aka ìtemperatureî, <span class=SpellE>U<sub>iso</sub></span>
+and displacement (aka ‚Äútemperature‚Äù, <span class=SpellE>U<sub>iso</sub></span>
 and <span class=SpellE>U<sub>ij</sub></span>) parameters for one or more
 phases, as well as peak shapes parameters either for broadening from either the
 sample or the instrument (avoid doing both together), background fitting terms
@@ -1169,8 +1169,8 @@ multiplicity (<i>m</i>), preferred orientation and various other geometric
 corrections. Simply apportioning the observed powder pattern intensities point
 by point to each reflection provides an estimate for the observed structure
 factors, F<sup>2</sup><sub>obs</sub>. The quality of this estimate improves as
-the crystal structure model approaches reality. Le Bailís method cleverly
-appropriates Rietveldís intensity extraction, but assuming the crystal
+the crystal structure model approaches reality. Le Bail‚Äôs method cleverly
+appropriates Rietveld‚Äôs intensity extraction, but assuming the crystal
 structure model is unknown, sets all F<sup>2</sup><sub>calc</sub> values to an
 initial value (e.g. 1.0). After the intensity extraction is performed, a set of
 F<sup>2</sup><sub>obs</sub> values is obtained. These initially treat every F<sup>2</sup><sub>obs</sub>/<i>m</i>
@@ -1203,7 +1203,7 @@ minor-latin'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:Calibri;mso-fareast-theme-font:
 minor-latin'>After the LeBail option has been invoked, the Calculate/Refine
-menu command will execute a preliminary LeBail only ìzero cyclesî refinement in
+menu command will execute a preliminary LeBail only ‚Äúzero cycles‚Äù refinement in
 which only F<sup>2</sup><sub>obs</sub> is adjusted via the LeBail method. It is
 cycled 10 times or until a minimum is reached. After that completes, the
 Rietveld/LeBail refinement proceeds allowing least-squares minimization of
@@ -1244,9 +1244,9 @@ minor-latin'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal>In this exercise you we will use Le Bail fitting to extract
 approximate reflection intensities. This is similar to what is done in the
-beginning of the ìCharge Flipping in GSAS-II - sucroseî tutorial, which instead
-uses Pawley fitting. It follows logically from the third example in the ìFit
-Peaks/Autoindexing in GSAS-IIî tutorial, from where the sucrose unit cell was
+beginning of the ‚ÄúCharge Flipping in GSAS-II - sucrose‚Äù tutorial, which instead
+uses Pawley fitting. It follows logically from the third example in the ‚ÄúFit
+Peaks/Autoindexing in GSAS-II‚Äù tutorial, from where the sucrose unit cell was
 determined. Alternately, a project (<span class=SpellE><span style='font-family:
 Courier'>start.gpx</span></span>) file is provided in the <a href="data/"
 target="_blank">exercise files</a> to start without the previous tutorial.</p>
@@ -1258,15 +1258,15 @@ and creating the phase, make the the following changes:</p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><b>Controls</b>: Set the ì<b><span
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b>Controls</b>: Set the ‚Äú<b><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
-mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Max cycles</span></b>î
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Max cycles</span></b>‚Äù
 value to 5 </p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><b>Limits</b>: Raise the upper data limit from 8
 to <b><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>24</span></b>
@@ -1274,7 +1274,7 @@ degrees</p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><b>Background</b>: Add a background peak at <b><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>5.5</span></b>
@@ -1285,7 +1285,7 @@ in the background from the Kapton capillary used to hold the sucrose sample.</p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><b>Instrument parameters</b>: Use the <b><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Operations/Reset
@@ -1294,7 +1294,7 @@ off refinement of all terms</p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><b>Sample parameters</b>: turn off refinement of
 the <b><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>histogram
@@ -1305,7 +1305,7 @@ mm.</p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><b>Phase Sucrose/Data tab</b>: Use <b><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Edit phase/Add
@@ -1319,7 +1319,7 @@ term. </p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l0 level1 lfo2'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><b>Phase Sucrose/General tab</b>: Set the <b><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Refine unit
@@ -1328,9 +1328,9 @@ cell</span></b> flag.</p>
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 
 <p class=MsoNormal>These changes have been applied to a GSAS-II project file
-from the conclusion of the 3rd Example within ì<b><span style='font-family:
+from the conclusion of the 3rd Example within ‚Äú<b><span style='font-family:
 "Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
-minor-latin;mso-bidi-theme-font:minor-latin'>Fit Peaks/Autoindexing in GSAS-II</span></b>î
+minor-latin;mso-bidi-theme-font:minor-latin'>Fit Peaks/Autoindexing in GSAS-II</span></b>‚Äù
 tutorial and is provided as for this tutorial as file <span class=SpellE><span
 style='font-family:Courier'>start.gpx</span></span>.</p>
 
@@ -1378,8 +1378,8 @@ variables removed from view</p>
 </v:shape><![endif]--><![if !vml]><img border=0 width=580 height=434
 src="LeBailSucrose.fld/image006.png" alt="GSAS-II project: start.gpx" v:shapes="Picture_x0020_12"><![endif]></span></p>
 
-<p class=MsoNormal>and the LeBail button has changed to ìStop LeBail
-extraction?î.</p>
+<p class=MsoNormal>and the LeBail button has changed to ‚ÄúStop LeBail
+extraction?‚Äù.</p>
 
 <h2>Step 3: Do the initial Le Bail fit</h2>
 
@@ -1465,7 +1465,7 @@ positions.</p>
  <v:imagedata src="LeBailSucrose.fld/image031.png" o:title=" start"/>
 </v:shape><![endif]--><![if !vml]><img border=0 width=669 height=430
 src="LeBailSucrose.fld/image009.png" alt="GSAS-II plots: start.gpx" v:shapes="Picture_x0020_19"><![endif]></span><span
-style='mso-spacerun:yes'>†</span></p>
+style='mso-spacerun:yes'>¬†</span></p>
 
 <p class=MsoNormal>Plotting the (<span class=SpellE>obs-cal</span>)/sigma curve
 (press the <b><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
@@ -1476,14 +1476,14 @@ background improvement might be expected with more background terms. </p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l1 level1 lfo4'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Change to use <b><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
 minor-latin'>6</span></b> chebyschev-1 parameters. </p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l1 level1 lfo4'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Also refine <b><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
 minor-latin'>sig</span></b> and <b><span style='font-family:"Calibri",sans-serif;
@@ -1495,7 +1495,7 @@ position error (it is almost always present)</p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l2 level1 lfo5'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>Select <b><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
 minor-latin'>Sample X <span class=SpellE>displ</span></span></b> in Sample
@@ -1506,7 +1506,7 @@ determined instrumental U, V &amp; W parameters</p>
 
 <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l2 level1 lfo5'><![if !supportLists]><span
 style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol'><span style='mso-list:Ignore'>∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Symbol'><span style='mso-list:Ignore'>¬∑<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]>In Instrument Parameters select <b><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>U, V &amp; W</span></b>
@@ -1607,17 +1607,17 @@ the Data tab.</p>
 src="LeBailSucrose.fld/image019.png" alt="GSAS-II project: start.gpx" v:shapes="Picture_x0020_25"><![endif]></span></p>
 
 <p class=MsoNormal>Notice the message on the righthand status line; to reset
-the LeBail intensities, ìcycleî the Le Bail button. Press <b><span
+the LeBail intensities, ‚Äúcycle‚Äù the Le Bail button. Press <b><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Stop Le Bail
 extraction</span></b> (NB: this will set the refinement into normal Rietveld mode
-ñ impossible because the model contains no atoms!). The window will be redrawn
+‚Äì impossible because the model contains no atoms!). The window will be redrawn
 to include the intensity dependent parameters. Now press it again (<b><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Start Le bail
 extraction?</span></b>). The window will be redrawn again. The next refinement
 will start with new initial structure factor values (=1.0) and will do the
-preliminary ìzero cycleî Le Bail refinement. You may leave the refinement
+preliminary ‚Äúzero cycle‚Äù Le Bail refinement. You may leave the refinement
 parameters alone. The refinement will start out high (Rwp~67%) but will quickly
 drop to ~5.7% because all the other parameters are near their optimal values.</p>
 
@@ -1652,7 +1652,7 @@ until the fit has converged (it may take several repeats as this part of a Le
 Bail refinement does converge slowly). I got <span class=SpellE>Rwp</span> =
 5.26% when I quit recycling the refinement. You can now use these extracted
 intensities to see if they can be used for a charge flipping structure solution
-(I did get it to work once ñ otherwise many failures).</p>
+(I did get it to work once ‚Äì otherwise many failures).</p>
 
 <p class=MsoNormal><o:p>&nbsp;</o:p></p>
 

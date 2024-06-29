@@ -960,10 +960,10 @@ originally solved by <span class=SpellE>Raghavan</span> &amp; <span
 class=SpellE>Seff</span>, <span class=SpellE>Acta</span> <span class=SpellE>Cryst</span>.
 B33, 386-391 (1977) in the space group P2<sub>1</sub>/c with one disordered
 pyridine ring with indications that the true space group was P2<sub>1</sub>. It
-was subsequently reinvestigated by Young (2014Ö.) who found that the true space
+was subsequently reinvestigated by Young (2014‚Ä¶.) who found that the true space
 group was P2<sub>1</sub> with 4 molecules in the asymmetric unit. The data used
-in the latter analysis is what is used here and is provided as a ì<span
-class=SpellE>fcf</span>î file obtained after structure analysis by Shelx-97;
+in the latter analysis is what is used here and is provided as a ‚Äú<span
+class=SpellE>fcf</span>‚Äù file obtained after structure analysis by Shelx-97;
 the structure factors are scaled to those calculated from the structure. We will
 solve the P 2<sub>1</sub>/c structure first.</p>
 
@@ -1018,7 +1018,7 @@ src="CFSingleCrystal_files/image002.gif" v:shapes="Picture_x0020_19"><![endif]><
 
 <p class=MsoListParagraph style='text-indent:-.25in'>2.<span style='font-size:
 7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Enter the space group <b><span
-style='font-family:"Calibri",sans-serif'>P 21/c</span></b> (donít forget the
+style='font-family:"Calibri",sans-serif'>P 21/c</span></b> (don‚Äôt forget the
 space between P &amp; 21/c) &amp; press <b><span style='font-family:"Calibri",sans-serif'>Enter</span></b>.
 A Space Group Information popup window will appear; press <b><span
 style='font-family:"Calibri",sans-serif'>OK</span></b>. The General window will
@@ -1074,8 +1074,8 @@ the layer. The observed structure factors are shown as blue rings, the
 calculated ones as green rings and a small green or red dot may appear at each
 ring center showing <span class=SpellE>F<sub>o</sub></span>-F<sub>c</sub>. If
 the reflection data file had only observed structure factors then only blue
-rings will be seen. You can explore the plot options in the ë<b><span
-style='font-family:"Calibri",sans-serif'>K</span></b>í box in the plot toolbar.</p>
+rings will be seen. You can explore the plot options in the ‚Äò<b><span
+style='font-family:"Calibri",sans-serif'>K</span></b>‚Äô box in the plot toolbar.</p>
 
 <h2><span style='mso-fareast-font-family:"Times New Roman"'>Step 3. Setup for
 charge flipping<o:p></o:p></span></h2>
@@ -1083,14 +1083,14 @@ charge flipping<o:p></o:p></span></h2>
 <p class=MsoNormal>To solve (again) this crystal structure we will use charge
 flipping. Charge flipping in GSAS-II is implemented to solve the crystal
 structure without consideration of space group symmetry. To do this it operates
-on the entire unit cell volume to a selected resolution (usually 0.5≈) using
+on the entire unit cell volume to a selected resolution (usually 0.5√Ö) using
 fast <span class=SpellE>fourier</span> transform techniques. This requires a
 set of structure factors in an array of the same dimensions as the density
-array covering the unit cell (i.e. a box bounded by ~0.5≈ resolution). The
+array covering the unit cell (i.e. a box bounded by ~0.5√Ö resolution). The
 space group symmetry is applied to the observed structure factors to create a
-full sphere which is then zero filled out to the 0.5≈ resolution bounded box.
+full sphere which is then zero filled out to the 0.5√Ö resolution bounded box.
 To be reasonably assured of success, the observed structure factors should
-extend to ~1≈ resolution; we have that here for this example. To begin select <b><span
+extend to ~1√Ö resolution; we have that here for this example. To begin select <b><span
 style='font-family:"Calibri",sans-serif'>Phases/SS <span class=SpellE>dipyridyl</span></span></b>
 from the GSAS-II data tree; the General tab will be shown</p>
 
@@ -1110,11 +1110,11 @@ reflection sets</span></b>, pick <b><span style='font-family:"Calibri",sans-seri
 S2dipyridyl.fcf:1a</span></b> from the list (the only one) and press <b><span
 style='font-family:"Calibri",sans-serif'>OK</span></b>. If you had multiple
 data sets for this phase, you can pick more than one and GSAS-II will use a
-ìlast one inî process for assembling the reflection set to use for charge
+‚Äúlast one in‚Äù process for assembling the reflection set to use for charge
 flipping. There are four more settings to consider: 1) <span class=SpellE>kMax</span>
 controls the upper cutoff for charge flipping; if the density is &gt; k-Max*<span
 style='font-family:Symbol'>s<sub>r</sub></span> (map standard deviation) then
-flip the charge. This prevents the ìUranium solutionî sometimes found where all
+flip the charge. This prevents the ‚ÄúUranium solution‚Äù sometimes found where all
 the density is concentrated in a single peak. A useful guide is to use twice
 the largest atomic number of any element in your structure. For equal atom
 problems use 12-15; adjust upward for structures with heavy &amp; light atoms.
@@ -1122,17 +1122,17 @@ In this case, set <b><span style='font-family:"Calibri",sans-serif'>k-Max</span>
 to <b><span style='font-family:"Calibri",sans-serif'>30.0</span></b> to allow
 the S atom to appear. 2) k-Factor controls the lower level for charge flipping;
 if the density is &lt; k-Factor*<span style='font-family:Symbol'>s<sub>r</sub></span>
-then flip the charge. The default value seems to work pretty well; Iíd only
+then flip the charge. The default value seems to work pretty well; I‚Äôd only
 change it if the charge flipping is having trouble solving the structure. 3)
-Resolution selects the spacing between map points. 0.5≈ is sufficient in most
+Resolution selects the spacing between map points. 0.5√Ö is sufficient in most
 cases. Choosing a smaller value requires more map points (NB: GSAS-II uses the
 entire unit cell volume for charge flipping) and thus will require more
 structure factors since the fast <span class=SpellE>fourier</span> algorithm
 requires the same size arrays in both real space and reciprocal space. This
 will slow down the charge flip process. 4) Normalizing element selects a form
-factor to rescale the structure factors thus ìsharpeningî the density map. I
+factor to rescale the structure factors thus ‚Äúsharpening‚Äù the density map. I
 suggest trying <b><span style='font-family:"Calibri",sans-serif'>None</span></b>
-first, otherwise select a representative element (really doesnít matter which).</p>
+first, otherwise select a representative element (really doesn‚Äôt matter which).</p>
 
 <h2 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>Step
 4. Charge flipping<o:p></o:p></span></h2>
@@ -1169,7 +1169,7 @@ applied to shift the map so that the symmetry elements are properly located in
 the unit cell. The quality of this fit (chi**2) is given. This process is not
 necessarily perfect; you are given an opportunity to hand-tune the offset.
 Finally the number of peaks found in the map is listed, the structure is drawn
-(Iíve made the view down the b-axis)</p>
+(I‚Äôve made the view down the b-axis)</p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
  id="Picture_x0020_24" o:spid="_x0000_i1036" type="#_x0000_t75" style='width:450pt;
@@ -1207,7 +1207,7 @@ resolution steps (0.5A). The table is also updated with new peak positions. You
 could also just repeat the charge flipping and hope to get a better map offset
 solution (examine the map offset chi**2 to get a sense of this). You can also
 show the map density (highest point is shown as a green dot somewhere in the
-map ñ on a S-atom position); select the <b><span style='font-family:"Calibri",sans-serif'>Draw
+map ‚Äì on a S-atom position); select the <b><span style='font-family:"Calibri",sans-serif'>Draw
 Options</span></b> tab and use the <b><span style='font-family:"Calibri",sans-serif'>Contour
 level</span></b> slider. The drawing will show green dots at each set map point
 with size in proportion to the density. The mouse <b><span style='font-family:
@@ -1242,7 +1242,7 @@ click the blank upper left corner of the table; all entries will be highlighted
 in blue. Then do <b><span style='font-family:"Calibri",sans-serif'>Map
 peaks/Unique peaks</span></b>; after a bit of time 1/4 of the peaks in the list
 will be highlighted and the corresponding peaks in the drawing will be green
-(NB: if you navigate away from this tab, this selection will be lost and youíll
+(NB: if you navigate away from this tab, this selection will be lost and you‚Äôll
 have to repeat it!). The console will show a summary giving the number &amp;
 fraction of unique peaks found; in this case 28 &amp; 0.25 are the correct
 values. Next, do <b><span style='font-family:"Calibri",sans-serif'>Map
@@ -1271,7 +1271,7 @@ src="CFSingleCrystal_files/image018.gif" v:shapes="Picture_x0020_27"><![endif]><
 atoms. The rest are C &amp; N atoms. In the <b><span style='font-family:"Calibri",sans-serif'>Atoms</span></b>
 tab select the first 4 atoms (press LB on the 1<sup>st</sup> &amp; shift LB on
 the 4<sup>th</sup> one). Then do <b><span style='font-family:"Calibri",sans-serif'>Edit
-Atoms/On selected atomsÖ/Modify parameters</span></b>; a popup window will
+Atoms/On selected atoms‚Ä¶/Modify parameters</span></b>; a popup window will
 appear. Select <b><span style='font-family:"Calibri",sans-serif'>Type</span></b>
 &amp; press <b><span style='font-family:"Calibri",sans-serif'>OK</span></b>; a
 Periodic Table will appear. Select <b><span style='font-family:"Calibri",sans-serif'>S</span></b>;
@@ -1280,10 +1280,10 @@ redrawn with yellow balls for the S atoms. Next select the remaining H atoms (a
 quick way it to double LB click the <b><span style='font-family:"Calibri",sans-serif'>Type</span></b>
 column heading and select <b><span style='font-family:"Calibri",sans-serif'>H</span></b>
 from the popup window). Then do <b><span style='font-family:"Calibri",sans-serif'>Edit
-Atoms/On selected atomsÖ/Modify parameters</span></b> and <b><span
+Atoms/On selected atoms‚Ä¶/Modify parameters</span></b> and <b><span
 style='font-family:"Calibri",sans-serif'>Type</span></b> from the popup; select
 <b><span style='font-family:"Calibri",sans-serif'>C</span></b> from the
-Periodic Table as we donít know which ones are N. The drawing will change (you
+Periodic Table as we don‚Äôt know which ones are N. The drawing will change (you
 may have to wiggle it a bit to force the update).</p>
 
 <p class=MsoNormal><span style='mso-no-proof:yes'><!--[if gte vml 1]><v:shape
@@ -1299,7 +1299,7 @@ atom (make sure the <b><span style='font-family:"Calibri",sans-serif'>Atom</span
 tab is displayed &amp; do <b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>shift LB</span></b>
-on an atom in the drawing ñ I chose the S atom on the left side of the drawing);
+on an atom in the drawing ‚Äì I chose the S atom on the left side of the drawing);
 it will turn green and a line in the Atom table will be highlighted. Next do <b><span
 style='font-family:"Calibri",sans-serif'>Edit Atoms/Assemble molecule</span></b>;
 a popup window will appear. Change the <b><span style='font-family:"Calibri",sans-serif'>Bond
@@ -1350,7 +1350,7 @@ C/N choice<o:p></o:p></span></h2>
 
 <p class=MsoNormal>We know from the chemistry that the N atom is in the 2
 position of the pyridine ring, i.e. next to the point of attachment to the
-S-atom. However, we donít know which one that is and we have 8 atoms of which 4
+S-atom. However, we don‚Äôt know which one that is and we have 8 atoms of which 4
 are C and 4 are N.</p>
 
 <p class=MsoNormal>To work out the C/N problem above we need the atoms to be in
@@ -1401,7 +1401,7 @@ src="CFSingleCrystal_files/image026.gif" v:shapes="Picture_x0020_31"><![endif]><
 <p class=MsoNormal>Once you have reordered the atoms to your satisfaction they
 can be renamed to be in order. To do this select all the atoms (double LB click
 the empty corner box) and then do <b><span style='font-family:"Calibri",sans-serif'>Edit
-Atoms/On selected atomsÖ/Modify atom parameters</span></b>. Select <b><span
+Atoms/On selected atoms‚Ä¶/Modify atom parameters</span></b>. Select <b><span
 style='font-family:"Calibri",sans-serif'>Name</span></b> and press <b><span
 style='font-family:"Calibri",sans-serif'>OK</span></b>; press <b><span
 style='font-family:"Calibri",sans-serif'>Yes</span></b> to the popup question.
@@ -1409,7 +1409,7 @@ The atoms will be renamed in numerical order. Do <b><span style='font-family:
 "Calibri",sans-serif'>Edit/Reload draw atoms</span></b>; the labels will
 change. In my numbering scheme, half of the C3, C7, C10, C14, C17, C21, C24 and
 C28 carbon atoms are really nitrogen (if they are ordered). Select these and do
-<b><span style='font-family:"Calibri",sans-serif'>Edit Atoms/On selected atomsÖ/Refine
+<b><span style='font-family:"Calibri",sans-serif'>Edit Atoms/On selected atoms‚Ä¶/Refine
 selected</span></b>; select <b><span style='font-family:"Calibri",sans-serif'>F</span></b>,
 <b><span style='font-family:"Calibri",sans-serif'>X</span></b> &amp; <b><span
 style='font-family:"Calibri",sans-serif'>U</span></b> for these. Do <b><span
@@ -1453,7 +1453,7 @@ style='font-family:"Calibri",sans-serif'>Type</span></b> column heading and
 select <b><span style='font-family:"Calibri",sans-serif'>C</span></b> from the
 popup; press <b><span style='font-family:"Calibri",sans-serif'>OK</span></b>.
 The C-atoms will be highlighted. Next do <b><span style='font-family:"Calibri",sans-serif'>Edit
-Atoms/On selected atomsÖ/<span class=SpellE>Calc</span> H atoms</span></b>; a <b><span
+Atoms/On selected atoms‚Ä¶/<span class=SpellE>Calc</span> H atoms</span></b>; a <b><span
 style='font-family:"Calibri",sans-serif'>Distance Angle Controls</span></b>
 popup will appear; the numbers should be as before. Press <b><span
 style='font-family:"Calibri",sans-serif'>OK</span></b>; a new popup will appear</p>

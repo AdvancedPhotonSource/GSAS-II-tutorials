@@ -1198,12 +1198,12 @@ break-word'>
 
 <div class=WordSection1>
 
-<h1><span style='mso-fareast-font-family:"Times New Roman"'>RMCProfile – IV<o:p></o:p></span></h1>
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>RMCProfile â€“ IV<o:p></o:p></span></h1>
 
 <p class=MsoNormal><BL><span style='font-family:Symbol;mso-ascii-font-family:
-"Times New Roman";mso-fareast-font-family:"Times New Roman"'>·</span><span
+"Times New Roman";mso-fareast-font-family:"Times New Roman"'>Â·</span><span
 style='mso-fareast-font-family:"Times New Roman"'><span
-style='mso-spacerun:yes'>  </span>Exercise files are found <a href="data/"
+style='mso-spacerun:yes'>Â  </span>Exercise files are found <a href="data/"
 target="_blank">here</a> <o:p></o:p></span></p>
 
 </BL>
@@ -1212,13 +1212,13 @@ target="_blank">here</a> <o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>In this
 tutorial, we will show how to use GSAS-II in conjunction with RMCProfile
-(“RMCProfile: Reverse Monte Carlo for polycrystalline materials”, M.G. Tucker,
+(â€œRMCProfile: Reverse Monte Carlo for polycrystalline materialsâ€, M.G. Tucker,
 D.A. Keen, M.T. Dove, A.L. Goodwin and Q. Hui, (2007) Jour. Phys.: Cond.
 Matter, <b style='mso-bidi-font-weight:normal'>19</b>, 335218. <span
 class=SpellE>doi</span>: <a
 href="https://doi.org/10.1088/0953-8984/19/33/335218">https://doi.org/10.1088/0953-8984/19/33/335218</a>)
 to do a fit with x-ray powder diffraction data and pair distribution functions
-(PDF) created from it with a “big box” disordered model. This exercise is very
+(PDF) created from it with a â€œbig boxâ€ disordered model. This exercise is very
 similar to RMCProfile-III except that no neutron data is used and instead a set
 of bond and angle potentials are used to augment the fitting.<o:p></o:p></span></p>
 
@@ -1242,7 +1242,7 @@ class=SpellE>cuda_lib</span></span><span style='mso-fareast-font-family:"Times N
 (if present) and place them in the GSASII main directory or in a new
 subdirectory (e.g. </span><span class=SubtitleChar><span style='font-size:11.0pt'>GSASII/RMCProfile</span></span><span
 style='mso-fareast-font-family:"Times New Roman"'>); <span
-style='mso-spacerun:yes'> </span>no other files are needed although you may
+style='mso-spacerun:yes'>Â </span>no other files are needed although you may
 wish to also retrieve the contents of the tutorial subdirectory. It contains </span><span
 class=SubtitleChar><span style='font-size:11.0pt'>rmcprofilemanual.pdf</span></span><span
 style='mso-fareast-font-family:"Times New Roman"'> and </span><span
@@ -1270,7 +1270,7 @@ material used in this tutorial is the same as described in the RMCProfile-III
 tutorial, gallium phosphate (GaPO<sub>4</sub>). GaPO<sub>4</sub> is a
 piezoelectric crystal of corner sharing GaO<sub>4</sub> and PO<sub>4</sub>
 tetrahedra arranged as in a doubled c-axis &#945;-quartz structure.<span
-style='mso-spacerun:yes'>  </span>The average structure determined by Rietveld
+style='mso-spacerun:yes'>Â  </span>The average structure determined by Rietveld
 refinement results in Ga-O and P-O bond lengths that are shorter than implied
 by the corresponding peak positions in either an x-ray or neutron PDF. The
 X-ray data used here was obtained at room temperature on beam line I15 at the
@@ -1296,7 +1296,7 @@ mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme
 minor-latin'>Import/Powder Data/from GSAS powder data file</span></b> menu item
 to read the data file into the current GSAS-II project. This read option is set
 to read any of the powder data formats defined for GSAS (angles in <span
-class=SpellE>centidegrees</span>, TOF in µsec). Other submenu items will read
+class=SpellE>centidegrees</span>, TOF in Âµsec). Other submenu items will read
 the <span class=SpellE><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>cif</span></b></span>
@@ -1304,7 +1304,7 @@ format or the <span class=SpellE><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>xye</span></b></span>
 format (angles in degrees) used by <span class=SpellE>topas</span>, etc.<span
-style='mso-spacerun:yes'>  </span>In those cases, you would change the file
+style='mso-spacerun:yes'>Â  </span>In those cases, you would change the file
 type to <span class=SpellE><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>cif</span></b></span>
@@ -1362,7 +1362,7 @@ file; switch the file type to </span><b style='mso-bidi-font-weight:normal'><spa
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>GSAS <span class=SpellE>iparm</span> file (<span
-class=GramE>*.<span class=SpellE>prm</span>,…</span>)</span></b><span
+class=GramE>*.<span class=SpellE>prm</span>,â€¦</span>)</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'>. Then one file (</span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
@@ -1404,7 +1404,7 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 we want to avoid the abrupt jump and (as it turns out) low angle contaminating
 peaks, we want to set the lower limit to just below the first large visible
 Bragg peak and the upper limit needs to be set to include just the range with
-Bragg intensities (&gt;0.4Å); go the </span><b style='mso-bidi-font-weight:
+Bragg intensities (&gt;0.4Ã…); go the </span><b style='mso-bidi-font-weight:
 normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
 minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
 minor-latin;mso-bidi-theme-font:minor-latin'>Limits</span></b><span
@@ -1454,7 +1454,7 @@ mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Import/Phase/f
 GSAS .EXP file</span></b> menu item to read the phase information for <span
 style='mso-fareast-font-family:"Times New Roman"'>GaPO<sub>4 </sub></span>into
 the current GSAS-II project. Other submenu items will read phase information in
-other formats.<span style='mso-spacerun:yes'>  </span>Because you used <span
+other formats.<span style='mso-spacerun:yes'>Â  </span>Because you used <span
 style='mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin'>the </span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
@@ -1559,7 +1559,7 @@ src="RMCProfile-IV_files/image079.gif" v:shapes="Picture_x0020_50"><![endif]></s
 style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>If
-this isn’t done then some of the input to RMCProfile will not be correctly
+this isnâ€™t done then some of the input to RMCProfile will not be correctly
 prepared.<o:p></o:p></span></p>
 
 <h3><span style='mso-fareast-font-family:"Times New Roman"'>Step 5. Set the
@@ -1584,11 +1584,11 @@ src="RMCProfile-IV_files/image080.gif" v:shapes="Picture_x0020_6"><![endif]></sp
 style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Be
-sure that “</span><b style='mso-bidi-font-weight:normal'><span
+sure that â€œ</span><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>chebyschev-1</span></b><span style='mso-fareast-font-family:
-"Times New Roman"'>” is used for the background function; RMCProfile only
+"Times New Roman"'>â€ is used for the background function; RMCProfile only
 recognizes that form to compute the background for the diffraction pattern.
 Select </span><b style='mso-bidi-font-weight:normal'><span style='font-family:
 "Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
@@ -1605,22 +1605,22 @@ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Calculate/Refine</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'> from the main GSAS-II menu.
 Before it starts a file selection dialog will appear; select a file name (no
-extension). I chose “</span><b style='mso-bidi-font-weight:normal'><span
+extension). I chose â€œ</span><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>GaPO4</span></b><span style='mso-fareast-font-family:
-"Times New Roman"'>”; do not use the phase name for this purpose because
+"Times New Roman"'>â€; do not use the phase name for this purpose because
 RMCProfile will use that as the root for the many files it creates. Also, you
 should create a new directory for this exercise while in this dialog box; it
 will be rapidly filled up with RMCProfile files which can lead to considerable
 confusion if mixed in with other files. For Windows, after navigating to a
 suitable location, a new directory can be made by a right mouse click and
-selecting “</span><b style='mso-bidi-font-weight:normal'><span
+selecting â€œ</span><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>New/Folder</span></b><span style='mso-fareast-font-family:
-"Times New Roman"'>” from the popup menu. It will appear with the name “New
-Folder”; change the name and select it (it will be empty). Other operating
+"Times New Roman"'>â€ from the popup menu. It will appear with the name â€œNew
+Folderâ€; change the name and select it (it will be empty). Other operating
 systems will have similar methods. Finally press </span><b style='mso-bidi-font-weight:
 normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
 minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
@@ -1639,7 +1639,7 @@ src="RMCProfile-IV_files/image082.gif" v:shapes="Picture_x0020_9"><![endif]></sp
 style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>I
-pressed the ‘s’ key so that sqrt(intensity) shows on the y-axis; makes things a
+pressed the â€˜sâ€™ key so that sqrt(intensity) shows on the y-axis; makes things a
 bit easier to see. It is evident that the lattice parameter as well as the
 sample broadening terms needs adjusting. Go to the </span><b style='mso-bidi-font-weight:
 normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
@@ -1842,7 +1842,7 @@ class=SpellE><b style='mso-bidi-font-weight:normal'><span style='font-family:
 "Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
 "Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>fullrmc</span></b></span><span
 style='mso-fareast-font-family:"Times New Roman"'>. The latter is an
-alternative big box modeling program (not working – under development);
+alternative big box modeling program (not working â€“ under development);
 RMCProfile is selected by default and all below are its setup controls. There
 are four major sections (metadata, major controls, restraints &amp; constraints
 and data controls); we will work through each of these in turn. The information
@@ -1882,7 +1882,7 @@ minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
 minor-latin;mso-bidi-theme-font:minor-latin'>1</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'> minute. At each save time a
 number of files are written by RMCProfile; these can be viewed by using the
-Operations/View command (more about this later – don’t bother trying it now,
+Operations/View command (more about this later â€“ donâ€™t bother trying it now,
 there is nothing to see). For the purposes of this tutorial leave them at their
 defaults. <o:p></o:p></span></p>
 
@@ -1918,7 +1918,7 @@ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Ga, P, O</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'>) is appropriate; if changed
 the window will repaint updating various entries possibly resetting some
-entries to defaults. I suggest you decide the order now and then don’t change
+entries to defaults. I suggest you decide the order now and then donâ€™t change
 it later. Set the maximum shift for Ga &amp; P to be </span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
@@ -1943,7 +1943,7 @@ exchange sites.<o:p></o:p></span></p>
 constraints/restraints<o:p></o:p></span></h3>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Next
-is to set the “Hard” minimum atom-atom separation and the allowed search rage
+is to set the â€œHardâ€ minimum atom-atom separation and the allowed search rage
 for each of 6 pairs of atom types. Possible values for this table can be
 obtained in GSAS-II by computing bond lengths although we discovered a good set
 in the RMCProfile-III tutorial; we will use these here. Suitable values are in
@@ -1973,7 +1973,7 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Scroll
-down to find the section that has “Potential temperature”; these are for bond
+down to find the section that has â€œPotential temperatureâ€; these are for bond
 and angle potentials. We will need 2 of each so press </span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
@@ -1996,7 +1996,7 @@ mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_18" o:spid="_x00
 src="RMCProfile-IV_files/image095.gif" v:shapes="Picture_x0020_18"><![endif]></span><span
 style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>We’re
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Weâ€™re
 wanting </span><b style='mso-bidi-font-weight:normal'><span style='font-family:
 "Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
 "Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Ga-O</span></b><span
@@ -2064,13 +2064,13 @@ to be fitted<o:p></o:p></span></h3>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>We
 will be using just x-ray data for GaPO<sub>4</sub> for fitting by RMCProfile.
-The first step is the selection of the x-ray powder pattern (“Bragg”) for
+The first step is the selection of the x-ray powder pattern (â€œBraggâ€) for
 processing. This is taken from the PWDR entry in the GSAS-II project and
-accessed from the pulldown; there is only one “</span><b style='mso-bidi-font-weight:
+accessed from the pulldown; there is only one â€œ</span><b style='mso-bidi-font-weight:
 normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
 minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
 minor-latin;mso-bidi-theme-font:minor-latin'>PWDR 105870-pe-GaPO4_ed.gsas Bank
-1</span></b><span style='mso-fareast-font-family:"Times New Roman"'>” that was
+1</span></b><span style='mso-fareast-font-family:"Times New Roman"'>â€ that was
 used earlier in your Rietveld refinement of GaPO<sub>4</sub>. If you had used
 multiple banks in the Rietveld refinement, all would be shown in the pulldown,
 but only one can be selected. Set the weight to </span><b style='mso-bidi-font-weight:
@@ -2084,11 +2084,11 @@ heavier weight).<o:p></o:p></span></p>
 press the </span><b style='mso-bidi-font-weight:normal'><span style='font-family:
 "Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:
 "Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Select</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'> button for the “</span><b
+style='mso-fareast-font-family:"Times New Roman"'> button for the â€œ</span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin'>Xray reciprocal space data: F(Q)</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'>” line; a <span class=SpellE>FileDialog</span>
+style='mso-fareast-font-family:"Times New Roman"'>â€ line; a <span class=SpellE>FileDialog</span>
 should appear. </span>Because you used <span style='mso-fareast-font-family:
 Calibri;mso-fareast-theme-font:minor-latin'>the </span><b style='mso-bidi-font-weight:
 normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
@@ -2192,24 +2192,24 @@ chebyschev-1 function needed to compute the background for the Bragg pattern<o:p
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
 style='mso-fareast-font-family:"Times New Roman"'>GaPO4-X.bragg</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'> – the powder pattern used in
+style='mso-fareast-font-family:"Times New Roman"'> â€“ the powder pattern used in
 the Rietveld refinement<o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
 style='mso-fareast-font-family:"Times New Roman"'>GaPO4-X.dat</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'> – the RMCProfile controls
+style='mso-fareast-font-family:"Times New Roman"'> â€“ the RMCProfile controls
 file; described in full in the RMCProfile User Manual. It can be edited if need
 be, but remember it is rewritten each time Operations/Setup RMC is done.<o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
 style='mso-fareast-font-family:"Times New Roman"'>GaPO4-X.inst</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'> – the instrument parameter
+style='mso-fareast-font-family:"Times New Roman"'> â€“ the instrument parameter
 coefficients for the x-ray peak shape function used by GSAS-II and implemented
 in RMCProfile for computing the Bragg pattern.<o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
 style='mso-fareast-font-family:"Times New Roman"'>GaPO4-X.rmc6f</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'> – the big box set of atom positions.
+style='mso-fareast-font-family:"Times New Roman"'> â€“ the big box set of atom positions.
 It is normally not rewritten when Operations/Setup RMC is done unless the
 X-axis, Y-axis, or Z-axis lattice multipliers are changed. Most important is
 that it will contain the set of big box atom positions as updated by RMCProfile
@@ -2226,13 +2226,13 @@ run RMCProfile from inside GSAS-II, do </span><b style='mso-bidi-font-weight:
 normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
 minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
 minor-latin;mso-bidi-theme-font:minor-latin'>Operations/Execute</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'>. You will first see a “nag”
+style='mso-fareast-font-family:"Times New Roman"'>. You will first see a â€œnagâ€
 note asking you to cite the publication describing RMCProfile; press </span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>OK</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'>. The program will start in a
-new console window – processing will initially be pretty fast for this case and
+new console window â€“ processing will initially be pretty fast for this case and
 then slow down as the modelling proceeds. It reports Time used and Last saved.
 Once the latter is nonzero you can view intermediate results to see its
 progress.<o:p></o:p></span></p>
@@ -2248,13 +2248,13 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>I
 have captured the initial RMCProfile console output (done by simply clicking
-anywhere in the window – note the white square. This temporarily stops processing;
+anywhere in the window â€“ note the white square. This temporarily stops processing;
 it can be restarted by pressing any key with the focus on the window). Things
 to look at are the several chi^2 values; there will be an overall one and one
-for each of the 3 data sets used in the fitting. The last one “X-ray
-real-space” is generated within RMCProfile by doing the Fourier transform from
+for each of the 3 data sets used in the fitting. The last one â€œX-ray
+real-spaceâ€ is generated within RMCProfile by doing the Fourier transform from
 the F(Q) input data to form the x-ray g(R) distribution (e.g. the x-ray PDF).
-Since we’ve set the Fit scale factors option; the “<span class=SpellE>Renorm</span>”
+Since weâ€™ve set the Fit scale factors option; the â€œ<span class=SpellE>Renorm</span>â€
 values are other than unity. These will approach 1.0 as the modelling
 continues. There is also a value for Bond energy calculated from the bonds and
 angles subject to the potential energy restraints. Do not be surprised if this
@@ -2294,8 +2294,8 @@ weights:<o:p></o:p></span></h3>
 choice of weights for RMCProfile may seem to be arbitrary in these exercises, but
 I have selected them so that each of the chi^2 values converge to be roughly
 equal and somewhere near unity. This selection generally gives the best
-performance in the reverse Monte Carlo calculation and requires some “trial
-&amp; effort” in selecting the values. If one of the chi^2 values is too large
+performance in the reverse Monte Carlo calculation and requires some â€œtrial
+&amp; effortâ€ in selecting the values. If one of the chi^2 values is too large
 (&gt;&gt;1, i.e. weight too small) at convergence, then adjustments in the
 structure will have been dominated by moves that lower that chi^2 sometimes at
 the expense of others. Conversely, if one chi^2 is too small (&gt;&gt;1, i.e.
@@ -2325,8 +2325,8 @@ src="RMCProfile-IV_files/image104.gif" v:shapes="Picture_x0020_60"><![endif]></s
 style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>They
-all should have the same prefix in their name, “GaPO4-X” which is the phase
-name from the GSAS-II project file. Select any one of them – it doesn’t matter.
+all should have the same prefix in their name, â€œGaPO4-Xâ€ which is the phase
+name from the GSAS-II project file. Select any one of them â€“ it doesnâ€™t matter.
 All of them will be read and their contents displayed as individual plots. For
 example the chi^2 plot shows the progress of the RMCProfile fit<o:p></o:p></span></p>
 
@@ -2374,7 +2374,7 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>A
 consideration of the reciprocal space F(Q) (top) and the x-ray real space g(R)
 (bottom) plots show reasonable agreement between the RMCProfile model and the
-data (but not quite as good as we obtained in the RMCProfile-III tutorial –
+data (but not quite as good as we obtained in the RMCProfile-III tutorial â€“
 probably an effect of imposing the potential energy restraints.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>The
@@ -2389,7 +2389,7 @@ mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_64" o:spid="_x00
 src="RMCProfile-IV_files/image108.gif" v:shapes="Picture_x0020_64"><![endif]></span><span
 style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>I’ve
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Iâ€™ve
 adjusted the scales to give a better view of the different bond lengths.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
@@ -2400,7 +2400,7 @@ mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_65" o:spid="_x00
 </v:shape><![endif]--><![if !vml]><img border=0 width=479 height=411
 src="RMCProfile-IV_files/image109.gif" v:shapes="Picture_x0020_65"><![endif]></span><span
 style='mso-fareast-font-family:"Times New Roman"'><span
-style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+style='mso-spacerun:yes'>Â </span><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -2455,7 +2455,7 @@ normal'><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
 minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
 minor-latin;mso-bidi-theme-font:minor-latin'>Edit phase name</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'> popup. The proposed name is
-the same as the existing one; GSAS-II will rename this one by adding ‘_1’ to
+the same as the existing one; GSAS-II will rename this one by adding â€˜_1â€™ to
 the end. Next will be a popup for </span><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
@@ -2464,7 +2464,7 @@ style='mso-fareast-font-family:"Times New Roman"'>; respond </span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Cancel</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'> because you don’t want this
+style='mso-fareast-font-family:"Times New Roman"'> because you donâ€™t want this
 phase to be in any subsequent Rietveld refinement. Looking at the </span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
@@ -2495,7 +2495,7 @@ style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-seri
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>CN-sphere</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'> for them (does take a long
-time, &gt;10min – be patient) and then change all the atoms to ball and stick
+time, &gt;10min â€“ be patient) and then change all the atoms to ball and stick
 style. The CN-sphere filling works because the RMCProfile structure still has
 translational symmetry across its 6x6x4 lattice. You should see something like<o:p></o:p></span></p>
 
@@ -2555,7 +2555,7 @@ mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>1/6, 1/6,1/4</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'> into the diagonal elements
 of the M matrix. The GUI will convert them to the decimal equivalent (<span
-class=GramE>0.167,…</span>). The target space group should be P 1. You should
+class=GramE>0.167,â€¦</span>). The target space group should be P 1. You should
 see<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman";
@@ -2572,7 +2572,7 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Ok</span></b><span
 style='mso-fareast-font-family:"Times New Roman"'> to do the transformation. A
-new phase, “GaPO4-X_1 <span class=SpellE>abc</span>” will be formed as
+new phase, â€œGaPO4-X_1 <span class=SpellE>abc</span>â€ will be formed as
 triclinic with cell axes that match the original hexagonal ones. Select </span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
@@ -2670,16 +2670,16 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>At
 the very bottom is the control for polyhedral comparison. All that is needed is
-to select the central atom (“</span><b style='mso-bidi-font-weight:normal'><span
+to select the central atom (â€œ</span><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>origin atom type</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'>”) and the polyhedral
-vertices (“</span><b style='mso-bidi-font-weight:normal'><span
+style='mso-fareast-font-family:"Times New Roman"'>â€) and the polyhedral
+vertices (â€œ</span><b style='mso-bidi-font-weight:normal'><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>target atom type</span></b><span
-style='mso-fareast-font-family:"Times New Roman"'>”). Select </span><b
+style='mso-fareast-font-family:"Times New Roman"'>â€). Select </span><b
 style='mso-bidi-font-weight:normal'><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>P</span></b><span
@@ -2715,7 +2715,7 @@ style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>OK</span></b><span style='mso-fareast-font-family:
 "Times New Roman"'>; a progress bar will show the atoms being processed. The
-console may show some atoms being skipped because the number of vertices wasn’t
+console may show some atoms being skipped because the number of vertices wasnâ€™t
 either 4 (tetrahedron) or 6 (octahedron); all but one are ok here. Because
 there are 432 P atoms to be looked at in this big box model, this calculation
 can take a number of minutes. The General tab reappears already scrolled to the
@@ -2877,7 +2877,7 @@ The fit to the g(R) is also poorer (much higher chi^2).<o:p></o:p></span></p>
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal style='tab-stops:317.2pt'><span style='mso-fareast-font-family:
-"Times New Roman"'><span style='mso-tab-count:1'>                                                                                                          </span><o:p></o:p></span></p>
+"Times New Roman"'><span style='mso-tab-count:1'>Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â Â  </span><o:p></o:p></span></p>
 
 </div>
 

@@ -1218,14 +1218,14 @@ files are found <a href="data" target="_blank">here</a> <o:p></o:p></span></p>
 <h2><span style='mso-fareast-font-family:"Times New Roman"'>Introduction<o:p></o:p></span></h2>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>In
-these tutorials, we show how to use GSAS-II in conjunction with PDFfit2 (ìPDFfit2
+these tutorials, we show how to use GSAS-II in conjunction with PDFfit2 (‚ÄúPDFfit2
 and PDFgui: computer programs for studying nanostructures in crystals&quot;,
 C.L. Farrow, P.Juhas, J.W. Liu, D. Bryndin, E.S. Bozin, J. Bloch, Th. Proffen
 &amp; S.J.L. Billinge, J. Phys, Condens. Matter 19, 335219 (2007), Jour. Phys.:
 Cond. Matter (2007), 19, 335218. doi:
 https://doi.org/10.1088/0953-8984/19/33/335219) to fit pair distribution
-functions (PDF) with a ìsmall boxî disordered model. We will refer to PDFfit2
-as ìPDFfitî in these tutorials as well as in the GSAS-II user interface for it.<o:p></o:p></span></p>
+functions (PDF) with a ‚Äúsmall box‚Äù disordered model. We will refer to PDFfit2
+as ‚ÄúPDFfit‚Äù in these tutorials as well as in the GSAS-II user interface for it.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1268,7 +1268,7 @@ Alternatively, you can install pdffit2 from Anaconda by executing <o:p></o:p></s
 #EEEFF0'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span style='color:#333333;background:#EEEFF0'>in a console
-window after activating your version of python.<span style='mso-spacerun:yes'>†
+window after activating your version of python.<span style='mso-spacerun:yes'>¬†
 </span>It will be installed in your python as
 gsas2full/Lib/site-packages/diffpy.</span><span style='mso-fareast-font-family:
 "Times New Roman"'><o:p></o:p></span></p>
@@ -1280,7 +1280,7 @@ this tutorial we will continue the analysis LaMnO<sub>3</sub> using variable
 temperature neutron G(r) patterns to introduce you to the process of doing
 sequential PDFfit analysis of mode distortions within GSAS-II. At the end you
 will be able to step through the sequence and see how the structure responds to
-temperature change from 300K to 980K. If you havenít done so already, start
+temperature change from 300K to 980K. If you haven‚Äôt done so already, start
 GSAS-II.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
@@ -1404,7 +1404,7 @@ v:shapes="Picture_x0020_3"><![endif]></span><span style='mso-fareast-font-family
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Press
-the ì<b>Parent cif file</b>î </span><b><i><span style='font-family:"Calibri",sans-serif;
+the ‚Äú<b>Parent cif file</b>‚Äù </span><b><i><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Select</span></i></b><span
 style='mso-fareast-font-family:"Times New Roman"'> button; a file selection
@@ -1415,7 +1415,7 @@ mso-bidi-theme-font:minor-latin'>LaMnO3 Pm3m.cif</span></i></b><span
 style='mso-fareast-font-family:"Times New Roman"'>. The window will repaint to
 show the choice (note that this does not import this phase into GSAS-II). Since
 we have already imported the Pbnm phase of LaMnO<sub>3</sub> and are working
-out of its ISODISTORT tab, we can use it for the ì<b>Child cif file</b>î. Press
+out of its ISODISTORT tab, we can use it for the ‚Äú<b>Child cif file</b>‚Äù. Press
 </span><b><i><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
 minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
 minor-latin;mso-bidi-theme-font:minor-latin'>Use this phase?</span></i></b><span
@@ -1536,7 +1536,7 @@ style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>LaMnO3-Pbnm_child.cif</span></i></b><span
 style='mso-fareast-font-family:"Times New Roman"'><span
-style='mso-spacerun:yes'>† </span>file from PDFfit-II tutorial skipping Steps 1
+style='mso-spacerun:yes'>¬† </span>file from PDFfit-II tutorial skipping Steps 1
 &amp; 2, there will only be one phase in the project. <o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
@@ -1687,20 +1687,20 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>The
-atom variables (ì@21î, etc.) correspond directly with the ISODISTORT distortion
+atom variables (‚Äú@21‚Äù, etc.) correspond directly with the ISODISTORT distortion
 modes shown for the LaMnO3-Pbnm_child phase; their values are shown as well.
 The correct target space group is given (P b n m); you should check the </span><b><i><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>Refine unit cell?</span></i></b><span
 style='mso-fareast-font-family:"Times New Roman"'><span
-style='mso-spacerun:yes'>† </span>box. You should also choose a Uiso refinement
+style='mso-spacerun:yes'>¬† </span>box. You should also choose a Uiso refinement
 model. I selected </span><b><i><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Refine Uiso ?
 by parent name</span></i></b><span style='mso-fareast-font-family:"Times New Roman"'>,
-that gives 4 additional parameters (ì@81î ñ ì@84î) with starting values
-(Uiso=0.005) as listed. As with the two earlier tutorials, change ìdelta2î to </span><b><i><span
+that gives 4 additional parameters (‚Äú@81‚Äù ‚Äì ‚Äú@84‚Äù) with starting values
+(Uiso=0.005) as listed. As with the two earlier tutorials, change ‚Äúdelta2‚Äù to </span><b><i><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>1.0</span></i></b><span style='mso-fareast-font-family:
@@ -1776,7 +1776,7 @@ sequential PDF data for LaMnO<sub>3</sub> into GSAS-II and sequential PDFfit
 setup<o:p></o:p></span></h3>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>The sequential
-PDFfit operation requires that the G(r) data be given as a suite of ìPDFî
+PDFfit operation requires that the G(r) data be given as a suite of ‚ÄúPDF‚Äù
 entries in the GSAS-II tree. Do </span><b><i><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Import/PDF
@@ -1849,10 +1849,10 @@ v:shapes="Picture_x0020_18"><![endif]></span><span style='mso-fareast-font-famil
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Change
-Seq data type to ë</span><b><i><span style='font-family:"Calibri",sans-serif;
+Seq data type to ‚Äò</span><b><i><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>N</span></i></b><span
-style='mso-fareast-font-family:"Times New Roman"'>í and then press the </span><b><i><span
+style='mso-fareast-font-family:"Times New Roman"'>‚Äô and then press the </span><b><i><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>Add PDF G(r) data sets</span></i></b><span
@@ -1900,7 +1900,7 @@ v:shapes="Picture_x0020_20"><![endif]></span><span style='mso-fareast-font-famil
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Unfortunately,
 the data sets did not (apart from the file name) contain a temperature record.
-Youíll have to enter them by hand. Notice the fine stepping in temperature
+You‚Äôll have to enter them by hand. Notice the fine stepping in temperature
 around 700-750K; this was to track some special structural change in this
 material. We will be keen to see what comes out of the mode displacements.<o:p></o:p></span></p>
 
@@ -1932,9 +1932,9 @@ mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>qdamp</span></i></b><span style='mso-fareast-font-family:
 "Times New Roman"'> selecting </span><b><i><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
-mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Y ñ vary all</span></i></b><span
+mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>Y ‚Äì vary all</span></i></b><span
 style='mso-fareast-font-family:"Times New Roman"'> in each case. The window is
-refreshed each time (youíll have to scroll back down to the bottom each time).
+refreshed each time (you‚Äôll have to scroll back down to the bottom each time).
 When done, this part of the window should look like<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
@@ -1982,7 +1982,7 @@ do </span><b><i><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-fo
 minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
 minor-latin;mso-bidi-theme-font:minor-latin'>Operations/Execute</span></i></b><span
 style='mso-fareast-font-family:"Times New Roman"'>; a popup will appear
-reminding you to properly cite your use of PDFfit (donít forget to cite GSAS-II
+reminding you to properly cite your use of PDFfit (don‚Äôt forget to cite GSAS-II
 as well). Press </span><b><i><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>OK</span></i></b><span
@@ -2030,7 +2030,7 @@ a column heading; the plot will show the parameter as a function of run number
 (I picked </span><b><i><span style='font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
 mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>11-a</span></i></b><span
-style='mso-fareast-font-family:"Times New Roman"'> ñ the unit cell axis a).<o:p></o:p></span></p>
+style='mso-fareast-font-family:"Times New Roman"'> ‚Äì the unit cell axis a).<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -2047,11 +2047,11 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>The
 vertical bars represent the standard uncertainties for each a-axis
-determination by the sequential PDFfit. Select the plot window and press the ë</span><b><i><span
+determination by the sequential PDFfit. Select the plot window and press the ‚Äò</span><b><i><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>s</span></i></b><span style='mso-fareast-font-family:
-"Times New Roman"'>í key; a small popup window will appear<o:p></o:p></span></p>
+"Times New Roman"'>‚Äô key; a small popup window will appear<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -2092,7 +2092,7 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>This
 is considerably more informative. Something interesting seems to be happening
-at ~750K. Now select all the mode distortion parameters ñ pick </span><b><i><span
+at ~750K. Now select all the mode distortion parameters ‚Äì pick </span><b><i><span
 style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;
 mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;
 mso-bidi-theme-font:minor-latin'>21-R5_T1u(a)</span></i></b><span
