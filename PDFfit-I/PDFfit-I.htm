@@ -1247,39 +1247,13 @@ better tackled via Rietveld refinement with the original diffraction data.<o:p><
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>We
-have included with the GSAS-II distribution the most recent version of the
-PDFfit2 executable and its python interface routines for Windows (those for Mac
-OSX and linux will follow in due course). They are in the </span><b><i><span
-style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:
-minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
-minor-latin;mso-bidi-theme-font:minor-latin'>diffpy</span></i></b><span
-style='mso-fareast-font-family:"Times New Roman"'> subdirectory of GSAS-II. No
-other files are needed. Also, the </span><b><i><span style='font-family:"Calibri",sans-serif;
-mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";
-mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>diffpy/manual</span></i></b><span
-style='mso-fareast-font-family:"Times New Roman"'> subdirectory has the paper
-referenced above as well as one that described the original Fortran version of
-PDFfit. </span><b><i><span style='font-family:"Calibri",sans-serif;mso-ascii-theme-font:
-minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:
-minor-latin;mso-bidi-theme-font:minor-latin'>PDFgui.html</span></i></b><span
-style='mso-fareast-font-family:"Times New Roman"'> describes 3 tutorials, upon
-which the GSAS-II ones are based, as given for the PDFgui software.
-Alternatively, you can install pdffit2 from Anaconda by executing <o:p></o:p></span></p>
-
-<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal><span style='font-family:Consolas;color:#333333;background:
-#EEEFF0'>conda install -c diffpy <span class=GramE>diffpy.pdffit</span>2</span></p>
-
-<p class=MsoNormal><span style='font-family:Consolas;color:#333333;background:
-#EEEFF0'><o:p>&nbsp;</o:p></span></p>
-
-<p class=MsoNormal><span style='color:#333333;background:#EEEFF0'>in a console
-window after activating your version of python.<span style='mso-spacerun:yes'> 
-</span>It will be installed in your python as
-gsas2full/Lib/site-packages/diffpy.</span><span style='mso-fareast-font-family:
-"Times New Roman"'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New
+Roman"'>
+Note that PDFfit2 is not installed with GSAS-II by default, but with
+usual installation configurations, where GSAS-II is run from a
+conda-installed version of Python, it can be installed for you (see
+<A href='#Step3'>Step 3</A>, below). 
+</p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
@@ -1542,8 +1516,9 @@ v:shapes="Picture_x0020_11"><![endif]></span><span style='mso-fareast-font-famil
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>which
 is the correct full cell description for nickel suitable for use in PDFfit.<o:p></o:p></span></p>
 
+<A name='Step3'>
 <h3><span style='mso-fareast-font-family:"Times New Roman"'>Step 3. Setup
-PDFfit<o:p></o:p></span></h3>
+PDFfit<o:p></o:p></span></h3></A>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>All operations
 for PDFfit are done in the RMC tab; select it and you should see the interface
@@ -1563,7 +1538,46 @@ style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></p>
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>Select
-the radio button at the top for PDFfit; the window will be redrawn <o:p></o:p></span></p>
+the radio button at the top for PDFfit. If GSAS-II is running under
+a conda-installed Python, and PDFfit2 is not installed, you will be
+asked if you want to install it. (If you have installed Python
+yourself, you will need to install PDFfit2 either as a separate Python
+interpreter -- recommended --  or inside the Python used for GSAS-II.
+If the PDFfit2 package is installed into the same
+Python interpreter used by GSAS-II using conda or pip this
+invites potential conflict where
+PDFfit2 and GSAS-II require different versions of packages. At present
+this does not appear to be a problem, but this could arise in the
+future. The <tt>pdffit2_exec</tt> config variable described below is not 
+needed when PDFfit2 is installed in the same Python used by GSAS-II.
+See
+links on
+<A href="https://github.com/diffpy/diffpy.pdffit2?tab=readme-ov-file#-diffpypdffit2">the DiffPy
+package</A>
+and/or
+<A href="https://pypi.org/project/diffpy.pdffit2">PyPi for PDFfit2</A>
+for more information on installing PDFfit2 manually.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'>
+ If PDFfit2 is installed in a separate Python installation, the
+location of this is saved in GSAS-II configuration variable
+<tt>pdffit2_exec</tt>. This is done for you if GSAS-II installs
+PDFfit2.
+
+<p class=MsoNormal></p>
+<p class=MsoNormal>&nbsp;</p>
+ Note that as of Oct. 2024, PDFfit2 is not yet available for Mac
+computers running ARM (M1/2/3/...) processors via conda. It is still possible to
+run the Intel version of PDFfit2 on these computers, but this requires
+a separate Python installation, as discussed above.
+Pip installation for ARM Macs may become available
+before a conda package is available.
+
+<p class=MsoNormal>&nbsp;</p>
+<p class=MsoNormal></p>
+Note that once the PDFfit option is
+selected, the window is redrawn, as below:<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='mso-fareast-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
 
