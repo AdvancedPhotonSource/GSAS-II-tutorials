@@ -29,10 +29,8 @@ well as extensive visualization capabilities.
    help.rst
    mailinglist.rst
    bug.rst
+   options.rst
    developers.rst 
-   compile.rst
-   install-pip.rst
-   proxy.rst
 
 .. tip::
     Please help us by citing:
