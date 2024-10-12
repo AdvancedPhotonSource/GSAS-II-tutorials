@@ -4,7 +4,7 @@
    :align: right
 
 ====================================
- Information for GSAS-II Developers
+Documentation for GSAS-II Developers
 ====================================
 
 Note the `documentation web page <documentation.html>`_, as the

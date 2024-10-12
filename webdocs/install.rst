@@ -3,20 +3,20 @@
    :alt: GSAS-II logo
    :align: right
 
-============================ 
-GSAS-II Installation Options
-============================
+==================================== 
+Choices for GSAS-II Installation
+====================================
 
 .. index:: Installation overview
 
-Running GSAS-II requires a number of coordinated installation steps and there are many different ways this can be accomplished. One needs not only the necessary Python source code for GSAS-II, but a Python interpreter that includes a number of "add-on" Python packages for additonal capabilities. This much match the computer where the software will be run. Further, GSAS-II requires that a small amount of its code be compiled, typically for speed and this must be matched both the computer OS and to the Python version. Here I outline different a few different approaches.
+Running GSAS-II requires a number of coordinated installation steps and there are many different ways this can be accomplished. One needs not only the necessary Python source code for GSAS-II, but a Python interpreter that includes a number of "add-on" Python packages for additional capabilities. This much match the operating system for the computer where the software will be run. Further, GSAS-II requires that a small amount of its code be compiled, typically for speed and this must be matched both the computer OS and to the Python version. Here I outline different a few different approaches.
 
 .. index:: gsas2full installer
 
 GSAS2FULL installer
 =======================
 
-Most users of GSAS-II are seeking a simple way to install and run the software and can live with the idea that they may have duplicated Python installations (several hundreds of MB each) on their computer. The GSAS2FULL self-installer provides that and can be `downloaded from here <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/latest>`_. Brief installation instructions are outlined below with links to more complete instructions:
+Most users of GSAS-II are seeking a simple way to install and run the software and can live with the idea that they may have duplicated Python installations (several hundreds of MB each) on their computer. The GSAS2FULL self-installer provides simple installation and can be `downloaded from here <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/latest>`_. Brief installation instructions are outlined below with links to more complete instructions:
 
 Windows
 -----------
@@ -110,5 +110,19 @@ While all of the above approaches will clone a copy of the GSAS-II repository fr
 Older installers
 =================================
 
-Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. While the installers for those processes are still available, this is not encouraged. Also, while updates will be provided for those past svn installations for the immediate future, this will not be continued indefinitely. Thus, we are encouraging users to reinstall GSAS-II via one of the above methods if they previously installed GSAS-II via svn. When updates via svn will be phased out, GSAS-II will provide warning messages.
-	     
+Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. The subversion server is not longer being updated, so those installers should not be used because if GSAS-II is installed from subversion, you will not be able to update to the current GSAS-II version.
+If you previously installed GSAS-II from that server, you will be shown a message when trying to update that you should reinstall GSAS-II as described above. 
+
+Installation details
+====================================
+
+Most people will not need these details, but some specific
+installation details are discussed in the topics below.
+
+.. toctree::
+   :maxdepth: 3
+	      
+   compile.rst
+   install-pip.rst
+   proxy.rst
+
