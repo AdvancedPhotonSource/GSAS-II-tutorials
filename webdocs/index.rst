@@ -53,8 +53,8 @@ new features and fixes as they are added and please make sure to use
 the latest version before reporting a bug to us, but *please* do report
 bugs.
 
-Installation overview
-=======================
+Overview of GSAS-II Installation Methods
+============================================
 
 There are several different ways to install GSAS-II, as are outlined below. Most people will use the GSAS2FULL installer
  
@@ -63,7 +63,7 @@ There are several different ways to install GSAS-II, as are outlined below. Most
       
    install.rst
 
-Documentation for Users
+Documentation for GSAS-II Users
 ====================================
 
 While there is no manual for GSAS-II, there is quite a bit of
@@ -72,19 +72,6 @@ web-based documentation, as listed below.
 .. toctree::
       
    documentation.rst
-
-Help: GSAS-II will not start
-====================================
-
-If there is a bug in GSAS-II, check for updates (using the Help/Update
-menu command) and if the bug is present in the latest version, please
-report it (see section below on  reporting bugs).
-Should GSAS-II fail to start after an update, then there are alternate
-ways to update GSAS-II, as discussed below. 
-
-.. toctree::
-      
-   help.rst
 
 Mailing List
 ====================================
@@ -96,7 +83,7 @@ about what is new and changing.
 
    mailinglist.rst
 
-Reporting Bugs
+Reporting GSAS-II Bugs
 ====================================
 
 If something is not working properly in GSAS-II, please let us
@@ -119,9 +106,21 @@ used in different parts of the program.
 
    options.rst
 
-
-Documentation for code developers  
+Help: GSAS-II will not start
 ====================================
+
+If there is a bug in GSAS-II, check for updates (using the Help/Update
+menu command) and if the bug is present in the latest version, please
+report it (see section above on reporting bugs).
+Should GSAS-II fail to start after an update, then there are alternate
+ways to update GSAS-II, as discussed below. 
+
+.. toctree::
+      
+   help.rst
+
+Documentation for GSAS-II Developers
+======================================
 
 We encourage you to improve GSAS-II or to use the code in your own
 projects. Some starting information is here:

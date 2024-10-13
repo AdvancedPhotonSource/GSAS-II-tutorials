@@ -4,7 +4,7 @@
    :align: right
 
 ====================================
- Available Documentation for GSAS-II
+Documentation for GSAS-II Users
 ====================================
 
 .. index:: GSAS-II tutorials

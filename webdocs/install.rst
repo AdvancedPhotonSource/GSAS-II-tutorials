@@ -3,9 +3,9 @@
    :alt: GSAS-II logo
    :align: right
 
-==================================== 
-Choices for GSAS-II Installation
-====================================
+============================================ 
+Overview of GSAS-II Installation Methods
+============================================
 
 .. index:: Installation overview
 

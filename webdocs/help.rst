@@ -1,10 +1,14 @@
+====================================
+ Help: GSAS-II will not start
+====================================
+
 While I hope this never happens again, there have been occasions where a
-version of GSAS-II has a bug that prevents the program from starting.
-If this version is installed, it is then not possible to access the
+version of GSAS-II is placed on the web that has an error that prevents the program from starting.
+Once that version is installed, it is then not possible to access the
 Help/Update menu command to obtain the different version of
 GSAS-II. The same thing can also happen if you make changes to the
 files yourself and introduce an error. Also, if you make changes to
-the GSAS-II Python (.py) files, you can no longer obtain updates. 
+the GSAS-II Python (.py) files, you may no longer be able to obtain updates.
 
 A script is provided that can be used to reset any locally made
 changes and then install the lastest version of GSAS-II. If you have

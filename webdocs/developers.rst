@@ -3,9 +3,9 @@
    :alt: GSAS-II logo
    :align: right
 
-====================================
+======================================
 Documentation for GSAS-II Developers
-====================================
+======================================
 
 Note the `documentation web page <documentation.html>`_, as the
 "Developer's Documentation" document, available in several formats, is
