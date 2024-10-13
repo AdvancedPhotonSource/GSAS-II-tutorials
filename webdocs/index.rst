@@ -26,10 +26,10 @@ well as extensive visualization capabilities.
       
    install.rst
    documentation.rst
-   help.rst
    mailinglist.rst
    bug.rst
    options.rst
+   help.rst 
    developers.rst 
 
 .. tip::
@@ -98,9 +98,10 @@ Customizing GSAS-II
 ====================================
 
 There are many options within GSAS-II that allow you to tailor aspects
-of the program to operate differently, for example to change how
-powder diffraction refinement results are plotted or some defaults
-used in different parts of the program. 
+of the program to operate differently. These are described
+here. Options are available to change how
+powder diffraction refinement results are plotted or change defaults
+used in different parts of the program, , for example. 
 
 .. toctree::
 
