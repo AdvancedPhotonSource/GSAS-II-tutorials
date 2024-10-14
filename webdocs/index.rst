@@ -121,7 +121,7 @@ ways to update GSAS-II, as discussed below.
       
    help.rst
 
-Documentation for GSAS-II Developers
+Notes for GSAS-II Developers
 ======================================
 
 We encourage you to improve GSAS-II or to use the code in your own

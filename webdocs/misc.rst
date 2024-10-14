@@ -16,11 +16,10 @@ In cooperation with the ACA, IUCr, ICDD, LANSCE and NCNR, we celebrated Bob Von 
 
 Both pre-recorded videos and live talks were presented. All content was placed on
 the American Crystallographic Association's History Portal (via a special `YouTube playlist <https://www.youtube.com/playlist?list=PL9KqEkw6mD5kU1qfJPsScoZTpEnPZIq1E>`_.
-Also of note is a short (and fairly modest) autobiographical sketch about Bob's work can be found `in the ACA's History pages <https://history.amercrystalassn.org/robert-von-dreele>`_.
+Also of note is a short (and fairly modest) autobiographical sketch
+about Bob's work which can also be found `in the ACA's History Portal <https://history.amercrystalassn.org/robert-von-dreele>`_.
 
-Listing of Presentations
-
-.. list-table:: Title
+.. list-table:: VonDreeleFest Presentations 
    :widths: 15 60 15 10
    :header-rows: 1
 
