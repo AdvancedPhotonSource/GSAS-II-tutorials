@@ -1,3 +1,8 @@
+.. image:: ./images/gsas2.png
+   :scale: 25 %
+   :alt: GSAS-II logo
+   :align: right
+
 ====================================
  Help: GSAS-II will not start
 ====================================

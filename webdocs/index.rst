@@ -31,6 +31,7 @@ well as extensive visualization capabilities.
    options.rst
    help.rst 
    developers.rst 
+   misc.rst 
 
 .. tip::
     Please help us by citing:
@@ -130,3 +131,11 @@ projects. Some starting information is here:
 
    developers.rst 
 
+Miscellaneous GSAS-II Links
+======================================
+
+Other things related to GSAS-II can be found here.
+
+.. toctree::
+   
+   misc.rst 
