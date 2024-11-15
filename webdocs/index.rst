@@ -54,7 +54,7 @@ new features and fixes as they are added and please make sure to use
 the latest version before reporting a bug to us, but *please* do report
 bugs.
 
-Overview of GSAS-II Installation Methods
+Installing GSAS-II: Overview
 ============================================
 
 There are several different ways to install GSAS-II, as are outlined below. Most people will use the GSAS2FULL installer
@@ -64,7 +64,7 @@ There are several different ways to install GSAS-II, as are outlined below. Most
       
    install.rst
 
-Documentation for GSAS-II Users
+GSAS-II Documentation
 ====================================
 
 While there is no manual for GSAS-II, there is quite a bit of

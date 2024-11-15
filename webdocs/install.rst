@@ -4,7 +4,7 @@
    :align: right
 
 ============================================ 
-Overview of GSAS-II Installation Methods
+Installing GSAS-II: Overview
 ============================================
 
 .. index:: Installation overview
@@ -37,7 +37,12 @@ For MacOS and Linux use a command such as::
 
 where:
 
- * <platform> is replaced by ``Linux-x86_64.sh`` for Linux, ``MacOSX-arm64.sh`` for MacOS with "Apple Silicon"  (M1, etc.) processors and ``MacOSX-x86_64.sh`` is for older Intel-based machines. Note that the ``MacOSX-x86_64.sh`` installer will run on "Apple Silicon" processors, but significantly more slowly. 
+ * <platform> is replaced by ``Linux-x86_64.sh`` for Linux, ``MacOSX-arm64.sh`` for MacOS with "Apple Silicon"  (M1, etc.) processors and ``MacOSX-x86_64.sh`` is for older Intel-based machines. Note that the ``MacOSX-x86_64.sh`` installer will run on "Apple Silicon" processors, but significantly more slowly. Thus choices are:: 
+
+        g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Linux-x86_64.sh"
+	g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-arm64.sh"
+	g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-x86_64.sh"
+
  * <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you may be asked if you want to place a shortcut for GSAS-II into the MacOS dock.
 
 More complete installation instructions are provided for `MacOS <install-g2f-mac.html>`_ and `Linux <install-g2f-linux.html>`_.
