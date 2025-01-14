@@ -53,3 +53,22 @@ Distro-supplied packages
 ---------------------------------
 
 A small number of users or sites prefer to use Python distributions supplied via a Linux distribution, such as from Ubuntu, Debian or Redhat. As an example for how this is done, please see some older notes on installation with the Raspberry Pi OS:  https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/InstallPiLinux.
+
+With Redhat Enterprise Linux (RHEL) if you want to use RHEL-supplied
+versions of Python, you can use this command to install a fairly old
+version of Python::
+
+  sudo yum install python3-wxpython4 python3-matplotlib python3-numpy python3-scipy python3-GitPython python3-requests python3-pillow python3-h5py  python3-pyopengl
+
+As you will likely need to create your own binary files, you will also
+likely need this as well::
+
+  sudo yum install python3-scons python3-numpy-f2py
+
+RHEL also supplies a Python 3.11 interpreter, but not very many
+packages for that, so pip will be needed (this is pretty slow, FWIW)::
+  
+  sudo yum install python3.11 python3.11-numpy python3.11-scipy  python3.11-pip python3.11-wheel
+  pip3.11 install wxpython 
+  pip3.11 install matplotlib
+  pip3.11 install pyopengl

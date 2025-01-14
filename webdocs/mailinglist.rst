@@ -7,8 +7,18 @@
 Mailing List
 =======================
 
-We provide a mailing list for GSAS-II users to ask questions and more importantly, **so that we can reach users with news about GSAS-II**. Please do subscribe. The level of traffic on this list is pretty low, perhaps a few e-mails a month; Bob and I usually reply to directly to the sender to further reduce this traffic, unless the answer will be valuable to many people.
-You can also search the `archives of the mailing list <http://www.mail-archive.com/gsas-ii@mailman.aps.anl.gov/>`_.
+We provide a mailing list for GSAS-II users to ask questions and more
+importantly, **so that we can reach users with news about
+GSAS-II** and for discussion questions. Please do subscribe.
+The level of traffic on this list is
+pretty low (typically 30-60 e-mails/year); Bob and I usually reply to
+directly to senders, unless the
+answer will be valuable to many people. There is an `archive of the
+list here <https://mailman.aps.anl.gov/pipermail/gsas-ii/>`_ while until
+2018 `this site
+<http://www.mail-archive.com/gsas-ii@mailman.aps.anl.gov/>`_  (which
+is searchable) also
+archived the mailing list. We will try to get that restarted. 
 
 .. index:: Subscribe to mailing list
 

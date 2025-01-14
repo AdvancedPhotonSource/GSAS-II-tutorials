@@ -27,25 +27,40 @@ You will have a choice for where to install the software (the default is usually
 
 More complete installation instructions `are here <install-g2f-win.html>`_.
 
-MacOS and Linux
+MacOS
 --------------------
 
-For MacOS and Linux use a command such as:: 
+For ARM (M1,...) MacOS use a command such as:: 
+    g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-arm64.sh"
+curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
 
-  g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-<platform>"
-  curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+For older Intel MacOS use a command such as:: 
 
+g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-x86_64.sh"
+curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+
+  
+Note that the ``MacOSX-x86_64.sh`` installer will run on "Apple Silicon" processors, but significantly more slowly.
+   
 where:
 
- * <platform> is replaced by ``Linux-x86_64.sh`` for Linux, ``MacOSX-arm64.sh`` for MacOS with "Apple Silicon"  (M1, etc.) processors and ``MacOSX-x86_64.sh`` is for older Intel-based machines. Note that the ``MacOSX-x86_64.sh`` installer will run on "Apple Silicon" processors, but significantly more slowly. Thus choices are:: 
+ * <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you will be given a chance to place a shortcut for GSAS-II into the MacOS dock.
 
-        g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Linux-x86_64.sh"
-	g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-arm64.sh"
-	g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-x86_64.sh"
+More complete installation instructions are provided for `MacOS separately <install-g2f-mac.html>`_.
 
- * <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you may be asked if you want to place a shortcut for GSAS-II into the MacOS dock.
+Linux
+--------------------
 
-More complete installation instructions are provided for `MacOS <install-g2f-mac.html>`_ and `Linux <install-g2f-linux.html>`_.
+To install GSAS2FULL in Linux use a command such as:: 
+  g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Linux-x86_64.sh"
+curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+  
+where:
+
+ * <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) 
+
+More complete installation instructions are provided for `Linux separately <install-g2f-linux.html>`_.
+
 
 GSAS2FULL Additional Details
 ----------------------------------------
@@ -103,7 +118,7 @@ will not be installed. However, when GSAS-II is first run, it will provide an op
 Installing directly from GitHub
 ==============================================
 
-While all of the above approaches will clone a copy of the GSAS-II repository from GitHub, software developers may find it more convenient to clone the repo themselves. This will typically be done as part of a process where a copy of GSAS-II is forked on GitHub. This is described in a `separate page <install_dev.html>`_. 
+While all of the above approaches will clone a copy of the GSAS-II repository from GitHub, software developers may find it more convenient to clone the repo themselves. This will typically be done as part of a process where a copy of GSAS-II is forked on GitHub. This is described in a `separate page <install_dev.html>`_ (outline below). 
 
 .. index:: Installing for development
 .. toctree::
