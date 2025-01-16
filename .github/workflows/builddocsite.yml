@@ -65,10 +65,10 @@ jobs:
 
       - name: Note changed files
         run: |
-            git status
             git add tutorials.html
             git add */data/index.html
-      
+            git status
+	    git commit -m"changes from automated build of tutorials"
       - name: Push changes
         uses: ad-m/github-push-action@master
 
