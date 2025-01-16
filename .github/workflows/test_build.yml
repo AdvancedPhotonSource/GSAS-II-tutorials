@@ -19,7 +19,11 @@ jobs:
         
       - name: Find tutorials
         run: |
-          ls -R
           cd MDtutorials
-          curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
+          ls
+          for path in ./*; do
+            [ -d "${path}" ] || continue # if not a directory, skip
+            dirname="$(basename "${path}")"
+            ls $dirname
+          done
         
