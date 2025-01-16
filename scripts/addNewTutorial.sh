@@ -1,4 +1,10 @@
 #!/bin/bash
+###########################
+# this script is obsolete #
+# these actions are done  #
+# in GitHub workflow      #
+###########################
+#
 # to add a new tutorial
 # 1) create new directory in .../GSASII-tutorials
 # 2) add .html file, data/ directory

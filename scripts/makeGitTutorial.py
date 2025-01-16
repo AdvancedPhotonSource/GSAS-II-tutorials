@@ -182,7 +182,7 @@ Last modified: {timestamp}
 </body>
 ''',file=out)
     out.close()
-    print(f"\nTutorials without videos {novideo}")
+    print(f"\nTutorials without videos {novideo}\n")
 
     for l in G2G.tutorialIndex:
         if len(l) != 1:
@@ -192,6 +192,8 @@ Last modified: {timestamp}
     # loop through directories in Tutorials repository
     for tutdir in glob.glob(os.path.join(TutorialsDir,'*')):
         if not os.path.isdir(tutdir): continue
+        if tutdir in ['scripts','docs','webdocs','MDtutorials']:
+            continue
         d = os.path.split(tutdir)[1]
         if d not in dirList: print(u"Tutorial directory not in GSASIIctrlGUI.tutorialIndex: "+d)
     print(f"\nStatistics: {tutorialcount} total tutorials, {videocount} with videos")
