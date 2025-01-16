@@ -13,17 +13,6 @@ jobs:
   build:       # Build web pages
     runs-on: ubuntu-latest
     steps:
-      - name: sed test
-        run: |
-          mkdir test
-          echo "<figure>" > test.txt
-          echo "before"
-          cat test.txt
-          #man sed
-          sed -i "s/<figure>/<BR clear=all><figure>/g" test.txt
-          echo "after"
-          cat test.txt
-          exit
 
       - name: Install pandoc
         uses: pandoc/actions/setup@v1
@@ -43,12 +32,10 @@ jobs:
             [ ! -d "${path}/imgs" ] || cp -r "${path}/imgs" ${dest}/
             cp tutorial.css ${dest}
             for fil in $dirname/*.md; do
-              echo $fil
               outfile="${dest}/$(basename "${fil%.md}.html")"
-              echo $outfile
+              echo "creating $outfile from $fil"
               pandoc --standalone ${fil} --css tutorial.css -o ${outfile}
               sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
             done
-            ls -R ${dest}
           done
         
