@@ -14,13 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
+     - name: Install pandoc
+        uses: pandoc/actions/setup@v1
+
       - name: Checkout
         uses: actions/checkout@v4
         
       - name: Find tutorials
         run: |
-          which pandoc
-          which sed
           cd MDtutorials
           ls
           for path in ./*; do
@@ -32,4 +33,6 @@ jobs:
               ls -l $fil
             done
           done
+          which pandoc
+          which sed
         
