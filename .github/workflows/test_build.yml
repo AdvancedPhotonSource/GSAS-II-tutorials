@@ -27,16 +27,17 @@ jobs:
             [ -d "${path}" ] || continue # skip if not a directory
             dirname="$(basename "${path}")"
             dest="../${dirname}"
-            mkdir -v ${dest}
-            [ ! -d "${path}/data" ] || cp -rv "${path}/data" ${dest}/
-            [ ! -d "${path}/imgs" ] || cp -rv "${path}/imgs" ${dest}/
-            cp -v tutorial.css ${dest}
+            mkdir ${dest}
+            [ ! -d "${path}/data" ] || cp -r "${path}/data" ${dest}/
+            [ ! -d "${path}/imgs" ] || cp -r "${path}/imgs" ${dest}/
+            cp tutorial.css ${dest}
             for fil in $dirname/*.md; do
               echo $fil
               outfile="${dest}/$(basename "${fil%.md}.html")"
               echo $outfile
               pandoc --standalone ${fil} --css tutorial.css -o ${outfile}
-              sed -i '' 's/<figure>/<BR clear=all><figure>/g' ${outfile}
+              sed -i "" "s/<figure>/<BR clear=all><figure>/g" ${outfile}
             done
+            ls -R ${dest}
           done
         
