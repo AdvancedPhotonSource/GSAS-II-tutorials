@@ -54,15 +54,21 @@ jobs:
               pandoc --standalone ${fil} --css tutorial.css -o ${outfile}
               sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
             done
+            git add ${dest}
           done
         
       - name: build tutorials index 
         run: |
           cd scripts
           python makeGitTutorial.py ..
+
+      - name: Note changed files
+        run: |
+            git add tutorials.html
+            git add */data/index.html
       
-#      - name: Push changes
-#        uses: ad-m/github-push-action@master
+      - name: Push changes
+        uses: ad-m/github-push-action@master
 
       - name: Sphinx build
         run: |
