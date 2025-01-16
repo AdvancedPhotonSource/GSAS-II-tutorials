@@ -20,19 +20,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Find tutorials
+      - name: convert tutorials
         run: |
           cd MDtutorials
-          ls
           for path in ./*; do
-            [ -d "${path}" ] || continue # if not a directory, skip
+            [ -d "${path}" ] || continue # skip if not a directory
             dirname="$(basename "${path}")"
-            mkdir -v ../$dirname
+            dest="../$dirname)
+            mkdir -v ${dest}
+            [ -d "${path}/data" ] || cp -rv "${path}/data" ${dest}/
+            [ -d "${path}/imgs" ] || cp -rv "${path}/imgs" ${dest}/
+            cp -v tutorial.css ${dest}
             for fil in $dirname/*.md; do
               echo $fil
-              ls -l $fil
+              outfile="${dest}/$(basename "${fil%.md}.html")"
+              echo $outfile
+              pandoc --standalone ${fil} --css tutorial.css -o ${outfile}
+              sed -i '' 's/<figure>/<BR clear=all><figure>/g' ${outfile}
             done
           done
-          which pandoc
-          which sed
         
