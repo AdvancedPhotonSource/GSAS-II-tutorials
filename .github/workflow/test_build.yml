@@ -1,0 +1,25 @@
+# Develop code to build markup files into HTML
+# 
+name: test md to HTML
+
+on: [workflow_dispatch] 
+
+permissions:
+  contents: write
+  id-token: write
+  pages: write
+
+jobs:
+  build:       # Build web pages
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Find tutorials
+        run: |
+          ls -R
+          cd MDtutorials
+          curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
+        
