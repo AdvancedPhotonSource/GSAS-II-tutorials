@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-     - name: Install pandoc
+      - name: Install pandoc
         uses: pandoc/actions/setup@v1
 
       - name: Checkout
