@@ -16,7 +16,7 @@ jobs:
       - name: sed test
         run: |
           mkdir test
-          cat "<figure>" > test.txt
+          echo "<figure>" > test.txt
           echo "before"
           cat test.txt
           man sed
