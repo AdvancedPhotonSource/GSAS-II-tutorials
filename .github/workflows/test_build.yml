@@ -19,11 +19,17 @@ jobs:
         
       - name: Find tutorials
         run: |
+          which pandoc
+          which sed
           cd MDtutorials
           ls
           for path in ./*; do
             [ -d "${path}" ] || continue # if not a directory, skip
             dirname="$(basename "${path}")"
-            ls $dirname
+            mkdir -v ../$dirname
+            for fil in $dirname/*.md; do
+              echo $fil
+              ls -l $fil
+            done
           done
         
