@@ -1,0 +1,85 @@
+=====================
+ Quick notes on writing a tutorial
+=====================
+
+New tutorials should be prepared in Markdown rather than HTML if possible. 
+
+* Create a new directory in MDtutorials (./MDtutorials/<newtutorial>) for the
+   tutorial (or combine into an existing directory), 
+
+* Create file for the tutoral as ./MDtutorials/<newtutorial>/<tutorialfile>.md 
+  <newtutorial> and <tutorialfile> will commonly be the same, but need not be so.
+
+  The final tutorial will be placed in
+  https://advancedphotonsource.github.io/GSAS-II-tutorials/<newtutorial>/<tutorialfile>.html
+
+* Images for the tutorial should be placed in subdirectory imgs, ./MDtutorials/<newtutorial>/imgs
+
+* data files needed for the tutorial should be placed in subdirectory ./MDtutorials/<newtutorial>/data
+
+
+The tutorial .md file should start with:
+
+    	         ---
+		 title: "Tutorial: Changing the GSAS-II Font Size"
+		 ---
+		 <!--- Don't change the HTML version of this file; edit the .md version -->
+
+* Sections should be labeled with
+
+  	   ## Intro
+
+   and, subsections with
+
+   	   ### Subsection title
+
+  Sections and subsections will be numbered; subsubsections (etc.) will not be numbered.
+  Place a blank line before and after the section label
+
+
+* For links, use: [displayed text](http://url)
+
+* For figures, which will be sized at 400px max and will be placed at the right margin, use:
+
+      	       ![caption text](imgs/<filename>.png)
+
+   Place a blank line before and after the figure
+
+
+* If needed, where a figure will be sized and placed manually, use HTML directly:
+
+     	     <img src="./imgs/nuc_struct.png" alt="nuclear structure" style="width:500px;">
+
+
+* Equations can be specified with MathJax:
+
+  	    	 Er${}_2$Ge${}_2$O${}_7$
+		 P$4_1 2_1 2$
+
+* Tables can be created using pipe characters
+
+  	 |  `FontSize_incr`  | Example |
+	 | :---: | ------------------------------------- | 
+	 | 0 | ![Example of GSAS-II GUI with the default font size (font=0)](imgs/font0.png) |
+	 | 3 | ![Example of GSAS-II GUI with the font increased by 3 units (font=3)](imgs/font3.png) |
+
+   See markdown docs for other mechanisms to create tables
+
+* To provide a link to a location within the tutorial, define an anchor at the location to be referenced
+
+     	     <a name=myanchor></a>
+
+   then the link to to this will be
+
+   	    here is some text [with a link](#myanchor) provided 
+
+
+* End the document with a table with the date and author(s):
+
+      	  ----
+	  | | 
+	  | ---: |
+	  | Brian Toby |
+	  | January 10, 2025 |
+
+* When the tutorial is complete, update GSASII/tutorialIndex.py to include the new tutorial

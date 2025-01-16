@@ -37,14 +37,6 @@ jobs:
         run: |
           curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
 
-      - name: build tutorials index 
-        run: |
-          cd scripts
-          python makeGitTutorial.py ..
-      
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-
       - name: convert tutorials
         run: |
           cd MDtutorials
@@ -52,7 +44,7 @@ jobs:
             [ -d "${path}" ] || continue # skip if not a directory
             dirname="$(basename "${path}")"
             dest="../${dirname}"
-            mkdir ${dest}
+            mkdir -pv ${dest}
             [ ! -d "${path}/data" ] || cp -r "${path}/data" ${dest}/
             [ ! -d "${path}/imgs" ] || cp -r "${path}/imgs" ${dest}/
             cp tutorial.css ${dest}
@@ -64,6 +56,14 @@ jobs:
             done
           done
         
+      - name: build tutorials index 
+        run: |
+          cd scripts
+          python makeGitTutorial.py ..
+      
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+
       - name: Sphinx build
         run: |
           sphinx-build webdocs .  # place output into root dir
@@ -78,7 +78,7 @@ jobs:
           mv _gsas2/GSASII/help ./help
       - name: Get rid of the rest of the GSAS-II files & other stuff not needed on web
         run: |
-          rm -rf _gsas2 webdocs scripts
+          rm -rf _gsas2 webdocs scripts MDtutorials
         
       - name: Upload artifact  # creates zip file with website contents
         uses: actions/upload-pages-artifact@v3
