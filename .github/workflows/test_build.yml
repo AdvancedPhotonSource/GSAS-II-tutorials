@@ -26,7 +26,7 @@ jobs:
           for path in ./*; do
             [ -d "${path}" ] || continue # skip if not a directory
             dirname="$(basename "${path}")"
-            dest="../$dirname)
+            dest="../${dirname}"
             mkdir -v ${dest}
             [ -d "${path}/data" ] || cp -rv "${path}/data" ${dest}/
             [ -d "${path}/imgs" ] || cp -rv "${path}/imgs" ${dest}/
