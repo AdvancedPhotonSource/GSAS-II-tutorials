@@ -19,7 +19,8 @@ jobs:
           echo "<figure>" > test.txt
           echo "before"
           cat test.txt
-          man sed
+          #man sed
+          sed -i "s/<figure>/<BR clear=all><figure>/g" test.txt
           echo "after"
           cat test.txt
           exit
@@ -46,7 +47,7 @@ jobs:
               outfile="${dest}/$(basename "${fil%.md}.html")"
               echo $outfile
               pandoc --standalone ${fil} --css tutorial.css -o ${outfile}
-              #sed -i "" "s/<figure>/<BR clear=all><figure>/g" ${outfile}
+              sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
             done
             ls -R ${dest}
           done
