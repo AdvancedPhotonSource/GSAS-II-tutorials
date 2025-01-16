@@ -56,7 +56,7 @@ jobs:
             done
             git add ${dest}
           done
-	  cd ..
+          cd ..
         
       - name: build tutorials index 
         run: |
@@ -65,7 +65,7 @@ jobs:
 
       - name: Note changed files
         run: |
-	    git status
+            git status
             git add tutorials.html
             git add */data/index.html
       
