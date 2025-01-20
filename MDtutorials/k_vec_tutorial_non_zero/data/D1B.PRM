@@ -1,0 +1,12 @@
+            123456789012345678901234567890123456789012345678901234567890
+INS   BANK      1                                                               
+INS   DTYPE   STND                                                              
+INS   HTYPE   PNCR                                                              
+INS  1 ICONS  2.39400   0.000000         0         0                            
+INS  1I HEAD DUMMY SPECTRUM FOR NEUTRON DIFFRACTOMETER                          
+INS  1I ITYP    0    0.0000  180.0000         1                                 
+INS  1PRCF1     2   12   0.00050    0                                           
+INS  1PRCF11   0.767400E+02  -1.613000E+02   1.389000E+02   0.475800E+01        
+INS  1PRCF12   0.250300E+01   0.000000E+00   0.680500E+01   0.000000E+00        
+INS  1PRCF13   0.000000E+00   0.000000E+00   0.000000E+00   0.000000E+00        
+

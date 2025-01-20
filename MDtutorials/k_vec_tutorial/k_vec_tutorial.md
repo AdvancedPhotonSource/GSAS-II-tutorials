@@ -77,7 +77,7 @@ In the plot window, we can click on the magnify glass to go to the zoom mode and
 see that the magnetic peaks in the 0.5 K data start to appear around 10° 2𝛳. So, for the low-angle region exclusion, 8°
 can be used as the upper limit safely. 
 
-* Click on the `Limits` entry for the first (2 K) histogram in the data tree. Note that the lower limit for the data (Tmin) is listed at the first data point at 2.025° 2𝛳. To change this so that we do not need to fit the lowest angle data with a widely changing background change the lower limit by putting in `8` into the `Tmin` input box. Note that the green dashed line moves to 8° 2𝛳 when the mouse is moved out of the box or Enter is pressed.
+* Click on the `Limits` entry for the first (2 K) histogram in the data tree. Note that the lower limit for the data (Tmin) is listed at the first data point at 2.025° 2𝛳. To change this so that we do not need to fit the lowest angle data with a widely changing background, change the lower limit by putting in `8` into the `Tmin` input box. Note that the green dashed line moves to 8° 2𝛳 when the mouse is moved out of the box or Enter is pressed.
 
 * At this stage, we no longer need the 0.5 K data and we can delete the
 corresponding histogram in GSAS-II. To do this, we do `Data/Delete data entries` and in the pop-up `Delete data`
@@ -157,7 +157,7 @@ Next, we will refine the atomic positions and the suggestion would be to start w
 and scattering strength to keep the refinement stable. This is done by setting the `X`
 in the `refine` column, indicating the atomic position will be refined.
 
-* Go to the phase and then click on the `Atoms` tab. Then double-click on the box in the `refine` column for the Er atom. Select `X`from the menu. 
+* Go to the phase and then click on the `Atoms` tab. Then double-click on the box in the `refine` column for the Er atom. Select `X` from the menu. 
 
 * Repeat this to set the `X` flag for the Ge atom.
 
@@ -190,7 +190,7 @@ exclude the low-angle region (set Tmin to 8) and and those aluminum peaks (exclu
 
 * Import the CIF file created in the previous step (with suggested name `Er2Ge2O7_2K.cif`) using the `Import/Phase/from CIF file` menu command and associate the phase and the dataset at the `Add histogram(s)` dialog.
 
-* Changing the number of background coefficients to `5` and refine background and scale factor, as was done in the [Initial fit](initfit). 
+* Changing the number of background coefficients to `5` and refine background and scale factor, as was done in the [Initial fit](#initfit). 
 
 ## Find the magnetic scattering peaks
 
@@ -200,11 +200,11 @@ Note that this relatively poor fit (Rp=35.5) is expected since we are not genera
 
 * Select the `Peak List` data tree entry for the histogram; the window will appear as to the right. 
 
-* Select Extra Peak using the button labeled `Switch to Extra Peak mode` (the `Peak Fitting` menu's `Add impurity/subgroup/magnetic peaks` menu command does the same thing. 
+* Select Extra Peak using the button labeled `Switch to Extra Peak mode` (the `Peak Fitting` menu's `Add impurity/subgroup/magnetic peaks` menu command does the same thing).
 
 ![Zoomed low angle region with initial peak picking](./imgs/extra_plot.png)
 
-* In the plot window, we want to zoom in the low angle region (~8-35 ° 2𝛳). Remember  to deactivate the zoom mode by clicking on the magnifying glass again. 
+* In the plot window, we want to zoom in the low angle region (~8-35° 2𝛳). Remember  to deactivate the zoom mode by clicking on the magnifying glass again. 
 
 Then we want to add peaks that have significant magnetic intensity. This is done by adding peaks to the peak list and then fitting them to find accurate positions. The fitting can account for low angle peak asymmetry or when a peak is on the shoulder of another and thus the peak maximum does represent the actual peak position. 
 
@@ -236,7 +236,7 @@ Note that the peak widths are generated from the peak width parameters in the `I
 
 ## k-vector search
 
-We now use the unit cell from the Er2Ge2O7 phase and the four peak positions that have been fit to search for a magnetic unit cell using commands in the `Unit Cells List` data tree item.
+We now use the unit cell from the Er${}_2$Ge${}_2$O${}_7$ phase and the four peak positions that have been fit to search for a magnetic unit cell using commands in the `Unit Cells List` data tree item.
 
 ![The Unit Cells List window](./imgs/unit_cell_list.png)
 
