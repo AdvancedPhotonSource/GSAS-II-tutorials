@@ -25,6 +25,10 @@ The tutorial .md file should start with:
 		 ---
 		 <!--- Don't change the HTML version of this file; edit the .md version -->
 
+		 * Exercise files are found [here](data/index.html)
+
+    ("exercise" line can be omitted when not needed)
+
 * Sections should be labeled with
 
   	   ## Intro

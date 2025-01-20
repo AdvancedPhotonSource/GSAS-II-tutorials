@@ -1,7 +1,9 @@
 ---
-title: k-vector searching in GSAS-II
+title: k-vector searching in GSAS-II #1 (all zero vector)
 ---
 <!--- Don't change the HTML version of this file; edit the .md version -->
+
+* Exercise files are found [here](data/index.html)
 
 ***This tutorial was built from the presentation by [Keith Taddei](https://www.anl.gov/profile/keith-taddei) at the [MagStr Workshop](https://conference.sns.gov/event/434/) for magnetic structure solution. The data associated with the tutorial has been published in*** 
 [K. Taddei, *et al.*  Phys. Rev. Mater., 3, 014405 (2019)](https://doi.org/10.1103/PhysRevMaterials.3.014405)

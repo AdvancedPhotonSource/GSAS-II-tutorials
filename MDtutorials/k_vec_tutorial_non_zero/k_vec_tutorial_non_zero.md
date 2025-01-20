@@ -1,7 +1,9 @@
 ---
-title: k-vector searching in GSAS-II (a non-zero case)
+title: k-vector searching in GSAS-II #2 (non-zero k-vector)
 ---
 <!--- Don't change the HTML version of this file; edit the .md version -->
+
+* Exercise files are found [here](data/index.html)
 
 ## Intro
 
@@ -9,7 +11,7 @@ This tutorial was built from the GSAS-II tutorial [Magnetic Structure Analysis-I
 
 ## Read in data & phase
 
-To avoid duplication, one can refer to the `Step-1` and `Step-2` for `exactly the same procedures` of loading in the experimental diffraction data and the configuration file for the nucleus structure.
+To avoid duplication, one can refer to the `Step-1` and `Step-2` in the [k-vector searching in GSAS-II #1](../k_vec_tutorial/k_vec_tutorial.html) for `exactly the same procedures` of loading in the experimental diffraction data and the configuration file for the nucleus structure.
 
 ## Inital refinement 
 
@@ -125,5 +127,5 @@ show how this is interfaced into GSAS-II.
 ----
 | | 
 | ---: |
-| Yuanpeng Zhang & Brian Toby |
+| Yuanpeng Zhang |
 | January 19, 2025 |
