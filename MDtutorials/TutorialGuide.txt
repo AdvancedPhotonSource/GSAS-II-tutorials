@@ -83,3 +83,14 @@ The tutorial .md file should start with:
 	  | January 10, 2025 |
 
 * When the tutorial is complete, update GSASII/tutorialIndex.py to include the new tutorial
+
+
+Build commands
+
+      The HTML file is constructed from the markdown file using commands:
+
+              pandoc --standalone ${infil} --css tutorial.css -o ${outfile}
+              sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
+
+      Note that on MacOS the sed command must be sed -i "" "s/...". The tutorial.css file
+      is found in the MDtutorials directory and is copied to the same location as $outfile.
