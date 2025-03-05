@@ -1,0 +1,236 @@
+ 
+######################################################################
+data_CaF2
+_gsas_GSASII_version  5804
+
+# phase info for CaF2 follows
+_pd_phase_name  CaF2
+_cell_length_a  5.464617
+_cell_length_b  5.464617
+_cell_length_c  5.464617
+_cell_angle_alpha  90
+_cell_angle_beta   90
+_cell_angle_gamma  90
+_cell_volume  163.185
+_exptl_crystal_density_diffrn  3.1780
+_symmetry_cell_setting  cubic
+_space_group_name_H-M_alt  "F m -3 m"
+_space_group_name_Hall  "-F 4 2 3"
+loop_
+    _space_group_symop_id
+    _space_group_symop_operation_xyz
+     1  x,y,z
+     2  z,x,y
+     3  y,z,x
+     4  x,y,-z
+     5  -z,x,y
+     6  y,-z,x
+     7  -z,x,-y
+     8  -y,-z,x
+     9  y,-z,-x
+    10  -x,y,-z
+    11  -z,-x,y
+    12  x,-y,-z
+    13  y,x,z
+    14  z,y,x
+    15  x,z,y
+    16  y,x,-z
+    17  -z,y,x
+    18  x,-z,y
+    19  -z,y,-x
+    20  -x,-z,y
+    21  x,-z,-y
+    22  -y,x,-z
+    23  -z,-y,x
+    24  y,-x,-z
+    25  -x,-y,-z
+    26  -z,-x,-y
+    27  -y,-z,-x
+    28  -x,-y,z
+    29  z,-x,-y
+    30  -y,z,-x
+    31  z,-x,y
+    32  y,z,-x
+    33  -y,z,x
+    34  x,-y,z
+    35  z,x,-y
+    36  -x,y,z
+    37  -y,-x,-z
+    38  -z,-y,-x
+    39  -x,-z,-y
+    40  -y,-x,z
+    41  z,-y,-x
+    42  -x,z,-y
+    43  z,-y,x
+    44  x,z,-y
+    45  -x,z,y
+    46  y,-x,z
+    47  z,y,-x
+    48  -y,x,z
+    49  x,1/2+y,1/2+z
+    50  z,1/2+x,1/2+y
+    51  y,1/2+z,1/2+x
+    52  x,1/2+y,1/2-z
+    53  -z,1/2+x,1/2+y
+    54  y,1/2-z,1/2+x
+    55  -z,1/2+x,1/2-y
+    56  -y,1/2-z,1/2+x
+    57  y,1/2-z,1/2-x
+    58  -x,1/2+y,1/2-z
+    59  -z,1/2-x,1/2+y
+    60  x,1/2-y,1/2-z
+    61  y,1/2+x,1/2+z
+    62  z,1/2+y,1/2+x
+    63  x,1/2+z,1/2+y
+    64  y,1/2+x,1/2-z
+    65  -z,1/2+y,1/2+x
+    66  x,1/2-z,1/2+y
+    67  -z,1/2+y,1/2-x
+    68  -x,1/2-z,1/2+y
+    69  x,1/2-z,1/2-y
+    70  -y,1/2+x,1/2-z
+    71  -z,1/2-y,1/2+x
+    72  y,1/2-x,1/2-z
+    73  -x,1/2-y,1/2-z
+    74  -z,1/2-x,1/2-y
+    75  -y,1/2-z,1/2-x
+    76  -x,1/2-y,1/2+z
+    77  z,1/2-x,1/2-y
+    78  -y,1/2+z,1/2-x
+    79  z,1/2-x,1/2+y
+    80  y,1/2+z,1/2-x
+    81  -y,1/2+z,1/2+x
+    82  x,1/2-y,1/2+z
+    83  z,1/2+x,1/2-y
+    84  -x,1/2+y,1/2+z
+    85  -y,1/2-x,1/2-z
+    86  -z,1/2-y,1/2-x
+    87  -x,1/2-z,1/2-y
+    88  -y,1/2-x,1/2+z
+    89  z,1/2-y,1/2-x
+    90  -x,1/2+z,1/2-y
+    91  z,1/2-y,1/2+x
+    92  x,1/2+z,1/2-y
+    93  -x,1/2+z,1/2+y
+    94  y,1/2-x,1/2+z
+    95  z,1/2+y,1/2-x
+    96  -y,1/2+x,1/2+z
+    97  1/2+x,y,1/2+z
+    98  1/2+z,x,1/2+y
+    99  1/2+y,z,1/2+x
+   100  1/2+x,y,1/2-z
+   101  1/2-z,x,1/2+y
+   102  1/2+y,-z,1/2+x
+   103  1/2-z,x,1/2-y
+   104  1/2-y,-z,1/2+x
+   105  1/2+y,-z,1/2-x
+   106  1/2-x,y,1/2-z
+   107  1/2-z,-x,1/2+y
+   108  1/2+x,-y,1/2-z
+   109  1/2+y,x,1/2+z
+   110  1/2+z,y,1/2+x
+   111  1/2+x,z,1/2+y
+   112  1/2+y,x,1/2-z
+   113  1/2-z,y,1/2+x
+   114  1/2+x,-z,1/2+y
+   115  1/2-z,y,1/2-x
+   116  1/2-x,-z,1/2+y
+   117  1/2+x,-z,1/2-y
+   118  1/2-y,x,1/2-z
+   119  1/2-z,-y,1/2+x
+   120  1/2+y,-x,1/2-z
+   121  1/2-x,-y,1/2-z
+   122  1/2-z,-x,1/2-y
+   123  1/2-y,-z,1/2-x
+   124  1/2-x,-y,1/2+z
+   125  1/2+z,-x,1/2-y
+   126  1/2-y,z,1/2-x
+   127  1/2+z,-x,1/2+y
+   128  1/2+y,z,1/2-x
+   129  1/2-y,z,1/2+x
+   130  1/2+x,-y,1/2+z
+   131  1/2+z,x,1/2-y
+   132  1/2-x,y,1/2+z
+   133  1/2-y,-x,1/2-z
+   134  1/2-z,-y,1/2-x
+   135  1/2-x,-z,1/2-y
+   136  1/2-y,-x,1/2+z
+   137  1/2+z,-y,1/2-x
+   138  1/2-x,z,1/2-y
+   139  1/2+z,-y,1/2+x
+   140  1/2+x,z,1/2-y
+   141  1/2-x,z,1/2+y
+   142  1/2+y,-x,1/2+z
+   143  1/2+z,y,1/2-x
+   144  1/2-y,x,1/2+z
+   145  1/2+x,1/2+y,z
+   146  1/2+z,1/2+x,y
+   147  1/2+y,1/2+z,x
+   148  1/2+x,1/2+y,-z
+   149  1/2-z,1/2+x,y
+   150  1/2+y,1/2-z,x
+   151  1/2-z,1/2+x,-y
+   152  1/2-y,1/2-z,x
+   153  1/2+y,1/2-z,-x
+   154  1/2-x,1/2+y,-z
+   155  1/2-z,1/2-x,y
+   156  1/2+x,1/2-y,-z
+   157  1/2+y,1/2+x,z
+   158  1/2+z,1/2+y,x
+   159  1/2+x,1/2+z,y
+   160  1/2+y,1/2+x,-z
+   161  1/2-z,1/2+y,x
+   162  1/2+x,1/2-z,y
+   163  1/2-z,1/2+y,-x
+   164  1/2-x,1/2-z,y
+   165  1/2+x,1/2-z,-y
+   166  1/2-y,1/2+x,-z
+   167  1/2-z,1/2-y,x
+   168  1/2+y,1/2-x,-z
+   169  1/2-x,1/2-y,-z
+   170  1/2-z,1/2-x,-y
+   171  1/2-y,1/2-z,-x
+   172  1/2-x,1/2-y,z
+   173  1/2+z,1/2-x,-y
+   174  1/2-y,1/2+z,-x
+   175  1/2+z,1/2-x,y
+   176  1/2+y,1/2+z,-x
+   177  1/2-y,1/2+z,x
+   178  1/2+x,1/2-y,z
+   179  1/2+z,1/2+x,-y
+   180  1/2-x,1/2+y,z
+   181  1/2-y,1/2-x,-z
+   182  1/2-z,1/2-y,-x
+   183  1/2-x,1/2-z,-y
+   184  1/2-y,1/2-x,z
+   185  1/2+z,1/2-y,-x
+   186  1/2-x,1/2+z,-y
+   187  1/2+z,1/2-y,x
+   188  1/2+x,1/2+z,-y
+   189  1/2-x,1/2+z,y
+   190  1/2+y,1/2-x,z
+   191  1/2+z,1/2+y,-x
+   192  1/2-y,1/2+x,z
+
+# ATOMIC COORDINATES AND DISPLACEMENT PARAMETERS
+loop_ 
+   _atom_site_label
+   _atom_site_type_symbol
+   _atom_site_fract_x
+   _atom_site_fract_y
+   _atom_site_fract_z
+   _atom_site_occupancy
+   _atom_site_adp_type
+   _atom_site_U_iso_or_equiv
+   _atom_site_site_symmetry_multiplicity
+CA1    Ca   0.00000     0.00000     0.00000     1.0000     Uiso 0.0036     4   
+F2     F    0.25000     0.25000     0.25000     1.0000     Uiso 0.0085     8   
+
+loop_  _atom_type_symbol _atom_type_number_in_cell
+  Ca      4
+  F       8
+
+# Note that Z affects _cell_formula_sum and _weight
+_cell_formula_units_Z  4
+_chemical_formula_sum  "Ca F2"
+_chemical_formula_weight  78.08
