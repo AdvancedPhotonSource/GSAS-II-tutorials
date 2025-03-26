@@ -32,6 +32,7 @@ well as extensive visualization capabilities.
    help.rst 
    developers.rst 
    misc.rst 
+   compile.rst
 
 .. tip::
     Please help us by citing:

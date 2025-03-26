@@ -142,7 +142,6 @@ installation details are discussed in the topics below.
 .. toctree::
    :maxdepth: 3
 	      
-   compile.rst
    install-pip.rst
    proxy.rst
 

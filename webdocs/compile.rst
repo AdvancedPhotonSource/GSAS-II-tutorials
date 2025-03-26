@@ -64,82 +64,142 @@ Some older binary files with combinations of older Python and
 NumPy versions can be found in the older svn repository for GSAS-II:
 https://subversion.xray.aps.anl.gov/trac/pyGSAS/browser/Binaries
 
-Compiling with meson
----------------------------
+Compiling with meson for Linux/MacOS
+--------------------------------------------
 
-Compiling GSAS-II binaries is quite simple. One needs to install the
+Compiling GSAS-II binaries is quite simple on Linux and MacOS and a
+bit more complex on Windows.
+One needs to install the
 Python meson and cython packages and a C compiler and the Gfortran
-compiler. On Linux it probably best to use compilers supplied with the
+compiler.
+
+On Linux it probably best to use compilers supplied with the
 dist using a commands such as `apt-get` or `yum`,
-but these compilers can be installed via conda
-from conda-forge and the latter does not require admin privs.
-On windows and MacOS, the easist way to obtain them
-is via their conda packages.
+but it is also possible to install these compilers via conda
+from conda-forge. The conda route has the advantage of not requiring admin privs.
+For Linux, one can add the extra packages needed for compilation to
+the Python environment used by GSAS-II. Below it is assumed that the
+Python environment is managed with conda, but on Linux it is also
+possible to utilize the distribution-supplied packages and/or PyPi
+(pip). It is also possible to use separate environments for
+compilation and for running GSAS-II. 
 
-Windows::
+For Mac, while there are several ways to potentially install the tools
+needed for compilation (for example homebrew) and one can use separate
+environments for compilation and for running GSAS-II, below a single
+environment is used and all software is loaded via conda.
 
-  conda install meson cython gcc gfortran -c conda-forge
+Note that if the gsas2full installer is used, this can replace
+steps (1) and (3), below. In that case use command::
+
+    source .../g2full/bin/activate
+
+  to activate Python/conda, where `.../g2full` is the location where gsas2full was
+  installed. And in place of step (3) use command::
+
+    cd .../g2full/GSAS-II
+    
+  where again `.../g2full` is the location where gsas2full was installed. 
+
+1. Install an initial, bare-bones Python environment can be installed
+using the miniforge installer from conda-forge at
+https://github.com/conda-forge/miniforge/releases/latest. Then
+activate Python/conda as instructed by the installer (or use command::
+
+       source ~/miniforge3/bin/activate
+  where `~/miniforge3` is the location where miniforge was installed.)
+  Then use the conda command to install the following packages to run GSAS-II:
+
+  python, numpy, matplotlib, scipy, wxpython, pyopengl, imageio, h5py,
+  hdf5, pillow, requests, pycifrw, pybaselines, git, gitpython, conda
+
+ (see `the GUI requirement section of the Developers manual 
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_.)
+
+2. Install the Python build routines and the compilers:
 
 MacOS::
 
-  conda install meson cython clang compilers  -c conda-forge
+  conda install python numpy meson cython clang compilers git -c conda-forge
 
 Linux::
 
-   sudo apt-get gcc gfortran  # or use the yum command
-   yum install gcc-gfortran
-   conda install meson cython -c conda-forge
-  
-Once meson and the tools are installed, the following steps are needed
-to build the GSAS-II binaries.
+   sudo apt-get gcc gfortran git # or use the yum command:
+   yum install gcc-gfortran git
 
-1. Download the GSAS-II sources (if not already done) and move to the directory::
+   conda python numpy install meson cython -c conda-forge
+
+Note that the GSAS-II binaries will be compiled to work with a
+specific version of Python and numpy, if you have more than one conda
+environment, and will use a different environment to compile vs. run
+GSAS-II, you may want to pin the Python and numpy versions above by
+specifying them in the conda command (such as using `python=3.13` and
+`numpy=2.2` in place of `python` and `numpy` above) to match the
+environment where GSAS-II will be run.
+   
+3. Download the GSAS-II sources (if not already done) and move to the directory::
 
    cd <...> # select where you wish to install GSAS-II
-   git clone git@github.com:AdvancedPhotonSource/GSAS-II.git --depth 1 -b main G2 
+   git clone https://github.com/AdvancedPhotonSource/GSAS-II.git --depth 1 -b main G2 
    cd G2
 
-2. Create a scratch directory to compile GSAS-II into::
+4. Create a scratch directory to compile GSAS-II into::
      
      meson setup /tmp/GSASIIc
 
-     Note that this command will fail if cython, gfortran and a c
-     complier is not found. If the flang compiler is found, meson will
-     use it, but the resulting binaries will not work properly. 
+   Note that this command will fail if cython, gfortran and a c
+   complier is not found. If the flang compiler is found, meson will
+   use it, but the resulting binaries will not work properly. 
      
-3. Move to the setup directory and compile::
+5. Move to the setup directory and compile::
      
      cd /tmp/GSASIIc
      meson compile
 
-4. (A) Install the GSAS-II binaries so they can be used by the current user::
+6. There are two choices for how to install the GSAS-II binaries to
+   where they can be found by the software. If only one user will use 
+   GSAS-II, use option (A), which also allows multiple GSAS-II installations to share a
+   single set of binaries (should a user wish to keep multiple
+   versions available). When GSAS-II is installed on a server
+   or possibly multiple versions of GSAS-II will be installed that
+   need to have different versions of the binaries, use option (B) and
+   the GSAS-II binaries will be placed with the GSAS-II source files. 
 
-   meson compile local-install
+  (A) Install the GSAS-II binaries so they can be used by the current user::
+
+     meson compile local-install
 
    This command will copy the compiled files to `~/.GSASII/bin`, which
    is appropriate for when one user will access the GSAS-II
    program. It also allows multiple GSAS-II installations (should a
    user wish to keep multiple versions available).
-   
-4. (B) Or when GSAS-II is installed on a server, the GSAS-II binaries
-can be placed with the GSAS-II source files installed with the git
-command (into .../G2)::
 
-   meson compile system-install
+  (B) Or when GSAS-II is installed on a server, the GSAS-II binaries
+      can be placed with the GSAS-II source files installed with the
+      git command (into .../G2)::
+
+       meson compile system-install
 
    If the first command used was `cd ~/software` then GSAS-II was
    installed into `~/software/G2` and the binaries will be installed into
    `~/software/G2/GSASII/bin`. 
    
-5. Clean up:
+7. (Optional) Clean up:
 
-   rm -rf /tmp/GSASIIc   
+   rm -rf /tmp/GSASIIc
 
-6. (Optional) Create shortcuts:
+8. (Optional) Run Self-tests::
 
-  Windows::
-    
-    python .../G2/GSASII/install/makeBat.py 
+     conda activate base
+     conda install pytest
+     cd .../G2
+     python -m pytest .../G2/tests
+
+  Note that `base` above may need to be replaced with the name of the
+  environment that was used if not base and `.../G2` here and below will be the
+  location used to install GSAS-II in step (2).
+
+9. (Optional) Create shortcuts:
 
   Linux::
     
@@ -149,14 +209,125 @@ command (into .../G2)::
     
     python .../G2/GSASII/install/makeMacApp.py 
 
+Compiling with meson for Windows
+--------------------------------------------
+
+Compiling GSAS-II binaries is bit more complex on Windows because
+separate Python environments *must* be used for compilation and
+running GSAS-II (it appears that inclusion of git and gfortran in the
+same installation causes problems with accessing libraries needed by the compiler). 
+There are other ways potentially to install the tools
+needed for compilation, but use of conda will be much simpler, but
+will require use of command-line commands (in a cmd.exe window, the
+commands have not been worked out if they will done with PowerShell). 
+
+Note that if the gsas2full installer is used, this can replace
+steps (1) and (2), below. In that case, use command::
+
+    ...\g2full\Scripts\activate
+
+  to activate Python/conda, where `...\g2full` is the location where gsas2full was
+  installed. And in place of step (3) use command::
+
+    cd ...\g2full\GSAS-II
+    
+  where again `...\g2full` is the location where gsas2full was installed. 
+
+1. Install miniforge
+
+  An initial, bare-bones Python environment can be installed
+  using the miniforge installer from conda-forge at
+  https://github.com/conda-forge/miniforge/releases/latest. Run the
+  downloaded `.exe` file. Once that has completed use command::
+
+        ...\miniforge3\Scripts\activate
+
+  where `...\miniforge3` is the location where miniforge was
+  installed to enable the Python/conda environment. Or in the start
+  menu use the "Start miniforge prompt" command which does the same
+  thing.
+
+  Use this command to install the following packages to run GSAS-II:::
+
+    conda install python numpy matplotlib wxpython pyopengl scipy git gitpython PyCifRW pillow conda requests hdf5 h5py imageio zarr xmltodict pybaselines seekpath pywin32 -c conda-forge -y
+ 
+ (see `the GUI requirement section of the Developers manual 
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_
+for more info.)
+
+2. Download the GSAS-II sources (if not already done) and move to the directory::
+
+   cd <...> # select where you wish to install GSAS-II
+   git clone https://github.com/AdvancedPhotonSource/GSAS-II.git --depth 1 -b main G2 
+   cd G2
+
+3. Install the Python build routines and the compilers. Note that this
+   is done in separate environment that is located in directory
+   `..\compile` relative to GSAS-II::
+     
+     conda create -p ..\compile meson cython gcc gfortran python numpy -c conda-forge -y
+
+ 4. Create a scratch directory to compile GSAS-II into::
+     
+    conda activate ..\compile
+    meson setup ..\tmp
+     
+5. Move to the setup directory and compile::
+     
+     cd ..\tmp
+     meson compile
+
+6. There are two choices for how to install the GSAS-II binaries to
+   where they can be found by the software. If only one user will use 
+   GSAS-II, use option (A), which also allows multiple GSAS-II installations to share a
+   single set of binaries (should a user wish to keep multiple
+   versions available). When GSAS-II is installed on a server
+   or possibly multiple versions of GSAS-II will be installed that
+   need to have different versions of the binaries, use option (B) and
+   the GSAS-II binaries will be placed with the GSAS-II source files. 
+ 
+  (A) Install the GSAS-II binaries so they can be used by the current user::
+
+     meson compile local-install
+
+   This command will copy the compiled files to `.GSASII\bin` in the
+   Home directory (usually `c:\Users\<your name>`), which
+   is appropriate for when one user will access the GSAS-II
+   program.
    
+  (B) Or when GSAS-II is installed on a server, the GSAS-II binaries
+      can be placed with the GSAS-II source files::
+
+       meson compile system-install
+
+   If the first command used was `cd software` then GSAS-II was
+   installed into `software\G2` and the binaries will be installed into
+   `software\G2\GSASII\bin`. 
+   
+7. Clean up::
+
+     cd ..
+     rmdir /s tmp
+     rmdir /s compile
+
+8. Create shortcuts:
+    
+    python G2\GSASII\install\makeBat.py 
+
+9. (Optional) Run Self-tests::
+
+     conda activate base
+     conda install pytest
+     python -m pytest G2\tests
+
+
 Compiling with Scons
 ---------------------------
 
 Compilation with scons (as opposed to meson, as discussed above) is not
 recommended and will be removed from GSAS-II in the future. It will
 work only with Python 3.11 or older and only with the `master`
-branch. GSAS-II will fail with Python earlier than 3.7 and may have
+branch. Do not use GSAS-II will fail with Python earlier than 3.7 and may have
 some errors even with Python 3.8.
 
 The compilation process requires installation of the gcc and gfortran
