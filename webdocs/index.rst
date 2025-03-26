@@ -21,7 +21,7 @@ well as extensive visualization capabilities.
 
 .. toctree::
    :caption: Home Page Contents
-   :maxdepth: 1
+   :maxdepth: 1 
    :numbered:     
       
    install.rst
@@ -31,8 +31,8 @@ well as extensive visualization capabilities.
    options.rst
    help.rst 
    developers.rst 
+   compile.rst 
    misc.rst 
-   compile.rst
 
 .. tip::
     Please help us by citing:
@@ -61,6 +61,7 @@ Installing GSAS-II: Overview
 There are several different ways to install GSAS-II, as are outlined below. Most people will use the GSAS2FULL installer
  
 .. toctree::
+   :maxdepth: 3
    :caption: Installation information:
       
    install.rst
@@ -132,7 +133,17 @@ projects. Some starting information is here:
 
    developers.rst 
 
-Miscellaneous GSAS-II Links
+Compiling GSAS-II
+======================================
+
+Creating the GSAS-II binaries when not using one of the standard
+installation methods.
+
+.. toctree::
+   
+   compile.rst
+   
+ Miscellaneous GSAS-II Links
 ======================================
 
 Other things related to GSAS-II can be found here.
