@@ -140,14 +140,14 @@ Creating the GSAS-II binaries when not using one of the standard
 installation methods.
 
 .. toctree::
-   
+
    compile.rst
    
- Miscellaneous GSAS-II Links
+Miscellaneous GSAS-II Links
 ======================================
 
 Other things related to GSAS-II can be found here.
 
 .. toctree::
-   
+
    misc.rst 

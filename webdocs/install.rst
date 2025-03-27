@@ -30,34 +30,36 @@ More complete installation instructions `are here <install-g2f-win.html>`_.
 MacOS
 --------------------
 
-For ARM (M1,...) MacOS use a command such as:: 
+For ARM (M1,...) MacOS use a command such as::
+  
     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-arm64.sh"
-curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+    curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
 
 For older Intel MacOS use a command such as:: 
 
-g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-x86_64.sh"
-curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+    g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-x86_64.sh"
+    curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
 
   
-Note that the ``MacOSX-x86_64.sh`` installer will run on "Apple Silicon" processors, but significantly more slowly.
+Note that the ``MacOSX-x86_64.sh`` installer will also run on "Apple Silicon" processors, but significantly more slowly.
    
 where:
 
- * <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you will be given a chance to place a shortcut for GSAS-II into the MacOS dock.
+ <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you will be given a chance to place a shortcut for GSAS-II into the MacOS dock.
 
 More complete installation instructions are provided for `MacOS separately <install-g2f-mac.html>`_.
 
 Linux
 --------------------
 
-To install GSAS2FULL in Linux use a command such as:: 
+To install GSAS2FULL in Linux use a command such as::
+  
   g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Linux-x86_64.sh"
-curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+  curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
   
 where:
 
- * <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) 
+ <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) 
 
 More complete installation instructions are provided for `Linux separately <install-g2f-linux.html>`_.
 
@@ -137,7 +139,10 @@ Installation details
 ====================================
 
 Most people will not need these details, but some specific
-installation details are discussed in the topics below.
+installation details are discussed in the topics below. Also note the
+information `on compiling GSAS-II
+<https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_
+if the distributed binaries cannot be used.
 
 .. toctree::
    :maxdepth: 3
