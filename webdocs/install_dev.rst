@@ -207,26 +207,3 @@ By default, the commands above will install and run GSAS-II with Python 3.13 (at
 ``pixi run -e py311 ui`` or 
 ``pixi shell -e py311``.
 
-
-==============================================
- Developing GSAS-II inside VSCode
-==============================================
-
-Visual Studio Code (VSCode) is a free code development environment that is available on all major platforms where GSAS-II runs. Yuanpeng Zhang (ORNL) has written some notes on how to
-`make GSAS-II run in the VSCode debugger <https://iris2020.net/2025-04-21-gsasii_dev_new/>`_.
-
-Note that if you have used the gsas2main installer to place GSAS-II at ``~/g2main`` then you can use the Python installation there (examples:
-Mac/Linux, ``/Users/toby/G2/g2main/bin/python``;
-Windows, ``c:\Users\toby\g2main\python.exe``)
-to run the debugger rather than install a new conda environment as he does. 
-
-==============================================
-IPython Code development tip
-==============================================
-   
-One nice trick for working with GSAS-II is that if you locate a place where you want to insert code into the program, you can run commands in that environment. To do this, two prerequisite steps are needed. First, use the conda command to install iPython (this assumes you have already used the activate command, as above)::
-
-    conda install ipython
-
-Then run GSAS-II and use the Preferences command (File menu or on MacOs on the first menu, named GSAS-II or python) and `set the debug option to True`. One can then place a
-``breakpoint()`` statement into GSAS-II at a location where one wants to develop code. When that statement is executed, GSAS-II will enter iPython but in the local environment where your code will be executed, so you can see what variables and functions are defined and try running code that can then be placed into GSAS-II. Remember to remove the breakpoint statement when you are done. 

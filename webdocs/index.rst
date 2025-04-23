@@ -9,6 +9,18 @@
 GSAS-II Home Page
 ====================================
 
+.. tip::
+
+   As of April 22, 2025, the default branch for GSAS-II has been
+   changed from ``master`` to a branch called ``main``. If the
+   gsas2full self-installer was used for GSAS-II use of the
+   Help/Update process should make the transition from the ``master``
+   to the new ``main`` version. Other types of installations will
+   likely require that GSAS-II be reinstalled (as described
+   below). Details about what has been changed in this transition can
+   be found in the :ref:`section on this transition <master2main>`,
+   also below. 
+
 Welcome to the home page for GSAS-II, a unique and comprehensive open
 source Python project for determination of crystal structures and
 diffraction-based materials characterization for crystalline solids on
@@ -33,6 +45,7 @@ well as extensive visualization capabilities.
    developers.rst 
    compile.rst 
    misc.rst 
+   master2main.rst 
 
 .. tip::
     Please help us by citing:
@@ -150,4 +163,8 @@ Other things related to GSAS-II can be found here.
 
 .. toctree::
 
-   misc.rst 
+   misc.rst
+   
+.. toctree::
+
+   master2main.rst 
