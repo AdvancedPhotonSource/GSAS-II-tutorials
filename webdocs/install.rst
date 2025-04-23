@@ -95,7 +95,7 @@ Note that on MacOS, a Mac app is also created and is displayed in the Finder
 
 .. index:: Installing GSAS-II with gitstrap.py
 
-Installing GSAS-II with separate Python Installation
+Installing GSAS-II with Separate Python Installation
 ======================================================
 
 A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages) or using `PyPi <https://pypi.org>`_, etc. or prefer to handle use of conda on their own. Some discussion on Python installation is
@@ -117,7 +117,7 @@ will not be installed. However, when GSAS-II is first run, it will provide an op
 
 .. index:: Installing GSAS-II from GitHub
 
-Installing directly from GitHub
+Installation Info for Developers
 ==============================================
 
 While all of the above approaches will clone a copy of the GSAS-II repository from GitHub, software developers may find it more convenient to clone the repo themselves. This will typically be done as part of a process where a copy of GSAS-II is forked on GitHub. This is described in a `separate page <install_dev.html>`_ (outline below). 
@@ -129,7 +129,7 @@ While all of the above approaches will clone a copy of the GSAS-II repository fr
    install_dev.rst
 
 
-Older installers
+Older Installers
 =================================
 
 Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. The subversion server is not longer being updated, so those installers should not be used because if GSAS-II is installed from subversion, you will not be able to update to the current GSAS-II version.
@@ -143,7 +143,7 @@ install GSAS-II from that branch, you will be
 be offered the opportunity to add needed Python packages and switch to
 the ``main`` branch when trying to update GSAS-II from the help menu.
 
-Installation details
+Installation Details
 ====================================
 
 Most people will not need these details, but some specific

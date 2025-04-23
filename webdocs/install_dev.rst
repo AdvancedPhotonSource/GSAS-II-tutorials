@@ -13,9 +13,9 @@
 
 .. tip::
 
-   At the time this is being edited (late April, 2025), the default branch for GSAS-II is being changed from ``master`` to a branch called ``main``. Development tasks should be made on the ``main`` branch rather than ``master``, but if changes are made to ``master`` they can be merged into ``main`` on a case-by-case basis if requested.
+   At the time this is being updated (April 22, 2025), the default branch for GSAS-II has been changed from ``master`` to a branch called ``main``. Development tasks should be made on the ``main`` branch rather than ``master``, but if changes are made to ``master`` they can be merged into ``main`` on a case-by-case basis if requested.
 
-While bug fixes are sometimes applied directly to the ``main`` branch (and previously the ``master`` branch). The better way to make changes to GSAS-II is to make a private copy of the ``main`` branch on GitHub, this private copy is called a "fork." When you have a working version with the changes or additions that you want to make, you then issue an invitation to have your changes incorporated into the ``main`` branch. That invitation is called a "pull request" on GitHub, as you wish to have your changes pulled into the central GSAS-II version. You are very much encouraged to try your hand at working on improvements to GSAS-II.
+While bug fixes are sometimes applied directly to the ``main`` branch (and previously the ``master`` branch). The better way to make changes to GSAS-II is to make a private copy of the ``main`` branch on GitHub; this private copy is called a "fork." When you have a working version with the changes or additions that you want to make, you then issue an invitation to have your changes incorporated into the ``main`` branch. That invitation is called a "pull request" on GitHub, as you wish to have your changes pulled into the central GSAS-II version. You are very much encouraged to try your hand at working on improvements and fixes to GSAS-II.
 
 This documentation section describes the steps needed to "fork a copy" of the GSAS-II repository in your own GitHub account. This means you will establish a private copy of GSAS-II. When you have reached a good point to share what you have done, and provide a "pull request" it allows the GSAS-II developers access to your working version so that the changes can be considered and potentially included into the main distribution.
 
@@ -75,8 +75,8 @@ To clone GSAS-II from your forked copy use commands similar to the following::
     git clone git@github.com:MyRepo/GSAS-II.git
     cd GSAS-II
 
-This will create directory ``dev/GSAS-II`` with a copy of your fork. The GSAS-II Python files will be in ``dev/GSAS-II/GSASII``. Note that when the GSAS-II Python files are cloned from a GitHub repo, the GSAS-II binary files are not be downloaded. However, when GSAS-II is first run, it will provide an opportunity to do this, provided you have used supported combinations of Python and numpy. If not, you may compile the binary files yourself, `as described here
-<https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_. The
+This will create directory ``dev/GSAS-II`` with a copy of your fork. The GSAS-II Python files will be in ``dev/GSAS-II/GSASII``. Note that when the GSAS-II Python files are cloned from a GitHub repo, the GSAS-II binary files are not be downloaded. However, when GSAS-II is first run, it will provide an opportunity to do this, provided you have used supported combinations of Python and numpy. If not, you may compile the binary files yourself,
+`as described here. <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_ The
 :ref:`section below on use of pixi <pixi installation>` provides an alternate way install GSAS-II including compilation of the binaries. It is both very quick and quite convenient. 
 
 To run this copy of GSAS-II, you will use a command such as::
@@ -181,7 +181,7 @@ After one of the above install commands is used, the following commands can be u
 ``pixi run test``
 
     Runs the GSAS-II self-test suite (takes 1-2 minutes typically to complete.)
-    See :ref:`example output here<example_pytest_output>`.
+    See :ref:`example output here<example_pytest_output>`_.
 
 ``pixi run ui``
 
@@ -212,7 +212,7 @@ By default, the commands above will install and run GSAS-II with Python 3.13 (at
  Developing GSAS-II inside VSCode
 ==============================================
 
-Visual Studio Code (VSCode) is a free code development environment that is available on all major platforms where GSAS-II runs. Yuanpeng Zhang (ORNL) has written some notes on how to :ref:`make GSAS-II run in the VSCode debugger <https://iris2020.net/2025-04-21-gsasii_dev_new/>`.
+Visual Studio Code (VSCode) is a free code development environment that is available on all major platforms where GSAS-II runs. Yuanpeng Zhang (ORNL) has written some notes on how to :ref:`make GSAS-II run in the VSCode debugger <https://iris2020.net/2025-04-21-gsasii_dev_new/>`_.
 
 Note that if you have used the gsas2main installer to place GSAS-II at ``~/g2main`` then you can use the Python installation there (Mac/Linux: ``/Users/toby/G2/g2main/bin/python``; Windows: ``c:\\Users\\toby\\g2main\\python.exe``)
 to run the debugger rather than install a new conda environment as he does. 
