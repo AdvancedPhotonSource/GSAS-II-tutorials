@@ -7,7 +7,7 @@
    :alt: GSAS-II logo
    :align: right
 
-MacOS GSAS2FULL Installation Details
+MacOS GSAS2MAIN Installation Details
 ========================================================
 
 .. image:: ./mac_inst_images/1.png
@@ -29,15 +29,15 @@ MacOS GSAS2FULL Installation Details
 
 2) Into the terminal window paste these commands (for an ARM aka "Apple Silicon" or M1, M2,... Mac)::
      
-     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-arm64.sh"
-     curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2full
+     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-MacOSX-arm64.sh"
+     curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2main
 
    Or on an older Intel Mac::
      
-     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-x86_64.sh"
-     curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2full
+     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-MacOSX-x86_64.sh"
+     curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2main
   
-   as seen to right. If you are not sure which you have, use "About This Mac" and look for the 1st line which will say "Chip" or "Processor" and will either list Intel or M1, M2,... Note that I have chosen to install in location ``~/g2full`` (which is subdirectory ``g2full`` in my home directory), but you can install where you prefer. Note that nothing happens until the Return key is pressed.   
+   as seen to right. If you are not sure which you have, use "About This Mac" and look for the 1st line which will say "Chip" or "Processor" and will either list Intel or M1, M2,... Note that I have chosen to install in location ``~/g2main`` (which is subdirectory ``g2main`` in my home directory), but you can install where you prefer. Note that nothing happens until the Return key is pressed.   
 
 .. raw:: html
 

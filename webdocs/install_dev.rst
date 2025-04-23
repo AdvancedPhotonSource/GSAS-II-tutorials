@@ -13,12 +13,13 @@
 
 .. tip::
 
-   At the time this is being edited (March 2025), the default branch for GSAS-II is called ``master`` but most development is being done on the branch called ``main`` and periodically updates are made to copy development and bug fixes from the ``master`` branch to ``main``. At some point in the next month or two, we hope to make ``main`` the default branch and retire ``master``. Development tasks are encouraged on the ``main`` branch rather than ``master``.
+   At the time this is being edited (late April, 2025), the default branch for GSAS-II is being changed from ``master`` to a branch called ``main``. Development tasks should be made on the ``main`` branch rather than ``master``, but if changes are made to ``master`` they can be merged into ``main`` on a case-by-case basis if requested.
 
-This section describes the steps needed so that if edits or additions are made to the GSAS-II code, those changes can be submitted to be included in future updates. This process is known as creating a "pull request" on GitHub. To do this "fork a copy" of the GSAS-II repository in your own GitHub account. This 
-means you will establish a private copy of GSAS-II and when you have reached a good point to share what you have done, you can provide access to your work via something called a "pull request." From the pull request the GSAS-II developers can consider including your changes into the main distribution.
+While bug fixes are sometimes applied directly to the ``main`` branch (and previously the ``master`` branch). The better way to make changes to GSAS-II is to make a private copy of the ``main`` branch on GitHub, this private copy is called a "fork." When you have a working version with the changes or additions that you want to make, you then issue an invitation to have your changes incorporated into the ``main`` branch. That invitation is called a "pull request" on GitHub, as you wish to have your changes pulled into the central GSAS-II version. You are very much encouraged to try your hand at working on improvements to GSAS-II.
 
-Note that since you can have multiple copies of GSAS-II installed on your computer, or use the git command to quickly switch between different versions of GSAS-II in a single installation (branches with git), it is easy to get back to the distributed version of GSAS-II, so there is no danger of breaking GSAS-II in some way that would be hard to fix. At worst you can discontinue work on a messed up branch and start again. You are very much encouraged to try your hand at working on improvements to GSAS-II.
+This documentation section describes the steps needed to "fork a copy" of the GSAS-II repository in your own GitHub account. This means you will establish a private copy of GSAS-II. When you have reached a good point to share what you have done, and provide a "pull request" it allows the GSAS-II developers access to your working version so that the changes can be considered and potentially included into the main distribution.
+
+Note that since you can have multiple copies of GSAS-II installed on your computer, or use the git command to quickly switch between different versions of GSAS-II in a single installation (branches with git), it is easy to get back to the distributed version of GSAS-II, so there is no danger of breaking GSAS-II in some way that would be hard to fix. At worst you can discontinue work on a messed up branch and start again. 
 
 The steps needed to establish a development version of GSAS-II are outlined below. I am still learning my way around some of this, so let me know about problems or better ways to do things.
 
@@ -32,7 +33,7 @@ It is free. Use this link: https://github.com/signup?source=login.
  Establish a connection
 ---------------------------------------------------
 
-You will need to establish an authorized connection between your computer and GitHub in order to have the ability to send files from your computer to GitHub.  While the files in GSAS-II are all publically available and do not need a GitHub account to be accessed, but if you have made changes and want to allow others to see what you have done, you need to provide authorization for git to upload those changed files to GitHub. This does require that the git program be given access your GitHub account. There are multiple ways to do this, as discussed here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github.
+You will need to establish an authorized connection between your computer and GitHub in order to have the ability to send files from your computer to GitHub.  While the files in GSAS-II are all publically available and do not need a GitHub account to be accessed, but if you have made changes and want to allow others to see what you have done, you need to provide authorization for git to upload those changed files to GitHub. This requires that the git program be given access your GitHub account. There are multiple ways to do this, as discussed here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github.
 
 The method I have used has been to use ssh authentication. In a nutshell this requires creating a ssh public key (if one does not already exist) and providing that key to GitHub. To see if you already have an ssh key, see this: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys. If you do not, see https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent.
 
@@ -55,15 +56,15 @@ There are two choices here, you can create a GSAS-II installation directly from 
 Install directly from your forked copy
 ---------------------------------------------------
 
-If you will clone GSAS-II directly, you will need to consider how git and Python are installed. One way to do this is to use the Python installed with one copy of GSAS-II, installed with the gsas2full self-installer, to run another. To do that you will need to use a command to make that Python available, as below.
+If you will clone GSAS-II directly, you will need to consider how git and Python are installed. One way to do this is to use the Python installed with one copy of GSAS-II, installed with the gsas2main self-installer, to run another. To do that you will need to use a command to make that Python available, as below.
 
-  For Windows, if GSAS-II is installed at location ``C:\Users\Me\gsas2full`` then use this command to setup Python::
+  For Windows, if GSAS-II is installed at location ``C:\Users\Me\gsas2main`` then use this command to setup Python::
 
-      C:\Users\Me\gsas2full\Scripts\activate
+      C:\Users\Me\gsas2main\Scripts\activate
 
-  For Linux and MacOS, if GSAS-II is installed at location ``~/G2/g2full`` then use this command to setup Python::
+  For Linux and MacOS, if GSAS-II is installed at location ``~/G2/g2main`` then use this command to setup Python::
 
-      source ~/G2/g2full/bin/activate 
+      source ~/G2/g2main/bin/activate 
 
   Note that once the above command has been run, in addition to the ``python`` command, one can also run ``git`` and ``conda``.
 
@@ -82,7 +83,7 @@ To run this copy of GSAS-II, you will use a command such as::
 
     python GSASII/GSASII.py
  
-Use of that command can get tiresome, so you may want to set up a shortcut method to access your development version. Note that the GSAS-II installers (gsas2full &  gsas2pkg) run installation scripts to create shortcuts. This can also be done manually for your development version. See discussion of ``makeMacApp.py``, ``makeLinux.py`` and ``makeBat.py`` (for MacOS, Linux and Windows, respectively) in the `Developer's Documentation <https://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html#gsas-ii-misc-scripts>`_. If you will use your development version of GSAS-II for scripting GSAS-II, see this `note on scripting shortcuts <https://gsas-ii.readthedocs.io/en/latest/GSASIIscriptable.html#shortcut-for-scripting-access>`_.     
+Use of that command can get tiresome, so you may want to set up a shortcut method to access your development version. Note that the GSAS-II installers (gsas2main &  gsas2pkg) run installation scripts to create shortcuts. This can also be done manually for your development version. See discussion of ``makeMacApp.py``, ``makeLinux.py`` and ``makeBat.py`` (for MacOS, Linux and Windows, respectively) in the `Developer's Documentation <https://gsas-ii.readthedocs.io/en/latest/GSASIIscripts.html#gsas-ii-misc-scripts>`_. If you will use your development version of GSAS-II for scripting GSAS-II, see this `note on scripting shortcuts <https://gsas-ii.readthedocs.io/en/latest/GSASIIscriptable.html#shortcut-for-scripting-access>`_.     
 
 Converting an http: installation to ssh 
 ---------------------------------------------------
@@ -206,13 +207,23 @@ By default, the commands above will install and run GSAS-II with Python 3.13 (at
 ``pixi run -e py311 ui`` or 
 ``pixi shell -e py311``.
 
+
 ==============================================
- Code development tip
+ Developing GSAS-II inside VSCode
+==============================================
+
+Visual Studio Code (VSCode) is a free code development environment that is available on all major platforms where GSAS-II runs. Yuanpeng Zhang (ORNL) has written some notes on how to :ref:`make GSAS-II run in the VSCode debugger <https://iris2020.net/2025-04-21-gsasii_dev_new/>`.
+
+Note that if you have used the gsas2main installer to place GSAS-II at ``~/g2main`` then you can use the Python installation there (Mac/Linux: ``/Users/toby/G2/g2main/bin/python``; Windows: ``c:\\Users\\toby\\g2main\\python.exe``)
+to run the debugger rather than install a new conda environment as he does. 
+
+==============================================
+IPython Code development tip
 ==============================================
    
 One nice trick for working with GSAS-II is that if you locate a place where you want to insert code into the program, you can run commands in that environment. To do this, two prerequisite steps are needed. First, use the conda command to install iPython (this assumes you have already used the activate command, as above)::
 
     conda install ipython
 
-Then run GSAS-II and use the Preferences command (File menu or on MacOs on the first menu, named GSAS-II or python) and set the debug option to True. One can then place a
+Then run GSAS-II and use the Preferences command (File menu or on MacOs on the first menu, named GSAS-II or python) and `set the debug option to True`. One can then place a
 ``breakpoint()`` statement into GSAS-II at a location where one wants to develop code. When that statement is executed, GSAS-II will enter iPython but in the local environment where your code will be executed, so you can see what variables and functions are defined and try running code that can then be placed into GSAS-II. Remember to remove the breakpoint statement when you are done. 

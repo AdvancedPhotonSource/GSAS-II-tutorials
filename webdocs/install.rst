@@ -11,17 +11,17 @@ Installing GSAS-II: Overview
 
 Running GSAS-II requires a number of coordinated installation steps and there are many different ways this can be accomplished. One needs not only the necessary Python source code for GSAS-II, but a Python interpreter that includes a number of "add-on" Python packages for additional capabilities. This much match the operating system for the computer where the software will be run. Further, GSAS-II requires that a small amount of its code be compiled, typically for speed and this must be matched both the computer OS and to the Python version. Here I outline different a few different approaches.
 
-.. index:: gsas2full installer
+.. index:: gsas2main installer
 
-GSAS2FULL installer
+GSAS2MAIN installer
 =======================
 
-Most users of GSAS-II are seeking a simple way to install and run the software and can live with the idea that they may have duplicated Python installations (several hundreds of MB each) on their computer. The GSAS2FULL self-installer provides simple installation and can be `downloaded from here <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/latest>`_. Brief installation instructions are outlined below with links to more complete instructions:
+Most users of GSAS-II are seeking a simple way to install and run the software and can live with the idea that they may have duplicated Python installations (several hundreds of MB each) on their computer. The GSAS2MAIN self-installer provides simple installation and can be `downloaded from here <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/latest>`_. Brief installation instructions are outlined below with links to more complete instructions:
 
 Windows
 -----------
 
-For Windows download file https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Windows-x86_64.exe and run it.
+For Windows download file https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-Windows-x86_64.exe and run it.
 After the installer is started 
 You will have a choice for where to install the software (the default is usually OK, but something like ``c:\software`` might be better, if your computer security allows that.)
 
@@ -32,12 +32,12 @@ MacOS
 
 For ARM (M1,...) MacOS use a command such as::
   
-    g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-arm64.sh"
+    g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-MacOSX-arm64.sh"
     curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
 
 For older Intel MacOS use a command such as:: 
 
-    g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-MacOSX-x86_64.sh"
+    g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-MacOSX-x86_64.sh"
     curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
 
   
@@ -45,29 +45,29 @@ Note that the ``MacOSX-x86_64.sh`` installer will also run on "Apple Silicon" pr
    
 where:
 
- <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) After installation is complete, you will be given a chance to place a shortcut for GSAS-II into the MacOS dock.
+ <install-loc> is where you want to install the software. (Use of ``~/g2main``, a subdirectory named ``g2main`` in your home directory is a good choice.) After installation is complete, you will be given a chance to place a shortcut for GSAS-II into the MacOS dock.
 
 More complete installation instructions are provided for `MacOS separately <install-g2f-mac.html>`_.
 
 Linux
 --------------------
 
-To install GSAS2FULL in Linux use a command such as::
+To install GSAS2MAIN in Linux use a command such as::
   
-  g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Linux-x86_64.sh"
+  g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-Linux-x86_64.sh"
   curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
   
 where:
 
- <install-loc> is where you want to install the software. (Use of ``~/g2full``, a subdirectory named ``g2full`` in your home directory is a good choice.) 
+ <install-loc> is where you want to install the software. (Use of ``~/g2main``, a subdirectory named ``g2main`` in your home directory is a good choice.) 
 
 More complete installation instructions are provided for `Linux separately <install-g2f-linux.html>`_.
 
 
-GSAS2FULL Additional Details
+GSAS2MAIN Additional Details
 ----------------------------------------
 
-The pages listed below go through the GSAS2FULL installation process on each identified platform in much greater detail.
+The pages listed below go through the GSAS2MAIN installation process on each identified platform in much greater detail.
 
 .. index:: gsas2pkg installer
 .. toctree::
@@ -91,7 +91,7 @@ After this command is run, use command ``conda activate GSASII`` to access the
 conda environment that has been created. On Linux and MacOS computers, two shortcut commands will then be available in the path, The first command, ``gsasII.sh``, which will start GSAS-II. This can optionally be used as ``gsasII.sh project.gpx`` to open existing project file ``project.gpx`` in GSAS-II. The second command, ``reset-gsasII.sh``  will rarely be used. This command will download the latest version of GSAS-II and update to that version, replacing any locally modified files with the original versions. This can be used to update GSAS-II when the program will not start, so the normal Help->Update menu command cannot be accessed. (Shortcuts available with gsas2pkg v5.1+.)
 
 Note that on MacOS, a Mac app is also created and is displayed in the Finder
-`see steps 5 & 6 here <install.html#macos-gsas2full-installation-details>`_. This app can be used to start GSAS-II from the dock or desktop.
+`see steps 5 & 6 here <install.html#macos-gsas2main-installation-details>`_. This app can be used to start GSAS-II from the dock or desktop.
 
 .. index:: Installing GSAS-II with gitstrap.py
 
@@ -133,7 +133,15 @@ Older installers
 =================================
 
 Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. The subversion server is not longer being updated, so those installers should not be used because if GSAS-II is installed from subversion, you will not be able to update to the current GSAS-II version.
-If you previously installed GSAS-II from that server, you will be shown a message when trying to update that you should reinstall GSAS-II as described above. 
+If you previously installed GSAS-II from that server, you will be
+shown a message when trying to update that you should reinstall
+GSAS-II as described above.
+
+Likewise, the gsas2full installer was used to install GSAS-II from the
+older ``master`` branch. Use of this installer is discouraged. If you
+install GSAS-II from that branch, you will be
+be offered the opportunity to add needed Python packages and switch to
+the ``main`` branch when trying to update GSAS-II from the help menu.
 
 Installation details
 ====================================

@@ -90,17 +90,17 @@ needed for compilation (for example homebrew) and one can use separate
 environments for compilation and for running GSAS-II, below a single
 environment is used and all software is loaded via conda.
 
-Note that if the gsas2full installer is used, this can replace
+Note that if the gsas2main installer is used, this can replace
 steps (1) and (3), below. In that case use command::
 
-    source .../g2full/bin/activate
+    source .../g2main/bin/activate
 
-to activate Python/conda, where ``.../g2full`` is the location where gsas2full was
+to activate Python/conda, where ``.../g2main`` is the location where gsas2main was
 installed. And in place of step (3) use command::
 
-    cd .../g2full/GSAS-II
+    cd .../g2main/GSAS-II
     
-where again ``.../g2full`` is the location where gsas2full was installed. 
+where again ``.../g2main`` is the location where gsas2main was installed. 
 
 1.
 Install an initial, bare-bones Python environment
@@ -266,17 +266,17 @@ needed for compilation, but use of conda will be much simpler, but
 will require use of command-line commands (in a cmd.exe window, the
 commands have not been worked out if they will done with PowerShell). 
 
-Note that if the gsas2full installer is used, this can replace
+Note that if the gsas2main installer is used, this can replace
 steps (1) and (2), below. In that case, use command::
 
-    ...\g2full\Scripts\activate
+    ...\g2main\Scripts\activate
 
-to activate Python/conda, where ``...\g2full`` is the location where gsas2full was
+to activate Python/conda, where ``...\g2main`` is the location where gsas2main was
 installed. And in place of step (3) use command::
 
-    cd ...\g2full\GSAS-II
+    cd ...\g2main\GSAS-II
     
-where again ``...\g2full`` is the location where gsas2full was installed. 
+where again ``...\g2main`` is the location where gsas2main was installed. 
 
 1.
 Install miniforge

@@ -7,7 +7,7 @@
    :alt: GSAS-II logo
    :align: right
 
-Linux GSAS2FULL Installation Details
+Linux GSAS2MAIN Installation Details
 ========================================================
 The exact details for how the installation is performed will depend on "flavor" of Linux in use. Here I am using Ubuntu.
 
@@ -18,10 +18,10 @@ The exact details for how the installation is performed will depend on "flavor" 
 
 1) In a terminal window paste the commands::
 
-     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2full-Latest-Linux-x86_64.sh"
-     curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2full
+     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-Linux-x86_64.sh"
+     curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2main
 
-   as seen to right. Note that I have chosen to install in location ``~/g2full`` (which is subdirectory ``g2full`` in my home directory), but you can install this where you prefer.
+   as seen to right. Note that I have chosen to install in location ``~/g2main`` (which is subdirectory ``g2main`` in my home directory), but you can install this where you prefer.
    
 .. raw:: html
 

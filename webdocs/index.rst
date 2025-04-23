@@ -58,7 +58,7 @@ bugs.
 Installing GSAS-II: Overview
 ============================================
 
-There are several different ways to install GSAS-II, as are outlined below. Most people will use the GSAS2FULL installer
+There are several different ways to install GSAS-II, as are outlined below. Most people will use the GSAS2MAIN installer
  
 .. toctree::
    :maxdepth: 3
