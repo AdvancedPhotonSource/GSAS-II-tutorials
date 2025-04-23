@@ -76,7 +76,7 @@ To clone GSAS-II from your forked copy use commands similar to the following::
     cd GSAS-II
 
 This will create directory ``dev/GSAS-II`` with a copy of your fork. The GSAS-II Python files will be in ``dev/GSAS-II/GSASII``. Note that when the GSAS-II Python files are cloned from a GitHub repo, the GSAS-II binary files are not be downloaded. However, when GSAS-II is first run, it will provide an opportunity to do this, provided you have used supported combinations of Python and numpy. If not, you may compile the binary files yourself,
-`as described here. <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_ The
+`as described here <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_. The
 :ref:`section below on use of pixi <pixi installation>` provides an alternate way install GSAS-II including compilation of the binaries. It is both very quick and quite convenient. 
 
 To run this copy of GSAS-II, you will use a command such as::
@@ -181,7 +181,7 @@ After one of the above install commands is used, the following commands can be u
 ``pixi run test``
 
     Runs the GSAS-II self-test suite (takes 1-2 minutes typically to complete.)
-    See :ref:`example output here<example_pytest_output>`_.
+    See :ref:`example output here<example_pytest_output>`.
 
 ``pixi run ui``
 
@@ -212,9 +212,12 @@ By default, the commands above will install and run GSAS-II with Python 3.13 (at
  Developing GSAS-II inside VSCode
 ==============================================
 
-Visual Studio Code (VSCode) is a free code development environment that is available on all major platforms where GSAS-II runs. Yuanpeng Zhang (ORNL) has written some notes on how to :ref:`make GSAS-II run in the VSCode debugger <https://iris2020.net/2025-04-21-gsasii_dev_new/>`_.
+Visual Studio Code (VSCode) is a free code development environment that is available on all major platforms where GSAS-II runs. Yuanpeng Zhang (ORNL) has written some notes on how to
+`make GSAS-II run in the VSCode debugger <https://iris2020.net/2025-04-21-gsasii_dev_new/>`_.
 
-Note that if you have used the gsas2main installer to place GSAS-II at ``~/g2main`` then you can use the Python installation there (Mac/Linux: ``/Users/toby/G2/g2main/bin/python``; Windows: ``c:\\Users\\toby\\g2main\\python.exe``)
+Note that if you have used the gsas2main installer to place GSAS-II at ``~/g2main`` then you can use the Python installation there (examples:
+Mac/Linux, ``/Users/toby/G2/g2main/bin/python``;
+Windows, ``c:\Users\toby\g2main\python.exe``)
 to run the debugger rather than install a new conda environment as he does. 
 
 ==============================================
