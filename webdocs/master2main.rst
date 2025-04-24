@@ -11,8 +11,8 @@ On April 22, 2025 GSAS-II made a transition from development on a branch named "
 
 * self-tests: there is now a suite of scripts that test the GSAS-II compiled binaries as well as significant portions of the GSAS-II crystallographic computations. These are run automatically when changes are checked into the main branch. They are also used to test binaries created with meson and are used to test self-installers (gsas2main).
 
-* GitHub actions: there are a series of scripts for `the source code repository< https://github.com/AdvancedPhotonSource/GSAS-II/actions>`_
-and  for `the build repository<https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/actions>`_ for these tasks:
+* GitHub actions: there are a series of scripts for `the source code repository <https://github.com/AdvancedPhotonSource/GSAS-II/actions>`_
+  and for `the build repository <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/actions>`_ for these tasks:
   
   (1) Run the self-tests (smoke test, ``smoke_test.yml``). This is run whenever there are code check-ins to main. 
   (2) Create and test self-installers (build & test self-installers, ``matrix_g2main-test.yml``). At present this is triggered manually.
