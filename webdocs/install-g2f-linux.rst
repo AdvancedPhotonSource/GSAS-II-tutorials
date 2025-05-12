@@ -32,7 +32,24 @@ The exact details for how the installation is performed will depend on "flavor" 
    :alt: completion commands in terminal window 
    :align: right
 
-2) This will run for a few minutes (or longer depending on download speeds) and then the conda installation process will start, with the display of lots of text. At the end, the terminal window will appear as seen to the right. Note the addition of the GSASII file on the desktop (this may not happen on all Linux desktop managers.). The installation has been completed. 
+Note that binary compatibility between Linux systems is not all that
+good. The above is constructed on an Ubuntu 24.04.2 LTS GitHub runner, but
+that will not run on APS Redhat Enterprise Linux systems. For RHEL a
+separate installer is available. Use this command, instead::
+
+  g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-rhel-Latest-Linux-x86_64.sh"
+  curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+
+If neither of the two installers will work for your flavor of Linux
+(which will be obvious as starting either the GUI or loading the scriptable module
+will produce error messages about being unable to import the GSAS-II
+binaries), you will need to compile GSAS-II yourself. This can be done
+after using either of the two Linux installers by following the chapter
+`on compiling GSAS-II
+<https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_. Note
+there the meson instructions.
+
+2) The previous install step will run for a few minutes (or longer depending on download speeds) and then the conda installation process will start, with the display of lots of text. At the end, the terminal window will appear as seen to the right. Note the addition of the GSASII file on the desktop (this may not happen on all Linux desktop managers.). The installation has been completed. 
 
 .. raw:: html
 

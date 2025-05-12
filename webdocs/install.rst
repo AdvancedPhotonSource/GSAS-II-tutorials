@@ -61,7 +61,16 @@ where:
 
  <install-loc> is where you want to install the software. (Use of ``~/g2main``, a subdirectory named ``g2main`` in your home directory is a good choice.) 
 
-More complete installation instructions are provided for `Linux separately <install-g2f-linux.html>`_.
+More complete installation instructions are provided for `Linux
+separately <install-g2f-linux.html>`_.
+
+Note that binary compatibility between Linux systems is not all that
+good. The above is constructed on an Ubuntu 24.04.2 LTS GitHub runner, but
+that will not run on APS Redhat Enterprise Linux systems. For RHEL a
+separate installer is available. Use this command, instead::
+
+  g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-rhel-Latest-Linux-x86_64.sh"
+  curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
 
 
 GSAS2MAIN Additional Details
@@ -85,7 +94,7 @@ Users who work extensively with Python and use the conda Python installer may pr
 
   conda create -n GSASII briantoby::gsas2pkg  -c conda-forge
 
-This creates a conda virtual environment named ``GSASII`` (this can be changed) for use by GSAS-II. While it is also possible to install GSAS-II into the conda base environment, this is not recommended as it can create conflicts between Python and package versions needed by GSAS-II and those required by other packages. (If you choose to do this anyway, be sure to specify ``conda install python=3.11 briantoby::gsas2pkg`` as Python is likely to be pinned to a different version.)
+This creates a conda virtual environment named ``GSASII`` (this can be changed) for use by GSAS-II. While it is also possible to install GSAS-II into the conda base environment, this is not recommended as it can create conflicts between Python and package versions needed by GSAS-II and those required by other packages. (If you choose to do this anyway, be sure to specify ``conda install python=3.13 briantoby::gsas2pkg`` as Python is likely to be pinned to a different version.)
 
 After this command is run, use command ``conda activate GSASII`` to access the
 conda environment that has been created. On Linux and MacOS computers, two shortcut commands will then be available in the path, The first command, ``gsasII.sh``, which will start GSAS-II. This can optionally be used as ``gsasII.sh project.gpx`` to open existing project file ``project.gpx`` in GSAS-II. The second command, ``reset-gsasII.sh``  will rarely be used. This command will download the latest version of GSAS-II and update to that version, replacing any locally modified files with the original versions. This can be used to update GSAS-II when the program will not start, so the normal Help->Update menu command cannot be accessed. (Shortcuts available with gsas2pkg v5.1+.)
@@ -102,7 +111,8 @@ A small number of users or sites prefer to use Python distributions supplied via
 `found here <install-pip.html>`_. Independent of how Python is installed, multiple packages are needed, please see the
 `discussion on Python package requirements <https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_, noting that the GSAS-II GUI requires at a minimum wxPython, matplotlib,
 PyOpenGL, NumPy and SciPy, while for scripting use, only NumPy and SciPy are required.  For full functionality, several other optional packages are needed.
-If versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or compile them yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
+If versions other than those recommended are selected (
+Python=3.13 with NumPy=2.2 or Python=3.11 with NumPy=1.26), you will likely need to either locate older binaries and install them manually or compile them yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
 
 A simple way to install GSAS-II with a supplied Python environment uses the ``gitstrap.py`` script provided for this purpose. Use these commands (on any platform) to install GSAS-II::
 
