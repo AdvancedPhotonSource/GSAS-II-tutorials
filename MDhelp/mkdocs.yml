@@ -26,17 +26,17 @@ theme:
   favicon: images/gsas2.png
   logo:    images/gsas2.png
 
-plugins:
-  - i18n:
-      docs_structure: suffix
-      languages:
-        - locale: en
-          default: true
-          name: English
-          build: true
-#        - locale: ja
-#          name: 日本語
-#          build: true
+# plugins:
+#   - i18n:
+#       docs_structure: suffix
+#       languages:
+#         - locale: en
+#           default: true
+#           name: English
+#           build: true
+#         - locale: ja
+#           name: 日本語
+#           build: true
 
 markdown_extensions:
   - def_list
