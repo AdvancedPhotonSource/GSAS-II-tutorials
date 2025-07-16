@@ -1,0 +1,52 @@
+site_name: GSAS-II Help
+
+nav:
+  - Contents: index.md
+  - Getting started: preface.md
+  - GUI components: applicationwindow.md
+  - Main menu: mainmenu.md
+  - Data tree items:
+    - Standard items: datatree.md
+    - Powder (PWDR): histgramtree.md
+    - Images: image.md
+    - PDF: pairdistribution.md
+    - Powder peaks (PKS): powderpeak.md
+    - Single Crystal (HKLF): singlecrystal.md
+    - Small Angle (SASD): smallanglescattering.md
+    - Reflectometry (REFD): reflectometry.md
+    - Phases: phase.md
+    - Sequential results: sequential.md
+    - Cluster Analysis: cluster.md
+    
+  - Other info: others.md
+
+  
+theme:
+  name: material
+  favicon: images/gsas2.png
+  logo:    images/gsas2.png
+
+plugins:
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+#        - locale: ja
+#          name: 日本語
+#          build: true
+
+markdown_extensions:
+  - def_list
+  - admonition
+  - mdx_math
+
+extra_javascript: 
+  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+#local build settings from https://www.mkdocs.org/user-guide/deploying-your-docs/#local-files
+
+site_url: ""
+use_directory_urls: false
