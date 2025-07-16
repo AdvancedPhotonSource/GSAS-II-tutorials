@@ -11,8 +11,8 @@
 
 name: test MD help w/build GSAS-II web site
 
-on: [workflow_dispatch] 
-#on: [push, workflow_dispatch]
+#on: [workflow_dispatch] 
+on: [push, workflow_dispatch]
 
 permissions:
   contents: write
@@ -31,7 +31,7 @@ jobs:
           pip install sphinx sphinx_readable_theme
       - name: mkdocs setup
         run: |
-          pip install mkdocs mkdocs-material python-markdown-math pip install mkdocs-i18n
+          pip install mkdocs mkdocs-material python-markdown-math mkdocs-i18n
       - name: pandoc setup
         uses: pandoc/actions/setup@v1
 
