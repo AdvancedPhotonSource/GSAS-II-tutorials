@@ -29,11 +29,11 @@ jobs:
       - name: Sphinx setup
         run: |
           pip install sphinx sphinx_readable_theme
-      - name: pandoc setup
-        uses: pandoc/actions/setup@v1
       - name: mkdocs setup
         run: |
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material python-markdown-math
+      - name: pandoc setup
+        uses: pandoc/actions/setup@v1
 
       - name: Checkout
         uses: actions/checkout@v4

@@ -9,8 +9,8 @@
 
 name: build GSAS-II web site
 
-#on: [workflow_dispatch] 
-on: [push, workflow_dispatch]
+on: [workflow_dispatch] 
+#on: [push, workflow_dispatch]
 
 permissions:
   contents: write
