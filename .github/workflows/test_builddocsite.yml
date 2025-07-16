@@ -9,7 +9,7 @@
 
 # this is a test version that creates draft help pages from the MDhelp directory
 
-name: build GSAS-II web site
+name: test MD help w/build GSAS-II web site
 
 on: [workflow_dispatch] 
 #on: [push, workflow_dispatch]
@@ -33,7 +33,7 @@ jobs:
         uses: pandoc/actions/setup@v1
       - name: mkdocs setup
         run: |
-          pip install mkdocs
+          pip install mkdocs mkdocs-material
 
       - name: Checkout
         uses: actions/checkout@v4
