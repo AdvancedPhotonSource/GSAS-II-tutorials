@@ -31,7 +31,7 @@ jobs:
           pip install sphinx sphinx_readable_theme
       - name: mkdocs setup
         run: |
-          pip install mkdocs mkdocs-material python-markdown-math
+          pip install mkdocs mkdocs-material python-markdown-math pip install mkdocs-i18n
       - name: pandoc setup
         uses: pandoc/actions/setup@v1
 
