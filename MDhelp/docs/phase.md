@@ -357,7 +357,7 @@ Actions to reposition the rigid body in either mode are:
 
 This tab is used to control settings used for a texture study of a material. This type of characterization usually requires diffraction data recorded with multiple detector orientations (the number of orientations will depend on sample and material symmetry). Do not confuse this with applying a [preferred orientation correction](./phase.md#preferred_orientation) (found in the ["Data" tab](#data)) in a structural study. The sample orientation relative to the detector axes is specified here and the detector orientation is specified for each histogram as goniometer omega, chi, phi and azimuth values (details below). These values must be specified.
 
-Texture analysis using GSAS-II employs spherical harmonics modeling, as described by Bunge, "Texture Analysis in Materials Science" (1982), and implemented by Von Dreele, J. Appl. Cryst., 30, 517-525 (1997) in GSAS. The even part of the orientation distribution function (ODF) via the general axis equatio
+Texture analysis using GSAS-II employs spherical harmonics modeling, as described by Bunge, "Texture Analysis in Materials Science" (1982), and implemented by Von Dreele, J. Appl. Cryst., 30, 517-525 (1997) in GSAS. The even part of the orientation distribution function (ODF) via the general axis equation
 
 $$
 A(x,y) = 1 + \sum_{L=2}^{N_L}{\frac{4\pi}{2L+1}} \sum_{m=-L}^{L} \sum_{n=-L}^{L} C_L^{mn} k_L^m(y) k_L^n(h)

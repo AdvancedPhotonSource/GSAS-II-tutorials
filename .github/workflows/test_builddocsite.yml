@@ -7,7 +7,7 @@
 # Also the tutorials.html file and the */data/index.html files are
 #     created by running scripts/makeGitTutorial
 
-# this is a test version that creates draft help pages from the MDhelp directory
+# this is a development version that creates draft help pages from the MDhelp directory
 
 name: test MD help w/build GSAS-II web site
 
@@ -97,7 +97,7 @@ jobs:
           mv _gsas2/GSASII/help ./help
       - name: Get rid of the rest of the GSAS-II files & other stuff not needed on web
         run: |
-          rm -rf _gsas2 webdocs scripts MDtutorials
+          rm -rf _gsas2 webdocs scripts MDtutorials MDhelp
         
       - name: Upload artifact  # creates zip file with website contents
         uses: actions/upload-pages-artifact@v3

@@ -6,7 +6,8 @@ nav:
   - GUI components: applicationwindow.md
   - Main menu: mainmenu.md
   - Data tree items:
-    - Standard items: datatree.md
+    - Data tree overview: datatree.md
+    - Universal items: commontreeitems.md
     - Powder (PWDR): histgramtree.md
     - Images: image.md
     - PDF: pairdistribution.md
@@ -45,6 +46,7 @@ markdown_extensions:
 
 extra_javascript: 
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+#  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # MathJax library from CDN
 
 #local build settings from https://www.mkdocs.org/user-guide/deploying-your-docs/#local-files
 

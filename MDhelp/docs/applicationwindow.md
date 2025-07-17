@@ -17,7 +17,7 @@ The leftmost entries in the GSAS-II menu provide access to many features of GSAS
 Different information is displayed in the Data Editing Window, depending on which section of the [data tree](#Data_tree) is selected. For example, clicking on the "Notebook" entry of the data tree brings up the [Notebook editing window](#TBD), as documented elsewhere.
 
 <a name="Plots"></a>
-## GSAS-II Plots Window
+## GSAS-II Graphics Window
 
 This window presents all the graphical material as a multipage tabbed set of plots utilizing the matplotlib python package. Each page containing a graph or plot has a tool bar with these controls:
 

@@ -13,11 +13,12 @@ additional links that need to be added:
       60 docs/applicationwindow.md
      191 docs/mainmenu.md 
       95 docs/others.md 
+      10 docs/datatree.md
+     165 docs/commontreeitems.md
 
 These files have had only minor editing. A few need to be broken up:
 
-    170 docs/cluster.md
-     157 docs/datatree.md
+     170 docs/cluster.md
      445 docs/histgramtree.md
      154 docs/image.md
       59 docs/pairdistribution.md
