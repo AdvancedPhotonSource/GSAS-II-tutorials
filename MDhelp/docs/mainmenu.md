@@ -1,3 +1,4 @@
+<!--- Don't change the HTML version of this file; edit the .md version -->
 <a name="main_menu"></a>
 # GSAS-II Main menu commands
 

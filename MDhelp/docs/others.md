@@ -1,3 +1,4 @@
+<!--- Don't change the HTML version of this file; edit the .md version -->
 # Miscellaneous information
 
 <a name="MacOS"></a>

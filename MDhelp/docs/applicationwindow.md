@@ -1,3 +1,4 @@
+<!--- Don't change the HTML version of this file; edit the .md version -->
 # GSAS-II GUI Organization
 
 The GSAS-II GUI uses three windows, which are described below. The main window has two parts. To the left is the "Data Tree" and to the right is the "Data Window". A second window, called the "Plots Window" is used for graphics such as plots of data or display of three-dimensional structures. The third window, the Console window, is used to show output from the program. 

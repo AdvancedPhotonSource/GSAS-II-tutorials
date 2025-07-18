@@ -1,3 +1,4 @@
+<!--- Don't change the HTML version of this file; edit the .md version -->
 # Help for GSAS-II
 
 This and the subsequent web pages provide documentation for the
@@ -17,11 +18,12 @@ An index on the topics covered in these help pages is given below.
 2. [GSAS-II GUI Organization](./applicationwindow.md)
     1. [Data Tree](./applicationwindow.md#Data_tree)  
     1. [Data Window](./applicationwindow.md#Data_frame)  
-    1. [Plots Window](./applicationwindow.md#Plots)  
+    1. [Graphics Window](./applicationwindow.md#Plots)  
     1. [Console Window](./applicationwindow.md#Console)  
 3. [Main menu contents](./mainmenu.md)
-4. Data Tree headings, graphics windows and menu commands
-    1. [Top-level](./datatree.md) Data Tree headings
+4. Data tree entries and their use
+    1. [Data tree overview](./datatree.md)
+    1. [Universal data tree](./commontreeitems.md) items
     2. [Phase](./phase.md) Data Tree headings
     3. [Image (IMG)](./image.md) Data Tree headings
     4. [Powder histogram (PWDR)](./histgramtree.md) Data Tree headings

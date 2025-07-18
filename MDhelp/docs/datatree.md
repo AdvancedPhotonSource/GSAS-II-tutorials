@@ -1,3 +1,4 @@
+<!--- Don't change the HTML version of this file; edit the .md version -->
 # GSAS-II data tree overview
 
 GSAS-II creates projects that are saved in `.gpx` files. The GSAS-II data tree, which is shown on the left side of the main GSAS-II window shows a hierarchical index to the contents of a project. This index will usually have all of the entries listed below on the [Universal Data Tree Items](./commontreeitems.md) page, which are found in all types of GSAS-II projects and will also have at least one entry representing some sort of experimental data (or simulation) -- called a histogram -- and will likely have one or more phase entries. 
