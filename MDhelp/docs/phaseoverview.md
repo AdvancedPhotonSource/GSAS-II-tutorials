@@ -1,5 +1,5 @@
 <a name="Phase"></a>
-#  Overview on phase data tree entries
+#  Overview on **Phase** data tree entries
 
 Phases are placed in their own section of the [GSAS-II data tree](./applicationwindow.md#Data_tree) as subentries under the "Phases" entry. Note that there are no limits to how many phases may be placed in a GSAS-II project (`.gpx` file), other than as limited by available computer memory. Also, phases are only used in refinements when they are linked to histograms (datasets) so there is very little 
 "cost" connected to including a phase that is not in use.

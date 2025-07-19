@@ -25,9 +25,10 @@ nav:
       - RMC tab: phaseRMC.md
       - ISODISTORT tab: phaseisodistort.md
       - Dysnomia tab: phasedysnomia.md
+    - Images (IMG): image.md
     
     - Powder (PWDR): histgramtree.md
-    - Images: image.md
+    
     - PDF: pairdistribution.md
     - Powder peaks (PKS): powderpeak.md
     - Single Crystal (HKLF): singlecrystal.md

@@ -31,13 +31,17 @@ additional links that need to be added:
       20 docs/phasepawley.md
      128 docs/phasetexture.md
       12 docs/phasewave.md
+     154 docs/image.md 
+
+In progress:
+
+     445 docs/histgramtree.md 
+
 
 These files have had only minor editing. histgramtree.md should
 probably be broken up:
 
      170 docs/cluster.md
-     445 docs/histgramtree.md
-     154 docs/image.md
       59 docs/pairdistribution.md
       74 docs/powderpeak.md
       89 docs/reflectometry.md
@@ -54,3 +58,7 @@ always forget that trick!
 
 Texture: are there places where capital greek letters should be used
 to differentiate symbols (\Phi vs \phi) orientation angles?
+
+image.md: Make gain map appears to be moved to Image
+Controls/Calibrate/Multiimage gain map. Remove former? Units are not
+correct I think, for GSAS-II to Fit2D and pyFAI conversions
