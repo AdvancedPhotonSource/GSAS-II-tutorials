@@ -17,7 +17,50 @@ GSAS-II provides a number of configuration settings that can be changed via vari
 <a name="RTFM"></a>
 ## Programmers' documentation
 
-The routines and classes used within GSAS-II are documented in a set of web pages and in a PDF document. This documentation is created from the Python source code files using Sphinx. 
+ The routines and classes used within GSAS-II are documented in a set of web pages and in a PDF document. This documentation is created from the Python source code files using Sphinx. 
+
+<a name="Origin_1"></a>
+## Origin 1 -> Origin 2 Transformations
+
+An important transformation may be needed in certain cases for space groups that have two alternate origin settings [listed here](https://gsas-ii.readthedocs.io/en/latest/GSASIIutil.html#GSASII.GSASIIspc.spg2origins).
+These are centrosymmetric space groups where the highest symmetry point in the structure does not contain a center of symmetry. Origin 1 places the origin at the highest symmetry setting while Origin 2 places the origin at a center of symmetry (creating a -x,-y,-z symmetry operator, which means that reflection phases can only be 0 or π.) GSAS-II requires use of the Origin 2 settings because computations are much faster and simpler without complex structure factors. Alas, the literature contains a number of structures reported in Origin 1, where the origin choice may not be clearly communicated. (The CIF standard does not require that origin choice be indicated.) When a structure is imported that uses any of the space groups where an origin choice is possible, a message is shown in GSAS-II notifying the user that they must confirm that the origin choice is correct and then provides the opportunity to change origins.
+
+**Example**: An example of what can go wrong is illustrated with the structure of anatase. The space group is \(I\ {\rm 4_1}/a\ m\ d\). The coordinates for the two origin choices are:
+
+### Origin 1
+
+| Atom  | X | Y | Z |
+| ----- | --|---|-- |
+| Ti    | 0 | 0 | 0  |
+| O     | 0 | 0 | 0.208 |
+
+### Origin 2
+
+| Atom  | X | Y | Z |
+| ----- | --|---|-- |
+| Ti    | 0 | 1/4 | -1/8  |
+| O     | 0 | 1/4 | 0.083 |
+
+Note that the Origin 2 coordinates are shifted by by addition of (0,1/4,-1/8) relative to those in Origin 1 (the values in the [GSASIIspc.spg2origins array](https://gsas-ii.readthedocs.io/en/latest/GSASIIutil.html#GSASII.GSASIIspc.spg2origins)).
+
+GSAS-II always uses the symmetry operators for Origin 2; if the structure is input incorrectly with the coordinates set for Origin 1, there are several obvious signs of problems:
+
+* the site symmetries and multiplicities are wrong, often giving an incorrect chemical formula,
+* the interatomic distances are incorrect
+* a plot of the structure is improbable, as below:
+
+![Wrong structure](./images/wrong.png)
+
+In this case incorrect multiplicities gives rise to a density of 7.9 g/cc, double the correct value. Impossible interatomic distances of 1.88Å for Ti-Ti, and 1.39Å for Ti-O are seen. The unit cell contents with the wrong space group operators is shown above.
+
+With coordinates that match the space group operations, the correct Ti-O distances are 1.92Å and 1.97Å and the shortest Ti-Ti distance is 3.0Å. (Note that interatomic distances can be computed in GSAS-II using the Phase's Atoms tab and the Compute/"Show Distances & Angles" menu item.)
+
+**Transform Origin**: To transform a space group setting from Origin setting 1 to 2, use the Transform option in the Compute menu of a Phase's General tab and then select the last option in the "Common transformations" pulldown menu, which will be setting 1->2 for space groups where both origins are available, as shown to the right. The transformation matrix will be set to the identity and the "V" vector will have the required origin shift loaded. Press OK. The changes can be seen by selecting the Atoms tab.
+
+![xform](./images/xform.png)
+
+
+
 
 <a name="FPA"></a>
 ## Fundamental Parameters as used to derive instrumental parameters

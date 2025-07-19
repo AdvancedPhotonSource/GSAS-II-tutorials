@@ -16,13 +16,17 @@ additional links that need to be added:
       10 docs/datatree.md
      207 docs/commontreeitems.md
 
+In progress (being broken up into sections by tab):
+
+     629 docs/phase.md 
+
+
 These files have had only minor editing. A few need to be broken up:
 
      170 docs/cluster.md
      445 docs/histgramtree.md
      154 docs/image.md
       59 docs/pairdistribution.md
-     629 docs/phase.md
       74 docs/powderpeak.md
       89 docs/reflectometry.md
       62 docs/sequential.md

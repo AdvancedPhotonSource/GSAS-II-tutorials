@@ -21,10 +21,13 @@ An index on the topics covered in these help pages is given below.
     1. [Graphics Window](./applicationwindow.md#Plots)  
     1. [Console Window](./applicationwindow.md#Console)  
 3. [Main menu contents](./mainmenu.md)
-4. Data tree entries and their use
-    1. [Data tree overview](./datatree.md)
+4. Data tree entries and their use ([overview](./datatree.md))
     1. [Universal data tree](./commontreeitems.md) items
-    2. [Phase](./phase.md) Data Tree headings
+    2. [Phase Data Tree items (overview)](./phaseoverview.md) 
+        * [General Phase tab](./phasegeneral.md)  
+        * [Data Phase tab](./phasedata.md) 
+        * [Atoms Phase tab](./phaseatoms.md) 
+    2. [Phase](./phase.md) Data Tree headings 
     3. [Image (IMG)](./image.md) Data Tree headings
     4. [Powder histogram (PWDR)](./histgramtree.md) Data Tree headings
         * Comments

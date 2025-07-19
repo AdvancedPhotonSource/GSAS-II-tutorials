@@ -8,6 +8,15 @@ nav:
   - Data tree items:
     - Data tree overview: datatree.md
     - Universal items: commontreeitems.md
+
+    - Phases:
+      - Phase overview: phaseoverview.md  
+      - General tab: phasegeneral.md
+      - Data tab: phasedata.md
+      - Atoms tab: phaseatoms.md
+    
+    - Phases: phase.md
+
     - Powder (PWDR): histgramtree.md
     - Images: image.md
     - PDF: pairdistribution.md
