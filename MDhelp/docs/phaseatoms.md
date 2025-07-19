@@ -63,7 +63,7 @@ graphics window's structure drawing that is marked by crossing , red, green and 
 <a name="Phase-mouse-plotopts"></a>
 <H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
-A drawing of the crystal structure will be displayed in the [Graphics Window](./applicationwindow.md#Plots) only if the [Draw Options](./phasedrawopts.md) or [Draw Atoms](./phasedrawatoms.md) tab has been visited first prior to selecting the Atoms tab. When back at the Atoms tab, the following actions and keypress commands are available, when use of the mouse buttons changes the view of the structure and can be used to select atoms. On MacOS and a one-button mouse, [some alternate actions must be used](./others.md#MacOS)
+A drawing of the crystal structure will be displayed in the [Graphics Window](./applicationwindow.md#Plots) only if the [Draw Options](./phasedrawopts.md) or [Draw Atoms](./phasedrawatoms.md) tab has been visited first prior to selecting the Atoms tab. When back at the Atoms tab, the following actions and keypress commands are available, when use of the mouse buttons changes the view of the structure and can be used to select atoms. On a Mac with a one-button mouse, [some alternate actions must be used](./others.md#MacOS)
 
 * **Left drag**: Holding down left button rotates axes around screen x & y
 * **Right drag**: Holding down right button translates the fractional coordinates assigned to the viewpoint (which is kept at the center of the drawing). The structure will appear to translate. The viewpoint can also be entered directly in the [Draw Options](./phasedrawopts.md)..

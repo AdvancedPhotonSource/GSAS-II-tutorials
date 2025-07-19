@@ -17,6 +17,7 @@ When a phase is selected from the data tree, parameters are shown for that selec
  - [Texture](./phasetexture.md)
  - [Map Peaks](./phasemappeaks.md)
  - [Pawley](./phasepawley.md)
+ - [Layers](./phaselayers.md)
  - [Wave Data](./phasewave.md)
  - [MC/SA](./phasemcsa.md)
  - [RMC](./phaseRMC.md)

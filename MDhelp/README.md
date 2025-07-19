@@ -15,13 +15,25 @@ additional links that need to be added:
       95 docs/others.md 
       10 docs/datatree.md
      207 docs/commontreeitems.md
+      32 docs/phaseRB.md
+      51 docs/phaseRMC.md
+      81 docs/phaseatoms.md
+      70 docs/phasedata.md
+      64 docs/phasedrawatoms.md
+      14 docs/phasedrawopts.md
+      11 docs/phasedysnomia.md
+      96 docs/phasegeneral.md
+      27 docs/phaseisodistort.md
+      25 docs/phaselayers.md
+      25 docs/phasemappeaks.md
+      13 docs/phasemcsa.md
+      25 docs/phaseoverview.md
+      20 docs/phasepawley.md
+     128 docs/phasetexture.md
+      12 docs/phasewave.md
 
-In progress (being broken up into sections by tab):
-
-     629 docs/phase.md 
-
-
-These files have had only minor editing. A few need to be broken up:
+These files have had only minor editing. histgramtree.md should
+probably be broken up:
 
      170 docs/cluster.md
      445 docs/histgramtree.md
@@ -39,3 +51,6 @@ Needs more work: menu commands not described or well described in
 atoms, draw atoms & draw options. Should also describe the settings on
 draw options. Also, how does one expand a drawing to multiple cells? I
 always forget that trick!
+
+Texture: are there places where capital greek letters should be used
+to differentiate symbols (\Phi vs \phi) orientation angles?

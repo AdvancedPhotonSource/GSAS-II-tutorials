@@ -8,7 +8,6 @@ nav:
   - Data tree items:
     - Data tree overview: datatree.md
     - Universal items: commontreeitems.md
-
     - Phases:
       - Phase overview: phaseoverview.md  
       - General tab: phasegeneral.md
@@ -16,11 +15,11 @@ nav:
       - Atoms tab: phaseatoms.md
       - Draw Options tab: phasedrawopts.md
       - Draw Atoms tab: phasedrawatoms.md
-      
       - RB Models tab: phaseRB.md
       - Texture tab: phasetexture.md
       - Map Peaks tab: phasemappeaks.md
       - Pawley tab: phasepawley.md
+      - Layers tab: phaselayers.md
       - Wave Data tab: phasewave.md
       - MC/SA tab: phasemcsa.md
       - RMC tab: phaseRMC.md
@@ -34,7 +33,6 @@ nav:
     - Single Crystal (HKLF): singlecrystal.md
     - Small Angle (SASD): smallanglescattering.md
     - Reflectometry (REFD): reflectometry.md
-    - Phases: phase.md
     - Sequential results: sequential.md
     - Cluster Analysis: cluster.md
     

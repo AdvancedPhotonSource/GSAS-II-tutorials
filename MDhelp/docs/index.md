@@ -15,15 +15,20 @@ An index on the topics covered in these help pages is given below.
 <a name="Index"></a>
 
 1. [Tutorials](./preface.md)  
+
 2. [GSAS-II GUI Organization](./applicationwindow.md)
     1. [Data Tree](./applicationwindow.md#Data_tree)  
     1. [Data Window](./applicationwindow.md#Data_frame)  
     1. [Graphics Window](./applicationwindow.md#Plots)  
     1. [Console Window](./applicationwindow.md#Console)  
+    
 3. [Main menu contents](./mainmenu.md)
+
 4. Data tree entries and their use ([overview](./datatree.md))
     1. [Universal data tree](./commontreeitems.md) items
+    
     2. [Phase Data Tree items (overview)](./phaseoverview.md) 
+    
         * [General Phase tab](./phasegeneral.md)  
         * [Data Phase tab](./phasedata.md) 
         * [Atoms Phase tab](./phaseatoms.md) 
@@ -32,7 +37,8 @@ An index on the topics covered in these help pages is given below.
         * [RB Models tab](./phaseRB.md)
         * [Texture tab](./phasetexture.md)
         * [Map Peaks tab](./phasemappeaks.md)
-        * [Pawley tab](./phasepawley.md)
+        * [Pawley tab](./phasepawley.md) 
+        * [Layers tab](./phaselayers.md)
         * [Wave Data tab](./phasewave.md)
         * [MC/SA tab](./phasemcsa.md)
         * [RMC tab](./phaseRMC.md)
