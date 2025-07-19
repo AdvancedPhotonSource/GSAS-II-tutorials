@@ -5,9 +5,7 @@
 
 1. Create a new directory in the current location. Make sure not to use a name already in use for an existing tutorial (in the main directory, (https://github.com/AdvancedPhotonSource/GSAS-II-tutorials/tree/main). 
 
-1. Create a &lt;filename&gt;.md file in the new directory. Name is arbitrary, but repeating the directory name is not a bad idea. 
-
-  * start the file with content like this:
+1. Create a &lt;filename&gt;.md file in the new directory. Name is arbitrary, but repeating the directory name is not a bad idea. Start the file with content like this:
 
         ---
         title: "Tutorial: ...anything you want to put here"
@@ -18,6 +16,8 @@
 
         ## Intro
 
+    look at the previously-created tutorials in this directory to see how formatting is done. 
+    
 1. Create a directory named `imgs` inside the new directory. Any images used in the tutorial go here. 
 
 1. (Optional) Create a directory named `data` inside the new directory. Any data files used in the tutorial go here. 

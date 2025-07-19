@@ -53,18 +53,20 @@ graphics window's structure drawing that is marked by crossing , red, green and 
 6. Menu '**Compute**' –
 
     * **Show Distances & Angles** – compute distances and angles with esds (if possible) for selected atoms. A popup dialog box will appear with distance angle controls. NB: if atoms have been added or their type changed, you may need to do a Reset of this dialog box before proceeding.
-    * **Save Distances & Angles** – same as the prior menu command, but writes the distance & angle result to a file with extension ".disagl".
+    * **Save Distances & Angles** – same as the prior menu command, but writes the distance & angle result to a file with extension `.disagl`.
     * **Histogram bonds and angles** – plots histograms of bond lengths & angles about selected atoms.
     * **Apportion atom frac** – after selection of a 2nd element; this determines from atomic number and neutron scattering length the atom fractions of each type for selected atoms and presents results on the console.
     * **Density** – calculate density
     * **ISODISTORT mode values** – when a structure has been imported from ISODISTORT,  this will compute the mode displacements for the current atom positions and display them in a popup window.
 
+
+<a name="Phase-mouse-plotopts"></a>
 <H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
-A drawing of the crystal structure will be displayed only if the Draw Options or Draw Atoms tabs has been visited first prior to selecting the Atoms tab. When back at the Atoms tab, the following actions and keypress commands are available, when use of the mouse buttons changes the view of the structure and can be used to select atoms. On MacOS and a one-button mouse, [some alternate actions must be used](./others.md#MacOS)
+A drawing of the crystal structure will be displayed in the [Graphics Window](./applicationwindow.md#Plots) only if the [Draw Options](./phasedrawopts.md) or [Draw Atoms](./phasedrawatoms.md) tab has been visited first prior to selecting the Atoms tab. When back at the Atoms tab, the following actions and keypress commands are available, when use of the mouse buttons changes the view of the structure and can be used to select atoms. On MacOS and a one-button mouse, [some alternate actions must be used](./others.md#MacOS)
 
 * **Left drag**: Holding down left button rotates axes around screen x & y
-* **Right drag**: Holding down right button translates the fractional coordinates assigned to the viewpoint (which is kept at the center of the drawing). The structure will appear to translate. The viewpoint can also be entered directly in the Draw Options.
+* **Right drag**: Holding down right button translates the fractional coordinates assigned to the viewpoint (which is kept at the center of the drawing). The structure will appear to translate. The viewpoint can also be entered directly in the [Draw Options](./phasedrawopts.md)..
 * **Middle drag**: Holding down center button rotates axes around screen z (direction perpendicular to screen).
 * **Mouse Wheel**: Rotating the scroll wheel changes "camera distance" (zoom in/out)
 * **Shift+Left Click**: Holding down the shift key while clicking on an atom with the left mouse button causes that atom to be selected (Shift + a Right click does the same). Any previously selected atoms will be reset. If two atoms are overlapped in the current view, then the top-most atom will usually be selected. Only atoms in the asymmetric unit can be selected from the plot in this way.
@@ -72,8 +74,8 @@ A drawing of the crystal structure will be displayed only if the Draw Options or
 * **Key n**: Pressing the "n" key selects the next atom in the displayed atom list.
 * **Key p**: Pressing the "p" key selects the previous atom in the displayed atom list.
 * **Key c**: Pressing the "c" key sets the plot viewpoint at unit cell center. Also resets n/p selection item to the 1st atom.
-* **Key s**: Pressing the "s" key brings up a (large) selection of color schemes for the slice contours. Default – "Paired" (Green – positive, red – negative & yellow – zero).
+* **Key s**: Pressing the "s" key brings up a (large) selection of color schemes for the slice contours. Default – "RdYlGn" (Green – positive, red – negative & yellow – zero).
 * **Key k**: Pressing the "k" key cycles through the possible slice contouring options (none, lines, colors, lines+colors)
-* **Key +**: Pressing the "+" (or "=") key steps the viewpoint in positive drawing z-direction (away from viewer). If structure is incommensurate, "+" steps the structure and map through the 4th dimension (+tau).
-* **Key -**: Pressing the "-" key steps the viewpoint in negative drawing z-direction (toward from viewer). If structure is incommensurate, "-" steps the structure and map through the 4th dimension (-tau).
-
+* **Key m**: Pressing the "m" key for an incommensurate structure creates a movie file of the change in the structure along the 4th dimension (tau). Movie controls are found in the GSAS-II Configuration Variables. Requires the imageio python package be available for import – it is not normally available in the GSAS-II version of python.
+* **Key +**: Pressing the "+" (or "=") key steps the viewpoint in positive drawing z-direction (toward viewer). If structure is incommensurate, "+" steps the structure and map through the 4th dimension (+tau).
+* **Key -**: Pressing the "-" key steps the viewpoint in negative drawing z-direction (away from viewer). If structure is incommensurate, "-" steps the structure and map through the 4th dimension (-tau).

@@ -27,7 +27,18 @@ An index on the topics covered in these help pages is given below.
         * [General Phase tab](./phasegeneral.md)  
         * [Data Phase tab](./phasedata.md) 
         * [Atoms Phase tab](./phaseatoms.md) 
-    2. [Phase](./phase.md) Data Tree headings 
+        * [Draw Options tab](./phasedrawopts.md)
+        * [Draw Atoms tab](./phasedrawatoms.md)
+        * [RB Models tab](./phaseRB.md)
+        * [Texture tab](./phasetexture.md)
+        * [Map Peaks tab](./phasemappeaks.md)
+        * [Pawley tab](./phasepawley.md)
+        * [Wave Data tab](./phasewave.md)
+        * [MC/SA tab](./phasemcsa.md)
+        * [RMC tab](./phaseRMC.md)
+        * [ISODISTORT tab](./phaseisodistort.md)
+        * [Dysnomia tab](./phasedysnomia.md)
+
     3. [Image (IMG)](./image.md) Data Tree headings
     4. [Powder histogram (PWDR)](./histgramtree.md) Data Tree headings
         * Comments

@@ -14,9 +14,19 @@ nav:
       - General tab: phasegeneral.md
       - Data tab: phasedata.md
       - Atoms tab: phaseatoms.md
+      - Draw Options tab: phasedrawopts.md
+      - Draw Atoms tab: phasedrawatoms.md
+      
+      - RB Models tab: phaseRB.md
+      - Texture tab: phasetexture.md
+      - Map Peaks tab: phasemappeaks.md
+      - Pawley tab: phasepawley.md
+      - Wave Data tab: phasewave.md
+      - MC/SA tab: phasemcsa.md
+      - RMC tab: phaseRMC.md
+      - ISODISTORT tab: phaseisodistort.md
+      - Dysnomia tab: phasedysnomia.md
     
-    - Phases: phase.md
-
     - Powder (PWDR): histgramtree.md
     - Images: image.md
     - PDF: pairdistribution.md

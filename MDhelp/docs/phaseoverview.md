@@ -9,4 +9,16 @@ Phases are either created with the Data/"Add new phase" menu item (manual input)
 When a phase is selected from the data tree, parameters are shown for that selected phase in a tabbed window. Clicking on each tab raises the windows as documented in subsequent sections of the help documentation. The tabs are:
 
  - [General](./phasegeneral.md)
-
+ - [Data](./phasedata.md)
+ - [Atoms](./phaseatoms.md)
+ - [Draw Options](./phasedrawopts.md)
+ - [Draw Atoms](./phasedrawatoms.md)
+ - [RB Models](./phaseRB.md)
+ - [Texture](./phasetexture.md)
+ - [Map Peaks](./phasemappeaks.md)
+ - [Pawley](./phasepawley.md)
+ - [Wave Data](./phasewave.md)
+ - [MC/SA](./phasemcsa.md)
+ - [RMC](./phaseRMC.md)
+ - [ISODISTORT](./phaseisodistort.md)
+ - [Dysnomia](./phasedysnomia.md)

@@ -34,3 +34,8 @@ These files have had only minor editing. A few need to be broken up:
       94 docs/smallanglescattering.md
 
 N.B. must use `mkdocs-static-i18n` not `mkdocs-i18n` as in `pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n`
+
+Needs more work: menu commands not described or well described in
+atoms, draw atoms & draw options. Should also describe the settings on
+draw options. Also, how does one expand a drawing to multiple cells? I
+always forget that trick!
