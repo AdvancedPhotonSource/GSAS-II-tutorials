@@ -26,10 +26,10 @@ jobs:
       - name: mkdocs setup
         run: |
           pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n
-          pip install weasyprint
+          #pip install weasyprint
           pip install mkdocs-with-pdf
           #pip install mkdocs-to-pdf
-          weasyprint --info
+          #weasyprint --info
           
       - name: Checkout
         uses: actions/checkout@v4
