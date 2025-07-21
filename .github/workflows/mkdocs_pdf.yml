@@ -42,14 +42,10 @@ jobs:
    
       - name: test newly-installed chrome
         run: |
-          ls /usr/bin
           which google-chrome-stable
           google-chrome-stable --version
+          /usr/bin/google-chrome-stable --headless --disable-gpu --dump-dom https://google.com
           
-      - name: quit
-        run: |
-          exit
-
       # - name: Setup chromium
       #   uses: browser-actions/setup-chrome@v1
       #   id: setup-chrome
@@ -87,7 +83,7 @@ jobs:
       - name: convert MDhelp
         run: |
           cd MDhelp
-          mkdocs build
+          #mkdocs build
           mv mkdocs.yml_pdf mkdocs.yml
           ENABLE_PDF_EXPORT=1 mkdocs build
           # mv site/GSASII-help.pdf ...
