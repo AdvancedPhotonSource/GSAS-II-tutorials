@@ -29,10 +29,10 @@ jobs:
       #   run: |
       #     which relaxed
 
-      - name: test installed chrome
-        run: |
-          which chrome
-          chrome --version
+      # - name: test installed chrome
+      #   run: |
+      #     which chrome
+      #     chrome --version
 
       - name: install debian chrome
         run: |
