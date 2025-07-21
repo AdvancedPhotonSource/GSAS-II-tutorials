@@ -27,7 +27,12 @@ jobs:
 
       - name: find relaxedjs
         run: |
+          which relaxed
           which relaxedjs
+          exit
+          
+      - name: stop
+        run: |
           exit
 
       # - name: Setup chromium
