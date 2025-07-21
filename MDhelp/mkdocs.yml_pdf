@@ -69,7 +69,7 @@ plugins:
         - Contents
 #        - index.md
       render_js: true
-      headless_chrome_path: /opt/hostedtoolcache/setup-chrome/chrome/stable/x64/
+      headless_chrome_path: /opt/hostedtoolcache/setup-chrome/chrome/stable/x64/chrome
 
   - i18n:
       docs_structure: suffix

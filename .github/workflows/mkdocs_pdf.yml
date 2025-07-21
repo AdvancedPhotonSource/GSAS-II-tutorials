@@ -25,6 +25,7 @@ jobs:
           chrome --version
           chromium --version
           which chrome
+          export chromium-browser=`which chrome`
       - name: Python setup
         uses: actions/setup-python@v3
 #      - name: Sphinx setup
