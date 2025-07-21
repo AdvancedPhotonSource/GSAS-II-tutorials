@@ -31,8 +31,6 @@ jobs:
 
       - name: test installed chrome
         run: |
-          which chrome-browser
-          chrome-browser --version
           which chrome
           chrome --version
 
