@@ -25,7 +25,9 @@ jobs:
           chrome --version
           chromium --version
           which chrome
-          #export chromium-browser=`which chrome`
+          which chromium
+          which chromium-browser
+          chromium-browser --headless --no-sandbox http://example.org/
       - name: Python setup
         uses: actions/setup-python@v3
 #      - name: Sphinx setup
