@@ -30,7 +30,11 @@ jobs:
           #pip install mkdocs-with-pdf
           pip install mkdocs-to-pdf
           #weasyprint --info
-          
+
+      - name: test chromium
+        run: |
+          /usr/bin/chromium-browser --headless --disable-gpu --dump-dom https://google.com
+
       - name: Checkout
         uses: actions/checkout@v4
 
