@@ -16,6 +16,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - name: Setup chromium
+          - uses: browser-actions/setup-chrome@v1
+            id: setup-chrome
+            with:
+              install-dependencies: true
+              install-chromedriver: true
+      - run: |
+        echo ${{ steps.setup-chrome.outputs.chrome-path }} --version
+        ${{ steps.setup-chrome.outputs.chrome-path }} --version
+      - name: test chromium
+        run: |
+          ${{ steps.setup-chrome.outputs.chrome-path }} --headless --disable-gpu --dump-dom https://google.com
+      
       - name: Python setup
         uses: actions/setup-python@v3
 #      - name: Sphinx setup

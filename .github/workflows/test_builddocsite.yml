@@ -29,7 +29,7 @@ jobs:
       - name: Sphinx setup
         run: |
           pip install sphinx sphinx_readable_theme
-          pip install mkdocs-with-pdf
+          #pip install mkdocs-to-pdf
       - name: pandoc setup
         uses: pandoc/actions/setup@v1
       - name: mkdocs setup
