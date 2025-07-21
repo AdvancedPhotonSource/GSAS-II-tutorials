@@ -40,6 +40,13 @@ jobs:
           mv mkdocs.yml_pdf mkdocs.yml
           mkdocs build
           #cp -vr site ../help_test
+          
+      - name: Upload help artifact  # creates zip file with website contents
+        uses: actions/upload-pages-artifact@v3
+        with:
+            path: MDhelp
+            name: MDhelp
+            retention-days: 1
         
       # - name: Get tutorials index from source code
       #   run: |
