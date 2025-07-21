@@ -40,11 +40,11 @@ jobs:
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt install ./google-chrome-stable_current_amd64.deb
    
-      - name: test newly-installed chrome
-        run: |
-          which google-chrome-stable
-          google-chrome-stable --version
-          /usr/bin/google-chrome-stable --headless --disable-gpu --dump-dom https://google.com
+#      - name: test newly-installed chrome
+#        run: |
+#          which google-chrome-stable
+#          google-chrome-stable --version
+#          /usr/bin/google-chrome-stable --headless --disable-gpu --dump-dom https://google.com
           
       # - name: Setup chromium
       #   uses: browser-actions/setup-chrome@v1
@@ -72,10 +72,7 @@ jobs:
       - name: mkdocs setup
         run: |
           pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n
-          #pip install weasyprint
-          #pip install mkdocs-with-pdf
           pip install mkdocs-to-pdf
-          #weasyprint --info
 
       - name: Checkout
         uses: actions/checkout@v4

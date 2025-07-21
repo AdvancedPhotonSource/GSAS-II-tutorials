@@ -62,7 +62,7 @@ plugins:
       author: Brian H. Toby and Robert B. Von Dreele
       enabled_if_env: ENABLE_PDF_EXPORT
       cover_title: GSAS-II Help information
-      cover_subtitle: A compilation of HTML pages as a PDF document
+      cover_subtitle: A compilation of HTML pages into PDF
       copyright: From https://advancedphotonsource.github.io/GSAS-II-tutorials/help/
       #back_cover: true
       output_path: GSASII-help.pdf
