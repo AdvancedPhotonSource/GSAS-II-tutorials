@@ -1,12 +1,15 @@
-# Small Angle Scattering – type SASD
+<!--- Don't change the HTML version of this file; edit the .md version -->
+<a name="SASD"></a>
+#  Type **SASD** data tree entries: Small Angle Scattering
 
 ## Comments
 
 This window shows whatever comment lines found above the QIE table when the small angle data file was read by GSAS-II. If you are lucky, there will be useful information here (e.g. sample name, date collected, wavelength used, etc.). If not, this window will be blank. The text is read-only.
 
+<a name="SASD_Limits"></a>
 ## Limits
 
-This window shows the limits in position to be used in any fitting for this small angle scattering data. The 'original' values are obtained from the minimum & maximum values in the data. The 'new' values determine the range of data that will be used in fitting. Units are in Q (Å-1).
+This window shows the limits in position to be used in any fitting for this small angle scattering data. The 'original' values are obtained from the minimum & maximum values in the data. The 'new' values determine the range of data that will be used in fitting. Units are in Q (Å \(^{-1}\)).
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
@@ -16,9 +19,10 @@ Menu '**Edit Limits**'
 
 * **Copy** - this copies the limits shown to other selected small angle patterns. If used, a dialog box (Copy Parameters) will appear showing the list of available small angle patterns, you can copy the limits parameters to any or all of them; select 'All' to copy them to all patterns. Then select 'OK' to do the copy; 'Cancel' to cancel the operation.
 
+<a name="SASD_Instrument_Parameters"></a>
 ## Instrument Parameters
 
-This window shows the relevant instrument parameter for small angle data; namely a wavelength to relate Q to scattering angle (2Q). It is not refinable.
+This window shows the relevant instrument parameter for small angle data; namely a wavelength to relate Q to scattering angle (\(2\theta\)). It is not refinable.
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
@@ -28,6 +32,7 @@ This window shows the relevant instrument parameter for small angle data; namely
 
 2. You can change the wavelength.
 
+<a name="SASD_Substances"></a>
 ## Substances
 
 This window shows the substances that make up the small angle scattering sample. By default, “vacuum” and “unit scatterer” are included; others can be added as needed. The desired substances must be added to Sample Parameters (below) before their use in constructing scattering models for small angle data analysis.
@@ -46,9 +51,10 @@ This window shows the substances that make up the small angle scattering sample.
 
 2. You can edit the composition by changing the number of each kind of element and change the sum of atomic volumes or the material density.
 
+<a name="SASD_Sample_Parameters"></a>
 ## Sample Parameters
 
-This window shows the various sample-dependent parameters for the selected small angle pattern. All values shown in this window can be edited. Note that the last three parameters (named FreePrmX, X=1,2,3) have labels that can be changed. If changed in one histogram, the same label is used for all histograms. When a label is changed, the Comments tree item for each SASD histogram is searched for a matching "Label=value" pair (differences in letter case between the two label strings is ignored). When found, the value is converted to a float and saved as the appropriate Sample Parameter. The last two items define the two components of a small angle scattering sample. One comprises the objects of interest while the other is the marix they are embedded in. The small angle pattern then results from the shape and scattering contrast between the two materials.
+This window shows the various sample-dependent parameters for the selected small angle pattern. All values shown in this window can be edited. Note that the last three parameters (named `FreePrm`X, X=1,2,3) have labels that can be changed. If changed in one histogram, the same label is used for all histograms. When a label is changed, the Comments tree item for each SASD histogram is searched for a matching "Label=value" pair (differences in letter case between the two label strings is ignored). When found, the value is converted to a float and saved as the appropriate Sample Parameter. The last two items define the two components of a small angle scattering sample. One comprises the objects of interest while the other is the marix they are embedded in. The small angle pattern then results from the shape and scattering contrast between the two materials.
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
@@ -69,10 +75,11 @@ LaB6_dc250.tif      100          1      test       .2
 LaB6_dc300.tif      150          1      test       .25
 ```
 
-Note that the first line(s) in the file can be a header, but each header line must start marked with a hash (#). A header is not required. "Columns" in the table are separated by one or more delimiters (which may be a comma, tab or space). Note that columns do not need to be aligned, as long as each entry is spaced by at least one delimiter. The first column in the table is used to look up SASD entries where the initial space-delimited string after the SASD tag ("myfile" in "SASD myfile AZM=180...") must match the table. Subsequent columns can then be mapped to sample parameters or can be ignored, using a dialog window.
+: Note that the first line(s) in the file can be a header, but each header line must start marked with a hash (#). A header is not required. "Columns" in the table are separated by one or more delimiters (which may be a comma, tab or space). Note that columns do not need to be aligned, as long as each entry is spaced by at least one delimiter. The first column in the table is used to look up SASD entries where the initial space-delimited string after the SASD tag ("myfile" in "SASD myfile AZM=180...") must match the table. Subsequent columns can then be mapped to sample parameters or can be ignored, using a dialog window.
 
 * **Rescale all** - Allows a series of selected SASD histograms to be put on a common scale by integrating them over a specific Q region and then scaling them so that the integration range will match the first pattern. (May not be valid for SASD)
 
+<a name="SASD_Models"></a>
 ## Models
 
 Small angle scattering models in GSAS-II have four different forms:

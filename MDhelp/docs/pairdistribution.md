@@ -1,16 +1,20 @@
-# Pair Distribution Functions - type PDF
+<!--- Don't change the HTML version of this file; edit the .md version -->
+<a name="PDF"></a>
+#  Type **PDF** data tree entries: Pair Distribution Functions
 
-A PDF entry is created from a powder histogram (PWDR entry) using the Setup PDFs entry in the Calculate menu. The main PDF data tree item displays the same window as the PDF Controls, below. A PDF entry can also be imported as G(R) from a file. When this item is selected, the S(Q) function or G(R) function (if imported) is plotted, see below.
+A PDF entry is created from a powder histogram (PWDR entry) using the [Setup PDFs entry in the Calculate menu](./mainmenu.md#Calculate_menu). Alternately, a PDF entry can also be imported as G(r) from a file. When this item is selected, the S(Q) function or G(r) function (if imported) is plotted, see below.
+The main PDF data tree item displays the same window as the PDF Controls, below. 
 
+<a name="PDF_Controls"></a>
 ## PDF Controls
 
-This window provides parameters for computing the pair distribution function [PDF, G(r)] from the I(Q) function. This can only be done when a chemical formula and appropriate control values are provided. If so, clicking on this menu item causes the I(Q), S(Q), F(Q) and G(R) functions to be plotted, as described below.
+This window provides parameters for computing the pair distribution function [PDF, G(r)] from the I(Q) function. This can only be done when a chemical formula and appropriate control values are provided. If so, clicking on this menu item causes the I(Q), S(Q), F(Q) and G(r) functions to be plotted, as described below.
 
-The **Optimize PDF** button can be used to refine the values of the "Flat Bkg", "Background ratio" and "Ruland width" parameters to best agree with the -4*pi*r line that is plotted for r < Rmin. Rmin should be set to a distance below the shortest expected interatomic distance for the material. 
+The **Optimize PDF** button can be used to refine the values of the "Flat Bkg", "Background ratio" and "Ruland width" parameters to best agree with the \(-4*\pi*r\) line that is plotted for r < Rmin. Rmin should be set to a distance below the shortest expected interatomic distance for the material. 
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
-The PDF parameters can be changed, triggering recomputation of the I(Q), S(Q), F(Q) and G(R) functions.
+The PDF parameters can be changed, triggering recomputation of the I(Q), S(Q), F(Q) and G(r) functions.
 
 Available menu commands are:
 
@@ -24,7 +28,7 @@ Available menu commands are:
 
 <H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
-When a chemical formula and appropriate control values are provided, clicking on this menu item causes the I(Q), S(Q), F(Q) and G(R) functions to be plotted, as described separately, below. 
+When a chemical formula and appropriate control values are provided, clicking on this menu item causes the I(Q), S(Q), F(Q) and G(r) functions to be plotted, as described separately, below. 
 
 <H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
@@ -39,21 +43,30 @@ For each of the plots, the following keyboard shortcuts are available:
 * **r: offset right** - for a waterfall plot of multiple powder profiles, increase the offset to the right (or decrease the left offset.)
 * **d: offset down** - for a waterfall plot of multiple powder profiles, increase the offset down.
 * **u: offset up** - for a waterfall plot of multiple powder profiles, increase the offset up.
-: **o: reset offset** - for a waterfall plot of multiple powder profiles, reset to no offset. 
+* **o: reset offset** - for a waterfall plot of multiple powder profiles, reset to no offset. 
 
+<a name="PDF_I_Q"></a>
 ## I(Q) Function
 
-This shows the I(Q) function. See the PDF Controls for information on menu commands and plot options,
+This shows the I(Q) function. 
+See the [PDF Controls](#PDF_Controls) for information on menu commands and plot options.
 
+<a name="PDF_S_Q"></a>
 ## S(Q) Function
 
-This shows the S(Q) function. See the PDF Controls for information on menu commands and plot options,
+This shows the S(Q) function. 
+See the [PDF Controls](#PDF_Controls) for information on menu commands and plot options.
 
+<a name="PDF_F_Q"></a>
 ## F(Q) Function
 
-This shows the F(Q) function. See the PDF Controls for information on menu commands and plot options,
+This shows the F(Q) function. 
+See the [PDF Controls](#PDF_Controls) for information on menu commands and plot options.
 
+
+<a name="PDF_G_R"></a>
 ## G(r) Function
 
-This shows the PDF, G(r) function. See the PDF Controls for information on menu commands and plot options, 
-
+This shows the PDF, G(r) function. 
+See the [PDF Controls](#PDF_Controls) for information on menu commands and plot options.
+ 

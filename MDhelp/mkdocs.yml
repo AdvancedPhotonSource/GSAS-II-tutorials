@@ -25,18 +25,29 @@ nav:
       - RMC tab: phaseRMC.md
       - ISODISTORT tab: phaseisodistort.md
       - Dysnomia tab: phasedysnomia.md
-    - Images (IMG): image.md
-    
-    - Powder (PWDR): histgramtree.md
-    
-    - PDF: pairdistribution.md
-    - Powder peaks (PKS): powderpeak.md
+    - Images (IMG): image.md 
+    - Powder (PWDR):
+       - Overview: powder.md
+       - Main PWDR entry: powderparent.md
+       - Comments: powdercomments.md
+       - Limits: powderlimits.md
+       - Background: powderbkg.md
+       - Instrument Parameters: powderinst.md
+       - Sample Parameters: powdersample.md
+       - Peak List: powderpeaks.md
+       - Index Peak List: powderindexppeaks.md
+       - Unit Cells List: powdercells.md
+       - Reflection Lists: powderrefs.md
     - Single Crystal (HKLF): singlecrystal.md
+    - PDF: pairdistribution.md
     - Small Angle (SASD): smallanglescattering.md
     - Reflectometry (REFD): reflectometry.md
     - Sequential results: sequential.md
     - Cluster Analysis: cluster.md
-    
+
+#    - Powder peaks (PKS): powderpeak.md
+
+
   - Other info: others.md
 
   

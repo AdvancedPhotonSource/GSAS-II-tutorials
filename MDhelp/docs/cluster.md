@@ -1,17 +1,21 @@
-# Cluster Analysis
+<!--- Don't change the HTML version of this file; edit the .md version -->
+<a name="Cluster_Analysis"></a>
+# Cluster Analysis data tree entry
 
-Cluster analysis is a suite of data survey techniques where data are grouped by some measure of their similarity. Thus, it can be used as a preliminary survey of a large number of data sets in e.g. preparation of detailed examination of representative members. In the case of powder diffraction pattern (PWDR) data or pair distribution (PDF) data, their similarity is determined by considering each pattern as a hyper-dimensional vector with one dimension for each data point and then computing some measure of how parallel pairs of these vectors are. Consequently, it can be used to survey PWDR data entries that have identical scan characteristics (e.g. instrument type, step size, radiation type, wavelength) or multiple PDF G(R) entries created with the same step sizes and using the same radiation from data collected with identical instrument configurations. Cluster analysis is available in GSAS-II after it is initiated by the main menu command **Calculate/Setup Cluster Analysis**. The cluster analysis routines used here are from the scipy library and (if available) the scikit-learn library.  If scikit-learn is absent, an attempt is automatically made to install the latter via the conda system from Anaconda. The scipy library provides some cluster analysis tools while the scikit-learn package provides others. If you use results from scikit-learn, please cite the following in any publication that uses it:
+The Cluster Analysis data tree entry shows parameters to perform a cluster analysis computation and results from that analysis once it has been run. This data tree entry is created in GSAS-II after the main menu command **Calculate/Setup Cluster Analysis** is used. 
 
-"Scikit-learn: Machine Learning in Python", Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M. and Duchesnay, E., (2011). Journal of Machine Learning Research 12, 2825-2830.
+Cluster analysis is a suite of data survey techniques where data are grouped by some measure of their similarity. Thus, it can be used as a preliminary survey of a large number of data sets in e.g. preparation of detailed examination of representative members. In the case of powder diffraction pattern (PWDR) data or pair distribution (PDF) data, their similarity is determined by considering each pattern as a hyper-dimensional vector with one dimension for each data point and then computing some measure of how parallel pairs of these vectors are. Consequently, it can be used to survey PWDR data entries that have identical scan characteristics (e.g. instrument type, step size, radiation type, wavelength) or multiple PDF G(r) entries created with the same step sizes and using the same radiation from data collected with identical instrument configurations. The cluster analysis routines used here are from the scipy library and (if available) the scikit-learn library.  If scikit-learn is absent, an attempt is automatically made to install the latter via the conda system. The scipy library provides some cluster analysis tools while the scikit-learn package provides others. If you use results from scikit-learn, please cite the following in any publication that uses it:
 
-<H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
+: "Scikit-learn: Machine Learning in Python", Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M. and Duchesnay, E., (2011). Journal of Machine Learning Research 12, 2825-2830.
 
 ## Cluster Analysis with scipy
 
-Doing cluster analysis in GSAS-II requires several steps; new steps will become visible in the GUI as previous ones are completed. Redoing earlier steps may clear subsequent ones. In order of their appearance, the following GUI commands are:
+Doing cluster analysis in GSAS-II requires several steps; new steps will become visible in the GUI as previous ones are completed. Redoing earlier steps may clear subsequent ones. For an example, see the tutorial, [Cluster and Outlier Analysis](https://advancedphotonsource.github.io/GSAS-II-tutorials/ClusterAnalysis/Cluster%20and%20Outlier%20Analysis.htm).
 
-* **Select datasets** - this brings up a selection tool for PWDR (& PDF, if present) entries in the GSAS-II data tree. Your selection must be either PWDR or PDF data; otherwise, there is no check on data similarity so be careful with your selections. Multi-bank TOF data should not be mixed for cluster analysis nor should laboratory and synchrotron data. Cluster analysis on fewer than 5-10 data sets is probably not useful but should be used when you have dozens or even hundreds of data sets.
-* **Data limits** - selection of data is followed by entries for the minimum and maximum data limits; the defaults are taken from the data Limits imposed on the original PWDR data or the r-range for the PDF G(R) data. The units are degrees 2Q, TOF in μs, or Å, as appropriate. Refer to any PWDR (or PDF) plot to select these values; leading background should be skipped, and the upper limit chosen from a relatively clear point where there are still significant peaks. Values will be used to give the cluster analysis input data matrix size.
+In order of their appearance, the GUI commands are:
+
+* **Select datasets** - this brings up a selection tool for PWDR (& PDF, if present) entries in the GSAS-II data tree. Your selection must be either PWDR or PDF data; otherwise, there is no check on data similarity so be careful with your selections. Multi-bank TOF data should not be mixed for cluster analysis nor should laboratory and synchrotron data. Cluster analysis on fewer than 5-10 data sets is probably not useful, but can be applied on dozens or even hundreds of data sets.
+* **Data limits** - selection of data is followed by entries for the minimum and maximum data limits; the defaults are taken from the data Limits imposed on the original PWDR data or the r-range for the PDF G(r) data. The units are degrees \(2\theta\), TOF in μs, or Å, as appropriate. Refer to any PWDR (or PDF) plot to select these values; leading background should be skipped, and the upper limit chosen from a relatively clear point where there are still significant peaks. Values will be used to give the cluster analysis input data matrix size.
 * **Make Cluster Analysis data array** - this button forms the data matrix for cluster analysis; it is number of data sets times number of data points between the limits in size. the next item will appear in the GUI.
 * **Select cluster analysis distance method** - there are several choices as what is meant by "distance" between all pairwise selection of data vectors (u & v). They are (as taken from scipy):
 
@@ -62,7 +66,7 @@ Doing cluster analysis in GSAS-II requires several steps; new steps will become 
     * **minkowski** – Computes the Minkowski distance between the data vectors as:
 
     $$
-    d(u,v) = \sqrt[p]{ \sum_i {( u_i - v_i )^p } }
+    d(u,v) = \sqrt[p]{ \sum_i {| u_i - v_i |^p } }
     $$
 
     where the exponent, p, = 2 by default; this is identical to the Euclidian formula. Some choices for p: 1 is the same as city block, and 10 (~  ∞) is essentially the same as Chebyschev. The others (3 & 4) give distance results that are between Euclidian (p=2) and Chebyschev (p=10 ~ ∞).
@@ -70,10 +74,10 @@ Doing cluster analysis in GSAS-II requires several steps; new steps will become 
     * **seculidian** – Computes the standardized Euclidian distance between the data vectors as:
 
     $$
-    d(u,v) = \sqrt{ \sum_i {( u_i - v_i )^2 }/V[X_i] }
+    d(u,v) = \sqrt{ \sum_i {( u_i - v_i )^2 }/V[x_i] }
     $$
 
-    where the variance, V[xi], is computed automatically as the variance in the data point values for each data position (i.e. 2Q) across the entire data array.
+    where the variance, \(V[x_i]\), is computed automatically as the variance in the data point values for each data position (i.e. \(2\theta\)) across the entire data array.
 
     * **sqeuclidian** – Computes the squared Euclidian distance between the data vectors as:
 
@@ -129,11 +133,12 @@ Changing the method results in an automatic calculation of the distances; the Co
 
     Changing the linkage method results in an automatic recalculation of the hierarchical clustering; a Compute button is provided for convenience. The result of this calculation is shown as a dendrogram in the same plot tab; the 4th plot shows the percentage contribution of the leading terms in the PCA to the distance data. Usually, 2-3 terms are sufficient to describe the distribution.
 
-* **Select number of clusters** for K-means clustering (scipy algorithm). The algorithm attempts to group the data points (e. g. as in the PCA plot) into the requested number of clusters based on Euclidian distances on a "whitened" data array (i. e. not the distance matrix). To whiten the data matrix the suite of values at each position (e. g. at each 2Q) are divided by its standard deviation; this reduces the scale of the PWDR & PDF observations to just numbers of standard deviations from zero. Use the Compute to repeat the K-means clustering; the start points are randomly selected and will sometimes yield different results. Cluster populations are shown in the GUI, clusters are colored to match the data point colors in the PCA plot.
+* **Select number of clusters** for K-means clustering (scipy algorithm). The algorithm attempts to group the data points (e. g. as in the PCA plot) into the requested number of clusters based on Euclidian distances on a "whitened" data array (i. e. not the distance matrix). To whiten the data matrix the suite of values at each position (e. g. at each \(2\theta\)) are divided by its standard deviation; this reduces the scale of the PWDR & PDF observations to just numbers of standard deviations from zero. Use the Compute to repeat the K-means clustering; the start points are randomly selected and will sometimes yield different results. Cluster populations are shown in the GUI, clusters are colored to match the data point colors in the PCA plot.
 
     * **Select cluster to list members** – Shows a colored list of the data items that belong to the selected cluster.
     * **Select cluster member** (use mouse RB on item in displayed list) – Displays the PWDR (or PDF) data on the Powder Pattern plot tab for the selected item.
 
+<a name="Cluster-PlotSel"></a>
 * **Plot selection** – changes the displayed plots:
     * **All** – All four plots are shown
     * **Distances** – Only the distance matrix is shown
@@ -167,4 +172,11 @@ Further details of these methods can be found at [2.7. Novelty and Outlier Detec
 
 <H3 style="color:blue;font-size:1.1em">What can I do with the plots?</H3>
 
-For each selection of distance method, i.e. "Euclidian", a plot tab is created with 2 or 4 plots. They are: 1\) the distance matrix displayed in the same way the refinement covariance matrix is displayed (default coloring is "paired" – same parameter as the powder pattern contour plot); 2\) the 3D PCA analysis plot; 3\) the hierarchical dendrogram plot and 4\) the PCA percent contribution plot. Each can be zoomed independent of the others and the 1st three can be selected to show as a single plot in the tab (see **Plot selection** above). A LB mouse selection (& hold button down) of a 3D PCA point will show the data set name in the plot status line. If clusters are determined by e. g. K-means, the 3D PCA points will be colored by cluster membership.
+For each selection of distance method, i.e. "Euclidian", a plot tab is created with 2 or 4 plots. They are: 
+
+1. the distance matrix displayed in the same way the refinement covariance matrix is displayed (default coloring is "paired" – same parameter as the powder pattern contour plot); 
+2. the 3D PCA analysis plot; 
+3. the hierarchical dendrogram plot and 
+4. the PCA percent contribution plot. 
+
+Each can be zoomed independent of the others and the 1st three can be selected to show as a single plot in the tab (see [**Plot selection**, above](#Cluster-PlotSel)). A LB mouse selection (& hold button down) of a 3D PCA point will show the data set name in the plot status line. If clusters are determined by e. g. K-means, the 3D PCA points will be colored by cluster membership.

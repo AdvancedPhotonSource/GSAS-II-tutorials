@@ -1,3 +1,4 @@
+<!--- Don't change the HTML version of this file; edit the .md version -->
 <a name="Phase-Data"></a>
 <a name="_Data"></a>
 # **Data** phase tab
@@ -42,7 +43,7 @@ For single crystal data, the only parameters are scale, extinction and disordere
 
 <a name="Phase-Preferred_orientation"></a>
 <a name="preferred_orientation"></a>
-* **Preferred Orientation** – Preferred orientation (texture) can be treated in one of two different sections of GSAS-II, either the Preferred Orientation correction here in the Data tab, or the "[Texture](#TBD)" tab, depending on what is desired. 
+* **Preferred Orientation** – Preferred orientation (texture) can be treated in one of two different sections of GSAS-II, either the Preferred Orientation correction here in the Data tab, or the "[Texture](phasetexture.md)" tab, depending on what is desired. 
 The Preferred Orientation correction here is typically used for crystallographic studies, where intensity corrections are desired to repair for undesired texture in the sample, while the Texture tab is used for studies where the goal is to characterize preferred orientation in a sample.
 
     The preferred orientation correction, here in the Phase/Data tab, can apply one of two different types of intensity corrections. One is to apply a cylindrical (wire symmetry) spherical harmonics orientational distribution function and the other is a simpler,   single-parameter model, known as **March-Dollase**. Note either of these is applied to only a single histogram.

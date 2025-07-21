@@ -6,16 +6,16 @@ The GSAS-II GUI uses three windows, which are described below. The main window h
 <a name="Data_tree"></a>
 ## GSAS-II Data Tree
 
-The data tree shows contents of a GSAS-II project (which can be read or saved as a .gpx file) in a hierarchical view. Clicking on any item in the tree opens that information on the right side of the window in the "Data Editing" section, where information in that item can be viewed or edited. For example, the "[Sample Parameters](#TBD)" item under a 'PWDR’ entry contains information about how data were collected, such as the sample temperature. The arrow keys (up & down) move the selection to successive entries in the data tree; both the data window and the associated plot (if any) will change.
+The data tree shows contents of a GSAS-II project (which can be read or saved as a .gpx file) in a hierarchical view. Clicking on any item in the tree opens that information on the right side of the window in the "Data Editing" section, where information in that item can be viewed or edited. For example, the "[Sample Parameters](./powdersample.md)" item under a 'PWDR’ entry contains information about how data were collected, such as the sample temperature. The arrow keys (up & down) move the selection to successive entries in the data tree; both the data window and the associated plot (if any) will change.
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
-The leftmost entries in the GSAS-II menu provide access to many features of GSAS-II. Other menu items will change depending on what type of entry is selected in the data tree. The menu commands that do not change and are described in the [main menu commands](#TBD) section.
+The leftmost entries in the GSAS-II menu provide access to many features of GSAS-II. Other menu items will change depending on what type of entry is selected in the data tree. The menu commands that do not change and are described in the [main menu commands](./mainmenu.md) documentation.
 
 <a name="Data_frame"></a>
 ## GSAS-II Data Window
 
-Different information is displayed in the Data Editing Window, depending on which section of the [data tree](#Data_tree) is selected. For example, clicking on the "Notebook" entry of the data tree brings up the [Notebook editing window](#TBD), as documented elsewhere.
+Different information is displayed in the Data Editing Window, depending on which section of the [data tree](#Data_tree) is selected. For example, clicking on the "Notebook" entry of the data tree brings up the [Notebook editing window](./commontreeitems.md#Notebook), as documented elsewhere.
 
 <a name="Plots"></a>
 ## GSAS-II Graphics Window

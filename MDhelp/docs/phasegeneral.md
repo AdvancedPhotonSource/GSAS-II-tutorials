@@ -1,3 +1,4 @@
+<!--- Don't change the HTML version of this file; edit the .md version -->
 <a name="Phase-General"></a>
 <a name="General"></a>
 # **General** phase tab
@@ -12,7 +13,7 @@ This section of the phase information provides overall parameters describing the
     :    Compute Fourier maps according to the controls set at bottom of General page. 
 
     **Search map**
-    :    Search the computed Fourier map. Peaks that are above 'Peak cutoff' % of the maximum will be found in this procedure; they will be printed on the console and will be shown in the ["Map peaks'](#TBD) page. This page will immediately be shown, and the peaks will be shown on the structure drawing for this phase as white 3-D crosses. 
+    :    Search the computed Fourier map. Peaks that are above 'Peak cutoff' % of the maximum will be found in this procedure; they will be printed on the console and will be shown in the ["Map peaks'](./phasemappeaks.md) tab. This page will immediately be shown, and the peaks will be shown on the structure drawing for this phase as white 3-D crosses. 
 
     **Charge flipping**
     :    Performs a charge flipping *ab initio* structure solution using the method of Oszlanyi & Suto (Acta Cryst. **A60**, 134-141, 2004). You will need to select a source for the reflection set and perhaps select an element for normalization by its form factor, a resolution limit (usually 0.5Å) and a charge flip threshold (usually 0.1); these are found near the bottom of the General window. There are also Test HKLs to show the progress in phasing with charge flipping cycles. They show the generally chaotic phase behavior before a solution is found; after that the phases are essentially fixed. No use is made of this information; it is just for your edification. A progress bar showing the charge flip residual is shown while the charge flip is in operation. When the residual is no longer decreasing (be patient – it doesn't necessarily fall continuously), press the Cancel button to stop the charge flipping, otherwise it will stop at 10,000 cycles. The resulting map will be positioned to properly place symmetry operators (N.B.: depends on the quality of the resulting phases; the map could be still offset by a few steps), searched for peaks and the display shifts to Map peaks to show them. 
@@ -42,8 +43,8 @@ This section of the phase information provides overall parameters describing the
     :    Compares idealized polyhedra (tetrahedron & octahedron) to those obtained from a Reverse Monte Carlo run in RMCProfile. 
 
     **Select magnetic/subgroup phase**
-    :    Selection of the results from a magnetic subgroup analysis done in the [PWDR/Unit cells list](#TBD) data tree item. This will generate a new magnetic phase. Can also be used to select from possible subgroups of a nonmagnetic super group for possible symmetry reduction. See the 
-[PWDR/Unit cells list description](#TBD) for further information. 
+    :    Selection of the results from a magnetic subgroup analysis done in the [PWDR/Unit cells list](./powderindexppeaks.md) data tree item. This will generate a new magnetic phase. Can also be used to select from possible subgroups of a nonmagnetic super group for possible symmetry reduction. See the 
+[PWDR/Unit cells list description](./powderindexppeaks.md) for further information. 
 
     **Protein quality**
     :    Evaluate protein quality by Python versions of `errat` & `errat2` codes by Colovos, C. & Yeates, T.O. Protein Science **2**, 1511-1519 (1991). 
@@ -69,7 +70,7 @@ If there are entries in the Atoms tab, then the Elements table is shown below on
 
 Next are the Pawley controls.
 
-* **Do Pawley refinement?** – This must be chosen to perform a Pawley refinement as opposed to a Rietveld refinement for this phase. NB: you should clear the Histogram scale factor refinement flag (found in [Sample parameters](#TBD) for the powder data -- PWDR histogram) as it cannot be refined simultaneously with the Pawley reflection intensities.
+* **Do Pawley refinement?** – This must be chosen to perform a Pawley refinement as opposed to a Rietveld refinement for this phase. NB: you should clear the Histogram scale factor refinement flag (found in [Sample parameters](./powdersample.md)) for the powder data -- PWDR histogram) as it cannot be refined simultaneously with the Pawley reflection intensities.
 * **Pawley dmin** – This is the minimum d-spacing to be used in a Pawley refinement. NB: be sure to set this to match the minimum d-spacing indicated by the powder pattern limits (see Limits for the powder data set).
 * **Pawley dmax** – This is the maximum d-spacing for reflections in a Pawley refinement. It is usually defined by the beginning of the data collection scan and will thus remove reflections that have too large d-spacing to be seen in the scan.
 * **Pawley neg. wt.** – This is the weight for a penalty function applied during a Pawley refinement on resulting negative intensities. Use with caution; initially try very small values (e.g. .01). A value of zero means no penalty is applied.

@@ -1,9 +1,12 @@
-# Reflectometry Data – type REFD
+<!--- Don't change the HTML version of this file; edit the .md version -->
+<a name="REFD"></a>
+#  Type **REFD** data tree entries: Reflectometry Data
 
 ## Comments
 
 This window shows whatever comment lines found above the QIE table when the reflectometry data file was read by GSAS-II. If you are lucky, there will be useful information here (e.g. sample name, date collected, wavelength used, etc.). If not, this window will be blank. The text is read-only.
 
+<a name="REFD_Limits"></a>
 ## Limits
 
 This window shows the limits in position to be used in any fitting for this reflectivity pattern. The 'original' values are obtained from the minimum & maximum values in the reflectivity pattern. The 'new' values determine the range of data that will be used in fitting. Units are Q(Å-1) for CW data.
@@ -16,6 +19,7 @@ Menu '**Edit Limits**'
 
 * **Copy** - this copies the limits shown to other selected powder patterns. If used, a dialog box (Copy Parameters) will appear showing the list of available powder patterns, you can copy the limits parameters to any or all of them; select 'All' to copy them to all patterns. Then select 'OK' to do the copy; 'Cancel' to cancel the operation.
 
+<a name="REFD_Instrument_Parameters"></a>
 ## Instrument Parameters
 
 This window shows the relevant instrument parameter for reflectivity data; namely a wavelength needed to properly calculate resonant scattering factors for x-rays or neutrons for the substances used in the reflectometry sample. It is not refinable.
@@ -28,6 +32,7 @@ This window shows the relevant instrument parameter for reflectivity data; namel
 
 2. You can change the wavelength.
 
+<a name="REFD_Substances"></a>
 ## Substances
 
 This window shows the substances that make up the reflectometry sample. By default, "vacuum" and "unit scatterer" are included; others can be added as needed. The reflectometry model is then constructed from layers of these substances.
@@ -46,9 +51,10 @@ This window shows the substances that make up the reflectometry sample. By defau
 
 2. You can edit the composition by changing the number of each kind of element and change the sum of atomic volumes or the material density.
 
+<a name="REFD_Sample_Parameters"></a>
 ## Sample Parameters
 
-This window shows the various sample-dependent parameters for the selected reflectometry pattern. All values shown in this window can be edited. Note that the last three parameters (named FreePrmX, X=1,2,3) have labels that can be changed. If changed in one histogram, the same label is used for all histograms. When a label is changed, the Comments tree item for each REFD histogram is searched for a matching "Label=value" pair (differences in letter case between the two label strings is ignored). When found, the value is converted to a float and saved as the appropriate Sample Parameter.
+This window shows the various sample-dependent parameters for the selected reflectometry pattern. All values shown in this window can be edited. Note that the last three parameters (named `FreePrm`X, X=1,2,3) have labels that can be changed. If changed in one histogram, the same label is used for all histograms. When a label is changed, the Comments tree item for each REFD histogram is searched for a matching "Label=value" pair (differences in letter case between the two label strings is ignored). When found, the value is converted to a float and saved as the appropriate Sample Parameter.
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
@@ -69,10 +75,11 @@ LaB6_dc250.tif      100          1      test       .2
 LaB6_dc300.tif      150          1      test       .25
 ```
 
-Note that the first line(s) in the file can be a header, but each header line must start marked with a hash (#). A header is not required. "Columns" in the table are separated by one or more delimiters (which may be a comma, tab or space). Note that columns do not need to be aligned, as long as each entry is spaced by at least one delimiter. The first column in the table is used to look up REFD entries where the initial space-delimited string after the REFD tag ("myfile" in " REFD myfile AZM=180...") must match the table. Subsequent columns can then be mapped to sample parameters or can be ignored, using a dialog window.
+: Note that the first line(s) in the file can be a header, but each header line must start marked with a hash (#). A header is not required. "Columns" in the table are separated by one or more delimiters (which may be a comma, tab or space). Note that columns do not need to be aligned, as long as each entry is spaced by at least one delimiter. The first column in the table is used to look up REFD entries where the initial space-delimited string after the REFD tag ("myfile" in " REFD myfile AZM=180...") must match the table. Subsequent columns can then be mapped to sample parameters or can be ignored, using a dialog window.
 
 * **Rescale all** - Allows a series of selected REFD histograms to be put on a common scale by integrating them over a specific Q region and then scaling them so that the integration range will match the first pattern. (May not be valid for REFD)
 
+<a name="REFD_Models"></a>
 ## Models
 
 A reflectometry model is composed of a sequence of layers beginning with the medium ("superphase") as the top layer in which the incident and scattered radiation paths are located (usually "vacuum" = air or other gasses) and ending with the bottom layer ("substrate") upon which the sample layers have been deposited. The substrate is considered to be "infinite" in thickness. The sample layers in between are each defined as a particular substance with a thickness and upper surface "roughness". The surface roughness describes the possibility of an interlayer mixing with the previous layer. Their scattering density can also be scaled and could include polarized magnetic neutron scatterers. The layer sequence is defined so that complex or multiple layers can be defined.

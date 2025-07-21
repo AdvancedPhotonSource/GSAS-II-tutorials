@@ -179,7 +179,7 @@ There are three different types of rigid bodies that can be used in GSAS-II, as 
 * **residue rigid bodies**, where atoms are defined according to Cartesian coordinates and torsion angles. These are much more commonly used than vector rigid bodies. 
 * **spinning rigid bodies**, where the dynamics or disorder causes the atoms to not have specific locations in the unit cell. 
 
-Note that there are two steps in defining a rigid body. In this data item the rigid body is defined. The rigid body is then later inserted into one or more phases using the ["RB Models"](#TBD) tab on a Phase data item. A rigid body can be inserted into more than one phase. 
+Note that there are two steps in defining a rigid body. In this data item the rigid body is defined. The rigid body is then later inserted into one or more phases using the ["RB Models"](./phaseRB.md) tab on a Phase data item. A rigid body can be inserted into more than one phase. 
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 

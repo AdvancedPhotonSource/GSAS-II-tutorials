@@ -1,3 +1,4 @@
+<!--- Don't change the HTML version of this file; edit the .md version -->
 <a name="IMG"></a>
 #  Type **IMG** data tree entries: 2-D Images
 

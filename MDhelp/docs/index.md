@@ -45,22 +45,24 @@ An index on the topics covered in these help pages is given below.
         * [ISODISTORT tab](./phaseisodistort.md)
         * [Dysnomia tab](./phasedysnomia.md)
 
-    3. [Image (IMG)](./image.md) Data Tree headings
-    4. [Powder histogram (PWDR)](./histgramtree.md) Data Tree headings
-        * Comments
-        * Limits
-        * Background
-        * Instrument Parameters
-        * Sample Parameters
-        * Peak List
-        * Index Peak List
-        * Unit Cells List
-        * Reflection Lists
-    5. [Single Crystal histogram (HKLF)](./singlecrystal.md) Data Tree headings
+    3. [Image (IMG)](./image.md) Data Tree entries
+    4. Powder histogram (PWDR) [overview](./powder.md) and [parent
+       PWDR data tree entry](./powderparent.md)
+        * [Comments](./powdercomments.md)
+        * [Limits](./powderlimits.md)
+        * [Background](./powderbkg.md)
+        * [Instrument Parameters](./powderinst.md)
+        * [Sample Parameters](./powdersample.md)
+        * [Peak List](./powderpeaks.md)
+        * [Index Peak List](./powderindexppeaks.md)
+        * [Unit Cells List](./powdercells.md)
+        * [Reflection Lists](./powderrefs.md)
+    5. [Single Crystal histogram (HKLF)](./singlecrystal.md) Data Tree entries
         * Instrument Parameters
         * Reflection List
-    6. [Pair Distribution Functions (PDF)](./pairdistribution.md) Data Tree headings
-    7. [Powder Peaks (PKS)](./powderpeak.md) Data Tree headings
-    8. [Small Angle Scattering (SASD)](./smallanglescattering.md) Data Tree headings
-    9. [Reflectometry (REFD)](./reflectometry.md) Data Tree headings
-5. [Others](./others.md): Macintosh notes, Configuration options and Programmers documentation
+    6. [Pair Distribution Functions (PDF)](./pairdistribution.md) Data Tree entries
+    8. [Small Angle Scattering (SASD)](./smallanglescattering.md) Data Tree entries
+    9. [Reflectometry (REFD)](./reflectometry.md) Data Tree entries
+    0. [Sequential results](./sequential.md)
+    0. [Cluster Analysis](./cluster.md)
+ 5. [Others](./others.md): Macintosh notes, Configuration options and Programmers' documentation

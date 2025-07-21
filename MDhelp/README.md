@@ -1,57 +1,22 @@
 This directory contains a draft version of the GSAS-II help pages
-that are being converted from their MS-Word/HTML format into 
-MarkDown where web pages are generated with mkdocs
-
-Status of work 7/16/2025:
-
-These files have been revised, but need another pass to update #TBD
-links once the anchors have been defined. There might be a few
-additional links that need to be added:
-
-      44 docs/index.md 
-      14 docs/preface.md 
-      60 docs/applicationwindow.md
-     191 docs/mainmenu.md 
-      95 docs/others.md 
-      10 docs/datatree.md
-     207 docs/commontreeitems.md
-      32 docs/phaseRB.md
-      51 docs/phaseRMC.md
-      81 docs/phaseatoms.md
-      70 docs/phasedata.md
-      64 docs/phasedrawatoms.md
-      14 docs/phasedrawopts.md
-      11 docs/phasedysnomia.md
-      96 docs/phasegeneral.md
-      27 docs/phaseisodistort.md
-      25 docs/phaselayers.md
-      25 docs/phasemappeaks.md
-      13 docs/phasemcsa.md
-      25 docs/phaseoverview.md
-      20 docs/phasepawley.md
-     128 docs/phasetexture.md
-      12 docs/phasewave.md
-     154 docs/image.md 
-
-In progress:
-
-     445 docs/histgramtree.md 
+that have been converted from their MS-Word/HTML format into 
+MarkDown. Web pages are generated with mkdocs
 
 
-These files have had only minor editing. histgramtree.md should
-probably be broken up:
+Status of work 7/20/2025:
 
-     170 docs/cluster.md
-      59 docs/pairdistribution.md
-      74 docs/powderpeak.md
-      89 docs/reflectometry.md
-      62 docs/sequential.md
-      39 docs/singlecrystal.md
-      94 docs/smallanglescattering.md
+The 41 .md files have all been looked at, though some more carefully
+than others. 
 
-N.B. must use `mkdocs-static-i18n` not `mkdocs-i18n` as in `pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n`
+The next step is to tabulate Anchors used in the .md files
+(duplicates, missing names used in original .html)
 
-Needs more work: menu commands not described or well described in
+Need python code that selects and opens new .html file based on anchor. 
+
+
+Needs more work: 
+
+menu commands not described or well described in
 atoms, draw atoms & draw options. Should also describe the settings on
 draw options. Also, how does one expand a drawing to multiple cells? I
 always forget that trick!
@@ -62,3 +27,10 @@ to differentiate symbols (\Phi vs \phi) orientation angles?
 image.md: Make gain map appears to be moved to Image
 Controls/Calibrate/Multiimage gain map. Remove former? Units are not
 correct I think, for GSAS-II to Fit2D and pyFAI conversions
+
+It would be nice to generate a PDF of all pages. Could not get
+https://mkdocs-to-pdf.readthedocs.io to work on MacOS, but perhaps on
+Linux? There are other choices:
+https://comwes.github.io/mkpdfs-mkdocs-plugin/index.html 
+https://pypi.org/project/mkdocs-with-pdf/
+Everything seems to depend on https://weasyprint.org/
