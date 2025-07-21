@@ -42,8 +42,9 @@ jobs:
    
       - name: test newly-installed chrome
         run: |
-          which chrome
-          chrome --version
+          ls /usr/bin
+          which google-chrome-stable
+          google-chrome-stable --version
           
       - name: quit
         run: |
