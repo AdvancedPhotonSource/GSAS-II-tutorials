@@ -66,11 +66,12 @@ plugins:
       copyright: From https://advancedphotonsource.github.io/GSAS-II-tutorials/help/
       #back_cover: true
       output_path: GSASII-help.pdf
-      exclude_pages:
+#      exclude_pages:
 #        - Contents
-        - index.md
-      render_js: true
-      headless_chrome_path: /usr/bin/chromium-browser
+#        - index.md
+#      render_js: true
+#      headless_chrome_path: /usr/bin/chromium-browser
+      relaxedjs_path: /usr/local/bin/relaxed
 
   - i18n:
       docs_structure: suffix
