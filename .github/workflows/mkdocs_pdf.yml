@@ -16,21 +16,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Setup chromium
-        uses: browser-actions/setup-chrome@v1
-        id: setup-chrome
-        with:
-          install-dependencies: true
-          install-chromedriver: true
-      - run: |
-          echo ${{ steps.setup-chrome.outputs.chrome-path }} --version
-          ${{ steps.setup-chrome.outputs.chrome-path }} --version
-      - name: test installed chrome
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install RelaxedJS globally
+        run: npm install -g relaxedjs
+      #- name: Install RelaxedJS locally
+      #  run: npm install relaxedjs
+
+      - name: find relaxedjs
         run: |
-          ${{ steps.setup-chrome.outputs.chrome-path }} --no-sandbox --headless --disable-gpu --dump-dom https://google.com
-      - name: test system chromium
-        run: |
-          /usr/bin/chromium-browser --no-sandbox --headless --disable-gpu --dump-dom https://google.com
+          which relaxedjs
+          exit
+
+      # - name: Setup chromium
+      #   uses: browser-actions/setup-chrome@v1
+      #   id: setup-chrome
+      #   with:
+      #     install-dependencies: true
+      #     install-chromedriver: true
+      # - run: |
+      #     echo ${{ steps.setup-chrome.outputs.chrome-path }} --version
+      #     ${{ steps.setup-chrome.outputs.chrome-path }} --version
+      # - name: test installed chrome
+      #   run: |
+      #     ${{ steps.setup-chrome.outputs.chrome-path }} --no-sandbox --headless --disable-gpu --dump-dom https://google.com
+      # - name: test system chromium
+      #   run: |
+      #     /usr/bin/chromium-browser --no-sandbox --headless --disable-gpu --dump-dom https://google.com
       
       - name: Python setup
         uses: actions/setup-python@v3
@@ -53,9 +67,9 @@ jobs:
       - name: convert MDhelp
         run: |
           cd MDhelp
-          mv mkdocs.yml_pdf mkdocs.yml
-          #mkdocs build
-          ENABLE_PDF_EXPORT=1 mkdocs build
+          mkdocs build
+          #mv mkdocs.yml_pdf mkdocs.yml
+          # ENABLE_PDF_EXPORT=1 mkdocs build
           # mv site/GSASII-help.pdf ...
           #cp -vr site ../help_test
           
