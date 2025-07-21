@@ -17,17 +17,41 @@ jobs:
     steps:
 
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v4
 
-      - name: Install RelaxedJS globally
-        run: npm install -g relaxedjs
-      #- name: Install RelaxedJS locally
-      #  run: npm install relaxedjs
+      # - name: Install RelaxedJS globally
+      #   run: npm install -g relaxedjs
+      # #- name: Install RelaxedJS locally
+      # #  run: npm install relaxedjs
 
-      - name: find relaxedjs
+      # - name: find relaxedjs
+      #   run: |
+      #     which relaxed
+
+      - name: test installed chrome
         run: |
-          which relaxed
+          which chrome-browser
+          chrome-browser --version
+          which chrome
+          chrome --version
+
+      - name: install debian chrome
+        run: |
+          set -ex
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install ./google-chrome-stable_current_amd64.deb
+   
+      - name: test newly-installed chrome
+        run: |
+          which chrome-browser
+          chrome-browser --version
+          which chrome
+          chrome --version
+          
+      - name: quit
+        run: |
+          exit
 
       # - name: Setup chromium
       #   uses: browser-actions/setup-chrome@v1
