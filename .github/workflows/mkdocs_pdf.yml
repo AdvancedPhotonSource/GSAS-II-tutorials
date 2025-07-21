@@ -37,7 +37,7 @@ jobs:
       - name: convert MDhelp
         run: |
           cd MDhelp
-          mv mkdocs_pdf.yml mkdocs.yml
+          mv mkdocs.yml_pdf mkdocs.yml
           mkdocs build
           #cp -vr site ../help_test
         
