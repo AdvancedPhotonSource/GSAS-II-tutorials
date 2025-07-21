@@ -18,10 +18,10 @@ jobs:
 
       - name: Setup chromium
         uses: browser-actions/setup-chrome@v1
-          id: setup-chrome
-          with:
-            install-dependencies: true
-            install-chromedriver: true
+        id: setup-chrome
+        with:
+          install-dependencies: true
+          install-chromedriver: true
       - run: |
         echo ${{ steps.setup-chrome.outputs.chrome-path }} --version
         ${{ steps.setup-chrome.outputs.chrome-path }} --version
