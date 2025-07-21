@@ -21,14 +21,14 @@ jobs:
 #      - name: Sphinx setup
 #        run: |
 #          pip install sphinx sphinx_readable_theme
-      - name: pandoc setup
-        uses: pandoc/actions/setup@v1
+#      - name: pandoc setup
+#        uses: pandoc/actions/setup@v1
       - name: mkdocs setup
         run: |
           pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n
           pip install weasyprint
           pip install mkdocs-with-pdf
-          pip install mkdocs-to-pdf
+          #pip install mkdocs-to-pdf
           weasyprint --info
           
       - name: Checkout
@@ -37,8 +37,9 @@ jobs:
       - name: convert MDhelp
         run: |
           cd MDhelp
+          mv mkdocs_pdf.yml mkdocs.yml
           mkdocs build
-          cp -vr site ../help_test
+          #cp -vr site ../help_test
         
       # - name: Get tutorials index from source code
       #   run: |
