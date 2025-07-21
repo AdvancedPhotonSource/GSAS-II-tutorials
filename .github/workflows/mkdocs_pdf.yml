@@ -22,12 +22,12 @@ jobs:
       - name: test chrome
         run: |
           ${{ steps.setup-chrome.outputs.chrome-path }} --version
-#          chrome --version
+          #chrome --version
           chromium --version
-#          which chrome
+          #which chrome
           which chromium
           which chromium-browser
-#          chromium-browser --headless --no-sandbox http://example.org/
+          #chromium-browser --headless --no-sandbox http://example.org/
       - name: Python setup
         uses: actions/setup-python@v3
 #      - name: Sphinx setup
