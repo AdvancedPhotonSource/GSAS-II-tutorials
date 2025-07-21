@@ -1,7 +1,7 @@
 site_name: GSAS-II Help
 
 nav:
-  - Contents: index.md
+#  - Contents: index.md
   - Getting started: preface.md
   - GUI components: applicationwindow.md
   - Main menu: mainmenu.md
@@ -65,11 +65,11 @@ plugins:
       copyright: From https://advancedphotonsource.github.io/GSAS-II-tutorials/help/
       #back_cover: true
       output_path: GSASII-help.pdf
-      exclude_pages:
-        - Contents
+#      exclude_pages:
+#        - Contents
 #        - index.md
-      #render_js: true
-      #headless_chrome_path: /opt/hostedtoolcache/setup-chrome/chrome/stable/x64/chrome
+      render_js: true
+      headless_chrome_path: /usr/bin/chromium-browser
 
   - i18n:
       docs_structure: suffix
