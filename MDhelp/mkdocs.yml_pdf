@@ -57,9 +57,9 @@ theme:
   logo:    images/gsas2.png
 
 plugins:
-    - with-pdf:
-      author: Brian H. Toby and Robert B. Von Dreele
-      enabled_if_env: ENABLE_PDF_EXPORT
+    - with-pdf
+#      author: Brian H. Toby and Robert B. Von Dreele
+#      enabled_if_env: ENABLE_PDF_EXPORT
     - i18n:
       docs_structure: suffix
       languages:
