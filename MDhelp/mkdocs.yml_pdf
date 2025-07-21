@@ -63,11 +63,11 @@ plugins:
       cover_title: GSAS-II Help information
       cover_subtitle: a compilation of HTML pages
       copyright: this material is available at https://advancedphotonsource.github.io/GSAS-II-tutorials/help/
-      #back_cover: true
+      back_cover: true
       output_path: GSASII-help.pdf
       exclude_pages:
           - 'index.md'
-      render_js: true
+      #render_js: true
 
   - i18n:
       docs_structure: suffix
