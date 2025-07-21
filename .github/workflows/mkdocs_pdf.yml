@@ -40,12 +40,13 @@ jobs:
           mv mkdocs.yml_pdf mkdocs.yml
           mkdocs build
           ENABLE_PDF_EXPORT=1 mkdocs build
+          # mv site/GSASII-help.pdf ...
           #cp -vr site ../help_test
           
       - name: Upload help artifact  # creates zip file with website contents
         uses: actions/upload-pages-artifact@v3
         with:
-            path: MDhelp
+            path: MDhelp/site
             name: MDhelp
             retention-days: 1
         
