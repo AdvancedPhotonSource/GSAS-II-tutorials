@@ -2,7 +2,10 @@
 <a name="PWDR_Peak_List"></a>
 #  PWDR **Peak List** subdata tree item (Powder Diffraction)
 
-The Peak List data tree entry is used to fit diffraction peaks at refined or user-supplied positions (not generated from a unit cell). Peak positions and intensities may be selected for individual refinement. Gaussian (\(\sigma^2\)) and Lorentzian (\(\Gamma\)) peak widths may be varied individually or the values may be generated from the the appropriate profile terms in the Instrument Parameters tree item (U, V & W for \(\sigma^2\); X & Y for \(\Gamma\)): Note that the Gaussian full-width at half-maximum is given by $$FWHM = \sqrt{8 * \ln 2 * \sigma^ 2}$$
+The Peak List data tree entry is used to fit diffraction peaks at refined or user-supplied positions (not generated from a unit cell). Peak positions and intensities may be selected for individual refinement. Gaussian (\(\sigma^2\)) and Lorentzian (\(\Gamma\)) peak widths may be varied individually or the values may be generated from the the appropriate profile terms in the Instrument Parameters tree item (U, V & W for \(\sigma^2\); X & Y for \(\Gamma\)): Note that the Gaussian full-width at half-maximum is given by 
+
+$$FWHM = \sqrt{8 * \ln 2 * \sigma^ 2}$$
+
 while \(\Gamma\) is the Lorentzian FWHM. The \(\sigma^2\) values (peak variances) are in units of centidegrees\(^2\) (centidegrees are degrees*100) for CW data or microseconds\(^2\) for TOF data; \(\Gamma\) has units of centidegrees or microseconds. 
 
 If individual \(\sigma^2\) or \(\Gamma\) values are refined, then those value(s) in the table are used as the refinement starting point. If values are not refined, then normally the unvaried widths are determined from the appropriate Instrument Parameters profile terms and are placed in the table prior to fitting. This behavior can be overridden by changing the "**Gen unvaried widths**" mode entry in the menu ([see below](#GenUnvariedWidths)) so that fixed values can be specified.
