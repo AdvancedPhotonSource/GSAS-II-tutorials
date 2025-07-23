@@ -71,6 +71,7 @@ plugins:
 #        - index.md
       render_js: true
       headless_chrome_path: /usr/bin/google-chrome-stable
+      headless_chrome_path: /Users/toby/bin/chromedriver
 #      relaxedjs_path: /usr/local/bin/relaxed
 
   - i18n:
