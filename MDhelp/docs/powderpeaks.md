@@ -2,7 +2,7 @@
 <a name="PWDR_Peak_List"></a>
 #  PWDR **Peak List** subdata tree item (Powder Diffraction)
 
-The Peak List data tree entry is used to fit diffraction peaks at refined or user-supplied positions (not generated from a unit cell). Peak positions and intensities may be selected for individual refinement. Gaussian (\(\sigma^2\)) and Lorentzian (\(\Gamma\)) peak widths may be varied individually or the values may be generated from the the appropriate profile terms in the Instrument Parameters tree item (U, V & W for \(\sigma^2\); X & Y for \(\Gamma\)): Note that the Gaussian full-width at half-maximum is given by 
+The Peak List data tree entry is used to fit diffraction peaks at refined or user-supplied positions (not generated from a unit cell). Peak positions and intensities may be selected for individual refinement. Gaussian ($\sigma^2$) and Lorentzian (\(\Gamma\)) peak widths may be varied individually or the values may be generated from the the appropriate profile terms in the Instrument Parameters tree item (U, V & W for \(\sigma^2\); X & Y for \(\Gamma\)): Note that the Gaussian full-width at half-maximum is given by 
 
 $$FWHM = \sqrt{8 * \ln 2 * \sigma^ 2}$$
 

@@ -91,8 +91,8 @@ markdown_extensions:
 #  - mdx_math
   - pymdownx.arithmatex:
       generic: true
-      tex_inline_wrap: ["\\(", "\\)"]
-      tex_block_wrap: ["$$", "$$"]
+#      tex_inline_wrap: ["\\(", "\\)"]
+#      tex_block_wrap: ["$$", "$$"]
 
 extra_javascript:
   - javascripts/mathjax.js
