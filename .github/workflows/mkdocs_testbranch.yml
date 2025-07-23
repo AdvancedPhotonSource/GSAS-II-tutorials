@@ -17,18 +17,6 @@ jobs:
     steps:
 
 
-      # - name: Set up Node.js
-      #   uses: actions/setup-node@v4
-
-      # - name: Install RelaxedJS globally
-      #   run: npm install -g relaxedjs
-      # #- name: Install RelaxedJS locally
-      # #  run: npm install relaxedjs
-
-      # - name: find relaxedjs
-      #   run: |
-      #     which relaxed
-
       # - name: test installed chrome
       #   run: |
       #     which chrome
@@ -45,22 +33,6 @@ jobs:
 #          which google-chrome-stable
 #          google-chrome-stable --version
 #          /usr/bin/google-chrome-stable --headless --disable-gpu --dump-dom https://google.com
-          
-      # - name: Setup chromium
-      #   uses: browser-actions/setup-chrome@v1
-      #   id: setup-chrome
-      #   with:
-      #     install-dependencies: true
-      #     install-chromedriver: true
-      # - run: |
-      #     echo ${{ steps.setup-chrome.outputs.chrome-path }} --version
-      #     ${{ steps.setup-chrome.outputs.chrome-path }} --version
-      # - name: test installed chrome
-      #   run: |
-      #     ${{ steps.setup-chrome.outputs.chrome-path }} --no-sandbox --headless --disable-gpu --dump-dom https://google.com
-      # - name: test system chromium
-      #   run: |
-      #     /usr/bin/chromium-browser --no-sandbox --headless --disable-gpu --dump-dom https://google.com
       
       - name: Python setup
         uses: actions/setup-python@v3
@@ -72,17 +44,20 @@ jobs:
       - name: mkdocs setup
         run: |
           pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n
-          pip install mkdocs-to-pdf pymdown-extensions
+          pip install pymdown-extensions
+          #pip install mkdocs-to-pdf
+          pip install git+https://github.com/domWalters/mkdocs-to-pdf.git@impl-playwright-pdf-engine
 
+https://github.com/domWalters/mkdocs-to-pdf.git
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: convert MDhelp
         run: |
           cd MDhelp
+          #mkdocs build
           mv mkdocs.yml_pdf mkdocs.yml
-          mkdocs build
-          #ENABLE_PDF_EXPORT=1 mkdocs build
+          ENABLE_PDF_EXPORT=1 mkdocs build
           # mv site/GSASII-help.pdf ...
           #cp -vr site ../help_test
           

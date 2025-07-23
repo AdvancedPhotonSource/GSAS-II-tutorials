@@ -71,9 +71,7 @@ plugins:
 #        - index.md
       render_js: true
       headless_chrome_path: /usr/bin/google-chrome-stable
-#      headless_chrome_path: /Users/toby/bin/chromedriver
-#      relaxedjs_path: /usr/local/bin/relaxed
-
+      pdf_engine: chromium
   - i18n:
       docs_structure: suffix
       languages:
@@ -91,8 +89,6 @@ markdown_extensions:
 #  - mdx_math
   - pymdownx.arithmatex:
       generic: true
-#      tex_inline_wrap: ["\\(", "\\)"]
-#      tex_block_wrap: ["$$", "$$"]
 
 extra_javascript:
   - javascripts/mathjax.js
