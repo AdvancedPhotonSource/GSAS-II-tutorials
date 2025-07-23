@@ -3,8 +3,8 @@
 
 name: test MD help to .pdf
 
-#on: [workflow_dispatch] 
-on: [push, workflow_dispatch]
+on: [workflow_dispatch] 
+#on: [push, workflow_dispatch]
 
 permissions:
   contents: write
@@ -47,8 +47,6 @@ jobs:
           pip install pymdown-extensions
           #pip install mkdocs-to-pdf
           pip install git+https://github.com/domWalters/mkdocs-to-pdf.git@impl-playwright-pdf-engine
-
-https://github.com/domWalters/mkdocs-to-pdf.git
       - name: Checkout
         uses: actions/checkout@v4
 
