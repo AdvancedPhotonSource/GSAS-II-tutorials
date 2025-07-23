@@ -34,7 +34,7 @@ jobs:
         uses: pandoc/actions/setup@v1
       - name: mkdocs setup
         run: |
-          pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n pymdown-extensions
+          pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n
 
       - name: Checkout
         uses: actions/checkout@v4

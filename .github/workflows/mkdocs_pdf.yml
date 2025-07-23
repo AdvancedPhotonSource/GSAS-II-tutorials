@@ -72,7 +72,7 @@ jobs:
       - name: mkdocs setup
         run: |
           pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n
-          pip install mkdocs-to-pdf
+          pip install mkdocs-to-pdf pymdown-extensions
 
       - name: Checkout
         uses: actions/checkout@v4
