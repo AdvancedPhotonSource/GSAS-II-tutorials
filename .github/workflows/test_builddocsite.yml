@@ -7,7 +7,7 @@
 #     created by running scripts/makeGitTutorial
 
 # this is a development version that creates draft help pages from the MDhelp directory
-For now
+# For now
 #  * HTML help files are copied over from the GSAS-II sources
 
 name: build GSAS-II web site w/test MD Help
