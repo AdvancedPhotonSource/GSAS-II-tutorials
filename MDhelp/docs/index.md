@@ -10,18 +10,20 @@ right corner of the data window. Access to specific help information
 is also offered on the graphics
 window and in other locations of the program. 
 
+<a name="Index"></a> 
 An index on the topics covered in these help pages is given below. 
 
-<a name="Index"></a>
 1. [Tutorials](./preface.md)  
-2. [GSAS-II GUI Organization](./applicationwindow.md)
+2. [GSAS-II GUI Organization](./applicationwindow.md) 
     1. [Data Tree](./applicationwindow.md#Data_tree)
-    1. [Data Window](./applicationwindow.md#Data_frame)
-    1. [Graphics Window](./applicationwindow.md#Plots)
-    1. [Console Window](./applicationwindow.md#Console) 
+    2. [Data Window](./applicationwindow.md#Data_frame)
+    3. [Graphics Window](./applicationwindow.md#Plots)
+    4. [Console Window](./applicationwindow.md#Console)
 3. [Main menu contents](./mainmenu.md)
 4. Data tree entries and their use ([overview](./datatree.md))
-    1. [Universal data tree](./commontreeitems.md) items
+    1. [Universal data tree](./commontreeitems.md) items 
+    0. [Sequential results](./sequential.md)
+    0. [Cluster Analysis](./cluster.md)
     2. [Phase Data Tree items (overview)](./phaseoverview.md) 
         * [General Phase tab](./phasegeneral.md)  
         * [Data Phase tab](./phasedata.md) 
@@ -54,7 +56,6 @@ An index on the topics covered in these help pages is given below.
         * Reflection List
     6. [Pair Distribution Functions (PDF)](./pairdistribution.md) Data Tree entries
     8. [Small Angle Scattering (SASD)](./smallanglescattering.md) Data Tree entries
-    9. [Reflectometry (REFD)](./reflectometry.md) Data Tree entries
-    0. [Sequential results](./sequential.md)
-    0. [Cluster Analysis](./cluster.md)
+    9. [Reflectometry (REFD)](./reflectometry.md) Data Tree entries 
+    9. [Powder Peaks (PKS)](./peaks.md) Data Tree entries 
  5. [Others](./others.md): Macintosh notes, Configuration options and Programmers' documentation

@@ -99,7 +99,6 @@ extra_javascript:
 #  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 #  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # MathJax library from CDN
 
-
 #local build settings from https://www.mkdocs.org/user-guide/deploying-your-docs/#local-files
 
 site_url: ""
