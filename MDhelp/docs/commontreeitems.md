@@ -28,7 +28,7 @@ This window provides access to the controls that determine how GSAS-II performs 
 [Configuration variables section of the Programmer's documentation.](https://gsas-ii.readthedocs.io/en/latest/GSASIIutil.html#config-example-py-configuration-options) for listing of these options.)
 
 1. **Refinement Controls**: 
-<a name="Refinement Controls"></a>
+<a name="RefinementControls"></a>
  These controls determine how refinements are performed. The first determines the computational engine used to minimize the structure.
 
     * **Refinement type** - 
@@ -136,6 +136,7 @@ In addition to menu commands, this window also offer the following actions by pr
 * **Show Generated Constraints** - After constraints have been processed, a series of relationships are developed to determine new variables from the current parameters and "inverse" equations that determine dependent parameters from the new variables and independent parameters. This shows the resulting relationships, as well as any "Hold" variables.
 * **Delete Selected** - This button will cause all the selected constraints on the current tab to be deleted.
 
+<a name=Constraints-SeqRef></a>
 ### Sequential Refinement Constraints
 
 While all the general information on constraints (above) applies to sequential refinements, the sequential refinement is performed by fitting each histogram individually and this affects how constraints are defined and processed for parameters keyed to a particular histogram number. When sequential refinement is selected (via the [Controls](#Controls) tree item), it becomes possible to define constraints of form `p:*:name` and `:*:name` (where "p" is a phase number and name is a parameter name). The "*" here is called a wildcard, and in a constraint or equivalence will cause that to be used for every histogram in turn.
@@ -171,6 +172,7 @@ This window shows the restraints to be used in a refinement for each phase (if m
     * **Delete restraints** - this deletes selected restraints from the list. A single click in the blank box in the upper left corner of the table will select/deselect all restraints.
 
 <a name="Rigidbodies"></a>
+<a name="Rigid_bodies"></a>
 ## Rigid bodies
 
 There are three different types of rigid bodies that can be used in GSAS-II, as selected by the tabs at the top of this window. 

@@ -9,6 +9,8 @@
 # this is a development version that creates draft help pages from the MDhelp directory
 # For now
 #  * HTML help files are copied over from the GSAS-II sources
+# Eventually, the help files generated here need to get into the GSASII/help
+# directory
 
 name: build GSAS-II web site w/test MD Help
 
@@ -61,6 +63,8 @@ jobs:
           cp -vr site ../help_test
           ENABLE_PDF_EXPORT=1 mkdocs build
           mv site/GSASII-help.pdf ../docs/
+          # create an anchor index
+          python findMDanchors.py
           cp -vr site ../help_test
           
       # - name: Upload help artifact  # creates zip file with website contents

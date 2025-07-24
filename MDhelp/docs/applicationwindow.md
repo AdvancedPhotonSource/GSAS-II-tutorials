@@ -13,6 +13,7 @@ The data tree shows contents of a GSAS-II project (which can be read or saved as
 The leftmost entries in the GSAS-II menu provide access to many features of GSAS-II. Other menu items will change depending on what type of entry is selected in the data tree. The menu commands that do not change and are described in the [main menu commands](./mainmenu.md) documentation.
 
 <a name="Data_frame"></a>
+<a name="Data_Frame"></a>
 ## GSAS-II Data Window
 
 Different information is displayed in the Data Editing Window, depending on which section of the [data tree](#Data_tree) is selected. For example, clicking on the "Notebook" entry of the data tree brings up the [Notebook editing window](./commontreeitems.md#Notebook), as documented elsewhere.

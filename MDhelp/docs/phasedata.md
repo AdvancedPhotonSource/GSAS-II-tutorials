@@ -42,6 +42,7 @@ For single crystal data, the only parameters are scale, extinction and disordere
 * **Hydrostatic/elastic strain** – This shifts the lattice constants for the contribution of a phase into a histogram. The values are added to the [reciprocal lattice parameter tensor terms](http://gsas-ii.readthedocs.io/en/latest/GSASIIutil.html#gsasiilattice-unit-cell-computations). They must be refined in sequential refinements or where the lattice constants are slightly different in different histograms (as an example see the [Combined X-ray/CW-neutron refinement of \(\rm PbSO_4\) tutorial](https://advancedphotonsource.github.io/GSAS-II-tutorials/CWCombined/Combined%20refinement.htm). But these values and the phase's lattice parameters (on the General tab) should not be refined at the same time. When the values are non-zero, the lattice constants after application of these strain tensor terms is shown. 
 
 <a name="Phase-Preferred_orientation"></a>
+<a name="Preferred_orientation"></a>
 <a name="preferred_orientation"></a>
 * **Preferred Orientation** – Preferred orientation (texture) can be treated in one of two different sections of GSAS-II, either the Preferred Orientation correction here in the Data tab, or the "[Texture](phasetexture.md)" tab, depending on what is desired. 
 The Preferred Orientation correction here is typically used for crystallographic studies, where intensity corrections are desired to repair for undesired texture in the sample, while the Texture tab is used for studies where the goal is to characterize preferred orientation in a sample.

@@ -1,6 +1,7 @@
 <!--- Don't change the HTML version of this file; edit the .md version -->
 # Miscellaneous information
 
+<a name="Mac"></a>
 <a name="MacOS"></a>
 ## Macintosh notes:
 
@@ -10,6 +11,7 @@ At present, two versions of GSAS-II are provided. One is for older, Intel CPUs a
 GSAS-II defines actions for both the left and right and middle buttons assuming that a three-button mouse is available. If a two or three-button mouse is used with a Mac, the "extra"  mouse buttons will work as intended. If using a Mac touchpad or single-button mouse, clicking the touchpad or mouse button will generate a "left button" click. Hold down the control-key to generate a "right button" click or for a right-button drag, hold down control while pressing on the mouse button or touchpad. I do not know how to generate a middle-button click or drag with a single-button mouse, but with a MacBook touchpad, pressing with two fingers generates the equivalent of a right-mouse drag and moving two fingers without pressure is the equivalent of a middle-button drag action. 
 
 <a name="config"></a>
+<a name="Preferences"></a>
 ## Configuration Variables:
 
 GSAS-II provides a number of configuration settings that can be changed via variables that can be set and saved. These are controlled in the File/Preferences menu item (on Mac the Preferences menu is found in the usual place on Macs, in the main application menu as well as in the File menu). These settings are saved for subsequent runs in a file named `config.ini` in the user's `.GSASII` directory. More information, including a list of the available configuration variables and their use can be found in the `config_example.py` file or the [Configuration variables section of the Programmer's documentation.](https://gsas-ii.readthedocs.io/en/latest/GSASIIutil.html#config-example-py-configuration-options) 
@@ -20,6 +22,8 @@ GSAS-II provides a number of configuration settings that can be changed via vari
  The routines and classes used within GSAS-II are documented in a set of web pages and in a PDF document. This documentation is created from the Python source code files using Sphinx. 
 
 <a name="Origin_1"></a>
+<a name="_Origin_1"></a>
+<a name="Origin1"></a>
 ## Origin 1 -> Origin 2 Transformations
 
 An important transformation may be needed in certain cases for space groups that have two alternate origin settings [listed here](https://gsas-ii.readthedocs.io/en/latest/GSASIIutil.html#GSASII.GSASIIspc.spg2origins).
@@ -62,7 +66,7 @@ With coordinates that match the space group operations, the correct Ti-O distanc
 
 
 
-<a name="FPA"></a>
+<a name="FPA"></a><a name=FPAinput></a>
 ## Fundamental Parameters as used to derive instrumental parameters
 
 This describes the FPA terms used to determine instrumental parameters in the 

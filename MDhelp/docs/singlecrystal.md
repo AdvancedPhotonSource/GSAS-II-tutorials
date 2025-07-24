@@ -19,10 +19,12 @@ You can change the weight factor. This is a multiplier on all of the reflection 
 : * see K box for all the possible commands.
 * **Plot 3D HKLs** - shows a 3D representation of the unique part reciprocal space points for this phase. The save as/key item in the plot status bar shows the various commands for modifying this plot.
 
+<a name="HKLF_Instrument_Parameters"></a>
 ## Instrument Parameters
 
 This window shows the histogram type (SXC or SNC, for x-ray and neutron, respectively) and the wavelength. You may change the wavelength or radiation type but rarely will need to do so.
 
+<a name="HKLF_Reflection_List"></a>
 ## Reflection List
 
 This window shows the reflections for this single crystal data set.
