@@ -1,5 +1,6 @@
 <!--- Don't change the HTML version of this file; edit the .md version -->
 <a name="PWDR_parent"></a>
+<a name="PWDR"></a>
 #  **PWDR** parent data tree (Powder Diffraction)
 
 When a powder diffraction dataset (prefix 'PWDR') is selected from the data tree or for most of the subdata tree items, the dataset is plotted. The observed data points are shown as blue crosses and where fit, the calculated pattern is shown as a green line; the background is shown as red line. The difference curve is shown as a cyan line. These colors can be changed through [configuration variables](./others.md#config) `Obs_color`, `Calc_color`, `Diff_color`, and `Bkg_color`.

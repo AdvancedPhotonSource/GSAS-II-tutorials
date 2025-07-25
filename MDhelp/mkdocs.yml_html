@@ -8,6 +8,8 @@ nav:
   - Data tree items:
     - Data tree overview: datatree.md
     - Universal items: commontreeitems.md
+    - Sequential results: sequential.md
+    - Cluster Analysis: cluster.md
     - Phases:
       - Phase overview: phaseoverview.md  
       - General tab: phasegeneral.md
@@ -42,8 +44,7 @@ nav:
     - PDF: pairdistribution.md
     - Small Angle (SASD): smallanglescattering.md
     - Reflectometry (REFD): reflectometry.md
-    - Sequential results: sequential.md
-    - Cluster Analysis: cluster.md
+    - Powder Peaks (PKS): peaks.md
 
 #    - Powder peaks (PKS): powderpeak.md
 
@@ -57,21 +58,15 @@ theme:
   logo:    images/gsas2.png
 
 plugins:
-  #- with-pdf:
-  - to-pdf:
-      author: Brian H. Toby and Robert B. Von Dreele
-      enabled_if_env: ENABLE_PDF_EXPORT
-      cover_title: GSAS-II Help information
-      cover_subtitle: A compilation of HTML pages into PDF
-      copyright: From https://advancedphotonsource.github.io/GSAS-II-tutorials/help/
-      #back_cover: true
-      output_path: GSASII-help.pdf
-#      exclude_pages:
-#        - Contents
-#        - index.md
-      render_js: true
-      headless_chrome_path: /usr/bin/google-chrome-stable
-      pdf_engine: chromium
+  # - to-pdf:
+  #     author: Brian H. Toby and Robert B. Von Dreele
+  #     enabled_if_env: ENABLE_PDF_EXPORT
+  #     cover_title: GSAS-II Help information
+  #     cover_subtitle: A compilation of HTML pages into PDF
+  #     copyright: From https://advancedphotonsource.github.io/GSAS-II-tutorials/help/
+  #     output_path: GSASII-help.pdf
+  #     render_js: true
+  #     headless_chrome_path: /usr/bin/google-chrome-stable
   - i18n:
       docs_structure: suffix
       languages:
@@ -93,11 +88,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-
-
-#extra_javascript: 
 #  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-#  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js # MathJax library from CDN
 
 #local build settings from https://www.mkdocs.org/user-guide/deploying-your-docs/#local-files
 
