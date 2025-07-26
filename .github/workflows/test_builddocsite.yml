@@ -126,13 +126,22 @@ jobs:
       #     cp webdocs/_static/fix.css _static/fix.css # should be done by sphinx
 
       # get the new help pages into the GSAS-II sources
-      - name: Get GSAS-II
-        run: |
-          git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git _gsas2
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+            repository: AdvancedPhotonSource/GSAS-II.git
+            path: _gsas2
+            ref: newhelp
+      # - name: Get GSAS-II
+      #   run: |
+      #     git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git _gsas2
       - name: move help into site
         run: |
-          cp -rpv MDhelp/site _gsas2/GSASII/help
+          cp -rpv MDhelp/site/* _gsas2/GSASII/help
           cd _gsas2
+          git status
+          git add GSASII/help
+          echo "After add"
           git status
 
       # before uploading, clean up
