@@ -65,8 +65,8 @@ jobs:
         run: |
           cd MDhelp
           mkdocs build
-          ENABLE_PDF_EXPORT=1 mkdocs build
-          mv site/GSASII-help.pdf ../docs/
+          #ENABLE_PDF_EXPORT=1 mkdocs build
+          #mv site/GSASII-help.pdf ../docs/
           # create an anchor index
           python findMDanchors.py
           cp -vr site ../help
@@ -132,17 +132,23 @@ jobs:
             repository: AdvancedPhotonSource/GSAS-II.git
             path: _gsas2
             ref: newhelp
+#            token: ''
       # - name: Get GSAS-II
       #   run: |
       #     git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git _gsas2
       - name: move help into site
         run: |
+          #rm -rf _gsas2/GSASII/help/assets/javascripts/
+          rm -rf _gsas2/GSASII/help/assets/stylesheets/
           cp -rpv MDhelp/site/* _gsas2/GSASII/help
           cd _gsas2
           git status
+          git diff
           git add GSASII/help
           echo "After add"
           git status
+          git commit -m"update help files"
+          git push
 
       # before uploading, clean up
       - name: Get rid of the rest of the GSAS-II files & other stuff not needed on web
