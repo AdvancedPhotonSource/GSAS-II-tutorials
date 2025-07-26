@@ -14,8 +14,12 @@
 
 name: build GSAS-II web site w/test MD Help
 
-#on: [workflow_dispatch] 
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
+  
+  push:
+    branches:  
+      - newhelp
 
 permissions:
   contents: write
@@ -29,13 +33,14 @@ jobs:
 
       - name: Python setup
         uses: actions/setup-python@v3
-      - name: Sphinx setup
-        run: |
-          pip install sphinx sphinx_readable_theme
-      - name: pandoc setup
-        uses: pandoc/actions/setup@v1
+# Code below removed for more rapid testing
+      # - name: Sphinx setup
+      #   run: |
+      #     pip install sphinx sphinx_readable_theme
+      # - name: pandoc setup
+      #   uses: pandoc/actions/setup@v1
 
-      # MD help stuff
+      # MD help tools
       - name: install debian chrome
         run: |
           set -ex
@@ -55,19 +60,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # MD help stuff
+      # MD help conversion
       - name: convert MDhelp
         run: |
           cd MDhelp
           mkdocs build
-          cp -vr site ../help_test
           ENABLE_PDF_EXPORT=1 mkdocs build
           mv site/GSASII-help.pdf ../docs/
           # create an anchor index
           python findMDanchors.py
-          cp -vr site ../help_test
+          cp -vr site ../help
           
-      # - name: Upload help artifact  # creates zip file with website contents
+      # - name: Upload help artifact  # debug: creates zip file with website contents
       #   uses: actions/upload-pages-artifact@v3
       #   with:
       #       path: MDhelp/site
@@ -78,33 +82,35 @@ jobs:
         run: |
           curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
 
-      - name: convert tutorials
-        run: |
-          cd MDtutorials
-          for path in ./*; do
-            [ -d "${path}" ] || continue # skip if not a directory
-            dirname="$(basename "${path}")"
-            dest="../${dirname}"
-            mkdir -pv ${dest}
-            [ ! -d "${path}/data" ] || cp -r "${path}/data" ${dest}/
-            [ ! -d "${path}/imgs" ] || cp -r "${path}/imgs" ${dest}/
-            cp tutorial.css ${dest}
-            for fil in $dirname/*.md; do
-              outfile="${dest}/$(basename "${fil%.md}.html")"
-              echo "creating $outfile from $fil"
-              pandoc --standalone ${fil} --css tutorial.css -o ${outfile}
-              sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
-            done
-            git add ${dest}
-          done
-          cd ..
+# Code below removed for more rapid testing
+      # - name: convert tutorials
+      #   run: |
+      #     cd MDtutorials
+      #     for path in ./*; do
+      #       [ -d "${path}" ] || continue # skip if not a directory
+      #       dirname="$(basename "${path}")"
+      #       dest="../${dirname}"
+      #       mkdir -pv ${dest}
+      #       [ ! -d "${path}/data" ] || cp -r "${path}/data" ${dest}/
+      #       [ ! -d "${path}/imgs" ] || cp -r "${path}/imgs" ${dest}/
+      #       cp tutorial.css ${dest}
+      #       for fil in $dirname/*.md; do
+      #         outfile="${dest}/$(basename "${fil%.md}.html")"
+      #         echo "creating $outfile from $fil"
+      #         pandoc --standalone ${fil} --css tutorial.css -o ${outfile}
+      #         sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
+      #       done
+      #       git add ${dest}
+      #     done
+      #     cd ..
         
-      - name: build tutorials index 
-        run: |
-          cd scripts
-          python makeGitTutorial.py ..
+# Code below removed for more rapid testing
+      # - name: build tutorials index 
+      #   run: |
+      #     cd scripts
+      #     python makeGitTutorial.py ..
 
-#      - name: Note changed files
+#      - name: Note changed files  # unused development code
 #        run: |
 #            git add tutorials.html
 #            git add */data/index.html
@@ -113,44 +119,49 @@ jobs:
 #      - name: Push changes
 #        uses: ad-m/github-push-action@master
 
-      - name: Sphinx build
-        run: |
-          sphinx-build webdocs .  # place output into root dir
-          cp webdocs/_static/fix.css _static/fix.css # should be done by sphinx
+# Code below removed for more rapid testing
+      # - name: Sphinx build
+      #   run: |
+      #     sphinx-build webdocs .  # place output into root dir
+      #     cp webdocs/_static/fix.css _static/fix.css # should be done by sphinx
 
-      # to be replaced by MD help stuff
-      # get the help pages from the GSAS-II sources into the web site
+      # get the new help pages into the GSAS-II sources
       - name: Get GSAS-II
         run: |
           git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git _gsas2
       - name: move help into site
         run: |
-          mv _gsas2/GSASII/help ./help
+          cp -rpv MDhelp/site _gsas2/GSASII/help
+          cd _gsas2
+          git status
+
+      # before uploading, clean up
       - name: Get rid of the rest of the GSAS-II files & other stuff not needed on web
         run: |
           rm -rf _gsas2 webdocs scripts MDtutorials MDhelp
-        
-      - name: Upload artifact  # creates zip file with website contents
-        uses: actions/upload-pages-artifact@v3
-        with:
-            path: .
-            name: github-pages
-            retention-days: 1
 
-  deploy:   # Deployment of web pages to GitHub pages
-    needs: build     
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+# Code below removed for more rapid testing
+  #     - name: Upload artifact  # creates zip file with website contents
+  #       uses: actions/upload-pages-artifact@v3
+  #       with:
+  #           path: .
+  #           name: github-pages
+  #           retention-days: 1
+
+  # deploy:   # Deployment of web pages to GitHub pages
+  #   needs: build     
+  #   permissions:
+  #     pages: write
+  #     id-token: write
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
     
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-           token: ${{ secrets.GITHUB_TOKEN }}
-           artifact_name: github-pages
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
+  #       with:
+  #          token: ${{ secrets.GITHUB_TOKEN }}
+  #          artifact_name: github-pages
