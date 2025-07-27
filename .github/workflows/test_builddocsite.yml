@@ -23,6 +23,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
   id-token: write
   pages: write
 
@@ -40,12 +41,13 @@ jobs:
       # - name: pandoc setup
       #   uses: pandoc/actions/setup@v1
 
-      # MD help tools
-      - name: install debian chrome
-        run: |
-          set -ex
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install ./google-chrome-stable_current_amd64.deb
+# Code below removed for more rapid testing
+      # # MD help tools
+      # - name: install debian chrome
+      #   run: |
+      #     set -ex
+      #     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      #     sudo apt install ./google-chrome-stable_current_amd64.deb
    
 #      - name: test newly-installed chrome
 #        run: |
@@ -78,9 +80,10 @@ jobs:
       #       name: MDhelp
       #       retention-days: 1
         
-      - name: Get tutorials index from source code
-        run: |
-          curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
+# Code below removed for more rapid testing
+      # - name: Get tutorials index from source code
+      #   run: |
+      #     curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
 
 # Code below removed for more rapid testing
       # - name: convert tutorials
@@ -133,9 +136,6 @@ jobs:
             path: _gsas2
             ref: newhelp
 #            token: ''
-      # - name: Get GSAS-II
-      #   run: |
-      #     git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git _gsas2
       - name: move help into site
         run: |
           #rm -rf _gsas2/GSASII/help/assets/javascripts/
@@ -148,6 +148,11 @@ jobs:
           echo "After add"
           git status
           git commit -m"update help files"
+      - name: push help into site
+        run: |
+          cd _gsas2
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git push
 
       # before uploading, clean up
