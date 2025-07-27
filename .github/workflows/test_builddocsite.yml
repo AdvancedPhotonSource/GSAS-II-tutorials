@@ -150,12 +150,12 @@ jobs:
       - name: commit changes
         run: |
           cd _gsas2
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m"update help files"
       - name: push help into site
         run: |
           cd _gsas2
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
           git push
 
       # before uploading, clean up
