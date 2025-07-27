@@ -147,6 +147,9 @@ jobs:
           git add GSASII/help
           echo "After add"
           git status
+      - name: commit changes
+        run: |
+          cd _gsas2
           git commit -m"update help files"
       - name: push help into site
         run: |
