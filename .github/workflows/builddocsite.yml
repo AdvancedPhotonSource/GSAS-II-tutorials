@@ -1,12 +1,10 @@
 # create a documentation web site for GSAS-II from four sources
-#  * HTML tutorials are simply copied
-#  * markdown tutorials (in ./MDtutorials) are formatted with pandoc and are copied over
-#  * sphinx is used to generate HTML from files in ./webdocs
-#  * the tutorials.html file and the */data/index.html files are
-#        created by running scripts/makeGitTutorial
-#  * the help pages are created from the .md file in the MDhelp directory
-#  * this triggers a process that also creates the help files and places
-#        the .html files into the GSAS-II sources
+#  1. HTML tutorials are simply copied
+#  2. markdown tutorials (in ./MDtutorials) are formatted with pandoc and are copied over
+#     * the tutorials.html file and the */data/index.html files are
+#        created by running scripts/makeGitTutorial.py
+#  3. sphinx is used to generate HTML from files in ./webdocs
+#  4. the help pages are created from the .md file in the MDhelp directory
 
 name: build GSAS-II web site w/MD Help
 
@@ -26,21 +24,6 @@ jobs:
   build:       # Build web pages
     runs-on: ubuntu-latest
     steps:
-
-      - name: Trigger remote workflow to update help files in GSAS-II repo
-        # see below for info on setting this up
-        run: |
-          # config var follows
-          repo_owner="AdvancedPhotonSource" 
-  
-          curl -L \
-            -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.G2TUT_2_G2_4HELP }}" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/$repo_owner/GSAS-II/dispatches \
-            -d '{"event_type": "remote build", "client_payload": {"service": "remote build", "unit": false, "integration": true}}'
-
       - name: Python setup
         uses: actions/setup-python@v3
       - name: Sphinx setup

@@ -33,8 +33,9 @@ works. The help information can also be viewed `as a PDF document
 
 Note that the help documentation was recently reformatted and updated
 as MarkDown (simple text) input files found
-`in GitHub, here<https://github.com/AdvancedPhotonSource/GSAS-II-tutorials/tree/main/MDhelp>`_.
-Comments, corrections, additions and issue reports on Help are most welcome. 
+in GitHub in the MDhelp directory of the
+AdvancedPhotonSource/GSAS-II-tutorials repo (https://github.com/AdvancedPhotonSource/GSAS-II-tutorials/tree/main/MDhelp).
+Comments, corrections, additions and issue reports on Help content are most welcome. 
 
 .. index:: Source code documentation
 
