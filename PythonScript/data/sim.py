@@ -1,7 +1,7 @@
 '''Sample script to demonstrate use of GSASIIscriptable to simulate a powder pattern
 
 This script is described in this tutorial: 
-https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/Scripting.htm
+https://advancedphotonsource.github.io/GSAS-II-tutorials/PythonScript/Scripting.htm
 '''
 
 import os,sys

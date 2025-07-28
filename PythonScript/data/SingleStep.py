@@ -1,9 +1,9 @@
 '''Sample script to demonstrate use of GSASIIscriptable to duplicate the
 tutorial found here:
-https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/CWCombined/Combined%20refinement.htm
+https://advancedphotonsource.github.io/GSAS-II-tutorials/CWCombined/Combined%20refinement.htm
 
 This script is described in this tutorial: 
-https://subversion.xray.aps.anl.gov/pyGSAS/Tutorials/PythonScript/Scripting.htm
+https://advancedphotonsource.github.io/GSAS-II-tutorials/PythonScript/Scripting.htm
 '''
 
 import os,sys
