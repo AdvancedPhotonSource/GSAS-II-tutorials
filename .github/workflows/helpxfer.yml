@@ -12,7 +12,7 @@ on:
       - MDhelp
 
 jobs:
-  build:       # Build web pages
+  trigger:       # Build web pages
     runs-on: ubuntu-latest
     steps:
       - name: Trigger remote workflow to update help files in GSAS-II repo
