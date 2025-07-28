@@ -25,14 +25,15 @@ Help pages
 
 The GSAS-II GUI provides context-based help via web files that are
 distributed with the program, as well as can be `viewed here
-<help/index.html>`_. These help pages are not always complete,
-but do provide information on how different sections of the program
-work. The help information can also be viewed `as a PDF document
+<help/index.html>`_. These help pages are not complete for all
+sections of the code,
+but do provide at least some information on how every section of the program
+works. The help information can also be viewed `as a PDF document
 <https://advancedphotonsource.github.io/GSAS-II-tutorials/docs/GSASII-help.pdf>`_.
 
 Note that the help documentation was recently reformatted and updated
 as MarkDown (simple text) input files found
-`here in GitHub<https://github.com/AdvancedPhotonSource/GSAS-II-tutorials/tree/main/MDhelp>`_.
+`in GitHub, here<https://github.com/AdvancedPhotonSource/GSAS-II-tutorials/tree/main/MDhelp>`_.
 Comments, corrections, additions and issue reports on Help are most welcome. 
 
 .. index:: Source code documentation

@@ -1,25 +1,16 @@
 # create a documentation web site for GSAS-II from four sources
 #  * HTML tutorials are simply copied
 #  * markdown tutorials (in ./MDtutorials) are formatted with pandoc and are copied over
+#  * HTML help files are copied over from the GSAS-II sources
 #  * sphinx is used to generate HTML from files in ./webdocs
 
 # Also the tutorials.html file and the */data/index.html files are
 #     created by running scripts/makeGitTutorial
 
-# this is a development version that creates draft help pages from the MDhelp directory
-# For now
-#  * HTML help files are copied over from the GSAS-II sources
-# Eventually, the help files generated here need to get into the GSASII/help
-# directory
+name: build GSAS-II web site
 
-name: build GSAS-II web site w/test MD Help
-
-#on: [workflow_dispatch] 
-on: 
-  push:
-    branches:  
-      - "main"  
-  workflow_dispatch:
+on: [workflow_dispatch] 
+#on: [push, workflow_dispatch]
 
 permissions:
   contents: write
@@ -39,44 +30,8 @@ jobs:
       - name: pandoc setup
         uses: pandoc/actions/setup@v1
 
-      # MD help stuff
-      - name: install debian chrome
-        run: |
-          set -ex
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install ./google-chrome-stable_current_amd64.deb
-   
-#      - name: test newly-installed chrome
-#        run: |
-#          which google-chrome-stable
-#          google-chrome-stable --version
-#          /usr/bin/google-chrome-stable --headless --disable-gpu --dump-dom https://google.com
-      - name: mkdocs setup
-        run: |
-          pip install mkdocs mkdocs-material python-markdown-math mkdocs-static-i18n
-          pip install mkdocs-to-pdf pymdown-extensions
-
       - name: Checkout
         uses: actions/checkout@v4
-
-      # MD help stuff
-      - name: convert MDhelp
-        run: |
-          cd MDhelp
-          mkdocs build
-          cp -vr site ../help_test
-          ENABLE_PDF_EXPORT=1 mkdocs build
-          mv site/GSASII-help.pdf ../docs/
-          # create an anchor index
-          python findMDanchors.py
-          cp -vr site ../help_test
-          
-      # - name: Upload help artifact  # creates zip file with website contents
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #       path: MDhelp/site
-      #       name: MDhelp
-      #       retention-days: 1
         
       - name: Get tutorials index from source code
         run: |
@@ -122,7 +77,6 @@ jobs:
           sphinx-build webdocs .  # place output into root dir
           cp webdocs/_static/fix.css _static/fix.css # should be done by sphinx
 
-      # to be replaced by MD help stuff
       # get the help pages from the GSAS-II sources into the web site
       - name: Get GSAS-II
         run: |
@@ -132,7 +86,7 @@ jobs:
           mv _gsas2/GSASII/help ./help
       - name: Get rid of the rest of the GSAS-II files & other stuff not needed on web
         run: |
-          rm -rf _gsas2 webdocs scripts MDtutorials MDhelp
+          rm -rf _gsas2 webdocs scripts MDtutorials
         
       - name: Upload artifact  # creates zip file with website contents
         uses: actions/upload-pages-artifact@v3
