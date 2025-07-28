@@ -78,8 +78,8 @@ jobs:
           mv site/GSASII-help.pdf ../docs/
           # create an anchor index in the help files (only used by Python code)
           python findMDanchors.py
-          cp -vr site/* ../help/
-          
+          cp -vr site ../help
+
       # - name: Upload help artifact  # creates zip file with website contents for debug
       #   uses: actions/upload-pages-artifact@v3
       #   with:
