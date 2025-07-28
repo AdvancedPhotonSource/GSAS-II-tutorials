@@ -388,12 +388,13 @@ Compiling with Scons
 Compilation with scons (as opposed to meson, as discussed above) is not
 recommended and will be removed from GSAS-II in the future. It will
 work only with Python 3.11 or older and only with the ``master``
-branch. Do not use GSAS-II will fail with Python earlier than 3.7 and may have
-some errors even with Python 3.8.
+branch. Note that GSAS-II will fail with Python earlier than 3.7 and may have
+some errors even with Python 3.8-3.10 as it is no longer tested on
+those environments.
 
 The compilation process requires installation of the gcc and GFortran
 compilers. Others will probablu not work. Also, the Python Scons
-package must be installed into Python. compilation is done with
+package must be installed into Python. Compilation is then done with
 commands::
 
     cd fsource
@@ -408,7 +409,8 @@ Installation of compilers is highly depend on the computer system being used, bu
 Use the ``conda search gfortran`` command to find the name for the package. 
 On most linux systems, one can use a command such as ``sudo apt-get gfortran`` or ``yum install gcc-gfortran``. Also see https://gcc.gnu.org/wiki/GFortranBinaries for more information.
 
-Note that the intent is that this Scons-based process will be replaced with one to run under meson in mid-2024. In the meantime, some older web pages discussing compiling GSAS-II may be of use:
+Note that the intent is that this Scons-based process is no longer in
+use, but for reference some older web pages discussing compiling GSAS-II may be of use:
 
  * https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/CompilingWindows
  * https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/InstallMacHardWay#CompilingFortranCode

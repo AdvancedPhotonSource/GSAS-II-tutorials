@@ -8,7 +8,11 @@ This repository contains files used to create GSAS-II web content, which include
 
 * **Tutorials**: When the tutorials will be run, It is best to access them from within GSAS-II using the Help->Tutorials menu (this will simplifies downloading the files needed to run the tutorials), but tutorials can also be accessed [from this link](https://advancedphotonsource.github.io/GSAS-II-tutorials/tutorials.html). The HTML, images and data files for the tutorials are found in this repo. Note that when new functionality is added to GSAS-II, it is customary to create a new tutorial. 
 
-* **Help Pages**: There are three HTML web pages used within GSAS-II (plus a table of contents page) for context-sensitive help. These files are maintained in the [GSAS-II source code repo](https://github.com/AdvancedPhotonSource/GSAS-II/tree/master/GSASII/help), but for convenience, [they can also be accessed from the web pages](https://advancedphotonsource.github.io/GSAS-II-tutorials/help/gsasII-index.html).
+* **Help Pages**: There are a set of web files that are
+distributed with GSAS-II, or can be [viewed here](help/index.html). These 
+help pages provide information on how different sections of the program
+work. The help information can also be viewed [as a PDF document](https://advancedphotonsource.github.io/GSAS-II-tutorials/docs/GSASII-help.pdf).
+Comments, corrections, additions and issue reports on Help are most welcome. 
 
 ## Repo Organization
 Each tutorial is placed here in its own subdirectory. In that subdirectory, there will be a web page for that tutorial (extension .html or .htm) and two additional subdirectories, one named `data`, with the input file(s) needed for that tutorial and another with a name generated from the web page file name that contains images for the web page. 
