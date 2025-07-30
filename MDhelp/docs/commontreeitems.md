@@ -44,7 +44,7 @@ This window provides access to the controls that determine how GSAS-II performs 
     * **Min delta-M/M** - A refinement will stop when the change in the minimization function, *M*,  \( (M=\sum[w(I_o-I_c)^2]) \) is less than this value. The allowed range is \(10^{-9}\) to 1.0, with a default of 0.001. A value of 1.0 stops the refinement after a single cycle. Values less than \(10^{-4}\) cause refinements to continue even if there is no meaningful improvement.
     * **Max cycles** - This determines the maximum number of refinement cycles that will be performed. This is used only with the "analytical Hessian" and "Hessian SVD" minimizers.
     * **Initial lambda** - Note that here λ is the Marquardt coefficient, where a weight of 1+λ is applied to the diagonal elements of the Hessian. When λ is large, this down-weights the significance of the off-diagonal terms in the Hessian. Thus, when λ is large, the refinement is effectively one of steepest-descents, where correlation between variables is ignored. Note that steepest-descents minimization is typically slow and may not always find the local minimum. This is only used when with the "analytical Hessian" minimizer is selected.
-    * **SVD zero tolerance** - This determines the level where SVD considers deivative values to be the same. Default is \(10^{-6}\). Make this larger when problems occur due to correlation. This is used only with the "analytical Hessian" and "Hessian SVD" minimizers.
+    * **SVD zero tolerance** - This determines the level where SVD considers derivative values to be the same. Default is \(10^{-6}\). Make this larger when problems occur due to correlation. This is used only with the "analytical Hessian" and "Hessian SVD" minimizers.
     * **Initial shift factor** - This provides an initial scaling ("damping") for the first cycle of refinement. Only available for "analytic Jacobian" and "numeric" minimizers. 
 
 2. **Single Crystal Refinement Settings**: 
@@ -152,7 +152,9 @@ Also included when sequential refinement is selected is a menu button labeled "S
 <a name="Restraints"></a>
 ## Restraints
 
-This window shows the restraints to be used in a refinement for each phase (if more than one). It is organized into several tabbed pages, one page for each type of restraint. Restraints are developed for an individual phase and act as additional observations to be "fitted" during the refinement.
+This window shows the restraints to be used in a refinement for each phase (if more than one). It is organized into several tabbed pages, one page for each type of restraint. Restraints are developed for an individual phase and act as additional observations to be "fitted" during the refinement. 
+
+Note that a restraint "pushes" a refinement towards a target value, but does not require that to happen (unlike a constraint). The strength of the "push" is dependent on the weighting factor and the "esd" used on the target value. The ideal use of a restraint is for an aspect of a structure that is not well-determined by the data. In this case, when the weighting of a restraint is dropped, the value of the restrained parameter may move considerably from the target value, but the quality of the fit (noted by the Rietveld plot, R-factor, reduced $\chi^2$, etc.) is not expected to change very much. If one places a restraint that is not consistent with the model (*e.g.* is wrong), then the fit will improve significantly as the weight is decreased. Such feedback is not possible with a constraint. 
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
@@ -170,6 +172,15 @@ This window shows the restraints to be used in a refinement for each phase (if m
     * **Change value** - this changes the 'obsd' value for selected restraints; a dialog box will appear asking for the new value.
     * **Change esd** - this changes the 'esd' value for selected restraints; a dialog box will appear asking for the new value.
     * **Delete restraints** - this deletes selected restraints from the list. A single click in the blank box in the upper left corner of the table will select/deselect all restraints.
+
+### Restraint types
+
+* **Bond**: Defines restraints with a target distance between pairs of atoms (which are typically bonded, but this is not required). Atom pairs to be restrained are set by performing a search and then selecting the pairs to be used. 
+* **Angle**:  Defines restraints with a target angle for a set of three atoms. Atoms to be used are located via a search and selection. 
+* **Plane**: Used to restrain selected atoms to be approximately co-planar. This is most commonly used for macromolecular crystallography. 
+* **Chiral**: Defines a chiral volume restraint. This is unlikely to be used other than for macromolecular crystallography. 
+* **Chem. Comp.**: This is of use when "Frac" parameters (atom occupancies) are refined. This option allows a variety of different types of restraints to be created. More than one chemical composition restraint can be defined for a phase. Examples of how this might be used would be to "push" refinement towards an expected composition, to encourage charge balance or to conserve valences. 
+* **General**: This allows a quantity to be restrained that is computed from a user-supplied equation, based on GSAS-II parameters. Thus, one can create any type of restraint that is desired. This restraint is used by supplying a Python equation and then to define which GSAS-II parameter is associated with each variable in the Python equation. One also supplies the target value for the restraint. Note that it is possible to use externally defined functions that contain "if" statements, which allows restraints that enforce minimum or maximum quantities rather than target values to be defined. 
 
 <a name="Rigidbodies"></a>
 <a name="Rigid_bodies"></a>

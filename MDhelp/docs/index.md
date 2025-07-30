@@ -2,14 +2,18 @@
 <a name="HelpIntro"></a> 
 # Help for GSAS-II
 
-This and the subsequent web pages provide documentation for the
-GSAS-II graphical user interface (GUI). The information is organized
+This and the web pages referenced below, provide documentation for use
+of the GSAS-II graphical user interface (GUI). The information is organized
 largely to follow the different sections of the GUI and is usually
-accessed via the "Help" features in GSAS-II. Help on specific sections
-of GSAS-II can be accessed from the yellow "?" button in the upper
-right corner of the data window. Access to specific help information 
-is also offered on the graphics
-window and in other locations of the program. 
+accessed via the "Help" features in GSAS-II: Help on specific sections
+of GSAS-II can be accessed from the "?" button (yellow on some computers) in the upper
+right corner of the data window, or from the Help command. The GSAS-II
+graphics window and in other locations of the program also offer
+access to context-specific help information.
+
+A single file containing all GSAS-II web pages is available [as a PDF
+document](https://advancedphotonsource.github.io/GSAS-II-tutorials/docs/GSASII-help.pdf)
+(note: ~100 pages, please don't print it.)
 
 <a name="Index"></a> 
 An index on the topics covered in these help pages is given below. 
@@ -21,8 +25,8 @@ An index on the topics covered in these help pages is given below.
     3. [Graphics Window](./applicationwindow.md#Plots)
     4. [Console Window](./applicationwindow.md#Console)
 3. [Main menu contents](./mainmenu.md)
-4. Data tree entries and their use ([overview](./datatree.md))
-    1. [Universal data tree](./commontreeitems.md) items 
+4. [Data tree entries: overview](./datatree.md)
+    1. [Universal data tree items](./commontreeitems.md) 
         * [Notebook](./commontreeitems.md#Notebook) 
         * [Controls and settings](./commontreeitems.md#Controls) 
         * [Covariance and fit results](./commontreeitems.md#Covariance) 
