@@ -380,7 +380,40 @@ Create shortcuts::
      conda install pytest
      python -m pytest G2\tests
 
-See above for an example of what to expect from the self tests. 
+See above for an example of what to expect from the self tests.
+
+
+A script to Install & Compile GSAS-II
+======================================================
+
+A simple way to install and compile GSAS-II uses the supplied
+``gitcompile.py`` script. Use these commands (on any platform) to
+install with local compilation::
+
+    cd ~/G2
+  curl -L -O https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/raw/main/install/gitcompile.py
+  python gitcompile.py
+
+This will place the install script in directory ``~/G2`` (which you
+may wish to change above) and will use git to clone the
+AdvancedPhotonSource/GSAS-II repo placing all files in subdirectory
+``~/G2/GSAS-II``. The script does the following things:
+
+ * it checks that the Python installation has the packages that GSAS-II
+  needs to run (`see here for details
+  <https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_)
+  and for compilation.
+  * It installs or updates the GSAS-II files from the GitHub repo
+  * It creates the and installs the appropriate binary files from the
+    Fortran, C and Cython sources. 
+  * It does a byte-compile on all ``.py`` files
+  * it creates shortcuts/icons for starting GSAS-II (OS specific)
+
+Note that there are a number of options that can be used with the
+script, for example ``python gitcompile.py --reset`` overwrites any
+changes that have been made to GSAS-II files locally with the original
+versions of the files. The other options are not likely to be needed,
+but can be seen with ``python gitcompile.py --help``
 
 Compiling with Scons
 ---------------------------

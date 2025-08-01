@@ -7,9 +7,14 @@ Phases are placed in their own section of the [GSAS-II data tree](./applicationw
 
 Phases are either created with the Data/"Add new phase" menu item (manual input) or are read in using the Import/Phase menu items. After a phase is imported, if there are histograms (datasets) present in the project, you will be offered a chance to link the imported phase to the previously imported histogram(s). Likewise, if histograms(s) are imported when phase(s) are already present, you will also be asked to link the new data to existing phases. It is also possible to link histograms to a phase later by selecting that phase in the data tree and then selecting the "Data" tab and finally using the "Edit Phase"/"Add powder histograms" menu command. 
 
-When a phase is selected from the data tree, parameters are shown for that selected phase in a tabbed window. Clicking on each tab raises the windows as documented in subsequent sections of the help documentation. The tabs are:
+When a phase is selected from the data tree, parameters are shown for
+that selected phase in a tabbed window. Clicking on each tab raises
+the windows as documented in subsequent sections of the help
+documentation. 
 
 <a name="PhaseTabList"></a>
+ The tabs are:
+
  - [General](./phasegeneral.md)
  - [Data](./phasedata.md)
  - [Atoms](./phaseatoms.md)

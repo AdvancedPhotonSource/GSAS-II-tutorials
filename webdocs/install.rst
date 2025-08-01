@@ -104,7 +104,7 @@ Note that on MacOS, a Mac app is also created and is displayed in the Finder
 
 .. index:: Installing GSAS-II with gitstrap.py
 
-Installing GSAS-II with Separate Python Installation
+Installing GSAS-II with a Separate Python Installation
 ======================================================
 
 A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages) or using `PyPi <https://pypi.org>`_, etc. or prefer to handle use of conda on their own. Some discussion on Python installation is
@@ -120,13 +120,87 @@ A simple way to install GSAS-II with a supplied Python environment uses the ``gi
   curl -L -O https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/raw/main/install/gitstrap.py
   python gitstrap.py
 
-This will place the install script in directory ``~/G2`` (which you may wish to change) and will place all GSAS-II files in subdirectory ``~/G2/GSAS-II``
+This will place the install script in directory ``~/G2`` (which you
+may wish to change above) and will use git to clone the
+AdvancedPhotonSource/GSAS-II repo placing all files in subdirectory
+``~/G2/GSAS-II``. The script does the following things:
 
-Note that you can also clone the GitHub repo. If you do this, the GSAS-II binary files
-will not be installed. However, when GSAS-II is first run, it will provide an opportunity to do this. 
+ * it checks that the Python installation has the packages that GSAS-II
+  needs to run (`see here for details
+  <https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_)
+  * It installs or updates the GSAS-II files from the GitHub repo
+  * It downloads and installs the appropriate binary files from the
+    `GSAS-II releases
+    <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases>`_
+  * It does a byte-compile on all ``.py`` files
+  * it creates shortcuts/icons for starting GSAS-II (OS specific)
+
+Note that there are a number of options that can be used with the
+script, for example ``python gitstrap.py --reset`` overwrites any
+changes that have been made to GSAS-II files locally with the original
+versions of the files. The other options are not likely to be needed,
+but can be seen with ``python gitstrap.py --help``
+
+This script is also useful because it can be run to update GSAS-II as
+an alternative to the Help/Update command (which will cannot be used
+when GSAS-II will not start after a bad update.) If GSAS-II will not
+start due to changes that have been made locally, the ``--reset``
+option might be needed.
+
+.. index:: Installing & Compiling GSAS-II
+
+Installing & Compiling GSAS-II
+======================================================
+
+If using GSAS-II on some Linux dists, or with versions of Python/numpy other than
+what we support, it may be necessary (or a site policy) to compile the
+GSAS-II binaries locally rather than download them. A script is
+supplied that works similarly to the above, but compiles the GSAS-II
+source files. This requires that in addition to the GSAS-II run-time
+Python packages are needed (see the
+`discussion on Python package requirements
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_,
+for compilation the Python cython and meson packages are required, as
+well as gfortran and gcc, which can be installed via conda, but are
+frequently intalled in other ways. 
+
+A simple way to install and compile GSAS-II uses the supplied
+``gitcompile.py`` script. Use these commands (on any platform) to
+install with local compilation::
+
+  cd ~/G2
+  curl -L -O https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/raw/main/install/gitcompile.py
+  python gitcompile.py
+
+This will place the install script in directory ``~/G2`` (which you
+may wish to change above) and will use git to clone the
+AdvancedPhotonSource/GSAS-II repo placing all files in subdirectory
+``~/G2/GSAS-II``. The script does the following things:
+
+ * it checks that the Python installation has the packages that GSAS-II
+  needs to run (`see here for details
+  <https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_)
+  and for compilation.
+  * It installs or updates the GSAS-II files from the GitHub repo
+  * It creates the and installs the appropriate binary files from the
+    Fortran, C and Cython sources. 
+  * It does a byte-compile on all ``.py`` files
+  * it creates shortcuts/icons for starting GSAS-II (OS specific)
+
+Note that there are a number of options that can be used with the
+script, for example ``python gitcompile.py --reset`` overwrites any
+changes that have been made to GSAS-II files locally with the original
+versions of the files. The other options are not likely to be needed,
+but can be seen with ``python gitcompile.py --help``
+
+This script is also useful because it can be run to update GSAS-II as
+an alternative to the Help/Update command (which will cannot be used
+when GSAS-II will not start after a bad update.) If GSAS-II will not
+start due to changes that have been made locally, the ``--reset``
+option might be needed.
 
 .. index:: Installing GSAS-II from GitHub
-
+           
 Installation Info for Developers
 ==============================================
 
