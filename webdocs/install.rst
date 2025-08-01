@@ -125,15 +125,16 @@ may wish to change above) and will use git to clone the
 AdvancedPhotonSource/GSAS-II repo placing all files in subdirectory
 ``~/G2/GSAS-II``. The script does the following things:
 
- * it checks that the Python installation has the packages that GSAS-II
-  needs to run (`see here for details
-  <https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_)
-  * It installs or updates the GSAS-II files from the GitHub repo
-  * It downloads and installs the appropriate binary files from the
-    `GSAS-II releases
-    <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases>`_
-  * It does a byte-compile on all ``.py`` files
-  * it creates shortcuts/icons for starting GSAS-II (OS specific)
+ * Checks that the Python installation has the packages that GSAS-II
+   needs to run (`see here for details
+   <https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_)
+   and for compilation.
+ * Installs or updates the GSAS-II files from the GitHub repo
+ * Downloads and installs the appropriate binary files from the
+   `GSAS-II releases <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases>`_
+ * Does a byte-compile on all ``.py`` files
+ * Creates shortcuts/icons for starting GSAS-II (OS specific)
+
 
 Note that there are a number of options that can be used with the
 script, for example ``python gitstrap.py --reset`` overwrites any
@@ -177,15 +178,16 @@ may wish to change above) and will use git to clone the
 AdvancedPhotonSource/GSAS-II repo placing all files in subdirectory
 ``~/G2/GSAS-II``. The script does the following things:
 
- * it checks that the Python installation has the packages that GSAS-II
-  needs to run (`see here for details
-  <https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_)
-  and for compilation.
-  * It installs or updates the GSAS-II files from the GitHub repo
-  * It creates the and installs the appropriate binary files from the
-    Fortran, C and Cython sources. 
-  * It does a byte-compile on all ``.py`` files
-  * it creates shortcuts/icons for starting GSAS-II (OS specific)
+ * Checks that the Python installation has the packages that GSAS-II
+   needs to run (`see here for details
+   <https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_)
+   and for compilation.
+ * Installs or updates the GSAS-II files from the GitHub repo
+ * Creates the and installs the appropriate binary files from the
+   Fortran, C and Cython sources. 
+ * Does a byte-compile on all ``.py`` files
+ * Creates shortcuts/icons for starting GSAS-II (OS specific)
+
 
 Note that there are a number of options that can be used with the
 script, for example ``python gitcompile.py --reset`` overwrites any
