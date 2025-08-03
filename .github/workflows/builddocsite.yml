@@ -93,13 +93,15 @@ jobs:
             done
             #git add ${dest}
           done
-          mkdir ../help/tutorial_template
-          cp tutorial.css ../help/tutorial_template
+          mkdir ../tutorial_template
+          cp tutorial.css ../tutorial_template
           fil=template.md
-          outfile=../help/tutorial_template/template.html
+          outfile=../tutorial_template/template.html
           echo "creating $outfile from $fil"
           pandoc --standalone --mathjax --css tutorial.css -o ${outfile} ${fil}
           sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
+          mkdir ../tutorial_template/imgs
+          cp FontSize/imgs/*.png ../tutorial_template/imgs/
           #cd ..
 
       - name: build tutorials index 
