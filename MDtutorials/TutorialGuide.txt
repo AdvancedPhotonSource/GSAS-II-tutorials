@@ -93,7 +93,7 @@ Build commands
 
       The HTML file is constructed from the markdown file using commands:
 
-              pandoc --standalone ${infil} --css tutorial.css -o ${outfile}
+              pandoc --standalone --css tutorial.css --mathjax -o ${outfile}  ${infil}
               sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
 
       Note that on MacOS the sed command must be sed -i "" "s/...". The tutorial.css file

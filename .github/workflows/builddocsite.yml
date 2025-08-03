@@ -88,13 +88,18 @@ jobs:
             for fil in $dirname/*.md; do
               outfile="${dest}/$(basename "${fil%.md}.html")"
               echo "creating $outfile from $fil"
-              pandoc --standalone ${fil} --css tutorial.css -o ${outfile}
+              pandoc --standalone --mathjax --css tutorial.css -o ${outfile} ${fil}
               sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
             done
-            git add ${dest}
+            #git add ${dest}
           done
-          cd ..
-        
+          fil=template.md
+          outfile=template.html
+          echo "creating $outfile from $fil"
+          pandoc --standalone --mathjax --css tutorial.css -o ${outfile} ${fil}
+          sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
+          #cd ..
+
       - name: build tutorials index 
         run: |
           cd scripts
