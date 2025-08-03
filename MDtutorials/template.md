@@ -75,7 +75,7 @@ Note that a colon can be used for right or left alignment or use two, as below f
   	 |  `FontSize_incr`  | Example |
 	 | :---: | ------------------------------------- | 
      | 0 | [see file `font0.png`](imgs/font0.png) |
-     | 3 | [see file `font0.png`](imgs/font3.png) |
+     | 3 | [see file `font3.png`](imgs/font3.png) |
 ```
 
 The code above creates the table below.
@@ -83,7 +83,7 @@ The code above creates the table below.
 |  `FontSize_incr`  | Example |
 | :---: | ------------------------------------- | 
 | 0 | [see file `font0.png`](imgs/font0.png) |
-| 3 | [see file `font0.png`](imgs/font3.png) |
+| 3 | [see file `font3.png`](imgs/font3.png) |
 
 See the markdown docs for other mechanisms to create tables. 
 

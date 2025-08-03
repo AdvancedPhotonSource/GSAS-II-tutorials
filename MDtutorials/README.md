@@ -14,7 +14,7 @@ Note that on MacOS the sed command must be `sed -i "" "s/...`. The [`tutorial.cs
 
 1. Create a new directory in the current location. Make sure not to use a name already in use for an existing tutorial (in the main directory, (https://github.com/AdvancedPhotonSource/GSAS-II-tutorials/tree/main). 
 
-1. Create a &lt;filename&gt;.md file in the new directory. Name is arbitrary, but repeating the directory name is not a bad idea, as `.../new-tutorial/new-tutorial.md`. Look at file `template.md` as an outline for formatting the tutorial ([formatted version is here](https://advancedphotonsource.github.io/GSAS-II-tutorials/tutorial_template/tutorial.html))
+1. Create a &lt;filename&gt;.md file in the new directory. Name is arbitrary, but repeating the directory name is not a bad idea, as `.../new-tutorial/new-tutorial.md`. Look at file `template.md` as an outline for formatting the tutorial ([formatted version is here](https://advancedphotonsource.github.io/GSAS-II-tutorials/tutorial_template/template.html))
 
 Start the new tutorial file with content like this:
 
