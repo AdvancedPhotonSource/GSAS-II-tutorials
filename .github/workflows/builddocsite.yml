@@ -93,8 +93,10 @@ jobs:
             done
             #git add ${dest}
           done
+          mkdir ../help/tutorial_template
+          cp tutorial.css ../help/tutorial_template
           fil=template.md
-          outfile=template.html
+          outfile=../help/tutorial_template/template.html
           echo "creating $outfile from $fil"
           pandoc --standalone --mathjax --css tutorial.css -o ${outfile} ${fil}
           sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
