@@ -115,7 +115,7 @@ Install an initial, bare-bones Python environment
   where ``~/miniforge3`` is the location where miniforge was installed.)
   Then use the conda command to install the following packages to run GSAS-II:
 
-    python, numpy, matplotlib, scipy, wxpython, pyopengl, imageio, h5py,
+    python, numpy, matplotlib-base, scipy, wxpython, pyopengl, imageio, h5py,
     hdf5, pillow, requests, pycifrw, pybaselines, git, gitpython, conda
 
   (see `the GUI requirement section of the Developers manual 
@@ -296,7 +296,7 @@ Install miniforge
  Use this command to install the following packages to run GSAS-II
  (note this is a very long line)::
 
-       conda install python numpy matplotlib wxpython pyopengl scipy git gitpython PyCifRW pillow conda requests hdf5 h5py imageio zarr xmltodict pybaselines seekpath pywin32 -c conda-forge -y
+       conda install python numpy matplotlib-base wxpython pyopengl scipy git gitpython PyCifRW pillow conda requests hdf5 h5py imageio zarr xmltodict pybaselines seekpath pywin32 -c conda-forge -y
  
  (see `the GUI requirement section of the Developers manual 
  <https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_

@@ -109,10 +109,18 @@ Installing GSAS-II with a Separate Python Installation
 
 A small number of users or sites prefer to use Python distributions supplied via other routes (such as Debian packages) or using `PyPi <https://pypi.org>`_, etc. or prefer to handle use of conda on their own. Some discussion on Python installation is
 `found here <install-pip.html>`_. Independent of how Python is installed, multiple packages are needed, please see the
-`discussion on Python package requirements <https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_, noting that the GSAS-II GUI requires at a minimum wxPython, matplotlib,
-PyOpenGL, NumPy and SciPy, while for scripting use, only NumPy and SciPy are required.  For full functionality, several other optional packages are needed.
-If versions other than those recommended are selected (
-Python=3.13 with NumPy=2.2 or Python=3.11 with NumPy=1.26), you will likely need to either locate older binaries and install them manually or compile them yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
+`discussion on Python package requirements
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_,
+noting that the GSAS-II GUI requires at a minimum wxPython, matplotlib
+(matplotlib-base is preferred over matplotlib unless matplotlib will
+be used outside GSAS-II), PyOpenGL, NumPy and SciPy, while for
+scripting use, only NumPy and SciPy are required.  For full
+functionality, several other optional packages are needed. 
+If versions other than those recommended are selected (Python=3.13
+with NumPy=2.2 or Python=3.11 with NumPy=1.26), you will likely need
+to either locate older binaries and install them manually or compile
+them yourself (`see compilation information
+<https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_).  
 
 A simple way to install GSAS-II with a supplied Python environment uses the ``gitstrap.py`` script provided for this purpose. Use these commands (on any platform) to install GSAS-II::
 
@@ -156,17 +164,23 @@ Installing & Compiling GSAS-II
 If using GSAS-II on some Linux dists, or with versions of Python/numpy other than
 what we support, it may be necessary (or a site policy) to compile the
 GSAS-II binaries locally rather than download them. A script is
-supplied that works similarly to the above, but compiles the GSAS-II
-source files. This requires that in addition to the GSAS-II run-time
-Python packages are needed (see the
-`discussion on Python package requirements
-<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_,
-for compilation the Python cython and meson packages are required, as
-well as gfortran and gcc, which can be installed via conda, but are
-frequently intalled in other ways. 
+supplied (``gitcompile.py``) that works similarly to the above, but
+compiles the GSAS-II source files. Alternately, it is possible to
+build and install GSAS-II with pixi (see :ref:`pixi installation`). 
 
 A simple way to install and compile GSAS-II uses the supplied
-``gitcompile.py`` script. Use these commands (on any platform) to
+``gitcompile.py`` script.  To use this script requires that in addition
+to the Python packages GSAS-II needs at run-time (see the
+`discussion on Python package requirements
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_,
+tools needed for compilation must also be available. These are the
+Python cython and meson packages and the gfortran and gcc
+compilers. Note that the compilers can be installed via conda, but
+while use of ``git`` is required for this script, use of conda is
+not. All tools and packages needed by ``gitcompile.py`` can be
+installed in other ways (apt-get, homebrew, pip...), but the choices available will depend on the target OS.
+
+Use these commands (on any platform) to
 install with local compilation::
 
   cd ~/G2

@@ -132,6 +132,8 @@ You are strongly encouraged to create a separate branch for each development pro
 
 When your changes are complete and you are ready to communicate them back, you will commit them locally and use ``git push`` to upload them to GitHub. From the web interface to GitHub you can then submit that branch as a pull request to the main GSAS-II repository. Once you have submiited your pull request, you likely will want to switch to a different branch to do any further development work, as if changes are uploaded for the branch used for the pull request, those changes will be added to the code in the pull request.
 
+.. index:: Installing with pixi
+
 .. _pixi installation:
    
 ==============================================

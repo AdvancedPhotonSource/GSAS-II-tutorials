@@ -13,7 +13,15 @@
 Customized Python Installation 
 ==================================================
 
-Experienced system managers or code developers may wish to perform their own Python installations. Noting that the GSAS-II GUI requires at a minimum wxPython, matplotlib, PyOpenGL, NumPy and SciPy be installed, while for scripting use, only NumPy and SciPy are required.  For full functionality, several other optional packages are needed, as is `discussed in the GSAS-II Python package requirements <https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_.
+Experienced system managers or code developers may wish to perform
+their own Python installations. Noting that the GSAS-II GUI requires
+at a minimum wxPython, matplotlib-base, PyOpenGL, NumPy and SciPy be
+installed, while for scripting use, only NumPy and SciPy are required.
+For full functionality, several other optional packages are needed, as
+is `discussed in the GSAS-II Python package requirements
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_.
+Note that matplotlib-base is preferred over matplotlib, unless matplotlib will
+be used outside GSAS-II. 
 If Python versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or run the compilation yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
 
 The choices for how to install Python and packages come down to distribution methods such as conda, pip, homebrew or Linux distro-supplied installation. It is also possible to obtain all as source code and compile them locally.
@@ -25,11 +33,11 @@ conda
 
 With conda, use commands such as this::
 
-         conda install python=3.11  numpy=1.26 wxpython scipy matplotlib pyopengl pillow h5py imageio requests git gitpython -c conda-forge
+         conda install python=3.13  numpy=2.2 wxpython scipy matplotlib-base pyopengl pillow h5py imageio requests git gitpython pycifrw pybaselines -c conda-forge
 
 or::
 
-       conda create -n <envname> python=3.11  numpy=1.26 wxpython scipy matplotlib pyopengl pillow h5py imageio requests git gitpython -c conda-forge 
+       conda create -n <envname> python=3.13  numpy=2.2 wxpython scipy matplotlib-base pyopengl pillow h5py imageio requests git gitpython pycifrw pybaselines -c conda-forge 
 
 .. index:: Customized Python installation; pip
 
