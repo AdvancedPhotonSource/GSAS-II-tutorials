@@ -52,7 +52,8 @@ An index on the topics covered in these help pages is given below.
         * [ISODISTORT tab](./phaseisodistort.md)
         * [Dysnomia tab](./phasedysnomia.md)
     3. [Image (IMG)](./image.md) Data Tree entries
-    4. Powder histogram (PWDR) [overview](./powder.md) and [parent PWDR data tree entry](./powderparent.md)
+    4. Powder histogram (PWDR) [overview](./powder.md) 
+        * [Parent PWDR data tree entry](./powderparent.md)
         * [Comments](./powdercomments.md)
         * [Limits](./powderlimits.md)
         * [Background](./powderbkg.md)

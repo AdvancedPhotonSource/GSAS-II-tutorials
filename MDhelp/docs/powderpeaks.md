@@ -57,7 +57,7 @@ The menu for Peak Fitting contains the following commands:
 <H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The plot is the largely the same as for the parent PWDR Powder Histograms tree entry 
-[with the same plot actions](./powderparent.md#PWDR_plot_actions) and [same key press commands](./powderparent.md#PWDR_keylist). Specific to this plot are the peak positions that are shown as vertical dashed blue lines. To show that a peak is selected, it is highlighted in yellow and the blue line is made wider. The upper and lower data limits are shown as red and green dashed vertical lines, respectively, and can be dragged to change the fitting range. 
+[with the same plot actions](./powder.md#PWDR_plot_actions) and [same key press commands](./powder.md#PWDR_keylist). Specific to this plot are the peak positions that are shown as vertical dashed blue lines. To show that a peak is selected, it is highlighted in yellow and the blue line is made wider. The upper and lower data limits are shown as red and green dashed vertical lines, respectively, and can be dragged to change the fitting range. 
 
 <H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 

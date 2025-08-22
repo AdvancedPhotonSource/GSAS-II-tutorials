@@ -61,7 +61,7 @@ The "Make new phase" command creates a new phase from the selected unit cell and
 <H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
 The plot is the largely the same as for the parent PWDR Powder Histograms tree entry 
-[with the same plot actions](./powderparent.md#PWDR_plot_actions) and [same key press commands](./powderparent.md#PWDR_keylist), except that tickmarks are not shown and the obs-calc position cannot be dragged. The fit limits can be changed from the plot either here or in the Limits data tree. Change the upper and lower Tmin values by clicking on the appropriate vertical line and dragging it to the right or left. Reducing the maximum Q value (TOF min or 2θ max) can greatly speed the time needed to compute reflections from a unit cell.
+[with the same plot actions](./powder.md#PWDR_plot_actions) and [same key press commands](./powder.md#PWDR_keylist), except that tickmarks are not shown and the obs-calc position cannot be dragged. The fit limits can be changed from the plot either here or in the Limits data tree. Change the upper and lower Tmin values by clicking on the appropriate vertical line and dragging it to the right or left. Reducing the maximum Q value (TOF min or 2θ max) can greatly speed the time needed to compute reflections from a unit cell.
 
 <a name="Laue_List"></a>
 ### Visualization Laue classes

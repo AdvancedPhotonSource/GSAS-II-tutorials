@@ -25,7 +25,7 @@ You can add an excluded region using the "Add excluded region" command in the "E
 <H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The plot is the largely the same as for the parent PWDR Powder Histograms tree entry 
-[with the same plot actions](./powderparent.md#PWDR_plot_actions) and [same key press commands](./powderparent.md#PWDR_keylist), except that tickmarks and the obs-calc position cannot be dragged. What is unique to the Limits subdata tree entry is that vertical lines are displayed for the fitting limits: green for the lower Tmin value and red for the upper Tmin value. Excluded regions are displayed with pairs of magenta vertical lines. All these vertical lines can be dragged to set limits or change excluded regions.
+[with the same plot actions](./powder.md#PWDR_plot_actions) and [same key press commands](./powder.md#PWDR_keylist), except that tickmarks and the obs-calc position cannot be dragged. What is unique to the plot associated with the Limits subdata tree entry is that the entire pattern is shown, including data outside the limits and regions that are ignored. Also, vertical lines are displayed for the fitting limits: green for the lower Tmin value and red for the upper Tmin value. Excluded regions are displayed with pairs of magenta vertical lines. All these vertical lines can be dragged to set limits or change excluded regions.
 
 <H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 

@@ -52,26 +52,46 @@ More complete installation instructions are provided for `MacOS separately <inst
 Linux
 --------------------
 
-To install GSAS2MAIN in Linux use a command such as::
+Linux turns out to be the hardest system to provide pre-built
+installers, due to incomtabilities in system libraries between
+different Linux dists. Two GSAS2MAIN
+installers are provided for Linux,
+https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-rhel-Latest-Linux-x86_64.sh
+and
+https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-Linux-x86_64.sh. The
+former is built on an APS Redhat Enterprise server, while the latter
+is built on an Ubuntu GitHub runner (24.04.2 LTS, last I
+checked). Neither may be compatible with other Linux versions. 
+
+To install GSAS2MAIN in Linux using the GitHub runner  version, use a command such as::
   
   g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-Linux-x86_64.sh"
   curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
-  
-where:
 
- <install-loc> is where you want to install the software. (Use of ``~/g2main``, a subdirectory named ``g2main`` in your home directory is a good choice.) 
-
-More complete installation instructions are provided for `Linux
-separately <install-g2f-linux.html>`_.
-
-Note that binary compatibility between Linux systems is not all that
-good. The above is constructed on an Ubuntu 24.04.2 LTS GitHub runner, but
-that will not run on APS Redhat Enterprise Linux systems. For RHEL a
-separate installer is available. Use this command, instead::
+That version will not run on APS Redhat Enterprise Linux systems, for
+RHEL install with the alternate installer using command::
 
   g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-rhel-Latest-Linux-x86_64.sh"
   curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
 
+where:
+
+ <install-loc> is where you want to install the software. (Use of
+ ``~/g2main``, a subdirectory named ``g2main`` in your home directory
+ is a good choice.) More details on use of the `GSAS2MAIN installer on
+ Linux is here <install-g2f-linux.html>`_.
+
+As note above, binary compatibility between Linux systems is not all that
+good. If the above do not work, or if you prefer to use code packages
+distributed for your Linux platform, you are encouraged to use
+apt-get, yum,... to install Python (see the
+`GSAS-II Python package requirements
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_,
+and then use the ``gitcompile.py`` routine, discussed in the
+:ref:`gitcompile` section below to download, compile and install  GSAS-II. 
+Another easy-to-use option is to use pixi, (see :ref:`pixi
+installation`). The disadvantage of pixi is that you will need to
+update GSAS-II manually with git commands and then rerun pixi.
 
 GSAS2MAIN Additional Details
 ----------------------------------------
@@ -155,6 +175,8 @@ an alternative to the Help/Update command (which will cannot be used
 when GSAS-II will not start after a bad update.) If GSAS-II will not
 start due to changes that have been made locally, the ``--reset``
 option might be needed.
+
+.. _gitcompile:
 
 .. index:: Installing & Compiling GSAS-II
 

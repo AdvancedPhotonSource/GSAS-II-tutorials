@@ -67,5 +67,5 @@ Any modification of the background representation will be immediately applied to
 <H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
 The plot is the largely the same as for the parent PWDR Powder Histograms tree entry 
-[with the same plot actions](./powderparent.md#PWDR_plot_actions) and [same key press commands](./powderparent.md#PWDR_keylist), except that tickmarks are not shown and the obs-calc position cannot be dragged.
+[with the same plot actions](./powder.md#PWDR_plot_actions) and [same key press commands](./powder.md#PWDR_keylist), except that tickmarks are not shown and the obs-calc position cannot be dragged.
 Specific to this plot are fixed background points. These can be added, deleted and moved. Once that is done the background parameters for the selected function can be fitted to the fixed points. NB: the number of fixed points must exceed the number of background parameters to be fitted. Not recommended for fitting sharp Bragg peak backgrounds unless sufficient fixed points are selected across each Bragg peak.
