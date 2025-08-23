@@ -16,7 +16,7 @@ Each powder diffraction dataset has a  [main (parent) entry](./powderparent.md) 
 * [Unit Cells List](./powdercells.md)
 * [Reflection Lists](./powderrefs.md)
 
-Clicking on the parent or on the subdata tree items, as well as [main (parent) entry for the histogram](./powderparent.md) allows access to different parameters associated with the dataset and offers different menu commands. With the exception of the Instrument Parameters subtree item, which produces a different type of plot, showing peak widths, each PWDR subtree item produces similar plots of the powder diffraction histogram, with different variations:
+Clicking on the parent or on the subdata tree items, as well as [main (parent) entry for the histogram](./powderparent.md) allows access to different parameters associated with the dataset and offers different menu commands. With the exception of the Instrument Parameters subdata tree item, which produces a different type of plot, showing peak widths, each PWDR subdata tree item produces similar plots of the powder diffraction histogram, with different variations:
 
 * By selecting the Limits entry, range of data used, as well as possible excluded regions, can be set.
 * Selecting Reflection Lists allows display of reflection indices (hkl values) for a selected phase. Letting the mouse rest unmoved at the position of a reflection in \(2\theta\), TOF, Q, etc. (the vertical position does not matter) will cause these to be displayed. After a short delay a "tool tip" will appear with indices for any reflections close to the lateral mouse position.
@@ -33,34 +33,47 @@ Clicking on the parent or on the subdata tree items, as well as [main (parent) e
 
 When the histogram is displayed by clicking on a data tree entry, the axes are initially scaled to fit the selected histogram. The plot can be rescaled a number of ways:
 
-* ![](./images/zoom.png) Clicking on the "Zoom" button allows you to trace out a box to use as new limits for the plot.
-* ![](./images/pan.png) Clicking on "Pan" button allows the limits to be repositioned, by dragging with the left mouse button, or the increase or decrease the scaling by dragging either vertically or horizontally with the right button (control+left also works on Macs). 
+* ![](./images/zoom.png) Clicking on the "Zoom" button allows you to trace out a box to use as new limits for the plot. Use a left-mouse drag to draw a box to enclose the region to be displayed. 
+Note that when this mode is selected, other actions with the mouse (such as dragging plot elements, peak picking, etc.) cannot be performed. 
+* ![](./images/pan.png) Clicking on "Pan" button allows the limits to be repositioned: by dragging with the left mouse button, or increase or decrease the scaling: by dragging with the right button either vertically or horizontally (control+left also works on Macs). 
+Note that when this mode is selected, other actions with the mouse cannot be performed. 
 * ![](./images/homestack.png) The "Home" button resets the scale to allow the data to fit into the plot. Note that a stack of scaling values are stored. Clicking left arrow provides access to a previous scaling values and then the right button returns to later values. 
 * Pressing the "s" key with the graphics window active causes the plot to enter "sqrt" plotting mode, where intensity values are shown as $\sqrt I$. This also causes the tickmarks and difference plot positions to be repositioned to their initial locations. Pressing the key again exits  "sqrt" plotting mode. 
 Pressing this key twice is a convenient way to reset the plotting scaling and tickmark positioning. 
 * ![](./images/KeyPress.png) An alternative to remembering what key to press is to use the "K" button which provides a menu of all defined key strokes and allows the action to be selected from that menu, so  "sqrt" plotting mode can also be selected using this button. 
 * When the main data tree item is selected, tickmarks and the difference plot location can be selected by dragging the plot item (using the left mouse button) to the desired location. 
-* To specify exact values for plot limits, one can use the Commands/Set plot limits... menu command associated with main data tree item. One can select which limits are to b specified in the window that is opened, so it is possible to scale only the "x" axis. 
+* To specify exact values for plot limits, one can use the Commands/"Set plot limits..." menu command (with the main PWDR data tree item only.) One can select which limits are to b specified in the window that is opened, so it is possible to scale only the "x" axis. 
+* ![](./images/magbuttons.png) The eight yellow "V" buttons can be used to reposition or rescale the plot axes. The four to the left reposition the plot limits but do not change the range. The "V" points in the direction the data move relative to the axes. The next two change the x-axis scaling and the final two change the y-axis scaling. The first of each pair zooms in (decreasing the plot range). 
+The advantage of using these buttons over the "Zoom" and "Pan" buttons is that these controls will not interfere with other mouse actions, while  "Zoom" and "Pan" mode need to be toggled off before other mouse actions are possible. 
 
-Note that plot scaling and difference/tickmark positioning is usually retained when selecting other histograms from the data tree, but only when the histogram type is the same. When moving from x-ray to neutron data, it is assumed that the scaling should be reset. 
+#### Histogram selection
 
-It is also possible to define default scaling/appearance settings for a histogram. Use the commands above to define the scaling, as well as position difference & tickmark items (and then press the "!" key (or access from the "K" button. The current display settings for the histogram are saved and these settings will be used when the histogram is redisplayed by clicking on a data tree entry. This is of particular value when working with several histograms having different Q and/or intensity ranges. 
+Once a first histogram has been selected, the plot scaling and difference/tickmark positioning is usually retained unchanged when selecting other histograms from the data tree, but only when the histogram type is the same. This allows one to zoom in on a region of a pattern and then look at that region in a series of histograms. If this is not the desired behavior, use the "!" key command to set default settings for histograms.
+When moving from x-ray to neutron data, for example, the scaling etc. is reset. 
+
+#### Histogram defaults
+
+It is also possible to define default scaling/appearance settings for a histogram. Use the commands above to define the scaling, as well as position difference & tickmark items (and then press the "!" key (or access from the "K" button). The current display settings for the histogram are saved and these settings will be used when the histogram is redisplayed by clicking on a data tree entry. This is of particular value when working with several histograms having different Q and/or intensity ranges. Note that the default settings for a histogram are saved in the project (.gpx) file. 
 
 <a name="PWDR_plot_actions"></a>
 <a name="PWDR_dragticks"></a>
 ### Plot Actions 
 
 Here is a list of things that one can do with the plot of diffraction patterns from the 
-PWDR entry and some of its subtree entries.
+PWDR entry and some of its subdata tree entries.
 
 #### For all plots
 
 * **Move mouse**: As the mouse cursor is moved across the plot, the plot status line will show the cursor position as \(2\theta\) (or TOF), d-spacing, Q and the intensity.
-* **Press keyboard keys** - See below. The "s" and "w" modes are commonly used.
-* **Drag tick marks** - Select any tick mark and while holding the left mouse button down, move them to where you want them to be displayed (press the s key for Sqrt(I) mode to reset to the defaults). With multiple phases, selecting the 2nd phase, etc. changes the vertical spacing between phases. Tick marks can be dragged only when the main PWDR or Reflection Lists tree items are selected.
-* **Drag the difference curve** - When the "normal" obs-calc plot is shown (as opposed to the "w" mode plot where (obs-calc)/sigma is displayed, select any point in the difference curve and while holding the left mouse button down move the curve to where you want it to be displayed (press the s key for Sqrt(I) mode to reset it to the default). The difference curve can be dragged only when the main PWDR or Reflection Lists tree items are selected.
-* **Display/edit histogram information** - By selecting different tree items within the current histogram, it is possible to display and, in some cases, edit information associated with the histogram. See above.
+* **Press keyboard keys** - [See below](#PWDR_keylist). The "s" and "w" modes are commonly used.
 * **Create a Publication-ready plot**  - Press the green "P" button to generate a customizable version of the displayed plot that can be exported at high resolution, [as discussed below](#PWDR_publication).
+
+#### For specific datatree items
+
+Display/edit histogram information: Each PWDR subdata tree entry offers access to different sections of the histogram data and settings. In the Data Window one can see this information, plot it and in many cases, edit information associated with the histogram. 
+
+* **Drag tickmarks** - Select any tickmark and while holding the left mouse button down, move them to where you want them to be displayed (press the s key for Sqrt(I) mode to reset to the defaults). With multiple phases, selecting the 2nd phase, etc. changes the vertical spacing between phases. tickmarks can be dragged only when the main PWDR or Reflection Lists tree items are selected.
+* **Drag the difference curve** - When the "normal" obs-calc plot is shown (as opposed to the "w" mode plot where (obs-calc)/sigma is displayed, select any point in the difference curve and while holding the left mouse button down move the curve to where you want it to be displayed (press the s key for Sqrt(I) mode to reset it to the default). The difference curve can be dragged only when the main PWDR or Reflection Lists tree items are selected.
 * **Highlight reflection positions** - By selecting the "Reflection Lists" tree item and a phase, if the mouse is moved to the region of a reflection in that phase, a "tool tip" (temporarily displayed text) with the indices for nearby reflections is displayed.
 * **Label reflection positions** - Right-clicking on a reflection tickmark (in the PWDR and "Reflection Lists" plots) will cause an hkl label with the indices for nearby reflection(s) to be displayed. Once a reflection label is shown, it can be dragged to a new position vertically with the left mouse button. Right-clicking on the label will delete it. All hkl labels can be deleted with a menu command. The hkl labels, including their positions, are saved in the GSAS-II project (.gpx) file.
 
@@ -74,14 +87,14 @@ The following key press characters have defined actions. These actions can also 
 * **a: add magnification region** - Adds a magnification region to the plot and sets the magnification amount to x2. This can be edited (or deleted) in the table that is shown when the main PWDR tree entry is selected.
 * **b: subtract background** - Subtracts the fitted background from the powder pattern. Pressing this again turns the mode off.
 * **c: contour on/off** - if multiple powder profiles, then a contour plot is shown of the observed intensities. Data sets of differing length are padded/trimmed to match the 1st pattern.
-* **f: toggle full length reflection tick marks** - Reflection positions are indicated when the main PDWR tree entry is selected, or when the "Reflection Lists" entry is selected by display of vertical lines. These lines can be shown as tickmarks, short lines or a thin vertical line the full length of the plot. The 'f' key toggles between the two modes.
+* **f: toggle full length reflection tickmarks** - Reflection positions are indicated when the main PDWR tree entry is selected, or when the "Reflection Lists" entry is selected by display of vertical lines. These lines can be shown as tickmarks, short lines or a thin vertical line the full length of the plot. The 'f' key toggles between the two modes.
 * **g: grid lines** - Toggle drawing vertical and horizontal grid lines at all axis label positions. Applies to all plot modes.
 * **m: toggle single/multiple plot** - In single mode, this will show only the one selected from the data tree. In multiple “waterfall” mode all are superimposed; offset options (below) can be used to shift them. The selected one is displayed as points & curve for obs/calc; others as obs lines only.
 * **n: log(I) on/off** - changes the y-axis to be the log10 of the intensity; difference curve is not shown for log(I) on.
 * **o: remove obs...** - toggle removal of the labels for obs, calc, etc (only phase names for tickmarks remain).
 * **p: plot partials** - plots the partial contributions from each phase, if they have been computed (using Calculate/Compute partials) in addition to the 
 * **q: toggle Q plot** - changes the x-axis to Q (in Å$^{-1}$). This will put multiple powder patterns taken at different wavelengths/types on the same x-axis scale.
-* **s: Sqrt(I) on/off** - changes the y-axis to be the square-root of the intensity. The tick mark and the difference curve location is reset.
+* **s: Sqrt(I) on/off** - changes the y-axis to be the square-root of the intensity. The tickmark and the difference curve location is reset.
 * **t: toggle d-space plot** - changes the x-axis to d-space (in Å). This will put multiple powder patterns taken at different wavelengths/types on the same x-axis scale.
 * **T: toggle plot title** - Removes or returns the plot title
 * **v: Save CSV output** - exports the contents of the plot as a .csv file for use in plotting and spreadsheet programs.

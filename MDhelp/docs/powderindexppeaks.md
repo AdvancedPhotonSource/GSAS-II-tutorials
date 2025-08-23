@@ -21,7 +21,7 @@ This window shows the list of peaks that will be used for indexing (see [Unit Ce
 
 The plot is the largely the same as for the parent PWDR Powder Histograms tree entry 
 [with the same plot actions](./powder.md#PWDR_plot_actions) and [same key press commands](./powder.md#PWDR_keylist). 
-Specific to this plot are the peak positions that are shown as vertical solid blue lines. To show that a peak is selected, it is highlighted in yellow and, if "use" is selected, the blue line is made wider. The upper and lower data limits are shown as red and green dashed vertical lines, respectively. Tick marks aer not shown. Limits cannot be dragged from this data tree item. 
+Specific to this plot are the peak positions that are shown as vertical solid blue lines. To show that a peak is selected, it is highlighted in yellow and, if "use" is selected, the blue line is made wider. The upper and lower data limits are shown as red and green dashed vertical lines, respectively. Tickmarks are not shown. Limits cannot be dragged from this data tree item. 
 
 <H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
