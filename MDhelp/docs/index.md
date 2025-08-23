@@ -52,8 +52,8 @@ An index on the topics covered in these help pages is given below.
         * [ISODISTORT tab](./phaseisodistort.md)
         * [Dysnomia tab](./phasedysnomia.md)
     3. [Image (IMG)](./image.md) Data Tree entries
-    4. Powder histogram (PWDR) [overview](./powder.md) 
-        * [Parent PWDR data tree entry](./powderparent.md)
+    4. [Powder histogram (PWDR) overview](./powder.md) 
+        * [Parent (main) PWDR data tree entry](./powderparent.md)
         * [Comments](./powdercomments.md)
         * [Limits](./powderlimits.md)
         * [Background](./powderbkg.md)
@@ -70,4 +70,4 @@ An index on the topics covered in these help pages is given below.
     8. [Small Angle Scattering (SASD)](./smallanglescattering.md) Data Tree entries
     9. [Reflectometry (REFD)](./reflectometry.md) Data Tree entries 
     9. [Powder Peaks (PKS)](./peaks.md) Data Tree entries 
- 5. [Others](./others.md): Macintosh notes, Configuration options and Programmers' documentation
+ 5. [Misc](./others.md): Macintosh notes, Configuration options and Programmers' documentation

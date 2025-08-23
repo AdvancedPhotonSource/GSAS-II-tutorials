@@ -22,11 +22,11 @@ where the sum is over the points (N) in the profile delimited by the Limits (see
 
 <H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
-The powder patterns that are part of your project are shown on this page. 
+The powder patterns that are part of your project are shown in the graphics window. 
 They can be displayed as a stack of powder patterns, just a single pattern, or as a contour image of the peak intensities, or be plotted individually. 
 What can be done here will depend on how many patterns are shown as well as what mode is selected. Note that the tick marks and difference curve positions can be customized, as discussed below.
 
-<H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
+<H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
 
-The plot is the largely the same for the main PWDR Powder Histograms tree entry and
-most subtree entries. See the [overview](./powder.md) section for the [same plot actions](./powder.md#PWDR_plot_actions) and [key press commands](./powder.md#PWDR_keylist). 
+There are a huge number of options that can be used with the plot to change different aspects of how pattern(s) are plotted. The controls are largely the same for graphics associated with the main PWDR Powder Histograms tree entry and
+most subtree entries. See the [overview](./powder.md) section for the [plot actions](./powder.md#PWDR_plot_actions) and [key press commands](./powder.md#PWDR_keylist). 
