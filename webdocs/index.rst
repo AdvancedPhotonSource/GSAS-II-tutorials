@@ -11,15 +11,10 @@ GSAS-II Home Page
 
 .. tip::
 
-   As of April 22, 2025, the default branch for GSAS-II has been
-   changed from ``master`` to a branch called ``main``. If the
-   gsas2full self-installer was used for GSAS-II use of the
-   Help/Update process should make the transition from the ``master``
-   to the new ``main`` version. Other types of installations will
-   likely require that GSAS-II be reinstalled (as described
-   below). Details about what has been changed in this transition can
-   be found in the :ref:`section on this transition <master2main>`,
-   also below. 
+   A new section in the GSAS-II web documentation,
+   `Announcements in "GitHub Discussions" <https://github.com/AdvancedPhotonSource/GSAS-II/discussions/categories/announcements>`_
+   is now in use as a source of information on new capabilities added to
+   GSAS-II. 
 
 Welcome to the home page for GSAS-II, a unique and comprehensive open
 source Python project for determination of crystal structures and

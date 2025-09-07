@@ -54,8 +54,10 @@ For a sequential Rietveld refinement, set the PWDR histograms to be used in the 
     * **Edit equation** - to edit an equation.
     * **Fit to equation(s)** - do the fitting of the parametric equations to the data.
 * Menu '**Seq export**' –
-    * **Project as** - only choice is as a full cif file.
-    * **Phase as** - either a "quick" cif or a CSV file
+    * **Project as** - choices are 
+      1. a CIF file that contains each sequential result as a separate block (with one phase) or multiple blocks, if multi-phase.
+      2. The output files used by the [Cinema: Debye-Scherrer program](https://github.com/cinemascience/cinema_debye_scherrer?tab=readme-ov-file#cinemadebye-scherrer) from Los Alamos. This is a nice tool for visual display of parametric fits. [Install it](https://github.com/cinemascience/cinema_debye_scherrer?tab=readme-ov-file#installation) before using the export option. 
+    * **Phase as** - either a "quick" CIF or a CSV file
     * **Powder as** - either a powder pattern cif, a histogram CSV file or a reflection list CSV file.
     * **Save table as CSV** - same as Save all as CSV above.
 

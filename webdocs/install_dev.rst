@@ -11,11 +11,7 @@
  Installing GSAS-II for code development
 ==============================================
 
-.. tip::
-
-   At the time this is being updated (April 22, 2025), the default branch for GSAS-II has been changed from ``master`` to a branch called ``main``. Development tasks should be made on the ``main`` branch rather than ``master``, but if changes are made to ``master`` they can be merged into ``main`` on a case-by-case basis if requested.
-
-While bug fixes are sometimes applied directly to the ``main`` branch (and previously the ``master`` branch). The better way to make changes to GSAS-II is to make a private copy of the ``main`` branch on GitHub; this private copy is called a "fork." When you have a working version with the changes or additions that you want to make, you then issue an invitation to have your changes incorporated into the ``main`` branch. That invitation is called a "pull request" on GitHub, as you wish to have your changes pulled into the central GSAS-II version. You are very much encouraged to try your hand at working on improvements and fixes to GSAS-II.
+While the main developers (Bob and Brian) do most of their work by applying changes directly to the ``main`` branch of GSAS-II. The better way to make changes to GSAS-II is to make a private copy of the ``main`` branch on GitHub; this private copy is called a "fork." When you have a working version with the changes or additions that you want to make, you then issue an invitation to have your changes incorporated into the ``main`` branch. That invitation is called a "pull request" on GitHub, as you wish to have your changes pulled into the central GSAS-II version. You are very much encouraged to try your hand at working on improvements and fixes to GSAS-II.
 
 This documentation section describes the steps needed to "fork a copy" of the GSAS-II repository in your own GitHub account. This means you will establish a private copy of GSAS-II. When you have reached a good point to share what you have done, and provide a "pull request" it allows the GSAS-II developers access to your working version so that the changes can be considered and potentially included into the main distribution.
 
@@ -144,19 +140,23 @@ The code in the ``main`` includes setup files for `Pixi <https://pixi.sh>`_, whi
 It is particularly convenient for GSAS-II software development. 
 There are many ways to install Pixi, as listed `here <https://pixi.sh>`_, or by using the ``conda install pixi`` command, or homebrew, etc. 
 
-Once pixi is installed, it can be used to setup and run GSAS-II, with commands as described below. These commands should be run from the ``<G2>/GSASII/pixi`` directory:
+Once pixi is installed, it can be used to setup and run GSAS-II, with commands as described below. These commands download GSAS-II from GitHub, install it, including compiling the files locally, then runs the self-tests and then finally starts the GSAS-II GUI: 
 
-Linux/MacOS::
-  
-    cd <...>/GSASII/pixi
+        cd <install-location>
+        git clone --depth 1 git@github.com:AdvancedPhotonSource/GSAS-II.git
+        cd GSAS-II/pixi
+        pixi run install
+        pixi run test
+        pixi run ui
 
-Windows:: 
+The pixi program makes all this very easy. Developers will likely want to clone from their own fork of the repo (see above) and may want to use variants on these commands, such as add `--no-single-branch` so that all branches are available and/or change the `--depth` value or even omit that option.  (Any of these increase the download time significantly.)
+Also note the `install-editable` or `install-editable-win` options below. This allows that git-installed code is used to run GSAS-II rather than copies. With this "`editable" option you can make changes to GSAS-II and then restart it and see the impact of your changes immediately [with a bit of tampering, sometimes one can use `importlib.reload()` and see changes as soon as they are saved]. If the normal install process is used, the changes will be seen only after repeating the `pixi run install` step.
 
-    cd <...>\GSASII\pixi
-    
 ---------------------------------------------------
-GSAS-II installation via pixi
+GSAS-II pixi commands
 ---------------------------------------------------
+
+Details on commonly-used commands with pixi follow: 
 
 ``pixi run install``
 
@@ -174,10 +174,6 @@ GSAS-II installation via pixi
      be used to upload changes to GitHub. Note the slightly different version of
      this command for Windows.
 
----------------------------------------------------
-Commonly-used pixi commands
----------------------------------------------------
-
 After one of the above install commands is used, the following commands can be used:
 
 ``pixi run test``
@@ -187,7 +183,7 @@ After one of the above install commands is used, the following commands can be u
 
 ``pixi run ui``
 
-    Runs the GSAS-II GUI. 
+    Starts the GSAS-II GUI. 
 
 ``pixi run python``
 
