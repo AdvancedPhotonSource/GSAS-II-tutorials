@@ -82,16 +82,16 @@ Display/edit histogram information: Each PWDR subdata tree entry offers access t
 
 The following key press characters have defined actions. These actions can also be initiated from the Key Press button on the plot toolbar. Not all actions are available for all PWDR subdata tree items.
 
-#### For line plots
+#### For Single-Histogram line plots
 
 * **a: add magnification region** - Adds a magnification region to the plot and sets the magnification amount to x2. This can be edited (or deleted) in the table that is shown when the main PWDR tree entry is selected.
 * **b: subtract background** - Subtracts the fitted background from the powder pattern. Pressing this again turns the mode off.
-* **c: contour on/off** - if multiple powder profiles, then a contour plot is shown of the observed intensities. Data sets of differing length are padded/trimmed to match the 1st pattern.
-* **f: toggle full length reflection tickmarks** - Reflection positions are indicated when the main PDWR tree entry is selected, or when the "Reflection Lists" entry is selected by display of vertical lines. These lines can be shown as tickmarks, short lines or a thin vertical line the full length of the plot. The 'f' key toggles between the two modes.
+* **c: contour on/off** - with multiple powder profiles, a contour plot is shown of the observed intensities (see below)
+* **f: toggle reflection tickmarks** - Reflection positions can be indicated when the main PDWR tree entry is selected, or when the "Reflection Lists" entry is selected by display of vertical lines. These lines can be shown as tickmarks: short lines or a thin vertical line the full length of the plot. The 'f' key toggles between three modes: short lines, thin lines or no lines.
 * **g: grid lines** - Toggle drawing vertical and horizontal grid lines at all axis label positions. Applies to all plot modes.
-* **m: toggle single/multiple plot** - In single mode, this will show only the one selected from the data tree. In multiple “waterfall” mode all are superimposed; offset options (below) can be used to shift them. The selected one is displayed as points & curve for obs/calc; others as obs lines only.
+* **m: toggle single/multiple plot** - In single mode, this will show only the one selected from the data tree. In multiple “waterfall” mode, all selected data are shown (see below).
 * **n: log(I) on/off** - changes the y-axis to be the log10 of the intensity; difference curve is not shown for log(I) on.
-* **o: remove obs...** - toggle removal of the labels for obs, calc, etc (only phase names for tickmarks remain).
+* **o: legend contents** - toggle removal of the labels for obs, calc, etc (only phase names for tickmarks may remain, as determined by the **f** key).
 * **p: plot partials** - plots the partial contributions from each phase, if they have been computed (using Calculate/Compute partials) in addition to the 
 * **q: toggle Q plot** - changes the x-axis to Q (in Å$^{-1}$). This will put multiple powder patterns taken at different wavelengths/types on the same x-axis scale.
 * **s: Sqrt(I) on/off** - changes the y-axis to be the square-root of the intensity. The tickmark and the difference curve location is reset.
@@ -105,6 +105,7 @@ The following key press characters have defined actions. These actions can also 
 * **.: scaling diagnostic** - When the '.' key is pressed, data are plotted as intensity*weight. Normally this = 1.0 for CW data and proportional to incident spectrum for normalized neutron TOF data. Does not include effect of selected weight factor but is equal to number of detectors in multidetector data. (not in menu)
 * **!: save plot parameters as default** - When the "!" key is pressed, the current display settings for the histogram are saved and these settings will be used when the histogram is displayed by clicking on a data tree entry. To reset the scaling, use either the "s" key (sqrt plotting mode) twice or press the "Home" button to the left on the Matplotlib toolbar. 
 
+##### For specific data tree items
 * **e: set excluded region** - Defines a new excluded region: press the "e" key with the mouse on one side of the region. Move the mouse to the other side and press "e" again. The region markers (magenta dashed lines) can be dragged to new positions.
 Available only when the Limits tree entry is selected. 
 * **d: highlight next peak** - Selects a peak in the table, or the next peak. 
@@ -113,32 +114,41 @@ Available only when the Peak List or Index Peak List tree entries are selected.
 Available only when the Peak List or Index Peak List tree entries are selected. 
  
 
-#### For line plots with more than one powder pattern
+#### For Waterfall Plots (with more than one powder pattern)
 
-* **c: contour on/off** - if multiple powder profiles, then a contour plot is shown of the observed intensities. Data sets of differing length are padded/trimmed to match the 1st pattern.
-* **S: set color Scheme** - Select the color map used for contour plots
-* **m: toggle single/multiple plot** - In single mode, this will show only the one selected from the data tree. In multiple “waterfall” mode all are superimposed; offset options (below) can be used to shift them. The selected one is displayed as points & curve for obs/calc; others as obs lines only.
-* **f: select data** - Allows a subset of the powder patterns to be plotted, rather than all.
-* **+,=: no selection** - For multiple powder profiles, only the observed curve is shown when this mode is turned on ('+' and '=' do exactly the same thing).
-* **/: normalize** - For multiple powder profiles, all diffraction datasets are normalized so that the maximum intensity is 1 (does not affect the data).
+* **m: toggle single/multiple plot** - In single mode, this will show only the one histogram selected from the data tree. In multiple “waterfall” mode, all selected histograms are superimposed (see **F** for selection); offset options (below) can be used to shift them. The mode for display of the selected dataset is determined by the **+** (or **=**)  key (see below).
+* **F: select data** - Allows a subset of the powder patterns to be plotted, rather than all.
+* **n: log(I) on/off** - changes the y-axis to be the log10 of the intensity; difference curve is not shown for log(I) on.
+* **o: legend contents** - toggles addition of histogram names in the plot legend for waterfall plots. Names are the histogram label or the data tree name, if the former is not set. See **f** for inclusion of phase names via tickmarks in the legend.
+* **s: Sqrt(I) on/off** - changes the y-axis to be the square-root of the intensity. The tickmark location is reset.
+* **+,=: no selection** - With waterfall plots, this is a four-way toggle. As before, in the default mode, observed points are shown as blue "+" signs (the color can be changed in preferences) and the fitted pattern as a green line. Pressing this once adds a line for the observed points, pressing it again removes the "+" signs. The additional mode for waterfall plots removes the calculated plot from the display and shows the 
+histogram name as the histogram label or the data tree name, if the former is not set.
+('+' and '=' do exactly the same thing).
+* **/: normalize** - For multiple powder profiles, all diffraction datasets are normalized so that the maximum intensity is 1 (only as displayed, the stored values are not changed).
 
-#### Offset modes for line plots in waterfall mode (multiple patterns only)
+##### Waterfall Plot Offsets
 
 * **l: offset left** - For a waterfall plot of multiple powder profiles, increase the offset so that later plots are shifted more to the left relative to previous plots.
 * **r: offset right** - For a waterfall plot of multiple powder profiles, increase the offset to the right (or decrease the left offset.)
 * **d,D: offset down** - For a waterfall plot of multiple powder profiles, increase the offset down. (D does the same as d but to a much larger amount)
 * **u,U: offset up** - For a waterfall plot of multiple powder profiles, increase the offset up. (U does the same as u but to a much larger amount)
-* **o: reset offset** - For a waterfall plot of multiple powder profiles, reset to no offset.
+* **O: reset offset** - For a waterfall plot of multiple powder profiles, reset to no offset.
 
-#### For contour plots
+#### For Contour Plots
+
+* **c: contour on/off** - if multiple powder profiles, then a contour plot is shown of the observed intensities. Data sets of differing length are padded/trimmed to match the 1st pattern.
+
+* **F: select data** - Allows a subset of the powder patterns to be plotted, rather than all.
+
+##### Contour Plots Display Options
+* **S: set color Scheme** - Select the color map used for contour plots. 
+Default is 'Paired', black/ white options are 'Greys' and 'binary' (for black on white) or 'gray' (for white on black). Some others can be very colorful (but not all are useful!).
 
 * **d: lower contour max** - This lowers the level chosen for the highest contour color.
 * **D: lower contour min** - This lowers the level chosen for the lowest contour color; can be negative.
 * **u: raise contour max** - This raises the level chosen for the highest contour color
 * **U: lower contour min** - This lowers the level chosen for the highest contour color
 * **i: interpolation method** - This changes the method used to represent the contours. If selected a dialog box appears with all the possible choices. Default is 'nearest'; the other useful choice is 'bilinear', this will smooth out the contours.
-* **s: color scheme** - This changes the color scheme for the contouring. Default is 'Paired', black/ white options are 'Greys' and 'binary' (for black on white) or 'gray' (for white on black). Others can be very colorful (but not useful!)
-* **c: contour off/on** -This turns off contouring and returns to a waterfall plot with any offsets applied.
 * **t: temperature on/off** - Show “temperature” for y-axis; valid only if temperature is varied across data sequence and evenly spaced.
 * **s: toggle sqrt(I) plot** - Show sqrt(intensity) in contour plot
 
