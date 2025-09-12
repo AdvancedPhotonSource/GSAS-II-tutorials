@@ -91,7 +91,7 @@ The following key press characters have defined actions. These actions can also 
 * **g: grid lines** - Toggle drawing vertical and horizontal grid lines at all axis label positions. Applies to all plot modes.
 * **m: toggle single/multiple plot** - In single mode, this will show only the one selected from the data tree. In multiple “waterfall” mode, all selected data are shown (see below).
 * **n: log(I) on/off** - changes the y-axis to be the log10 of the intensity; difference curve is not shown for log(I) on.
-* **o: legend contents** - toggle removal of the labels for obs, calc, etc (only phase names for tickmarks may remain, as determined by the **f** key).
+* **L: legend contents** - toggle removal of the labels for obs, calc, etc (only phase names for tickmarks may remain, as determined by the **f** key).
 * **p: plot partials** - plots the partial contributions from each phase, if they have been computed (using Calculate/Compute partials) in addition to the 
 * **q: toggle Q plot** - changes the x-axis to Q (in Å$^{-1}$). This will put multiple powder patterns taken at different wavelengths/types on the same x-axis scale.
 * **s: Sqrt(I) on/off** - changes the y-axis to be the square-root of the intensity. The tickmark and the difference curve location is reset.
@@ -119,7 +119,7 @@ Available only when the Peak List or Index Peak List tree entries are selected.
 * **m: toggle single/multiple plot** - In single mode, this will show only the one histogram selected from the data tree. In multiple “waterfall” mode, all selected histograms are superimposed (see **F** for selection); offset options (below) can be used to shift them. The mode for display of the selected dataset is determined by the **+** (or **=**)  key (see below).
 * **F: select data** - Allows a subset of the powder patterns to be plotted, rather than all.
 * **n: log(I) on/off** - changes the y-axis to be the log10 of the intensity; difference curve is not shown for log(I) on.
-* **o: legend contents** - toggles addition of histogram names in the plot legend for waterfall plots. Names are the histogram label or the data tree name, if the former is not set. See **f** for inclusion of phase names via tickmarks in the legend.
+* **L: legend contents** - toggles addition of histogram names in the plot legend for waterfall plots. Names are the histogram label or the data tree name, if the former is not set. See **f** for inclusion of phase names via tickmarks in the legend.
 * **s: Sqrt(I) on/off** - changes the y-axis to be the square-root of the intensity. The tickmark location is reset.
 * **+,=: no selection** - With waterfall plots, this is a four-way toggle. As before, in the default mode, observed points are shown as blue "+" signs (the color can be changed in preferences) and the fitted pattern as a green line. Pressing this once adds a line for the observed points, pressing it again removes the "+" signs. The additional mode for waterfall plots removes the calculated plot from the display and shows the 
 histogram name as the histogram label or the data tree name, if the former is not set.
@@ -132,7 +132,7 @@ histogram name as the histogram label or the data tree name, if the former is no
 * **r: offset right** - For a waterfall plot of multiple powder profiles, increase the offset to the right (or decrease the left offset.)
 * **d,D: offset down** - For a waterfall plot of multiple powder profiles, increase the offset down. (D does the same as d but to a much larger amount)
 * **u,U: offset up** - For a waterfall plot of multiple powder profiles, increase the offset up. (U does the same as u but to a much larger amount)
-* **O: reset offset** - For a waterfall plot of multiple powder profiles, reset to no offset.
+* **o: reset offset** - For a waterfall plot of multiple powder profiles, reset to initial state (no offsets.)
 
 #### For Contour Plots
 
