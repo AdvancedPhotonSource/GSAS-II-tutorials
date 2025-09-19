@@ -33,11 +33,10 @@ A single menu is provided with the selection of instrument parameters.
 
 * **Set one value**: this is used to set a single selected instrument parameter for a selected set of PWDR histograms. The same value can be used for all histograms, or a dialog can be used to provide a table where you can set the values differently for each of selected histograms.
 
-* **Show multiple**: Sets a mode where selected histograms matching the current selected histogram are shown in the data window.
+* **Show multiple**: Displays instrument parameters for all histograms similar to the current selected histogram in a dingle table.
 
-Note that you can change any of the instrument coefficients
-
-* You can choose to refine any instrument coefficients, but this is discouraged, except for generating instrumental profiles for a NB: In certain circumstances some choices are ignored e.g. Zero is not refined during peak fitting. Also, some choices may lead to unstable refinement, e.g. Lam refinement and lattice parameter refinement. Examine the 'Covariance' display for highly correlated parameters.
+Note that you can change any of the instrument coefficients and the instrument peak widths plot will be updated to show the effect of the change on overall peak widths. 
+Note that while the software does allow you to refine any of the instrument coefficients, refinement of these terms is discouraged, except for generating instrumental profiles for calibration. NB: In certain circumstances some refinement choices are ignored: e.g. Zero is not refined (or used) during peak fitting. Also, some parameter choices may lead to unstable refinement, e.g. combining refinement of Lam (wavelength) and lattice parameter. In Rietveld fitting, examine the 'Covariance' display for highly correlated parameters.
 
 <H3 style="color:blue;font-size:1.1em">What is plotted here?</H3>
 
