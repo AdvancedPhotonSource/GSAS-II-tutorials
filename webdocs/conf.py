@@ -6,10 +6,10 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'GSAS-II web documentation'
-copyright = '2024 by Argonne National Laboratory'
+project = 'GSAS-II'
+copyright = '2025 by Argonne National Laboratory'
 author = 'Brian H. Toby'
-release = '1.0'
+release = 'v5.6.0'
 
 
 # -- General configuration ---------------------------------------------------

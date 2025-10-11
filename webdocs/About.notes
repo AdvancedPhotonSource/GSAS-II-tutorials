@@ -1,0 +1,18 @@
+cd 
+wc -l *.py imports/*.py exports/*.py
+wc -l *GUI.py
+wc -l *.f* powsubs/*.f* spsubs/*.f* texturesubs/*.f* 
+wc -l fmask.c
+
+
+wc -l NIST_profile/*.py k_vec_solve/*.py G2shapes.py
+wc -l  pydiffax.for DIFFaXsubs/* NISTlatsubs/*
+
+ls ~/G2/GSASII-tutorials/*/*.ht* ~/G2/GSASII-tutorials/MDtutorials/*/*.md | wc
+wc ~/G2/GSASII-tutorials/MDtutorials/*/*.md
+wc -l ~/G2/GSASII-tutorials/*/*.ht*
+
+wc  ~/G2/GSASII-tutorials/MDhelp/docs/*.md
+
+wc  ~/G2/GSASII-tutorials/webdocs/*.rst
+figure

@@ -140,7 +140,7 @@ The code in the ``main`` includes setup files for `Pixi <https://pixi.sh>`_, whi
 It is particularly convenient for GSAS-II software development. 
 There are many ways to install Pixi, as listed `here <https://pixi.sh>`_, or by using the ``conda install pixi`` command, or homebrew, etc. 
 
-Once pixi is installed, it can be used to setup and run GSAS-II, with commands as described below. These commands download GSAS-II from GitHub, install it, including compiling the files locally, then runs the self-tests and then finally starts the GSAS-II GUI: 
+Once pixi is installed, it can be used to setup and run GSAS-II, with commands as described below. These commands download GSAS-II from GitHub, install it, including compiling the files locally, then runs the self-tests and then finally starts the GSAS-II GUI:: 
 
         cd <install-location>
         git clone --depth 1 git@github.com:AdvancedPhotonSource/GSAS-II.git
