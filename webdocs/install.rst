@@ -25,7 +25,15 @@ For Windows download file https://github.com/AdvancedPhotonSource/GSAS-II-buildt
 After the installer is started 
 You will have a choice for where to install the software (the default is usually OK, but something like ``c:\software`` might be better, if your computer security allows that.)
 
-More complete installation instructions `are here <install-g2f-win.html>`_.
+More complete installation instructions on the GSAS2MAIN
+installation process on windows are linked below. 
+
+.. index:: gsas2main windows details
+.. toctree::
+   :maxdepth: 1
+	      
+   install-g2f-win.rst
+
 
 MacOS
 --------------------
@@ -47,7 +55,14 @@ where:
 
  <install-loc> is where you want to install the software. (Use of ``~/g2main``, a subdirectory named ``g2main`` in your home directory is a good choice.) After installation is complete, you will be given a chance to place a shortcut for GSAS-II into the MacOS dock.
 
-More complete installation instructions are provided for `MacOS separately <install-g2f-mac.html>`_.
+More complete installation instructions on the GSAS2MAIN
+installation process on MacOS are linked below. 
+
+.. index:: gsas2main MacOS details
+.. toctree::
+   :maxdepth: 3
+	      
+   install-g2f-mac.rst
 
 Linux
 --------------------
@@ -62,6 +77,19 @@ https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.
 former is built on an APS Redhat Enterprise server, while the latter
 is built on an Ubuntu GitHub runner (24.04.2 LTS, last I
 checked). Neither may be compatible with other Linux versions. 
+
+Binary compatibility between Linux systems is not all that
+good. If the above do not work, or if you prefer to use code packages
+distributed for your Linux platform, you are encouraged to use
+apt-get, yum,... to install Python (see the
+`GSAS-II Python package requirements
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_,
+and then use the ``gitcompile.py`` routine, discussed in the
+:ref:`gitcompile` section below to download, compile and install  GSAS-II. 
+Another easy-to-use option is to use pixi, (see :ref:`pixi
+installation`). The disadvantage of pixi, at least with the standard
+install, is that you will need to
+update GSAS-II manually with git commands and then rerun pixi.
 
 To install GSAS2MAIN in Linux using the GitHub runner  version, use a command such as::
   
@@ -78,51 +106,34 @@ where:
 
  <install-loc> is where you want to install the software. (Use of
  ``~/g2main``, a subdirectory named ``g2main`` in your home directory
- is a good choice.) More details on use of the `GSAS2MAIN installer on
- Linux is here <install-g2f-linux.html>`_.
+ is a good choice.)
 
-As note above, binary compatibility between Linux systems is not all that
-good. If the above do not work, or if you prefer to use code packages
-distributed for your Linux platform, you are encouraged to use
-apt-get, yum,... to install Python (see the
-`GSAS-II Python package requirements
-<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_,
-and then use the ``gitcompile.py`` routine, discussed in the
-:ref:`gitcompile` section below to download, compile and install  GSAS-II. 
-Another easy-to-use option is to use pixi, (see :ref:`pixi
-installation`). The disadvantage of pixi is that you will need to
-update GSAS-II manually with git commands and then rerun pixi.
+More complete installation instructions on the GSAS2MAIN
+installation process on linux are below. 
 
-GSAS2MAIN Additional Details
-----------------------------------------
-
-The pages listed below go through the GSAS2MAIN installation process on each identified platform in much greater detail.
-
-.. index:: gsas2pkg installer
+.. index:: gsas2main MacOS details
 .. toctree::
    :maxdepth: 3
 	      
-   install-g2f-win.rst
-   install-g2f-mac.rst
    install-g2f-linux.rst
+
+Installing GSAS-II via pixi
+======================================================
+
+Due to royalty issues with use of Anaconda, Inc. conda packages (which
+GSAS-II does not use; GSAS-II only uses conda-forge which is
+non-proprietary), some sites are encouraging use of pixi rather than
+conda. The pixi installer can be used directly after downloading
+GSAS-II from the GitHub site. It installs Python and all packages
+needed for GSAS-II and it also compiles GSAS-II locally, rather than
+downloading pre-built binaries, which is of particular value for
+Linux. It interferes with GSAS-II's self-updating process, however. 
+
+.. index:: pixi installation
+.. toctree::
+   :maxdepth: 3
 	      
-
-GSAS2PKG Conda Package
-=======================
-
-Users who work extensively with Python and use the conda Python installer may prefer to utilize their existing conda installation to obtain GSAS-II along with the Python configuration that GSAS-II prefers. This can be done with this command (on all platforms)::
-
-  conda create -n GSASII briantoby::gsas2pkg  -c conda-forge
-
-This creates a conda virtual environment named ``GSASII`` (this can be changed) for use by GSAS-II. While it is also possible to install GSAS-II into the conda base environment, this is not recommended as it can create conflicts between Python and package versions needed by GSAS-II and those required by other packages. (If you choose to do this anyway, be sure to specify ``conda install python=3.13 briantoby::gsas2pkg`` as Python is likely to be pinned to a different version.)
-
-After this command is run, use command ``conda activate GSASII`` to access the
-conda environment that has been created. On Linux and MacOS computers, two shortcut commands will then be available in the path, The first command, ``gsasII.sh``, which will start GSAS-II. This can optionally be used as ``gsasII.sh project.gpx`` to open existing project file ``project.gpx`` in GSAS-II. The second command, ``reset-gsasII.sh``  will rarely be used. This command will download the latest version of GSAS-II and update to that version, replacing any locally modified files with the original versions. This can be used to update GSAS-II when the program will not start, so the normal Help->Update menu command cannot be accessed. (Shortcuts available with gsas2pkg v5.1+.)
-
-Note that on MacOS, a Mac app is also created and is displayed in the Finder
-`see steps 5 & 6 here <install.html#macos-gsas2main-installation-details>`_. This app can be used to start GSAS-II from the dock or desktop.
-
-.. index:: Installing GSAS-II with gitstrap.py
+   install_pixi.rst
 
 Installing GSAS-II with a Separate Python Installation
 ======================================================
@@ -238,11 +249,35 @@ start due to changes that have been made locally, the ``--reset``
 option might be needed.
 
 .. index:: Installing GSAS-II from GitHub
+
+
+GSAS2PKG Conda Package
+=======================
+
+Users who work extensively with Python and use the conda Python installer may prefer to utilize their existing conda installation to obtain GSAS-II along with the Python configuration that GSAS-II prefers. This can be done with this command (on all platforms)::
+
+  conda create -n GSASII briantoby::gsas2pkg  -c conda-forge
+
+This creates a conda virtual environment named ``GSASII`` (this can be changed) for use by GSAS-II. While it is also possible to install GSAS-II into the conda base environment, this is not recommended as it can create conflicts between Python and package versions needed by GSAS-II and those required by other packages. (If you choose to do this anyway, be sure to specify ``conda install python=3.13 briantoby::gsas2pkg`` as Python is likely to be pinned to a different version.)
+
+After this command is run, use command ``conda activate GSASII`` to access the
+conda environment that has been created. On Linux and MacOS computers, two shortcut commands will then be available in the path, The first command, ``gsasII.sh``, which will start GSAS-II. This can optionally be used as ``gsasII.sh project.gpx`` to open existing project file ``project.gpx`` in GSAS-II. The second command, ``reset-gsasII.sh``  will rarely be used. This command will download the latest version of GSAS-II and update to that version, replacing any locally modified files with the original versions. This can be used to update GSAS-II when the program will not start, so the normal Help->Update menu command cannot be accessed. (Shortcuts available with gsas2pkg v5.1+.)
+
+Note that on MacOS, a Mac app is also created and is displayed in the Finder
+`see steps 5 & 6 here <install.html#macos-gsas2main-installation-details>`_. This app can be used to start GSAS-II from the dock or desktop.
+
+.. index:: Installing GSAS-II with gitstrap.py
+
            
 Installation Info for Developers
 ==============================================
 
-While all of the above approaches will clone a copy of the GSAS-II repository from GitHub, software developers may find it more convenient to clone the repo themselves. This will typically be done as part of a process where a copy of GSAS-II is forked on GitHub. This is described in a `separate page <install_dev.html>`_ (outline below). 
+While all of the above approaches will clone a copy of the GSAS-II
+repository from GitHub, software developers may find it more
+convenient to clone the repo themselves. This will typically be done
+as part of a process where a copy of GSAS-II is forked on GitHub. This
+is described in a `separate page <install_dev.html>`_ (outline
+below). 
 
 .. index:: Installing for development
 .. toctree::
@@ -250,20 +285,6 @@ While all of the above approaches will clone a copy of the GSAS-II repository fr
 	      
    install_dev.rst
 
-
-Older Installers
-=================================
-
-Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. The subversion server is not longer being updated, so those installers should not be used because if GSAS-II is installed from subversion, you will not be able to update to the current GSAS-II version.
-If you previously installed GSAS-II from that server, you will be
-shown a message when trying to update that you should reinstall
-GSAS-II as described above.
-
-Likewise, the gsas2full installer was used to install GSAS-II from the
-older ``master`` branch. Use of this installer is discouraged. If you
-install GSAS-II from that branch, you will be
-be offered the opportunity to add needed Python packages and switch to
-the ``main`` branch when trying to update GSAS-II from the help menu.
 
 Installation Details
 ====================================
@@ -280,3 +301,16 @@ if the distributed binaries cannot be used.
    install-pip.rst
    proxy.rst
 
+Older Installers
+=================================
+
+Previously GSAS-II was provided via an Advanced Photon Source-maintained subversion (svn) server, with differing installation processes. The subversion server is not longer being updated, so those installers should not be used because if GSAS-II is installed from subversion, you will not be able to update to the current GSAS-II version.
+If you previously installed GSAS-II from that server, you will be
+shown a message when trying to update that you should reinstall
+GSAS-II as described above.
+
+Likewise, the gsas2full installer was used to install GSAS-II from the
+older ``master`` branch. Use of this installer is discouraged. If you
+install GSAS-II from that branch, you will be
+be offered the opportunity to add needed Python packages and switch to
+the ``main`` branch when trying to update GSAS-II from the help menu.
