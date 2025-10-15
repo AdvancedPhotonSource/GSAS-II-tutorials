@@ -36,8 +36,7 @@ On April 22, 2025 GSAS-II made a transition from development on a branch named "
 
 * Scripting API: several commands now can read input files supplied as a URL; preferred orientation correction now are available in the API.
 
-* Scripting: Slightly different code is now needed to access the GSASIIscriptable module. The developers documentation for GSAS-II (on https://gsas-ii.readthedocs.io and 
-https://gsas-ii-scripting.readthedocs.io) has been revised to show this. 
+* Scripting: Slightly different code is now needed to access the GSASIIscriptable module. The developers documentation for GSAS-II (on https://gsas-ii.readthedocs.io and https://gsas-ii-scripting.readthedocs.io) has been revised to show this. 
 
 Below is the e-mail sent to the GSAS-II mailing list concerning the above changes.
 

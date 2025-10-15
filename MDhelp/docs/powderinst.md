@@ -31,9 +31,10 @@ A single menu is provided with the selection of instrument parameters.
 
 * **Copy flags**: this copies the instrument parameter refinement flags shown to other selected powder patterns. If used, a dialog box (Copy refinement flags) will appear showing the list of available powder patterns, you can copy the instrument parameter refinement flags to any or all of them; select 'All' to copy them to all patterns. Then select 'OK' to do the copy; 'Cancel' to cancel the operation. The copy will only work for instrument parameters that are commensurate with the one that is shown, e.g. single radiation patterns will not be updated from Kα1α2 ones.
 
-* **Set one value**: this is used to set a single selected instrument parameter for a selected set of PWDR histograms. The same value can be used for all histograms, or a dialog can be used to provide a table where you can set the values differently for each of selected histograms.
+* **Set one value**: this is used to set a single selected instrument parameter for the current selected PWDR histogram. Once changed, the new value can be copied to selected other histograms. There is also an "Edit in table" option. When that is used, the value can be set individually (likewise for the refine flag) for every selected histogram. Note that the "down arrow" button in the table is used to copy the selected value to all
+histograms below. 
 
-* **Show multiple**: Displays instrument parameters for all histograms similar to the current selected histogram in a dingle table.
+* **Show multiple**: Displays instrument parameters for all histograms similar to the current selected histogram in a single table.
 
 Note that you can change any of the instrument coefficients and the instrument peak widths plot will be updated to show the effect of the change on overall peak widths. 
 Note that while the software does allow you to refine any of the instrument coefficients, refinement of these terms is discouraged, except for generating instrumental profiles for calibration. NB: In certain circumstances some refinement choices are ignored: e.g. Zero is not refined (or used) during peak fitting. Also, some parameter choices may lead to unstable refinement, e.g. combining refinement of Lam (wavelength) and lattice parameter. In Rietveld fitting, examine the 'Covariance' display for highly correlated parameters.

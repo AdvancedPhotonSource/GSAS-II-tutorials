@@ -41,13 +41,15 @@ well as extensive visualization capabilities.
    compile.rst 
    misc.rst 
    master2main.rst 
+   AboutGSASII.rst
 
 .. tip::
     Please help us by citing:
 
      .. index:: Citation
     
-    Toby, B. H., & Von Dreele, R. B. (2013). "GSAS-II: the genesis of a modern open-source all purpose crystallography software package". *Journal of Applied Crystallography*, **46**\(2), 544-549. doi:10.1107/S0021889813003531
+    Toby, B. H., & Von Dreele, R. B. (2013). "GSAS-II: the genesis of a modern open-source all purpose crystallography software package". *Journal of Applied Crystallography*, **46**\(2), 544-549. `DOI: 10.1107/S0021889813003531 <https://doi.org/10.1107/S0021889813003531>`_
+
 
        Note that some sections of the program utilize externally provided
        codes or reference later work, with citations provided
@@ -163,3 +165,13 @@ Other things related to GSAS-II can be found here.
 .. toctree::
 
    master2main.rst 
+
+
+GSAS-II Statisics: Usage & Size
+======================================
+
+Some statistics about GSAS-II are included here.
+
+.. toctree::
+
+   AboutGSASII.rst

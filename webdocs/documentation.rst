@@ -28,7 +28,8 @@ distributed with the program, as well as can be `viewed here
 <help/index.html>`_. These help pages are not complete for all
 sections of the code,
 but do provide at least some information on how every section of the program
-works. The help information can also be viewed `as a PDF document
+works. The help information can also be viewed as a PDF document
+`(Help as PDF)
 <https://advancedphotonsource.github.io/GSAS-II-tutorials/docs/GSASII-help.pdf>`_.
 
 Note that the help documentation was recently reformatted and updated
@@ -46,10 +47,10 @@ Developer's Documentation
 and RestructuredText documentation files are found on the `"Read The
 Docs" web site <https://gsas-ii.readthedocs.io>`_. The documentation
 can also be downloaded as a
-`PDF document <https://gsas-ii.readthedocs.io/_/downloads/en/latest/pdf/>`_
+PDF document `(Code Manual as PDF) <https://gsas-ii.readthedocs.io/_/downloads/en/latest/pdf/>`_
 or as
-`an electronic book <https://gsas-ii.readthedocs.io/_/downloads/en/latest/epub/>`_
-(Epub format). 
+an electronic book `(Code Manual as e-book
+<https://gsas-ii.readthedocs.io/_/downloads/en/latest/epub/>`_, Epub format). 
 Regardless of the format, this provides very useful documentation for
 code developers, for people interested in creating GSAS-II scripts, or
 incorporating GSAS-II capabilities into their software, or for those
@@ -65,10 +66,10 @@ Documentation described immediately above, but an
 `abridged version of the web site
 <https://gsas-ii-scripting.readthedocs.io/en/latest/>`_ with 
 only sections relevant to scripting is also available. This abridged
-version can also be downloaded as a `PDF document
+version can also be downloaded as a PDF document `(Scripting Manual as PDF) 
 <https://gsas-ii-scripting.readthedocs.io/_/downloads/en/latest/pdf/>`_ or as
-`an electronic book
-<https://gsas-ii-scripting.readthedocs.io/_/downloads/en/latest/epub/>`_  (Epub
+an electronic book `(Scripting Manual as e-book
+<https://gsas-ii-scripting.readthedocs.io/_/downloads/en/latest/epub/>`_,  Epub
 format). 
 
 
