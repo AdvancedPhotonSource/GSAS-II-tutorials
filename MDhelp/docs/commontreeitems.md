@@ -154,7 +154,7 @@ Also included when sequential refinement is selected is a menu button labeled "S
 
 This window shows the restraints to be used in a refinement for each phase (if more than one). It is organized into several tabbed pages, one page for each type of restraint. Restraints are developed for an individual phase and act as additional observations to be "fitted" during the refinement. 
 
-Note that a restraint "pushes" a refinement towards a target value, but does not require that to happen (unlike a constraint). The strength of the "push" is dependent on the weighting factor and the "esd" used on the target value. The ideal use of a restraint is for an aspect of a structure that is not well-determined by the data. In this case, when the weighting of a restraint is dropped, the value of the restrained parameter may move considerably from the target value, but the quality of the fit (noted by the Rietveld plot, R-factor, reduced $\chi^2$, etc.) is not expected to change very much. If one places a restraint that is not consistent with the model (*e.g.* is wrong), then the fit will improve significantly as the weight is decreased. Such feedback is not possible with a constraint. 
+Note that a restraint "pushes" a refinement towards a target value, but does not require that to happen (unlike a constraint). The strength of the "push" is dependent on the weighting factor and the "esd" used on the target value. The ideal use of a restraint is for an aspect of a structure that is not well-determined by the data. In this case, when the weighting of a restraint is dropped, the value of the restrained parameter may move considerably from the target value, but the quality of the fit (noted by the Rietveld plot, R-factor, reduced $\chi^2$, etc.) is not expected to change very much. If one places a restraint that is not consistent with the model (*e.g.* is wrong), then the fit will improve significantly as the weight is decreased. Such feedback is not possible with a constraint.  [See below](#RestraintWeights) for more discussion on restraint weighting. 
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
@@ -229,6 +229,18 @@ angle,  ignore,    N15 C8 C9,   OK,           ignore,      ignore,      123.38, 
 angle,  ignore,    C9 C10 C11,  OK,           ignore,      ignore,      116.18,    0.01
 angle,  ignore,    C11 C12 N15, OK,           ignore,      ignore,      123.91,    0.02
 ```
+
+<a name="RestraintWeights"></a>
+### Restraint Weights
+
+There is no simple recipe for how to weight restraints, in that it varies with the problem, but one should understand is that restraints are used computationally just like any other data point, where the refinement works towards minimizing the sum of 
+$[ w * (obs_i - calc_i ) / \sigma_i  ]^2$ where w is usually 1 and $obs_i$ might be a powder diffraction intensity but could also be a restraint bond distance and where $\sigma_i$ is the uncertainty on $obs_i$, which for restraints is the "esd" value. Since there are usually $10^3$ to $10^4$ data points and only circa $10^1$ restraints, I will usually initially weight the restraints quite highly (100-10,000) since I want to start the fit with a model that closely matches the expected distances and angles. 
+
+As the refinement progresses and I have a good fit, I will then try lowering the restraint weighting. Ideally, I can set the weight on the distances & angles to zero, in which case the restraints will show me a diagnostic of how far the as-fit distances, etc. deviate from my presupposed values, but do not actually change the fit. 
+
+A weight factor of 0 may not produce a good result with complex structures and not very complex diffraction patterns. In those cases, there just is not enough information to define all the structural degrees of freedom uniquely. In that case, lowering the weighting will increase the deviations seen in the restraints with only very trivial improvements in the fit to the powder pattern. One needs to reduce the restraint weight, but only to the point where a chemically reasonable structure is still obtained. Usually, a small value for the weight is needed (around 0.1 to 10) for the final refinements, as very little "force" is needed to keep the structure in agreement with what is expected for the class of materials. 
+
+There is one important case to be aware of, and that is where the restraints are incorrect for the material being studied. If one tries to restrain, for example, a bond to a value that is wrong for the material (for example a carbon-carbon single bond where in fact a double-bond is present) and the data have enough sensitivity to determine this, then the restraints and the data will be in conflict. Lowering the restraint weighting will produce a significant improvement in the fit to the powder data as the bond distance refines away from the target value. If this occurs the restraints need to be corrected to the valid structure. This is different from the case where there is not enough information to define all the structural degrees of freedom, where the fit to the powder data improves only slightly as the restraint is down-weighted. In that latter case, there are very many structures that produce about the same quality of fit, but restraints will prejudice the fit towards models that are more expected based on what is known on the class of materials. 
 
 
 <a name="Rigidbodies"></a>
