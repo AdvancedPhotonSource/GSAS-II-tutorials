@@ -17,7 +17,14 @@ Windows GSAS2MAIN Installation Details
    :alt: browser confirm safe
    :align: right
 
-2) You may need to confirm that the file you have just downloaded is safe to open. If your employer's or school's security policy will not allow this file to be downloaded or run, seek help from your local computer assistance office.
+2) You may need to confirm that the file you have just downloaded is
+   safe to open.
+   Apparently the newest windows security makes it hard to install
+   software that is not registered with Microsoft: I am told you have
+   to first right click, go to Properties, and check the “Unblock”
+   box. If your employer's or school's security policy will not allow
+   this file to be downloaded or run, seek help from your local
+   computer assistance office. 
 
 .. raw:: html
 
