@@ -10,7 +10,7 @@
 Windows GSAS2MAIN Installation Details
 ========================================================
 
-1 ) In your favorite browser click on the link to the download file, https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-Windows-x86_64.exe.
+1) In your favorite browser click on the link to the download file, https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-Windows-x86_64.exe.
 
 .. image:: ./win_inst_images/1.png
    :scale: 25 %
