@@ -44,15 +44,16 @@ Typical sensitivity for crystallite size is to no more than 4 μm (less for lowe
 
 * **Hydrostatic/elastic strain** – This shifts the lattice constants for the contribution of a phase into a histogram. The values are added to the [reciprocal lattice parameter tensor terms](http://gsas-ii.readthedocs.io/en/latest/GSASIIutil.html#gsasiilattice-unit-cell-computations). They must be refined in sequential refinements or where the lattice constants are slightly different in different histograms (as an example see the [Combined X-ray/CW-neutron refinement of \(\rm PbSO_4\) tutorial](https://advancedphotonsource.github.io/GSAS-II-tutorials/CWCombined/Combined%20refinement.htm). But these values and the phase's lattice parameters (on the General tab) should not be refined at the same time. When the values are non-zero, the lattice constants after application of these strain tensor terms is shown. 
 
-<a name="Phase-Preferred_orientation"></a>
-<a name="Preferred_orientation"></a>
-<a name="preferred_orientation"></a>
+    <a name="Phase-Preferred_orientation"></a>
+    <a name="Preferred_orientation"></a>
+    <a name="preferred_orientation"></a>
+
 * **Preferred Orientation** – Preferred orientation (texture) can be treated in one of two different sections of GSAS-II, either the Preferred Orientation correction here in the Data tab, or the "[Texture](phasetexture.md)" tab, depending on what is desired. 
 The Preferred Orientation correction here is typically used for crystallographic studies, where intensity corrections are desired to repair for undesired texture in the sample, while the Texture tab is used for studies where the goal is to characterize preferred orientation in a sample.
 
     The preferred orientation correction, here in the Phase/Data tab, can apply one of two different types of intensity corrections. One is to apply a cylindrical (wire symmetry) spherical harmonics orientational distribution function and the other is a simpler,   single-parameter model, known as **March-Dollase**. Note either of these is applied to only a single histogram.
 This is in contrast to the model applied in the Texture tab, where the corrections from a set of spherical harmonics terms will be applied to all histograms associated with the current phase appears. Note that multiple sample orientations or detector settings are usually needed to determine texture with symmetry lower than cylindrical. Typically, the Preferred Orientation correction here is used for crystallographic studies, where intensity corrections are desired to repair for undesired texture in the sample, while the Texture tab is used for studies where the goal is to characterize preferred orientation in a sample. Note that both the Preferred Orientation and Texture corrections should not be used at the same time.
-    
+
     Use of the **March-Dollase** model requires a definition of a unique axis (as a reciprocal space vector) and then a single ratio can be refined, which specifies the relative amount of excess (value >1) or depleted (value <1) crystallites in that direction. Note that there is only one choice for the unique axis for many crystal systems, such as 001 for hexagonal and tetragonal. 
     
     The **Spherical Harmonics model** allows for a more complex probability surface (which is always constrained to match the symmetry of the crystal system and assumes a cylindrical symmetry sample.) An order parameter term is available which dictates how many terms are introduced into the model and thus the complexity of the probability surface. Note that use of this model requires that the correct value is used for Sample parameters. For the goniometer \(\chi\) (chi) setting be sure to use: 
