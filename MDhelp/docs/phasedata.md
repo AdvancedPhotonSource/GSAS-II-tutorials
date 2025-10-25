@@ -24,20 +24,23 @@ For single crystal data, the only parameters are scale, extinction and disordere
 
     Note that when the histogram scale factor is varied, these values are on a relative scale. Conventional practice is to vary the scale factor and to not vary the phase fraction for one phase in a histogram, but also common is to fix the histogram scale factor and refine all phase fractions. Do not refine the scale factor and all phase fractions unless a constraint is defined so the phase fractions add to 1.
   
-* **Scale factor** - Used for single crystal data: relates \(F^2_{obs}\) to \(^F2_{calc}\).
+* **Scale factor** - Used for single crystal data: relates \(F^2_{obs}\) to \(F^2_{calc}\).
 
 * **Crystallite size peak broadening** – This is computed from size factor(s) in microns (1 μm = \(10^{-6}\) m), with the Scherrer constant assumed as unity. Sizes can be computed in three ways: isotropic, uniaxial and ellipsoidal. 
+Typical sensitivity for crystallite size is to no more than 4 μm (less for lower resolution instruments); beyond that the particles are effectively infinite for a diffraction experiment.
 
     * In isotropic broadening, crystallites are assumed to average as uniform in all directions and a single size value is supplied; 
     * with uniaxial broadening, a preferred direction (as a crystallographic axis, such as (001) is supplied) -- note that for most crystal systems only one axis makes sense -- and two size parameters are defined, one for along the axis and one for in the perpendicular plane; 
     * with ellipsoidal, six terms are used to define a broadening tensor that has arbitrary orientation -- this model may require constraints and is seldom needed. 
 
-    Note that size broadening is usually Lorentzian, which corresponds to a LGmix value of 1.0; if this value is between 0. and 1., both Gaussian and Lorentz size broadening is modeled and a value of 0.0 is pure Gaussian. Values less than 0. or greater than 1. make no physical sense. Typical sensitivity is to no more than 4 μm; beyond that the particles are effectively infinite for a diffraction experiment.
+    Note that size broadening is usually Lorentzian, which corresponds to a LGmix value of 1.0; if this value is between 0. and 1., both Gaussian and Lorentz size broadening is modeled and a value of 0.0 is pure Gaussian. Values less than 0. or greater than 1. make no physical sense. LGmix is not commonly refined.
     
-* **Microstrain peak broadening**  - This is computed as unitless fraction of Δd/d (or equivalently ΔQ/Q) times \(10^6\). Microstrain can be represented in three ways: isotropic, uniaxial and generalized. 
+* **Microstrain peak broadening**  - This is computed as unitless fraction of Δd/d (or equivalently ΔQ/Q) times \(10^6\). Microstrain can be represented in three ways: isotropic, uniaxial and generalized. Typical microstrain is ~1000, but may be significantly higher. 
     * In isotropic broadening, microstrain broadening assumed to be the same in all crystallographic directions and a single value is supplied; 
     * with uniaxial broadening, a preferred direction (as a crystallographic axis, such as 0,0,1) is supplied -- note that for most crystal systems only one axis makes sense -- and two microstrain parameters are defined, one for along the axis and one for in the perpendicular plane; 
-    * with generalized, the [Nicolae Popa](https://journals.iucr.org/j/issues/2020/06/00/es5029/index.html)/[Peter Stephens](https://journals.iucr.org/paper?hn0085) second-order expansion model is used and the number of terms will depend on the crystal system. It is typically possible to refine all terms when significant anisotropic strain broadening is present. Note that microstrain broadening is usually Lorentzian, which corresponds to a LGmix value of 1.0; if this value is between 0. and 1., both Gaussian and Lorentz broadening is modeled and a value of 0.0 is pure Gaussian. Values less than 0. or greater than 1. make no physical sense. Typical microstrain is ~1000.
+    * with generalized, the [Nicolae Popa](https://journals.iucr.org/j/issues/2020/06/00/es5029/index.html)/[Peter Stephens](https://journals.iucr.org/paper?hn0085) second-order expansion model is used and the number of terms will depend on the crystal system. It is typically possible to refine all terms when significant anisotropic strain broadening is present.
+    
+    Note that microstrain broadening is usually Lorentzian, which corresponds to a LGmix value of 1.0; if this value is between 0.0 and 1.0, both Gaussian and Lorentz broadening is applied and a value of 0.0 is pure Gaussian. Values less than 0 or greater than 1 make no physical sense. LGmix is not commonly refined. 
 
 * **Hydrostatic/elastic strain** – This shifts the lattice constants for the contribution of a phase into a histogram. The values are added to the [reciprocal lattice parameter tensor terms](http://gsas-ii.readthedocs.io/en/latest/GSASIIutil.html#gsasiilattice-unit-cell-computations). They must be refined in sequential refinements or where the lattice constants are slightly different in different histograms (as an example see the [Combined X-ray/CW-neutron refinement of \(\rm PbSO_4\) tutorial](https://advancedphotonsource.github.io/GSAS-II-tutorials/CWCombined/Combined%20refinement.htm). But these values and the phase's lattice parameters (on the General tab) should not be refined at the same time. When the values are non-zero, the lattice constants after application of these strain tensor terms is shown. 
 
