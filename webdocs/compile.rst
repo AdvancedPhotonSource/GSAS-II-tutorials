@@ -7,7 +7,9 @@
    :alt: GSAS-II logo
    :align: right
 
-.. index:: Compiling GSAS-II
+.. index:: Compiling GSAS-II 
+
+.. _Compiling GSAS-II:
 
 ====================== 
 Compiling GSAS-II
@@ -41,6 +43,11 @@ branches for GSAS-II. The ``master`` branch uses Scons and the
 ``main`` branch uses meson. The master branch is the current default
 branch but will eventually be retired in favor of the newer ``main``
 branch. 
+
+Most people will not need this, but some specific
+installation details are discussed in the source code documentation, 
+`on compiling GSAS-II
+<https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_.
 
 Supplied Binary Files
 ---------------------------
@@ -130,12 +137,16 @@ Install the Python build routines and the compilers:
 
  Linux::
 
-    sudo apt-get gcc gfortran git # or use the yum command:
-    yum install gcc-gfortran git
+    sudo apt-get gcc gfortran git
+    
+or use the dnf command::
 
- and for Linux::
+    dnf install gcc-gfortran git
+
+Also for Linux make sure that meson and cython are installed (using
+conda or pip)::
    
-    conda python numpy install meson cython -c conda-forge
+    conda install python numpy meson cython -c conda-forge
 
  Note that the GSAS-II binaries will be compiled to work with a
  specific version of Python and numpy, if you have more than one conda
@@ -159,8 +170,8 @@ Create a scratch directory to compile GSAS-II into::
 
 Note that this command will fail if cython, GFortran and a c
 complier is not found. If the flang compiler is found, meson will
-use it, but the resulting binaries will not work properly. 
-     
+use it, but the resulting binaries may not work properly. 
+
 5.
 Move to the setup directory and compile::
      
@@ -185,11 +196,11 @@ Install GSAS-II Binaries
 
              meson compile local-install
 
-           This command will copy the compiled files to
-           ``~/.GSASII/bin``, which is appropriate for when one user
-           will access the GSAS-II program. It also allows multiple
-           GSAS-II installations (should a user wish to keep multiple
-           versions available).
+         This command will copy the compiled files to
+         ``~/.GSASII/bin``, which is appropriate for when one user
+         will access the GSAS-II program. It also allows multiple
+         GSAS-II installations (should a user wish to keep multiple
+         versions available).
 
        * Or when GSAS-II is installed on a server, the GSAS-II
          binaries can be placed with the GSAS-II source files
@@ -264,7 +275,7 @@ same installation causes problems with accessing libraries needed by the compile
 There are other ways potentially to install the tools
 needed for compilation, but use of conda will be much simpler, but
 will require use of command-line commands (in a cmd.exe window, the
-commands have not been worked out if they will done with PowerShell). 
+commands have not been tested with PowerShell). 
 
 Note that if the gsas2main installer is used, this can replace
 steps (1) and (2), below. In that case, use command::
@@ -387,64 +398,4 @@ A script to Install & Compile GSAS-II
 ======================================================
 
 A simple way to install and compile GSAS-II uses the supplied
-``gitcompile.py`` script. Use these commands (on any platform) to
-install with local compilation::
-
-    cd ~/G2
-  curl -L -O https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/raw/main/install/gitcompile.py
-  python gitcompile.py
-
-This will place the install script in directory ``~/G2`` (which you
-may wish to change above) and will use git to clone the
-AdvancedPhotonSource/GSAS-II repo placing all files in subdirectory
-``~/G2/GSAS-II``. The script does the following things:
-
- * Checks that the Python installation has the packages that GSAS-II
-   needs to run (`see here for details
-   <https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_)
-   and for compilation.
- * Installs or updates the GSAS-II files from the GitHub repo
- * Creates the and installs the appropriate binary files from the
-   Fortran, C and Cython sources. 
- * Does a byte-compile on all ``.py`` files
- * Creates shortcuts/icons for starting GSAS-II (OS specific)
-
-Note that there are a number of options that can be used with the
-script, for example ``python gitcompile.py --reset`` overwrites any
-changes that have been made to GSAS-II files locally with the original
-versions of the files. The other options are not likely to be needed,
-but can be seen with ``python gitcompile.py --help``
-
-Compiling with Scons
----------------------------
-
-Compilation with scons (as opposed to meson, as discussed above) is not
-recommended and will be removed from GSAS-II in the future. It will
-work only with Python 3.11 or older and only with the ``master``
-branch. Note that GSAS-II will fail with Python earlier than 3.7 and may have
-some errors even with Python 3.8-3.10 as it is no longer tested on
-those environments.
-
-The compilation process requires installation of the gcc and GFortran
-compilers. Others will probablu not work. Also, the Python Scons
-package must be installed into Python. Compilation is then done with
-commands::
-
-    cd fsource
-    scons
-
-The scons file captures the compilation options needed for the supported platforms, but to compile on other platforms, it may be necessary to modify the ``Sconstruct`` file to configure for the new platform.     
-
-Installation of compilers is highly depend on the computer system being used, but in many cases they can be installed as a conda package, with a command such as::
-
-      conda install gfortran_osx-64 scons
-
-Use the ``conda search gfortran`` command to find the name for the package. 
-On most linux systems, one can use a command such as ``sudo apt-get gfortran`` or ``yum install gcc-gfortran``. Also see https://gcc.gnu.org/wiki/GFortranBinaries for more information.
-
-Note that the intent is that this Scons-based process is no longer in
-use, but for reference some older web pages discussing compiling GSAS-II may be of use:
-
- * https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/CompilingWindows
- * https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/InstallMacHardWay#CompilingFortranCode
- * https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/InstallLinux#CompilingFortranCode
+``gitcompile.py`` script. See :ref:`gitcompile` for details. 

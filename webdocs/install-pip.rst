@@ -7,76 +7,253 @@
    :alt: GSAS-II logo
    :align: right
 	   
-.. index:: Customized Python installation
+.. index:: Installation via pip
 
-==================================================
-Customized Python Installation 
-==================================================
+.. _pip installation:
 
-Experienced system managers or code developers may wish to perform
-their own Python installations. Noting that the GSAS-II GUI requires
-at a minimum wxPython, matplotlib-base, PyOpenGL, NumPy and SciPy be
-installed, while for scripting use, only NumPy and SciPy are required.
-For full functionality, several other optional packages are needed, as
-is `discussed in the GSAS-II Python package requirements
-<https://gsas-ii.readthedocs.io/en/latest/packages.html#gui-requirements>`_.
-Note that matplotlib-base is preferred over matplotlib, unless matplotlib will
-be used outside GSAS-II. 
-If Python versions other than those recommended are selected (Python=3.11 and NumPy=1.26), you will likely need to either locate older binaries and install them manually or run the compilation yourself (`see compilation information <https://advancedphotonsource.github.io/GSAS-II-tutorials/compile.html>`_). 
+Overview: Installing GSAS-II with pip
+=======================================
 
-The choices for how to install Python and packages come down to distribution methods such as conda, pip, homebrew or Linux distro-supplied installation. It is also possible to obtain all as source code and compile them locally.
+The "standard" method for installing Python and packages uses the
+Python package installer and downloads packages from the Python
+Package Index (PyPI). GSAS-II is not available on PyPI, but can still
+be installed via pip. If you use pip, you are recommended to install GSAS-II into its
+own virtual environment, so that it is independent of any other
+software installations using Python.
+For the commands below, the  ``python -m venv ~/G2-env``
+and the ``source ~/G2-env/bin/activate`` create a virtual environment
+in file `G2-env` in the user's home directory and then activate
+that.
 
-.. index:: Customized Python installation; conda
+The advantage of installing GSAS-II with pip is that GSAS-II will be
+fully integrated with Python. Python command such as ``import
+GSASII.GSASIIscriptable`` will work without modifying the Python
+path. Also, pip creates a shell command (``GSAS-II``) to start the GSAS-II
+GUI. The disadvantage is that updating GSAS-II will require rerunning pip.
 
-conda
-----------
+For Linux, a pip installation works quite well for scripting use,
+particularly on HPC installations, where Python and compilers are
+likely already installed, but for GUI use this installation process
+will usually require considerable package downloads and then a build
+for wxpython, which can require an hour or more to run.
+Some Linux dists provide an install kit for wxpython,
+which would be quick and easy to install, but pip will not find that.
+Note that a possible alternative to the downloads and
+compilation requires finding a matching wxpython wheel for your Linux version (see 
+https://extras.wxpython.org/wxPython4/extras/linux/) and use that to
+install (see https://wxpython.org/pages/downloads/ for details). 
 
-With conda, use commands such as this::
+Note that the commands below download and install GSAS-II in multiple
+steps::
 
-         conda install python=3.13  numpy=2.2 wxpython scipy matplotlib-base pyopengl pillow h5py imageio requests git gitpython pycifrw pybaselines -c conda-forge
+    git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git ~/G2
+    cd ~/G2
+    pip install .[gui,useful]
 
-or::
+There is a single-step alternative to this, which downloads GSAS-II
+with git and then performs the installation. This one step replaces the
+three commands above::
+    
+    pip install GSAS-II[gui,useful] git+https://github.com/AdvancedPhotonSource/GSAS-II.git
 
-       conda create -n <envname> python=3.13  numpy=2.2 wxpython scipy matplotlib-base pyopengl pillow h5py imageio requests git gitpython pycifrw pybaselines -c conda-forge 
+I do not recommend using this because if the initial three steps are
+used, GSAS-II can quickly be updated with the following commands. The
+`git pull`
+command will then only download the files that need an update not the
+entire package::
 
-.. index:: Customized Python installation; pip
+    cd ~/G2
+    git pull 
+    pip install ~/G2[gui,useful]
 
-pip
---------
+Note that the default pip installation of GSAS-II installs the minimum
+number of packages needed to run for scripting. As described in
+the developers manual [Python requirements section]
+(https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements),
+there are several optional packages that GSAS-II uses for some of its 
+functionality and without these additional packages certain commands or options
+will not work. An example is that GSAS-II can access content from the
+internet, but only if the Python `requests` package is installed.
+All of these optional packages can be installed by pip when GSAS-II is
+installed by including ``[useful]`` on the command. Likewise, to
+install GSAS-II with the Python packages required for running the GUI,
+use ``[gui]`` and for both use ``[gui,useful]``. 
 
-For pip (PyPI) installation, download and install Python from https://www.python.org/downloads/ (the 3.11 version is recommended) and then use a Python pip command similar to this::
+Examples of pip installation sequences
+=======================================
 
-     pip install numpy wxpython scipy matplotlib pyopengl pillow h5py imageio requests gitpython 
+Below are some sample commands that have been used to install GSAS-II
+using pip on a few key OS versions.
+    
+Linux RHEL 9.6
+----------------
 
-.. index:: Customized Python installation; homebrew
+These commands require admin access (sudo authorization)::
 
-homebrew
----------------
+    sudo dnf install python3.11-devel
+    sudo dnf install pip
+    sudo dnf install gcc-c++
+    sudo dnf install gfortran
+    sudo dnf install libjpeg-turbo-devel libtiff-devel gstreamer1-plugins-base-devel libnotify-devel freeglut-devel  gtk3-devel.x86_64 SDL2-devel.x86_64
 
-Homebrew is one of several installers that will install a OS-specific complied software package or will download, compile and install the package from source code. See help information for that installer.
+These commands can be run by any user account::
+    
+    python3.11 -m venv ~/G2-env
+    source ~/G2-env/bin/activate
+    pip install --upgrade pip
+    pip install wxpython
+    git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git ~/G2
+    cd ~/G2
+    pip install .[gui,useful]
 
-.. index:: Customized Python installation; Linux distro tools
+RHEL 9.6 for scripting only
+------------------------------
 
-Distro-supplied packages
----------------------------------
+These commands require admin access (sudo authorization)::
 
-A small number of users or sites prefer to use Python distributions supplied via a Linux distribution, such as from Ubuntu, Debian or Redhat. As an example for how this is done, please see some older notes on installation with the Raspberry Pi OS:  https://subversion.xray.aps.anl.gov/trac/pyGSAS/wiki/InstallPiLinux.
+    sudo dnf install python3.11-devel
+    sudo dnf install pip
+    sudo dnf install gfortran
 
-With Redhat Enterprise Linux (RHEL) if you want to use RHEL-supplied
-versions of Python, you can use this command to install a fairly old
-version of Python::
+These commands can be run by any user account::
+    
+    python3.11 -m venv ~/G2-env
+    source ~/G2-env/bin/activate
+    pip install --upgrade pip
+    git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git ~/G2
+    cd ~/G2
+    pip install .[useful]
 
-  sudo yum install python3-wxpython4 python3-matplotlib python3-numpy python3-scipy python3-GitPython python3-requests python3-pillow python3-h5py  python3-pyopengl
+Optionally test the GSAS-II installation with these commands. See
+below for interpreting the results::
 
-As you will likely need to create your own binary files, you will also
-likely need this as well::
+    pip install pytest
+    pytest
 
-  sudo yum install python3-scons python3-numpy-f2py
+    
+Linux Mint 21.2
+--------------------------------
 
-RHEL also supplies a Python 3.11 interpreter, but not very many
-packages for that, so pip will be needed (this is pretty slow, FWIW)::
-  
-  sudo yum install python3.11 python3.11-numpy python3.11-scipy  python3.11-pip python3.11-wheel
-  pip3.11 install wxpython 
-  pip3.11 install matplotlib
-  pip3.11 install pyopengl
+These commands require admin access (sudo authorization)::
+
+    sudo apt-get update
+    sudo apt install python3 pip python3-venv
+    sudo apt install gfortran
+    sudo apt install git
+    sudo apt install dpkg-dev build-essential python3-dev freeglut3-dev
+    sudo apt install libgl1-mesa-dev libglu1-mesa-dev libgstreamer-plugins-base1.0-dev
+    sudo apt install libgtk-3-dev libjpeg-dev libnotify-dev libpng-dev libsdl2-dev
+    sudo apt install libsm-dev  libtiff-dev libwebkit2gtk-4.0-dev  libxtst-dev
+
+These commands can be run by any user account::
+
+    python3 -m venv ~/G2-env
+    source ~/G2-env/bin/activate
+    git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git ~/G2
+    cd ~/G2
+    pip install wxpython
+    pip install .[gui,useful]
+
+Mint 21.2 for scripting only
+--------------------------------
+
+These commands require admin access (sudo authorization)::
+
+    sudo apt-get update
+    sudo apt install python3 pip python3-venv
+    sudo apt install gfortran
+    sudo apt install git
+
+These commands can be run by any user account::
+
+    python3 -m venv ~/G2-env
+    source ~/G2-env/bin/activate
+    git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git ~/G2
+    cd ~/G2
+    pip install .[useful]
+
+Optionally test the GSAS-II installation with these commands::
+
+    pip install pytest
+    pytest
+
+The output will look something like :ref:`this example output<example_pytest_output>`
+where each of the 27 dot (`.`) characters above represents a test that ran
+successfully. Any test that fails will show as a `F`. At present one
+warning is generated that can be ignored. 
+
+MacOS 14.3.1 (Sonoma)
+------------------------------
+
+These commands require admin access::
+
+    xcode-select --install
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo >> ~/.zprofile
+    echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
+    eval "$(/usr/local/bin/brew shellenv)"
+    brew install gfortran
+    brew install git
+    brew install python@3.13
+
+These commands can be run by any user account::
+
+    python3.13 -m venv ~/G2-env
+    source ~/G2-env/bin/activate
+    pip install --upgrade pip
+    git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git ~/G2
+    cd ~/G2
+    pip install wxpython
+    pip install ".[gui,useful]"
+
+Start GSAS-II from the command-line by typing `GSAS-II` in the
+terminal. To install it on dock, run this command::
+
+    python ~/G2/GSASII/install/makeMacApp.py
+
+The command will create an App to run GSAS-II and display it in the
+finder. The App can be run from that location or create an alias to
+move to another folder; do not move the App itself to another
+location. 
+    
+Windows 11
+------------------------------
+
+I do not see a pressing need to use pip to install GSAS-II for windows
+as there are plenty of other mechanisms that work just as well, if not
+better. In any case, 
+I was not able to get gfortran working properly with Windows in my
+most recent attempt. To
+install via pip would require
+the following packages to be installed:
+
+* A Python installation kit, such as
+  https://www.python.org/ftp/python/3.13.9/python-3.13.9-amd64.exe
+  from https://www.python.org/downloads/ and run the downloaded .exe.
+  Click on "Add python.exe to
+  PATH" at the bottom of the window before pressing "Install Now".
+
+* git, using
+  https://github.com/git-for-windows/git/releases/download/v2.51.2.windows.1/Git-2.51.2-64-bit.exe
+  or more recent from https://git-scm.com/download/win. Run the
+  downloaded .exe file. The default installation options should all be
+  fine. 
+
+* the gfortran and gcc compilers. There is plenty of information and
+  packages for this (see
+  https://fortran-lang.org/learn/os_setup/install_gfortran/), but
+  Windows blocks downloading some of them. 
+  I was not able to get one to install and correctly configure for linking.
+
+Once that is done in a cmd.exe window use the following commands::
+
+    python -m venv G2-env
+    G2-env\Scripts\activate
+    python -m pip install --upgrade pip
+    pip install wxpython
+    git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git G2
+    cd G2
+    PATH=%PATH%;%HOMEPATH%\gcc\bin
+    pip install .[gui,useful]
+
+
