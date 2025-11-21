@@ -112,7 +112,7 @@ There are many options within GSAS-II that allow you to tailor aspects
 of the program to operate differently. These are described
 here. Options are available to change how
 powder diffraction refinement results are plotted or change defaults
-used in different parts of the program, , for example. 
+used in different parts of the program, for example. 
 
 .. toctree::
 

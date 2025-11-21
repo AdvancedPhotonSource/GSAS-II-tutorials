@@ -1,5 +1,5 @@
 ---
-title: k-vector searching in GSAS-II #2 (non-zero k-vector)
+# Tutorial: k-vector searching in GSAS-II #2 (non-zero vector) 
 ---
 <!--- Don't change the HTML version of this file; edit the .md version -->
 
