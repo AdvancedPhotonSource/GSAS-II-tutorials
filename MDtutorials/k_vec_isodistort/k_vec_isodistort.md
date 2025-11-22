@@ -1,7 +1,9 @@
 ---
-# Tutorial: Use of  ISODISTORT with a k-vector found by GSAS-II
+Title: "Tutorial: Use of ISODISTORT with a k-vector found by GSAS-II"
 ---
 <!--- Don't change the HTML version of this file; edit the .md version -->
+
+# Tutorial: Use of ISODISTORT with a k-vector found by GSAS-II
 
 * Exercise files are found [here](data/index.html)
 
@@ -80,8 +82,7 @@ Select the first candidate k-vector to be supplied to the ISODISTORT program. Th
 
 - For each generated subgroup, a GSAS-II project file is created where the parent phase is replaced by the candidate subgroup
 
-This processing will take some time, depending on the number of candidate subgroups compatible with the selected k-vector. For the test case here, the result is a total of 19 candidate subgroups. The CIFs are named `{phasename}_{number}_{HMname}.cif` and the project files are named  `{GPXname}_{phasename}_{number}_{HMname}.gpx`.
-In the list of CIFs and .gpx files, we can see a file containing the string `P4_mmm` corresponding to space group $P 4/mmm$, which is indeed our ground truth. 
+This processing will take some time, depending on the number of candidate subgroups compatible with the selected k-vector. For the test case here, the result is a total of 19 candidate subgroups. The CIFs are named `{phasename}_{number}_{HMname}.cif` and the project files are named  `{GPXname}_{phasename}_{number}_{HMname}.gpx`, where `{GPXname}` is the project name, `{phasename}` is the name of the phase, the source of `{number}` is unclear and `{HMname}` is the Hermann-Mauguin space group name, where any slashes are replaced with an underscore (_). In the list of CIFs and .gpx files, we can see a file containing the string `P4_mmm` corresponding to space group $P 4/mmm$, which is indeed our ground truth, so the proper result has been found. 
 
 In a real analysis, we would not know which result is the best choice. It would be necessary to perform a refinement with each of the GSAS-II project files created here, and from that determine the highest symmetry subgroup that gives a good fit to the data. We hope in the future to develop a script to do that automatically. 
 

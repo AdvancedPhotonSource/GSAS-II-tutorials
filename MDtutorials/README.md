@@ -19,9 +19,11 @@ Note that on MacOS the sed command must be `sed -i "" "s/...`. The [`tutorial.cs
 Start the new tutorial file with content like this:
 
         ---
-        title: "Tutorial: ...anything you want to put here"
+        Title: "Tutorial: ...anything you want to put here"
         ---
         <!--- Don't change the HTML version of this file; edit the .md version -->
+        
+        # Tutorial: ...anything you want to put here
 
         [//1]: <> (Comment: optional comment(s) here.)
         
@@ -29,14 +31,13 @@ Start the new tutorial file with content like this:
         
         ## Intro
 
-omit the "Exercise files..." line if no exercise files are in use. Note that the `.../data/index.html` file is generated automatically.
+omit the "Exercise files..." line if no exercise files are in use. Note that the `.../data/index.html` file is generated automatically. The title as "Title:" seems needed by pandoc while the single-# heading seems ignored by pandoc, while the reverse is true for mkdocs, should we ever switch to that.
     
 1. Create a directory named `imgs` inside the new directory. Any images used in the tutorial go here. 
 
 1. (Optional) Create a directory named `data` inside the new directory. Any data files used in the tutorial go here. 
 
 1. Edit the file `tutorialIndex.py` (in the main GSAS-II repo) to include the new tutorial. Note that the first item in the list will be the directory name chosen in the first step, above. The second item will be the name of the generated `.html` file which will be based on the name of the `.md` file chosen in the second step. The remaining entries are the title of the tutorial and a synopsis. 
-
 
 Editing of MarkDown can be done with any text editor, but it is sometimes nice to see the final result before committing the file. One can use the `pandoc` command above to see the result, or use VS Code, which has a MarkDown viewer. There are also lots of programs that can be used as MarkDown editors: https://github.com/mundimark/awesome-markdown-editors/blob/master/README.md
 but I have not tried any of them.

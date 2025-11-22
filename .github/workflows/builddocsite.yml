@@ -72,7 +72,7 @@ jobs:
         
       - name: Get tutorials index from source code
         run: |
-          curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/master/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
+          curl -L https://github.com/AdvancedPhotonSource/GSAS-II/raw/main/GSASII/tutorialIndex.py -o scripts/tutorialIndex.py
 
       - name: convert MarkDown tutorials
         run: |

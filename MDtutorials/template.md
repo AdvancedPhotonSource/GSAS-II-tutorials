@@ -5,6 +5,8 @@ title: "Tutorial: Example tutorial to be written in Markdown"
 [//1]: <> (Comment: This comment is only in the .md file, as opposed to the next line which is raw HTML and creates that is placed into the .html file.)
 <!--- Don't change the HTML version of this file; edit the .md version -->
 
+# Tutorial: Example tutorial to be written in Markdown
+
 * Exercise files are found [here](data/index.html)
 
 <a name=Intro></a>
