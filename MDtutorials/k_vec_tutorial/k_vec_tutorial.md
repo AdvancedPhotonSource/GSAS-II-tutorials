@@ -246,8 +246,7 @@ We now use the unit cell from the Er${}_2$Ge${}_2$O${}_7$ phase and the four pea
 
 * Select the `Unit Cells List` item under the data histogram tree and click on the `Search for k-vector` checkbox. The window will appear as to the right. 
 
-Note the options for the k-vector search that are available. By varying the search step, the tolerance and the search over high symmetry points, lines or general positions the search can be optimized. 
-The tolerance option controls the threshold for determining the optimal k-vector found -- if a certain k-vector yields a
+Note the options for the k-vector search that are available. In this case, we only have one phase in the tree so it will be used as the parent to search against. If two or more phases are in the tree, a dropdown selection will become available in the k-vector search interface for us to choose the phase to search against. By varying the search step, the tolerance and the search over high symmetry points, lines or general positions the search can be optimized. The tolerance option controls the threshold for determining the optimal k-vector found -- if a certain k-vector yields a
 mismatch (indicated by $\delta_d/d$) smaller than the threshold, it will be regarded as the optimal k-vector and the
 search will be terminated. If the tolerance is specified as `0`, this means an exhaustive search will be performed and
 those top options of the k-vector will be listed. In the case of `HighSymPts` option, the search will be performed over only those high
