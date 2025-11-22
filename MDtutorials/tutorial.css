@@ -40,6 +40,7 @@
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
+      counter-reset: h2cnt;
     }
     header {
       display: grid;
