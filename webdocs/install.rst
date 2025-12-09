@@ -38,11 +38,13 @@ GSAS2MAIN installer for Windows
 ==================================
 
 For Windows download file https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-Windows-x86_64.exe and run it.
-After the installer is started 
-You will have a choice for where to install the software (the default is usually OK, but something like ``c:\software`` might be better, if your computer security allows that.)
+After the installer is started, you will have a choice for where to
+install the software (the default is usually OK, but something like
+``c:\software`` might be better, if your computer security allows that.)
 
 You do not need to have administrator access to your computer to
-install GSAS-II, but apparently the newest windows security makes it
+install GSAS-II, and installing from an admin account is not
+recommended, but apparently the newest windows security makes it
 hard to install software that is not registered with Microsoft: I am
 told you have to first right click, go to Properties, and check the “Unblock” box.
 

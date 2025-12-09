@@ -64,3 +64,17 @@ there the meson instructions.
 
    Clicking on the icon will open GSAS-II. Likewise a GSAS-II project (.gpx) file can be dragged onto the icon to open that file in GSAS-II.
 
+
+Command-line options
+----------------------
+
+The bash installation command above uses two options:
+
+* `-b` for batch mode, so that no questions are asked and
+* `-p <path>` which specifies where GSAS-II will be installed.
+
+One other option is available:
+
+* `-f` for force, which will cause the GSAS-II installation to proceed
+  even when there are files in the installation location. This should
+  only be used to reinstall GSAS-II if needed. 

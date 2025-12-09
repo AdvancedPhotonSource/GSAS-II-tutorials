@@ -108,3 +108,16 @@ MacOS: Detailed GSAS2MAIN Installation Instructions
 
 Note: When the icon is first used, you will likely see one or more Mac security warnings asking you to confirm that you do want to give GSAS-II access to components in your computer, as shown to the right. GSAS-II will not run properly unless you press "Allow". Each warning should only be shown once. 
 
+Command-line options
+----------------------
+
+The bash installation command above uses two options:
+
+* `-b` for batch mode, so that no questions are asked and
+* `-p <path>` which specifies where GSAS-II will be installed.
+
+One other option is available:
+
+* `-f` for force, which will cause the GSAS-II installation to proceed
+  even when there are files in the installation location. This should
+  only be used to reinstall GSAS-II if needed. 
