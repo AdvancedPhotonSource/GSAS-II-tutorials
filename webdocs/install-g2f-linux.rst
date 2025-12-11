@@ -70,11 +70,11 @@ Command-line options
 
 The bash installation command above uses two options:
 
-* `-b` for batch mode, so that no questions are asked and
-* `-p <path>` which specifies where GSAS-II will be installed.
+* ``-b`` for batch mode, so that no questions are asked and
+* ``-p <path>`` which specifies where GSAS-II will be installed.
 
 One other option is available:
 
-* `-f` for force, which will cause the GSAS-II installation to proceed
+* ``-f`` for force, which will cause the GSAS-II installation to proceed
   even when there are files in the installation location. This should
   only be used to reinstall GSAS-II if needed. 

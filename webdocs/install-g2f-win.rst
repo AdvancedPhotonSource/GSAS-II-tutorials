@@ -207,8 +207,8 @@ should be the same on all computers. E.g., if GSAS-II is installed
 in ``C:\software\GSASII`` it can be copied to a directory with the
 same name on other computers and used from that location, but not to 
 ``E:\software\GSASII`` or ``C:\Users\someone\GSASII``. A supplied
-script (`...\GSASII\install\makeBat.py`) can be run to register the
-`.gpx` extension so that clicking on a GSAS-II project will open it in GSAS-II. 
+script (``...\GSASII\install\makeBat.py``) can be run to register the
+``.gpx`` extension so that clicking on a GSAS-II project will open it in GSAS-II. 
 
 
 Command-line options
@@ -221,7 +221,7 @@ https://github.com/conda/constructor/blob/main/CONSTRUCT.md#installer_type
 
 Potentially useful commands would be:
 
-* `/S` for "silent" (batch) mode, so that no questions are asked and
-* `/D=<path>` which specifies the location where GSAS-II will be
-  installed (`/D=E:\software\GSASII`)
-* `/?` displays the available options. 
+* ``/S`` for "silent" (batch) mode, so that no questions are asked and
+* ``/D=<path>`` which specifies the location where GSAS-II will be
+  installed (``/D=E:\software\GSASII``)
+* ``/?`` displays the available options. 

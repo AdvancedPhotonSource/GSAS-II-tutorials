@@ -22,17 +22,17 @@ either using a utility to place a copy elsewhere, or you can use the
 git stash, branch or commit commands. The commands below will
 overwrite your changes with the latest GSAS-II version. 
 
-On windows
+On Windows
 ----------------
 
 At present, two windows .BAT files are created in the directory where
-GSAS-II is installed, one named `Reset2FreshGSASII.bat` the other
-`start_G2_bootstrap.bat`. Thus, if GSAS-II is installed in directory 
-`C:\Users\toby\gsas2main` the files will be named
-`C:\Users\toby\gsas2main\Reset2FreshGSASII.bat` and
-`C:\Users\toby\gsas2main\start_G2_bootstrap.bat`.
+GSAS-II is installed, one named ``Reset2FreshGSASII.bat`` the other
+``start_G2_bootstrap.bat``. Thus, if GSAS-II is installed in directory 
+``C:\Users\toby\gsas2main`` the files will be named
+``C:\Users\toby\gsas2main\Reset2FreshGSASII.bat`` and
+``C:\Users\toby\gsas2main\start_G2_bootstrap.bat``.
 Either will restore the GSAS-II files, but the
-`Reset2FreshGSASII` file, will ask you to confirm before acting. The
+``Reset2FreshGSASII`` file, will ask you to confirm before acting. The
 files can run by locating them in the Windows File Explorer and
 double-clicking on it or by typing the file name into the cmd.exe
 window. 
@@ -41,11 +41,11 @@ On MacOS and Linux
 ------------------------
 
 At the time this is being written, an error prevents the script from
-running, but this can be corrected by editing the `reset-gsasII.sh`
-file manually (see below). Note that this file is placed in the `bin` directory
+running, but this can be corrected by editing the ``reset-gsasII.sh``
+file manually (see below). Note that this file is placed in the ``bin`` directory
 immediately below the GSAS-II installation directory. Thus, if
-GSAS-II is installed at location `/Users/toby/G2/gsas2main` then the
-file will be named `/Users/toby/G2/gsas2main/bin/reset-gsasII.sh`. (It
+GSAS-II is installed at location ``/Users/toby/G2/gsas2main`` then the
+file will be named ``/Users/toby/G2/gsas2main/bin/reset-gsasII.sh``. (It
 will appear in the path if conda is initialized.) Depending on the OS,
 it may be possible to locate and run this file in a system-supplied
 file browser, or type the file name into a terminal window. 
