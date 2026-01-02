@@ -50,11 +50,16 @@ GSAS-II, will run self-tests and will start the GUI::
         pixi run test
         pixi run ui
 
+Note that ``pixi run install-editable`` (Linux/MacOS) or ``pixi run
+install-editable-win`` (on Windows) is frequently a better choice than
+``pixi run install``,  as discussed in the next section. 
+ 
+        
 ---------------------------------------------------
 GSAS-II pixi commands
 ---------------------------------------------------
 
-Mor detailed descriptions of some commonly used pixi commands follow: 
+More detailed descriptions of some commonly used pixi commands follow: 
 
 ``pixi run install``
 
@@ -66,11 +71,16 @@ Mor detailed descriptions of some commonly used pixi commands follow:
 
 ``pixi run install-editable-win`` (on Windows)
      
-     This will set up to run GSAS-II in the directory where the files are originally
-     located. This is ideal for code development as changes in Python code will
-     immediately be seen as soon as GSAS-II is restarted and git commands can
-     be used to upload changes to GitHub. Note the slightly different version of
-     this command for Windows.
+     These commands will set up to run GSAS-II in the directory where
+     the files are originally
+     located. This is ideal for code development, as changes made in Python code will
+     immediately effect operation, as soon as GSAS-II is restarted and git commands can
+     be used to upload changes to GitHub. Likewise, git can be used to
+     download updates, potentially using the self-update menu commands
+     (Help/Update) that are part of GSAS-II's GUI. When the ``pixi run
+     install`` command is used, one must after making changes or after
+     use a manual update with git in order to access the changed
+     files. 
 
 After one of the above install commands is used, the following commands can be used:
 
@@ -124,7 +134,7 @@ following commands in a terminal window (Linux/Mac) or cmd.exe window
         cd <install-location>
         cd GSASII
         cd pixi
-        git pull
+``pixi run install-editable-win``        git pull
         pixi run install
   
 ---------------------------------------------------
@@ -150,7 +160,7 @@ relatively minor changes to the above installation process: For git:
 
 With the pixi command:
 
-* use ``install-editable`` (not yet available for Windows) command
+* use ``install-editable`` (Windows, ``pixi run install-editable-win``) command
   rather than the ``install`` command. This means that the git-installed
   code is used to run GSAS-II, a copy made by pixi to the Python
   tree. With this "editable" option any changes you make to the
@@ -178,8 +188,8 @@ Example use of pixi on different Operating Systems
 MacOS
 ==================
 
-At this time pixi is configured only for newer "Apple Silicon" (ARM)
-processor computers (M1, M2,...) , not older Intel Macs. 
+Note that pixi is now configured both for newer "Apple Silicon" (ARM)
+processor computers (M1, M2,...) as well as older Intel Macs. 
 
 In a terminal window run the next command. It will open a window
 asking you to confirm that you want to download and install the xcode
