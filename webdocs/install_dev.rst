@@ -169,7 +169,7 @@ will also work as GSAS-II is run directly from the git repo.
 
 .. tip::
    
-   If using pixi, be sure to use the ``pixi run install-editable`` command (Windows,
+   If using pixi, be sure to use the ``pixi run install-editable`` command (on Windows,
    ``pixi run install-editable-win``) to install GSAS-II. With ``pixi run install``,
    because the files used to run GSAS-II are versions present when the install
    command was last run, not the latest versions. If you modified the repo
@@ -177,17 +177,15 @@ will also work as GSAS-II is run directly from the git repo.
    see the latest changes. Likewise, do not use pip to install GSAS-II for the
    same reasons. 
 
-   One could possibly modify the installed GSAS-II files, in a
-   directory along the lines of
-   ``.../pixi/.pixi/envs/default/Lib/site-packages/GSASII``, but then
-   changed files would need to be copied over to the git repo and
-   would be at risk for an accidental overwrite if the install command
-   were used. 
+   While one could modify the installed GSAS-II files, in a directory along the lines of
+   ``.../pixi/.pixi/envs/default/Lib/site-packages/GSASII`` during code development, but then
+   the revised files would need to be copied over to the git repo to upload them and
+   would be at risk for an accidental overwrite if the install command were used. 
 
 Once GSAS-II is installed and is running, one uses git to change the
 GSAS-II files over to the version in your copy of the repo. Before
 doing that, note if you will be using `ssh or https access
-<gitauthenticate>`_ to GitHub. With ssh access you will use these
+<#gitauthenticate>`_ to GitHub. With ssh access you will use these
 commands::
 
   cd GSAS-II
@@ -226,7 +224,7 @@ Install GSAS-II directly from your forked repo
 
 If you are on MacOS or Linux, you can use steps indicated in the `pixi
 installer <install_pixi.html>`_ to install pixi. Again, knowing if you
-will use `ssh or https access <gitauthenticate>`_ to GitHub. With ssh
+will use `ssh or https access <#gitauthenticate>`_ to GitHub. With ssh
 access, the commands to download GSAS-II and install it and Python (as
 well as compile) and will be::
 
@@ -305,7 +303,8 @@ binaries, which can be done by copying the binary directory,
 in the development installation. Alternately the GSASII-bin directory
 can be moved to ``~/.GSASII`` (``%HOMEPATH%\.GSASII`` on Windows).
 
- Running the development version of GSAS-II
+
+Running the development version of GSAS-II
 ----------------------------------------------------------------------------
 
 If GSAS-II is run from a directly installed version of Python or a
@@ -364,7 +363,7 @@ The command to do this is::
 
      git checkout -b g2newfeature
 
-  Note that this creates a branch named ``g2newfeature`` (do choose a better name.)
+Note that this creates a branch named ``g2newfeature`` (do choose a better name.)
 
 When your changes are complete and you are ready to communicate them
 back, you will commit them locally and use ``git push`` to upload them

@@ -243,8 +243,8 @@ prerequisites, pixi and git.
 
     powershell -ExecutionPolicy ByPass -Command "irm -useb https://pixi.sh/install.ps1 | iex"
     
-Close the cmd.exe window (to get access to the newly-installed git and
-pixi programs) and open new cmd.exe window where these commands are entered::
+* Close the cmd.exe window (to get access to the newly-installed git
+  and pixi programs) and open new cmd.exe window where these commands are entered::
 
     git clone --depth 1 https://github.com/AdvancedPhotonSource/GSAS-II.git G2
     cd G2\pixi
@@ -277,17 +277,27 @@ entered::
     pixi run test
     pixi run ui
 
-Linux RHEL 9.6
+Ubuntu 22.04.2
+----------------
+
+See the instructions above for Linux Mint 21.2, except that curl needs
+to be installed, so the second command should be changed to::
+
+  sudo apt install gfortran git curl
+
+  Linux RHEL 9.6
 ==================
 
 The first command requires admin access (sudo authorization).  If you
 need to login to a separate account to run sudo commands (which I
 consider a good security practice), you will 
-want to run only the first command from the admin account. The
-``curl`` command to install pixi should be run from the account where
-you will run GSAS-II::
+want to run this command from the admin account::
 
    sudo dnf install gfortran
+
+The second command that downloads and installs pixi should be run from
+the account where you will run GSAS-II::
+
     curl -fsSL https://pixi.sh/install.sh | bash
    
 Close the terminal window (to get access to the newly-installed pixi
@@ -299,13 +309,3 @@ entered::
     pixi run install
     pixi run test
     pixi run ui
-
-Ubuntu 22.04.2
-----------------
-
-See the instructions above for Linux Mint 21.2, except that curl needs
-to be installed, so the second command should be::
-
-  sudo apt install gfortran git curl
-
-  
