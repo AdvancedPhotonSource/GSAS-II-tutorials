@@ -170,14 +170,14 @@ will also work as GSAS-II is run directly from the git repo.
 .. tip::
    
    If using pixi, be sure to use the ``pixi run install-editable`` command (Windows,
-   ``pixi run install-editable-win``) to install GSAS-II. With ``pixi run install``
+   ``pixi run install-editable-win``) to install GSAS-II. With ``pixi run install``,
    because the files used to run GSAS-II are versions present when the install
    command was last run, not the latest versions. If you modified the repo
    files, you would need to rerun the ``pixi run install``  command to
    see the latest changes. Likewise, do not use pip to install GSAS-II for the
    same reasons. 
 
-  One could possibly modify the installed GSAS-II files, in a
+   One could possibly modify the installed GSAS-II files, in a
    directory along the lines of
    ``.../pixi/.pixi/envs/default/Lib/site-packages/GSASII``, but then
    changed files would need to be copied over to the git repo and
@@ -186,7 +186,7 @@ will also work as GSAS-II is run directly from the git repo.
 
 Once GSAS-II is installed and is running, one uses git to change the
 GSAS-II files over to the version in your copy of the repo. Before
-doing that note if you will be using `ssh or https access
+doing that, note if you will be using `ssh or https access
 <gitauthenticate>`_ to GitHub. With ssh access you will use these
 commands::
 
@@ -274,8 +274,8 @@ be specified in both, such as::
 Install GSAS-II directly from your repo using GSAS2MAIN Python
 ----------------------------------------------------------------------------
   
-If you have installed GSAS-II from GSAS2MAIN and wish to use that
-Python and the GSAS-II binaries, that is also possible.
+If you have installed GSAS-II from the GSAS2MAIN self-installer, it is fairly easy to make a separate installation of GSAS-II for use in development, redeploying the 
+Python provided by the self-installer and copying the GSAS-II binaries.
 
 * For Windows, if GSAS-II is installed at location ``C:\Users\Me\gsas2main`` then use this command to setup Python::
 
@@ -295,17 +295,16 @@ To clone GSAS-II from your forked copy use commands similar to the following::
     git clone --depth 1 git@github.com:<your-fork>/GSAS-II.git
     cd GSAS-II
 
-or with https the third command will be:
+or, with https rather than ssh, the third command will be::
 
   git clone --depth 1 https://github.com/<your-fork>/GSAS-II.git
 
 Before GSAS-II can be run, it is also necessary to provide GSAS-II
 binaries, which can be done by copying the binary directory,
-GSASII-bin, from the GSAS2MAIN installation to the equivalent location
+``GSASII-bin``, from the GSAS2MAIN installation to the equivalent location
 in the development installation. Alternately the GSASII-bin directory
-can be moved to ~/.GSASII (%HOMEPATH%\.GSASII on Windows).
+can be moved to ``~/.GSASII`` (``%HOMEPATH%\.GSASII`` on Windows).
 
-----------------------------------------------------------------------------
  Running the development version of GSAS-II
 ----------------------------------------------------------------------------
 
@@ -337,20 +336,19 @@ Note that if you have cloned using https using a command like this::
 
 but later set up for ssh authorization, you will need to change the
 upstream repo, as described in the next section. This can be done by
-editing the ``.../GSAS-II/.git/config`` file from::
+directly editing the ``.../GSAS-II/.git/config`` file from::
 
    [remote "origin"]
 	url = https://github.com/AdvancedPhotonSource/GSAS-II.git
 	fetch = +refs/heads/master:refs/remotes/origin/master
 
-  to::
+to::
 
    [remote "origin"]
 	url = git@github.com:MyPersonalRepo/GSAS-II.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 
-These changes can be done directly by editing this file. Alternately,
-these git commands will do the same thing::
+Alternately, these git commands will do the same thing::
 
      git config remote.origin.url git@github.com:MyPersonalRepo/GSAS-II.git 
      git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
@@ -366,7 +364,7 @@ The command to do this is::
 
      git checkout -b g2newfeature
 
-  Note that this creates a branch named ``g2newfeature`` -- do choose a better name.
+  Note that this creates a branch named ``g2newfeature`` (do choose a better name.)
 
 When your changes are complete and you are ready to communicate them
 back, you will commit them locally and use ``git push`` to upload them

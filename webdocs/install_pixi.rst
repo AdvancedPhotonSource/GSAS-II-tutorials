@@ -17,7 +17,7 @@ Overview: Installing GSAS-II with pixi
 
 Due to royalty issues with use of Anaconda, Inc. conda packages (which
 GSAS-II does not use; GSAS-II only uses conda-forge packages, which are
-non-proprietary), some sites are encouraging use of `pixi
+non-proprietary). Some sites are encouraging use of `pixi
 <https://pixi.sh>`_, rather than
 conda. The pixi installer can be used directly after downloading
 GSAS-II from the GitHub site. The pixi program makes installation of
@@ -28,9 +28,11 @@ Linux. It is also helpful for GSAS-II development (see below).
 
 Installation of GSAS-II with pixi requires a few prerequisite steps,
 depending on the platform. Note that on Windows and MacOS, pixi
-installs gfortran, but on Linux this must be done (typically with a
-Linux package manager such as apt or dnf, etc.). These are the steps
-that are typically needed:
+installs gfortran, but on Linux this must be done before running pixi (typically with a
+Linux package manager such as apt or dnf, etc.).
+
+These are the steps that are typically needed to install GSAS-II using
+pixi.:
 
 * installation of the pixi program
 * on Linux, installation of the gfortran (and gcc) compiler
@@ -134,8 +136,12 @@ following commands in a terminal window (Linux/Mac) or cmd.exe window
         cd <install-location>
         cd GSASII
         cd pixi
-``pixi run install-editable-win``        git pull
+        git pull
         pixi run install
+
+If you used ``pixi run install-editable-win`` or ``pixi run
+install-editable``  to install GSAS-II, the ``pixi run...`` command
+does not need to be repeated. 
   
 ---------------------------------------------------
 Use of pixi for GSAS-II Development

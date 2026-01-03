@@ -118,7 +118,7 @@ have this code be executed only in debug mode::
         G2gr.UpdateGroup(G2frame,item)
 
 ---------------------------------------------------
-Adding startup commands
+Adding startup code
 ---------------------------------------------------
 
 When doing repetitive testing, it can be time consuming to have to run
@@ -131,4 +131,5 @@ directory with the rest of the GSAS-II files. As an example::
        G2frame = wx.App.GetMainTopWindow()
        G2frame.OnRefine(None)
 
-
+This triggers refinement of a .gpx file that is placed on the command
+line. 
