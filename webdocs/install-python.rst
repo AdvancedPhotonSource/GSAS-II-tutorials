@@ -80,7 +80,7 @@ source code. To perform this compilation you will need to install
 gfortran, gcc, cython and meson. (Note that cython and meson can be
 installed via pip but gfortran and gcc should be installed from the
 Linux package manager.) The ``gitcompile.py`` `described below
-<gitcompile>`_ provides a convenient way to download, compile and
+<#gitcompile>`_ provides a convenient way to download, compile and
 install GSAS-II.
 
 With a mixed installation, where some packages are installed from the

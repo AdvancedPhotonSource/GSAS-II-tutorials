@@ -202,6 +202,22 @@ described in the page listed below.
 .. index:: Installing GSAS-II with gitstrap.py
 
            
+Externally-developed software
+==============================================
+
+GSAS-II provides interfaces to use a number of programs developed by
+others. Some are included with GSAS-II, some are accessed over the web
+and others must be installed 
+separately. These are all discussed in some detail in the `Developer's Documentation
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#supported-externally-developed-software>`_.
+Installation details for the programs that must be installed by users
+is included in the section below. 
+
+.. toctree::
+   :maxdepth: 2
+	      
+   install-external.rst
+
 Installation Info for Developers
 ==============================================
 

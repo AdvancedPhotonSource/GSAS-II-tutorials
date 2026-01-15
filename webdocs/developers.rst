@@ -84,6 +84,9 @@ Note that when the ``debug`` configuration setting is set to True, that
 also turns on some potentially useful print statements. 
 
 ---------------------------------------------------
+Coding tricks
+---------------------------------------------------
+
 Testing code without restarting
 ---------------------------------------------------
 
@@ -117,19 +120,76 @@ have this code be executed only in debug mode::
             reload(G2gr)
         G2gr.UpdateGroup(G2frame,item)
 
----------------------------------------------------
+
 Adding startup code
 ---------------------------------------------------
 
 When doing repetitive testing, it can be time consuming to have to run
 the same commands from the GUI each time that GSAS-II is started. In
 debug mode, GSAS-II can run specific code when the program is started
+and a .gpx file is loaded (in routine ``GSASIIdataGUI.GSASII.StartProject``)
 by creating a file named ``debug_setup.py`` that is placed in the
-directory with the rest of the GSAS-II files. As an example::
+directory with the rest of the GSAS-II files. Some examples follow.
 
+This triggers refinement of a .gpx file that is placed on the command
+line::
+  
        import wx
        G2frame = wx.App.GetMainTopWindow()
        G2frame.OnRefine(None)
 
-This triggers refinement of a .gpx file that is placed on the command
-line. 
+This will cause the GSAS-II notebook entries to be loaded into array
+``data`` and be displayed using routine :func:`GSASIIdataGUI.UpdateNotebook`::
+       
+       print(f'\n{70*"="}\nrunning debug_setup.py\n{70*"="}')
+       import wx
+       G2frame = wx.App.GetMainTopWindow()
+       from .GSASIIdataGUI import UpdateNotebook
+       data = G2frame.GPXtree.GetItemPyData(item)
+       UpdateNotebook(G2frame,data)
+
+This will also cause the GSAS-II notebook entries to be displayed,
+but by selection of the Notebook entry in the data tree::
+
+       print(f'\n{70*"="}\nrunning debug_setup.py\n{70*"="}')
+       import wx
+       G2frame = wx.App.GetMainTopWindow()
+       nId = GetGPXtreeItemId(G2frame,G2frame.root,'Notebook')
+       G2frame.GPXtree.SelectItem(nId)
+
+Running stand-alone code
+---------------------------------------------------
+
+While previously it was possible to test routines by sticking them at
+the end of a module, separated by a::
+
+  if __name__ == '__main__':
+
+statement. It is no longer possible to run most modules with a
+``python module.py`` command, as the ``from . import`` statements
+fail. As an alternate, one can supply the name of a Python file as the
+first argument when invoking GSAS-II in debug mode, *e.g.* ::
+  
+  python <path1>G2.py <path2>testme.py
+
+If this is done, in ``GSASIIGUI.main`` the file ``<path2>testme.py``
+will be imported after the GSAS-II environment has been established,
+this includes starting wx by creating a wxPython application, the
+GSAS-II binaries and setting up the  ``breakpoint`` command that will
+invoke an IPython shell. After the import has completed, GSAS-II will
+exit. 
+
+As an example, here are some commands that test a routine in the
+``GSASIIctrlGUI`` module if placed in a file, say ``/tmp/testG2G.py``
+and GSAS-II is invoked with ``python G2.py /tmp/testG2G.py``::
+
+  print(f'running {__file__}')
+  import wx
+  from GSASII import GSASIIctrlGUI as G2G
+  G2frame = wx.Frame(None)
+  dlg = G2G.OpenTutorial(G2frame)
+  if dlg.ShowModal() == wx.ID_OK:
+        print("OK")
+  else:
+        print("Cancel")
+  dlg.Destroy()

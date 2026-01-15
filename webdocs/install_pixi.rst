@@ -285,7 +285,7 @@ to be installed, so the second command should be changed to::
 
   sudo apt install gfortran git curl
 
-  Linux RHEL 9.6
+Linux RHEL 9.6
 ==================
 
 The first command requires admin access (sudo authorization).  If you

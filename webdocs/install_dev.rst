@@ -164,7 +164,7 @@ for Windows). The installation methods where `Python is installed
 independently of GSAS-II <install-python.html>`_, such as use of the
 `gitstrap.py <install-python.html#using-the-gitstrap-py-installer>`_
 and `gitcompile.py
-</install-python.html#using-the-gitcompile-py-installer>`_ installers
+<install-python.html#using-the-gitcompile-py-installer>`_ installers
 will also work as GSAS-II is run directly from the git repo.
 
 .. tip::
