@@ -14,7 +14,7 @@ Some GSAS-II operations (*e.g.*, structure refinement, Fourier map calculation &
 * The "Set filters" button allows you to select which type of entries are shown, as are selected on a list. Note that older Notebook entries were not recorded with tags that allow filtering to work. 
 
 * The "Plot" button allows plotting the progression of the overall Rw or reduced \(\chi^2\) in the refinement, or logged variables (to log a parameter see **View LS parms** in the 
-[Calculate menu](./mainmenu.md#Calculate) or the `LogAllVars` setting in the 
+[Calculate menu](./mainmenu.md#Calculate_menu) or the `LogAllVars` setting in the 
 [Configuration variables](./others.md#config)).
 
 * The "Save" button writes the contents of the Notebook as a text file named &lt;project&gt;-notebook.txt. 
