@@ -72,6 +72,26 @@ an electronic book `(Scripting Manual as e-book
 <https://gsas-ii-scripting.readthedocs.io/_/downloads/en/latest/epub/>`_,  Epub
 format). 
 
+News
+----------------------------
+GSAS-II is not a "finished product" in that we are constantly 
+correcting bugs, adding new features and improving the science.
+(Alas, sometimes
+creating new bugs in that process.) At the same time, the computing
+environment that GSAS-II runs in also changes, so code that runs fine
+now may not run in a new version of an operating system or when Python
+or a Python package is updated, so even standing still sometimes requires code
+changes.
+
+News on changes to GSAS-II, new features, etc. is
+placed in the
+`Announcements section of the GitHub Discussion
+pages <https://github.com/AdvancedPhotonSource/GSAS-II/discussions/categories/announcements>`_.
+This will be useful reading for people who work with GSAS-II frequently. 
+One can also track the minutiae of changes made to GSAS-II from
+`GitHub's log of commits <https://github.com/AdvancedPhotonSource/GSAS-II/commits/main/>`_,
+but since many commits may be used for a single bug-fix or new
+feature, this can be hard to follow. 
 
 Crystallography/Powder Diffraction Intro
 -----------------------------------------------

@@ -19,7 +19,7 @@ GSAS-II provides a number of configuration settings that can be changed via vari
 <a name="RTFM"></a>
 ## Programmers' documentation
 
- The routines and classes used within GSAS-II are documented in a set of web pages and in a PDF document. This documentation is created from the Python source code files using Sphinx. 
+ The routines and classes used within GSAS-II are documented in a set of [web pages]((https://gsas-ii.readthedocs.io/en/latest) and in a [PDF document](https://gsas-ii.readthedocs.io/_/downloads/en/latest/pdf/) with >400 pages. This documentation is created from the Python source code files using Sphinx. There is also an [abbreviated form of the documentation](https://gsas-ii-scripting.readthedocs.io/en/latest/) intended for people developing scripting applications only, or [as a PDF](https://gsas-ii-scripting.readthedocs.io/_/downloads/en/latest/pdf/).
 
 <a name="Origin_1"></a>
 <a name="_Origin_1"></a>
