@@ -25,17 +25,24 @@ overwrite your changes with the latest GSAS-II version.
 On Windows
 ----------------
 
-At present, two windows .BAT files are created in the directory where
-GSAS-II is installed, one named ``Reset2FreshGSASII.bat`` the other
-``start_G2_bootstrap.bat``. Thus, if GSAS-II is installed in directory 
-``C:\Users\toby\gsas2main`` the files will be named
-``C:\Users\toby\gsas2main\Reset2FreshGSASII.bat`` and
-``C:\Users\toby\gsas2main\start_G2_bootstrap.bat``.
-Either will restore the GSAS-II files, but the
-``Reset2FreshGSASII`` file, will ask you to confirm before acting. The
-files can run by locating them in the Windows File Explorer and
+A Windows .BAT file is created in the directory where
+GSAS-II is installed, named ``2Reset2FreshGSASII.bat``
+Thus, if GSAS-II is installed in directory 
+``C:\Users\toby\gsas2main`` the file will be named
+``C:\Users\toby\gsas2main\2Reset2FreshGSASII.bat``.
+This file will remove any changes you have made locally to the GSAS-II
+files and will install the latest version of those files from the
+GitHub server. The
+file can run by locating them in the Windows File Explorer and
 double-clicking on it or by typing the file name into the cmd.exe
-window. 
+window.
+
+Note that the GSAS-II installers prior to 2026 did not create this
+file or created a similarly named file that would not work. If the
+file ``2Reset2FreshGSASII.bat`` is not present, download and reinstall
+GSAS-II. You can use a new location and keep the old version or delete
+the old version and install the new one in the location used
+previously. 
 
 On MacOS and Linux
 ------------------------

@@ -127,8 +127,42 @@ Adding startup code
 When doing repetitive testing, it can be time consuming to have to run
 the same commands from the GUI each time that GSAS-II is started. In
 debug mode, GSAS-II can run specific code when the program is started
-and a .gpx file is loaded (in routine ``GSASIIdataGUI.GSASII.StartProject``)
-by creating a file named ``debug_setup.py`` that is placed in the
+or when a .gpx file is loaded (in routine
+``GSASIIdataGUI.GSASII.StartProject``).
+
+
+Run at startup
+===============
+
+To run code at startup, creating a file named ``debug_startup.py``
+that is placed in the directory with the rest of the GSAS-II files. An
+example that tests a section of code from an exporter::
+
+  print(f'\n{70*"="}\nrunning debug_startup.py\n{70*"="}')
+  import wx
+  G2frame = wx.App.GetMainTopWindow()
+  from .imports import G2img_HDF5
+  reader = G2img_HDF5.HDF5_Reader()
+  reader.ContentsValidator('/Users/toby/Scratch/MPE_H5/test.h5')
+
+and this code loads an image file when GSAS-II starts::
+
+  print(f'\n{70*"="}\nrunning debug_startup.py\n{70*"="}')
+  import wx
+  self = G2frame = wx.App.GetMainTopWindow()
+  self.CheckNotebook()
+  rdlist = self.OnImportGeneric(None,self.ImportImageReaderlist,
+            'image',multiple=True,Preview=False,load2Tree=True,
+            filename='/tmp/MPE_H5/Cr3_Zry4_Temp_2cps_650C_016665.ge1.h5')
+  if rdlist:
+      self.GPXtree.SelectItem(GetGPXtreeItemId(self,self.Image,'Image Controls'))
+
+  
+Run after reading a project
+=============================
+
+Provide Python commands that will be run after a project is read by
+creating a file named ``debug_setup.py`` that is placed in the 
 directory with the rest of the GSAS-II files. Some examples follow.
 
 This triggers refinement of a .gpx file that is placed on the command

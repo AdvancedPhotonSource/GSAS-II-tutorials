@@ -339,7 +339,7 @@ directly editing the ``.../GSAS-II/.git/config`` file from::
 
    [remote "origin"]
 	url = https://github.com/AdvancedPhotonSource/GSAS-II.git
-	fetch = +refs/heads/master:refs/remotes/origin/master
+	fetch = +refs/heads/main:refs/remotes/origin/main
 
 to::
 

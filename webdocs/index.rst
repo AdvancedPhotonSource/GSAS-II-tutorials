@@ -53,7 +53,7 @@ well as extensive visualization capabilities.
        codes or reference later work, with citations provided
        as they are used. *Please* cite them as well.
  
-GSAS-II is made available for free use (`see license <https://raw.githubusercontent.com/AdvancedPhotonSource/GSAS-II/master/LICENSE>`_) with open access to the `source code <https://github.com/AdvancedPhotonSource/GSAS-II>`_.  
+GSAS-II is made available for free use (`see license <https://raw.githubusercontent.com/AdvancedPhotonSource/GSAS-II/main/LICENSE>`_) with open access to the `source code <https://github.com/AdvancedPhotonSource/GSAS-II>`_.  
 
 Also, please do sign up for the GSAS-II mailing list `see below <mailinglist.html>`_.
 We add new features to GSAS-II quite frequently, so we may break

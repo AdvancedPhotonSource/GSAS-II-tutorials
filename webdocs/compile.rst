@@ -35,14 +35,12 @@ binaries that have been distributed with GSAS-II, but they can be
 compiled by users and in some cases that will be necessary. The
 documentation here discusses these files.
 
-Note that there are two methods used for compiling GSAS-II. For Python
-3.11 and earlier, a build process with a utility called ``Scons`` was used, but this
-stopped working for GSAS-II with Python 3.12 and a new build process
-using the ``meson`` tool was implemented. At present, there are two
-branches for GSAS-II. The ``master`` branch uses Scons and the
-``main`` branch uses meson. The master branch is the current default
-branch but will eventually be retired in favor of the newer ``main``
-branch. 
+Note that GSAS-II is compiled using a utility called ``meson``.
+For Python prior to 3.10, a build process with a utility called
+``Scons`` may be needed, but this
+stopped working for GSAS-II with Python 3.12.
+The now obsolete ``master`` branch uses Scons and the
+``main`` branch uses meson.
 
 Most people will not need this, but some specific
 installation details are discussed in the source code documentation, 
