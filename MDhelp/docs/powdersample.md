@@ -35,7 +35,9 @@ The remaining parameters are non-refinable and may be needed for texture or para
 * **Copy selected...** - This copies only the sample parameter that are selected to other selected powder patterns but is otherwise similar to "Copy".
 * **Copy flags** - This copies the sample parameter refinement flags shown to other selected powder patterns. If used, a dialog box (Copy refinement flags) will appear showing the list of available powder patterns, you can copy the sample parameter refinement flags to any or all of them; select 'All' to copy them to all patterns. Then select 'OK' to do the copy; 'Cancel' to cancel the operation.
 * **Set one value** - This is used to set a single selected sample parameter for a selected set of PWDR histograms. The same value can be used for all histograms or a dialog can be used to provide a table where you can set the values differently for each of selected histograms.
-* **Load all** - Reads a file containing a table of sample parameters and copies them to matching PWDR entries. The file will look something like the example here:
+* **Load all** - Reads a file containing a table of sample parameters and copies them to matching PWDR entries. The file will look something like the example below.
+
+    Note that the first line(s) in the file can be a header, but each header line must start marked with a hash (#). A header is not required. "Columns" in the table are separated by one or more delimiters (which may be a comma, tab or space). Note that columns do not need to be aligned, as long as each entry is spaced by at least one delimiter. The first column in the table is used to look up PWDR entries where the initial space-delimited string after the PWDR tag ("myfile" in "PWRD myfile AZM=180...") must match the table. Subsequent columns can then be mapped to sample parameters or can be ignored, using a dialog window.
 
 ```
     #filename       temperature pressure ignore-me  humidity
@@ -43,10 +45,9 @@ The remaining parameters are non-refinable and may be needed for texture or para
     LaB6_dc300.tif      150          1      test       .25 
 ```
 
-Note that the first line(s) in the file can be a header, but each header line must start marked with a hash (#). A header is not required. "Columns" in the table are separated by one or more delimiters (which may be a comma, tab or space). Note that columns do not need to be aligned, as long as each entry is spaced by at least one delimiter. The first column in the table is used to look up PWDR entries where the initial space-delimited string after the PWDR tag ("myfile" in "PWRD myfile AZM=180...") must match the table. Subsequent columns can then be mapped to sample parameters or can be ignored, using a dialog window.
 
 * **Rescale all** - Allows a series of selected PWDR histograms to be put on a common scale by integrating them over a specific two-theta region and then scaling them so that the integration range will match the first pattern.
 
-<a name="SetFromComments"></a>
-* **Set from comments** - The histogram comments section, depending on the importer used to read in the data (or image the data is derived from) often contains values that are recorded on the diffraction instrument. These are commonly recorded as "Label=value" or "Label:value". 
+* **Set from comments** -    <a name="SetFromComments"></a>
+ The histogram comments section, depending on the importer used to read in the data (or image the data is derived from) often contains values that are recorded on the diffraction instrument. These are commonly recorded as "Label=value" or "Label:value". 
   This command can be used to scan the comments and transfer them to the sample parameters. This is done by selecting a sample parameter as well as a Label found in the comments. One then specifies the histograms where the search will be performed. This is particularly of use for parametric variables and for sample setting angles. 
