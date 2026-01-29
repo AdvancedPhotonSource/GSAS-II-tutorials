@@ -42,7 +42,14 @@ file or created a similarly named file that would not work. If the
 file ``2Reset2FreshGSASII.bat`` is not present, download and reinstall
 GSAS-II. You can use a new location and keep the old version or delete
 the old version and install the new one in the location used
-previously. 
+previously.
+
+For now, the gsas2main installer will also create two other similar
+files, ``G2_bootstrap.bat`` and ``G2_start.bat``. These have the
+installation location hard-coded. The ``G2_bootstrap.bat`` file should
+download and rerun the ``gitstrap.py`` updating GSAS-II, very
+similarly to the ``2Reset2FreshGSASII.bat``script. The
+``G2_start.bat`` simply starts the GSAS-II GUI. 
 
 On MacOS and Linux
 ------------------------

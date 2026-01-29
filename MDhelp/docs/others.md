@@ -5,10 +5,25 @@
 <a name="MacOS"></a>
 ## Macintosh notes:
 
-GSAS-II can be run on Windows, Linux and Macintosh/OS X computers, but the GUI follows the native style of Mac OS X. On Windows and some versions of Linux, the menu bars appears on top of the main window. On the Mac, the menu appears at the location that has been configured for menus (usually at the top of the screen). 
-At present, two versions of GSAS-II are provided. One is for older, Intel CPUs and the other for "Apple Silicon" (ARM or M1, M2,...) CPUs. Eventually only ye ARM CPUs will be supported. At present, the Intel version will run on ARM machines under Rosetta, but eventually that too will go away. 
+GSAS-II can be run on Windows, Linux and Macintosh/OS X computers, but the GUI follows the native style of the window manager where it is run, so GSAS-II will look more like a Mac application on that platform and more like a Windows application there. On Windows and some versions of Linux, the menu bars appears on top of the main window. On the Mac, the menu appears at the location that has been configured for menus (usually at the top of the screen). 
+At present, two versions of GSAS-II are provided. One is for older, Intel CPUs and the other for "Apple Silicon" (ARM or M1, M2,...) CPUs. Eventually only ARM CPUs will be supported. At present, the Intel version will run on ARM machines under Rosetta, but eventually Rosetta will also go away. 
 
-GSAS-II defines actions for both the left and right and middle buttons assuming that a three-button mouse is available. If a two or three-button mouse is used with a Mac, the "extra"  mouse buttons will work as intended. If using a Mac touchpad or single-button mouse, clicking the touchpad or mouse button will generate a "left button" click. Hold down the control-key to generate a "right button" click or for a right-button drag, hold down control while pressing on the mouse button or touchpad. I do not know how to generate a middle-button click or drag with a single-button mouse, but with a MacBook touchpad, pressing with two fingers generates the equivalent of a right-mouse drag and moving two fingers without pressure is the equivalent of a middle-button drag action. 
+GSAS-II defines actions for both the left and right and middle buttons assuming that a three-button mouse is available. If a two or three-button mouse is used with a Mac, the "extra"  mouse buttons will work as intended. If using a Mac touchpad or single-button mouse, clicking the touchpad or pressing the mouse button will generate a "left button" click. Hold down the control-key to generate a "right button" click or for a right-button drag, hold down control while pressing on the mouse button or touchpad. I do not know how to generate a middle-button click or drag with a single-button mouse, but with a MacBook touchpad, pressing with two fingers generates the equivalent of a right-mouse drag and moving two fingers without pressure is the equivalent of a middle-button drag action. 
+
+<a name="Windows"></a>
+## Windows notes:
+
+When GSAS-II is installed through most of the conventional installation methods, the `GSASII\install\MakeBat.py` file is run and this creates two "Windows .bat" files that can be used to make running GSAS-II easier as well as making some minor Windows registry changes. This script can be run manually by people who are installing GSAS-II directly from GitHub. 
+
+The `MakeBat.py` script creates a file named `RunGSASII.bat` file, which is placed in the directory where GSAS-II is installed and a shortcut to this file is placed on the Windows desktop. The shortcut can be moved, renamed etc. Clicking on this file or shortcut will start GSAS-II. 
+
+Another file, `2Reset2FreshGSASII.bat` is created in the same directory. 
+Ideally, this will not be needed, but might be of use if GSAS-II cannot be started due 
+to changes made in the files locally or because we have put out a bad version. 
+By double-clicking on the `2Reset2FreshGSASII.bat`  file, the `gitstrap.py`
+script that is used to install GSAS-II will be updated to the latest version and then 
+run that in a mode that will reset any changes that have been made to the GSAS-II 
+files on your computer. It will also rerun the `MakeBat.py` script.
 
 <a name="config"></a>
 <a name="Preferences"></a>
@@ -62,9 +77,6 @@ With coordinates that match the space group operations, the correct Ti-O distanc
 **Transform Origin**: To transform a space group setting from Origin setting 1 to 2, use the Transform option in the Compute menu of a Phase's General tab and then select the last option in the "Common transformations" pulldown menu, which will be setting 1->2 for space groups where both origins are available, as shown to the right. The transformation matrix will be set to the identity and the "V" vector will have the required origin shift loaded. Press OK. The changes can be seen by selecting the Atoms tab.
 
 ![xform](./images/xform.png)
-
-
-
 
 <a name="FPA"></a><a name=FPAinput></a>
 ## Fundamental Parameters as used to derive instrumental parameters
