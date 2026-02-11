@@ -170,7 +170,7 @@ Note that a restraint "pushes" a refinement towards a target value, but does not
     * **Add restraints** - this takes you through a sequence of dialog boxes which ask for the identities of the atoms involved in the restraint and the value to be assigned to the restraint. The esd is given a default value which can be changed after the restraints are created.
     * **Add residue restraints** - if the phase is a 'macromolecule' then develop the restraints from a selected 'macro' file based on those used in GSAS for this purpose. A file dialog box is shown directed to /GSASIImacros; be sure to select the correct file.
     
-    * **Add MOGUL restraints** - add restraints from a file produced by the CCDC's MOGUL program or a file prepared 
+    * **Add MOGUL restraints** - add restraints from a file produced by the CCDC's Mercury program (using the CSD-Core/Mogul Geometry Check) or a file prepared 
     in that style. [See below](#RestraintImports) for more information on importing restraints. 
     Note that when used from the Bond tab, only "bond" entries are read and when used from the 
     Angle tab, only "angle" entries are read.
@@ -191,11 +191,12 @@ Note that a restraint "pushes" a refinement towards a target value, but does not
 
 <a name="RestraintImports"></a>
 ### Importing Restraints
-For the  **Add MOGUL restraints** menu command, restraints are read from a supplied file. 
-The file produced by the MOGUL program has many columns, but only the first 8 are used here and a few of those do not matter. 
-If producing the file manually or with your own software, follow the following instructions. 
+For the  **Add MOGUL restraints** menu command, restraints are read from a .csv file that is usually generated in the CCDC program Mercury using the CSD-Core/Mogul Geometry Check. This file has many columns, but only the first 8 are used here and a few of those do not matter. It would also be possible to produce such a file 
+manually or cast output from another program, but make sure the .csv file 
+follows the following instructions:
+
 The first line in the file must be a header, which must start with "Type" (note capitalization). 
-The rest of the line is ignored, but it is convenient to follow the example below. 
+The rest of that initial line is ignored, but it is convenient to follow the example below. 
 
 Subsequent lines should contain:
 
