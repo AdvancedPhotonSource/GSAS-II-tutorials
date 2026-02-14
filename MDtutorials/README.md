@@ -105,3 +105,13 @@ So far this seems to be a very much manual operation, but pandocs can help remov
         pandoc --standalone --mathjax --css tutorial.css -o ${outfile} ${fil}
         sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
         ```
+
+1. To put revised tutorial into web
+
+    * rename original HTML tutorial directory to Outtakes
+    * revise the GSAS-II tutorialIndex.py file if the HTML name
+      changes (typically .htm to .html) and push that to main
+    
+    If the new MD tutorial is in subdirectory of MDtutorials, it
+    should be converted to HTML and moved to the correct location
+    without any other changes needed. 

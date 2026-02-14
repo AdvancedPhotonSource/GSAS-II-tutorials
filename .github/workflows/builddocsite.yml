@@ -125,7 +125,7 @@ jobs:
 
       - name: Get rid of the rest of the GSAS-II files & other stuff not needed on web
         run: |
-          rm -rf webdocs scripts MDtutorials MDhelp
+          rm -rf webdocs scripts MDtutorials MDhelp Outtakes
         
       - name: Upload artifact  # creates zip file with website contents
         uses: actions/upload-pages-artifact@v3
