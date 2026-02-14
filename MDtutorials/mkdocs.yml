@@ -1,0 +1,52 @@
+site_name: GSAS-II Tutorials
+site_description: GSAS-II Markdown Tutorials
+site_author: GSAS-II Team
+site_url: https://advancedphotonsource.github.io/GSAS-II-tutorials/
+
+# Repository
+repo_name: GSAS-II-tutorials
+repo_url: https://github.com/AdvancedPhotonSource/GSAS-II-tutorials
+
+# Configuration
+theme:
+  name: readthedocs
+  navigation_depth: 3
+
+# Extensions
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+# Plugins
+plugins:
+  - search
+
+# MathJax support
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML
+
+# CSS
+extra_css:
+  - tutorial.css
+
+# Navigation structure
+nav:
+  - ReadMe: README.md
+  - Template: template.md
+  - Tutorials:
+      - Font Size: FontSize/FontSize.md
+      - K-Vector with IsoDistort: k_vec_isodistort/k_vec_isodistort.md
+      - K-Vector Tutorial: k_vec_tutorial/k_vec_tutorial.md
+      - K-Vector Non-Zero Tutorial: k_vec_tutorial_non_zero/k_vec_tutorial_non_zero.md
+      - FindProfParamCW: CWInstDemo/FindProfParamCW.md
+
+# Build directory
+site_dir: site
+
+# Directories to include
+docs_dir: docs

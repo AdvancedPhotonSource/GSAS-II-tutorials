@@ -45,4 +45,63 @@ but I have not tried any of them.
 
 TODO: someday, I'd like to have keywords associated with tutorials and a search mechanism to make it easier to find some of the "little things" (for example constraint definition) that are shown in them. 
 
+# Use with mkdocs
 
+Use of the `mkdocs serve` command allows viewing changes every time a file is modified, but since the .md files are not being placed in the conventional locations used by mkdocs, a bit of setup work is needed:
+
+1. Place a link in the `MDtutorials/docs` directory to the directory to be accessed:
+
+    ```
+    cd docs
+    ln -s ../CWInstDemo CWInstDemo
+    ```
+
+2. Modify the `nav:` section of the `mkdocs.yml` file to reference the new tutorial
+
+    ```
+    - Tutorials:
+        ...
+        - K-Vector Non-Zero Tutorial: k_vec_tutorial_non_zero/k_vec_tutorial_non_zero.md
+        - FindProfParamCW: CWInstDemo/FindProfParamCW.md
+    ```
+
+3. Start the mkdocs server: 
+
+    `mkdocs serve`
+
+4. Browse the working directory: 
+
+    `open http://127.0.0.1:8000/GSAS-II-tutorials/`
+
+# Translating existing tutorials
+
+So far this seems to be a very much manual operation, but pandocs can help remove much of the MS Word cruft from the HTML file. 
+
+1. Set up directories in the MDtutorials area
+
+    ```
+    mkdir ~/G2/GSASII-tutorials/MDtutorials/CWInstDemo
+    cd ~/G2/GSASII-tutorials/CWInstDemo
+    cp -rp FindProfParamCW_files ~/G2/GSASII-tutorials/MDtutorials/CWInstDemo
+    cp -rp data ~/G2/GSASII-tutorials/MDtutorials/CWInstDemo
+    ```
+
+1. Translate the HTML tutorial:
+
+    ```
+    pandoc FindProfParamCW.htm -f html -t markdown -o ~/G2/GSASII-tutorials/MDtutorials/CWInstDemo/FindProfParamCW.md 
+    ```
+1. Start editing the .md file
+
+    Follow the example in the template.md file. 
+
+1. View results
+
+    * The `mkdocs serve` command, as above is sufficient to view the approximate formatting
+
+    * The exact commands used to generate the HTML file used in the tutorial will be:
+
+        ```
+        pandoc --standalone --mathjax --css tutorial.css -o ${outfile} ${fil}
+        sed -i "s/<figure>/<BR clear=all><figure>/g" ${outfile}
+        ```
