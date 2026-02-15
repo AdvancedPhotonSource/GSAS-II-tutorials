@@ -2,20 +2,52 @@
 <a name="PWDR_Peak_List"></a>
 #  PWDR **Peak List** subdata tree item (Powder Diffraction)
 
-The Peak List data tree entry is used to fit diffraction peaks at refined or user-supplied positions (not generated from a unit cell). Peak positions and intensities may be selected for individual refinement. There are four modes available here for treatment of peak widths: 
-1) Gaussian ($\sigma^2$) and Lorentzian (\(\Gamma\)) peak widths may be varied individually, 
-2) the width values may be generated from the the appropriate profile terms in the Instrument Parameters tree item (U, V & W for \(\sigma^2\); X & Y for \(\Gamma\)), where those terms may optionally be refined. 
-3) It is possible to mix refinement of XY terms and fit a few individual  (\(\Gamma\)) peak widths, but this is not possible with the UVW terms. When any individual ($\sigma^2$) peak widths are fit, it is not possible to refine the U, V or W terms. Note that when individual widths are refined, the fitted values override the values that would be generated from the UVW/XY terms, except as noted in the next mode.
-4)It is possible to turn off the setting of individual (\(\sigma^2\) or \(\Gamma\) peak width values) peak width  If  are refined, then those value(s) in the table are used as the refinement starting point. If values are not refined, then normally the unvaried widths are determined from the appropriate Instrument Parameters profile terms and are placed in the table prior to fitting. When the "Gen unvaried widths" menu item is turned off, the unvaried peak with values are not computed from the Instrument Parameters; this must be turned on  (the default mode) to vary Instrument Parameters.
+The Peak List data tree entry is used to fit diffraction peaks at refined or 
+user-supplied positions (not generated from a unit cell). Peak positions and 
+intensities may be selected for individual refinement. There are four modes 
+available here for treatment of peak widths: 
 
-Note that the Gaussian full-width at half-maximum is given by 
+1. Gaussian ($\sigma^2$) and Lorentzian (\(\Gamma\)) peak widths may be varied individually. 
+2. The width values may be generated from the the appropriate profile terms in the 
+Instrument Parameters tree item (U, V & W for \(\sigma^2\); X & Y for \(\Gamma\)), 
+where those terms may optionally be refined. 
+3. It is possible to mix refinement of XY terms and fit a few individual  (\(\Gamma\)) 
+peak widths, but this is not possible with the UVW terms. When any individual ($\sigma^2$) 
+peak widths are fit, it is not possible to refine the U, V or W terms. Note that when 
+individual widths are refined, the fitted values override the values that would be 
+generated from the UVW/XY terms, except as noted in the next mode.
+4. It is possible to turn off the setting of individual (\(\sigma^2\) or \(\Gamma\) 
+peak width values) peak width  If  are refined, then those value(s) in the table are 
+used as the refinement starting point. If values are not refined, then normally the 
+unvaried widths are determined from the appropriate Instrument Parameters profile 
+terms and are placed in the table prior to fitting. When the "Gen unvaried widths" 
+menu item is turned off, the unvaried peak with values are not computed from the 
+Instrument Parameters; this must be turned on  (the default mode) to vary 
+Instrument Parameters.
 
-$$FWHM = \sqrt{8 * \ln 2 * \sigma^ 2}$$
+Note that the Gaussian full-width at half-maximum is given by: 
 
-while \(\Gamma\) is the Lorentzian FWHM. The \(\sigma^2\) values (peak variances) are in units of centidegrees\(^2\) (centidegrees are degrees*100) for CW data or microseconds\(^2\) for TOF data; \(\Gamma\) has units of centidegrees or microseconds. Except in very unusual circumstances, instrumental broadening is Gaussian and will be a slowly-changing function of Q and sample broadening is strictly Lorentzian and while this may be only a function of Q, it can vary from peak to peak if the sample is a mixture of phases, or anisotropic peak broadening is present. Thus, it makes sense to fit Gaussian widths only using the U, V & W terms and indeed the software will not allow those terms to be varied if 
-*any* 
-individual peak \(\sigma^2\) terms are varied as this usage would not make sense physically. 
-This is different for X & Y and individual peak \(\Gamma\) values. The refinement of X & Y, while fitting of *some* individual peak \(\Gamma\) values is allowed and this can make sense physically, but note that one should have a sufficient number of peaks that are not being fit individually and these peaks should be distributed over a wide range in Q when X & Y are fit simultaneously.
+$$FWHM_G = \sqrt{8 * \ln 2 * \sigma^ 2}$$
+
+while the Lorentzian full-width at half-maximum is just $\Gamma$:
+
+$$FWHM_L = \Gamma$$
+
+The \(\sigma^2\) values (peak variances) are in units of centidegrees\(^2\) 
+(centidegrees are degrees\*100) for CW data or microseconds\(^2\) for TOF data; 
+\(\Gamma\) has units of centidegrees or microseconds. Except in very unusual 
+circumstances, instrumental broadening is Gaussian and will be a slowly-changing 
+function of Q. However, sample broadening is strictly Lorentzian and while sample broadening may 
+only vary with Q, it can also vary from peak to peak if the sample is a mixture 
+of phases, or anisotropic peak broadening is present. Thus, it makes sense to fit 
+Gaussian widths only using the U, V & W terms and indeed the software will not 
+allow those terms to be varied if *any* 
+individual peak \(\sigma^2\) terms are varied, as this usage would not make sense physically. 
+This is different for X & Y and individual peak \(\Gamma\) values. The refinement 
+of X & Y, while fitting of *some* individual peak \(\Gamma\) values is allowed and 
+this can make sense physically, but note that one should have a sufficient number 
+of peaks that are not being fit individually and these peaks should be distributed 
+over a wide range in Q when X & Y are fit simultaneously.
 
 For peak fitting, the background is generated using the parameters in the Background data tree entry. Also, the range of data used in the fit is set from the Limits tree item. In both cases these are the same values that are used in Rietveld fits. Note that optionally the parameters on the Background and in the Instrument Parameters tree items may be refined during peak fitting, but in the case of U, V & W, these values cannot be refined if any individual \(\sigma^2\) values are fit. 
  
@@ -32,7 +64,7 @@ The following interactions are available with the peak table:
 * You can highlight a peak in the plot by double-clicking on the row label (to the left) for a peak.
 * Pressing "d" in the plot window causes the next peak in the table (or the first if none are selected) to be selected and causes that peak to be highlighted in the plot; pressing "u" causes the previous peak in the list to be highlighted. 
 
-### "**Command**" Menu Commands
+### Menu Commands: "**Command**" menu
 
 The menu for Peak Fitting contains the following commands:
 
