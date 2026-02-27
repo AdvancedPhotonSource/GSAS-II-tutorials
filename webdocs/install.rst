@@ -64,22 +64,22 @@ GSAS2MAIN installer for MacOS
 For ARM (M1,...) MacOS use a command such as::
   
     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-MacOSX-arm64.sh"
-    curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+    curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2main
 
 For older Intel MacOS use a command such as:: 
 
     g2="https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/download/v1.0.1/gsas2main-Latest-MacOSX-x86_64.sh"
-    curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p <install-loc>
+    curl -L "$g2" > /tmp/g2.sh; bash /tmp/g2.sh -b -p ~/g2main
 
   
 * This ``MacOSX-x86_64.sh`` installer will also run on "Apple
   Silicon" processors, but runs significantly more slowly.
    
-Note that in the above, `<install-loc>` is where you want to install
-the software. (Use of ``~/g2main``, a subdirectory named ``g2main`` in
-your home directory is a good choice.) After installation is complete,
-you will be given a chance to place a shortcut for GSAS-II into the
-MacOS dock. 
+Note that in the above, ``~/g2main`` is where the GSAS-II files will be
+installed where ``~/g2main`` is a subdirectory named ``g2main`` in
+your home directory. You can change this to any location you prefer.
+After installation is complete,you will be given a chance to place a
+shortcut for running GSAS-II into the MacOS dock. 
 
 More complete installation instructions on the GSAS2MAIN
 installation process on MacOS are linked below. 
