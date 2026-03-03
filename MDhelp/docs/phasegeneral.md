@@ -61,7 +61,9 @@ The items in the upper part of the General page that can be changed are Phase na
 ([see more extensive elsewhere](./others.md#Origin_1)). 
 
 * **Refine unit cell** – set this flag to refine the unit cell parameters in a Rietveld or Pawley refinement. The actual parameters refined are the symmetry allowed terms (A0-A5) in the expression 
+
 $$ d^{*2} = A_0h^2 + A_1 k^2 + A_2 l^2 + A_3 hk + A_4 hl + A_5 kl $$ 
+
 where \(A_0 - A_5\) correspond to elements in the reciprocal metric tensor element (**G**) where off-diagonal contributions are doubled, A0-A5 = \(G_{11}\), \(G_{22}\), \(G_{33}\), \(2 *  G_{12}\), \(2 *  G_{13}\), \(2 *  G_{23}\)
 
 * **a, b, c, alpha, beta, gamma** – lattice parameters; only those permitted by the space group are shown. The volume is computed from the values entered.
