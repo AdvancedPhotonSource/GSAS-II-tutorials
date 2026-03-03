@@ -15,11 +15,11 @@ The data window for the main `IMG` data tree entry shows some controls, most of 
 
 <H3 style="color:blue;font-size:1.1em">What can I do here?</H3>
 
-A number of calibration values are shown for the placement and dimensions of the detector. They can be changed here.  (*Caution:* you do need to know what their true value is; you do not want to invalidate data by incorrectly changing these values.)
+* A number of calibration values are shown for the placement and dimensions of the detector. They can be changed here.  (*Caution:* you do need to know what their true value is; you do not want to invalidate data by incorrectly changing these values.)
 
-**Polarization:** you can determine the x-ray bean polarization for your detector. This requires an image with scattering from a purely isotropic amorphous sample (a glass slide mounted perpendicular to the incident beam is recommended) with the detector close to the sample so that the scattering angle at the edge of the detector is at least 35° \(2\theta\); better is > 40° \(2\theta\). A frame mask is recommended to remove detector edge effects. The image should be as free as possible (except for beam stop) from shadows and obstructions and normal to the incident beam. The detector orientation should have been previously calibrated with a known reference material (e.g., LaB<sub>6</sub> or Si). Use the **Calibrate?** button to start the Polarization process, as below.
+* **Polarization:** you can determine the x-ray beam polarization for your detector. This requires an image with scattering from a purely isotropic amorphous sample (a glass slide mounted perpendicular to the incident beam is recommended) with the detector close to the sample so that the scattering angle at the edge of the detector is at least 35° \(2\theta\); better is > 40° \(2\theta\). A frame mask is recommended to remove detector edge effects. The image should be as free as possible (except for beam stop) from shadows and obstructions and normal to the incident beam. The detector orientation should have been previously calibrated with a known reference material (e.g., LaB<sub>6</sub> or Si). Use the **Calibrate?** button to start the Polarization process, as below.
 
-* **Calibrate?** (Polarization) - This begins the calibration procedure ([Von Dreele & Xi, 2021](https://doi.org/10.1107/S1600576720014132)) for the x-ray beam polarization, which integrates a 4° \(2\theta\) wide ring sampling area with and without an arc mask positioned about 90° azimuth (top of image) with selected polarization values. The integrations match with the correct polarization value. You will be asked for a \(2\theta\) position for the sampling mask; choose a value at least 2° \(2\theta\) less than the maximum \(2\theta\) seen for all edges inside the frame mask. The process takes about 5 min to complete, so be patient.
+    * **Calibrate?** (Polarization) - This begins the calibration procedure ([Von Dreele & Xi, 2021](https://doi.org/10.1107/S1600576720014132)) for the x-ray beam polarization, which integrates a 4° \(2\theta\) wide ring sampling area with and without an arc mask positioned about 90° azimuth (top of image) with selected polarization values. The integrations match with the correct polarization value. You will be asked for a \(2\theta\) position for the sampling mask; choose a value at least 2° \(2\theta\) less than the maximum \(2\theta\) seen for all edges inside the frame mask. The process takes about 5 min to complete, so be patient.
 
 <a name="IMG_Comments"></a>
 ## Comments
@@ -39,10 +39,10 @@ The image controls data window displays a number of settings and options that in
  * Create a gain map (requires multiple images)
  * Integrate images
 
-<H3 style="color:blue;font-size:1.1em">Window arrangement</H3>
+<H3 style="color:blue;font-size:1.1em">Window organization</H3>
 
 The window used for Image Controls contains a large number of settings and controls, as shown below. 
-The sections of the window are outlined with colored boxes and labeled and are described further, below. 
+The sections of the window are outlined below with colored boxes and labeled that are described further, also below. 
 
 ![Image Controls Window](./images/ImageControls.png)
 
@@ -68,7 +68,7 @@ The Integration menu provides the ability to radially integrate an image to prov
 
 ![Parameters Menu](./images/ParmsMenu.png)
 
-<H3 style="color:blue;font-size:1.1em">Calibration compared to other software</H3>
+<H3 style="color:blue;font-size:1.1em">Calibration parameters compared to other software</H3>
 Note that calibration parameters used in GSAS-II are closely related to those used by the pyFAI and Fit2D programs, but add 90 to the GSAS-II tilt plane rotation (labeled as "Rotation" in GSAS-II) to obtain the pyFAI value. The X and Y values determine the beam center location. In GSAS-II the values are in mm measured from the top left corner of the detector, while in pyFAI the values are measured in the same way, but in units of pixels:
 
 $$X_{GSAS-II}/size_X = X_{pyFAI}$$
