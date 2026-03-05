@@ -39,7 +39,7 @@ The image controls data window displays a number of settings and options that in
  * Create a gain map (requires multiple images)
  * Integrate images
 
-<H3 style="color:blue;font-size:1.1em">Window organization</H3>
+### Window organization
 
 The window used for Image Controls contains a large number of settings and controls, as shown below. 
 The sections of the window are outlined below with colored boxes and labeled that are described further, also below. 
@@ -55,7 +55,7 @@ value for each pixel in the image.
 * E. The **Calibration controls** determine the process used to search for diffraction rings when the detector calibration is used. The "Show ring picks" check button determines if the located ring positions are displayed, but does not affect the computation. 
 * F. The **Sample goniometer angles** reflect positioning of a sample. They are not used for calibration, but will be transferred to powder patterns generated from the image during image integration. The Global edit button provides a single window where setting angles for all images can be changed. 
 
-<H3 style="color:blue;font-size:1.1em">Menu commands</H3>
+### Menu commands
 
 Three sets of menu commands are associated with the Image Controls tree item. The first, **Calibration**, provides commands to perform calibration from an image (where the calibration values are fitted from a diffraction pattern image taken with a calibrant). 
 ![Calibration Menu](./images/CalMenu.png)
@@ -68,8 +68,13 @@ The Integration menu provides the ability to radially integrate an image to prov
 
 ![Parameters Menu](./images/ParmsMenu.png)
 
-<H3 style="color:blue;font-size:1.1em">Calibration parameters compared to other software</H3>
-Note that calibration parameters used in GSAS-II are closely related to those used by the pyFAI and Fit2D programs, but add 90 to the GSAS-II tilt plane rotation (labeled as "Rotation" in GSAS-II) to obtain the pyFAI value. The X and Y values determine the beam center location. In GSAS-II the values are in mm measured from the top left corner of the detector, while in pyFAI the values are measured in the same way, but in units of pixels:
+### Calibration parameters definitions
+
+The detector coordinate system has **x** horizontal and **y** vertical with (0,0) located at the lower left, looking from the sample position. The **z** axis is defined as **z** = **x** $\times$ **y**, which points from the detector towards the sample. When a detector is rotated from this position, the detector azimuthal offset describes the angle applied to rotate the detector clockwise (as viewed from the sample position) from the orientation with **x** horizontal and **y** vertical. The beam center position in GSAS-II is in mm, measured from the bottom left corner of the detector. 
+
+#### Comparison to other software
+
+Note that calibration parameters used in GSAS-II are closely related to those used by the pyFAI and Fit2D programs, but add 90 to the GSAS-II tilt plane rotation (labeled as "Rotation" in GSAS-II) to obtain the pyFAI value. The beam center location in pyFAI is defined the the same way as in GSAS-II, except that in pyFAI the units are pixels rather than in mm. 
 
 $$X_{GSAS-II}/size_X = X_{pyFAI}$$
 
