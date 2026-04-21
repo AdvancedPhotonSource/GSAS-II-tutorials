@@ -9,13 +9,14 @@ Installing GSAS-II: Overview
 
 .. index:: Installation overview
 
-GSAS-II requires a number of coordinated installation steps and there are many 
+GSAS-II requires a number of coordinated installation actions and there are many 
 different ways this can be accomplished. One needs -- not only the necessary Python source 
-code for GSAS-II -- but a Python interpreter that includes a number of "add-on" Python 
-packages for additional capabilities. This much match the operating system for the 
+code for GSAS-II -- but also a Python interpreter that includes a
+`number of "add-on" Python
+packages<https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_
+for additional capabilities. This much match the operating system for the 
 computer where the software will be run. Further, GSAS-II requires that a small amount 
-of its code be compiled, typically for speed and this must be matched both the computer 
-OS and to the Python version. Here I outline different a few different approaches.
+of its code be compiled, typically for speed and this must be matched both the computer OS and to the Python version. Here I outline different a few different approaches.
 
 Most users of GSAS-II, particularly those using Windows and MacOS, are seeking
 a simple way to install and run the software and can live 
@@ -102,7 +103,7 @@ one built on an APS Redhat Enterprise server,  and the other
 on an Ubuntu GitHub runner (24.04.2 LTS, last I
 checked). Neither may be compatible with other Linux versions. 
 
-There are several installation options, described in later sections of
+There are several other installation options, described in later sections of
 this page, that should work with any Linux distribution. These include
 use of :ref:`pixi <pixi installation>`, :ref:`pip <pip installation>`
 or installing GSAS-II after Python is installed locally. 
@@ -224,9 +225,9 @@ Installation Info for Developers
 While all of the above approaches will clone a copy of the GSAS-II
 repository from GitHub, software developers may find it more
 convenient to clone the repo themselves. This will typically be done
-as part of a process where a copy of GSAS-II is forked on GitHub. This
-is described in a `separate page <install_dev.html>`_ (outline
-below). 
+as part of a process where a copy of GSAS-II is forked on
+GitHub. Details on doing this are described in a
+`separate page <install_dev.html>`_ (outlined below). 
 
 .. index:: Installing for development
 .. toctree::
@@ -255,11 +256,13 @@ should not be used. If GSAS-II is installed from subversion,
 you will not be able to update to the current GSAS-II version and
 you will be
 shown a message when trying to update that you should reinstall
-GSAS-II as described above.
+GSAS-II using one of the methods described above.
 
-Likewise, the gsas2full installer was used to install GSAS-II from the
+Likewise, previously the ``gsas2full`` installer was used to install GSAS-II from the
 older ``master`` branch on GitHub. Use of this installer is strongly discouraged 
-as it will provide a much older version of GSAS-II. If you
-install GSAS-II from that branch, you will be
+as it will also provide an out-of-date version of GSAS-II. If you
+have that older version of GSAS-II installed, you will be
 be offered the opportunity to add needed Python packages and switch to
-the ``main`` branch when trying to update GSAS-II from the help menu.
+the ``main`` branch when trying to update GSAS-II from the help menu,
+but for new installation, please use one of the previously described
+methods. 
