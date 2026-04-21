@@ -12,16 +12,20 @@ Installing GSAS-II: Overview
 GSAS-II requires a number of coordinated installation actions and there are many 
 different ways this can be accomplished. One needs -- not only the necessary Python source 
 code for GSAS-II -- but also a Python interpreter that includes a
-`number of "add-on" Python
-packages<https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_
-for additional capabilities. This much match the operating system for the 
+`number of "add-on" Python packages
+<https://gsas-ii.readthedocs.io/en/latest/packages.html#python-requirements>`_
+for additional capabilities. The Python and add-on modules
+much match the operating system for the 
 computer where the software will be run. Further, GSAS-II requires that a small amount 
-of its code be compiled, typically for speed and this must be matched both the computer OS and to the Python version. Here I outline different a few different approaches.
+of its code be compiled, typically for speed, and these files must
+match both the computer OS and to the Python/numpy versions.
+Here I outline different a few different installation approaches.
 
 Most users of GSAS-II, particularly those using Windows and MacOS, are seeking
 a simple way to install and run the software and can live 
 with the idea that they may have duplicated Python installations (several hundreds of MB each) 
-on their computer. The GSAS2MAIN self-installer provides simple installation and can be 
+on their computer. The GSAS2MAIN self-installer provides for that
+simple installation. It can be 
 `downloaded from here
 <https://github.com/AdvancedPhotonSource/GSAS-II-buildtools/releases/latest>`_. The
 GSAS2MAIN self-installer also has the advantage that once GSAS-II is
