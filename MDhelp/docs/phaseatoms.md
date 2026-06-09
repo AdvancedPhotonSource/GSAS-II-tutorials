@@ -58,8 +58,7 @@ graphics window's structure drawing that is marked by crossing , red, green and 
     * **Histogram bonds and angles** – plots histograms of bond lengths & angles about selected atoms.
     * **Apportion atom frac** – after selection of a 2nd element; this determines from atomic number and neutron scattering length the atom fractions of each type for selected atoms and presents results on the console.
     * **Density** – calculate density
-    * **ISODISTORT mode values** – when a structure has been imported from ISODISTORT,  this will compute the mode displacements for the current atom positions and display them in a popup window.
-
+   * **Show New Var modes** – When New Var constraints are present, this opens a window that shows the effect of the constraints to be seen. This is of particular value when ISODISTORT modes have been read.  From the created window,  the New Var parameters can be changed and the changes that the constraints make to the linked dependent parameters are shown. When this command is used from the "Draw Atoms" tab rather than here, the structure plot is updated. The changes made here are temporary, unless the Save button is used to close the window. 
 
 <a name="Phase-mouse-plotopts"></a>
 <H3 style="color:blue;font-size:1.1em">What can I do with the plot?</H3>
