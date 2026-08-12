@@ -154,6 +154,7 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
     Equivalence & 1.0 * 1::AUiso:0 = 1.0 * 1::AUiso:1
     NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1
 ```
+
     Any line beginning with a "#" will be ignored as a comment.
     Note that Equations are of form: `m1 * v1 + m2 * v2 + ... = m0`, and
     Holds are simply a variable name. Equivalences are in form: 
@@ -165,10 +166,12 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
 ```
     NewVar & variable-name & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1
 ```
+
     and to specifiy that the variable should be refined, use this:
 ```
     NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1 & varied
 ```
+
     The two forms can be combined. 
 
 * **Show New Var modes** – When New Var constraints are present, this opens a window that shows the effect of the constraints to be seen. This is of particular value when representational analysis generated normal modes have been read from a CIF created with ISODISTORT.  From the created window,  the New Var parameters can be changed and the changes that the constraints make to the linked dependent parameters are shown. When this command is used from a Phase "Draw Atoms" tab rather than here, the structure plot is updated. The changes made here are temporary, unless the Save button is used to close the window. 
