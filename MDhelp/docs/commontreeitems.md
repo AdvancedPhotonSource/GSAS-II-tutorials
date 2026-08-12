@@ -147,13 +147,13 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
     the constraint. 
     The file extension for this is usually `.constr`.
     Examples are below:
-    ```
+```
     # Constraints from 4constr.gpx on 2026-08-11T20:50
     Equation & 1.0 * 0:0:Scale + 1.0 * 1:0:Scale = 1.0
     Hold & 0::dAz:2
     Equivalence & 1.0 * 1::AUiso:0 = 1.0 * 1::AUiso:1
     NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1
-    ```
+```
     Any line beginning with a "#" will be ignored as a comment.
     Note that Equations are of form: `m1 * v1 + m2 * v2 + ... = m0`, and
     Holds are simply a variable name. Equivalences are in form: 
@@ -162,13 +162,13 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
     
     There are two variations for NewVar constraints. 
     If the NewVar constraint is named, use this:
-    ```
+```
     NewVar & variable-name & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1
-    ```
+```
     and to specifiy that the variable should be refined, use this:
-    ```
+```
     NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1 & varied
-    ```
+```
     The two forms can be combined. 
 
 * **Show New Var modes** – When New Var constraints are present, this opens a window that shows the effect of the constraints to be seen. This is of particular value when representational analysis generated normal modes have been read from a CIF created with ISODISTORT.  From the created window,  the New Var parameters can be changed and the changes that the constraints make to the linked dependent parameters are shown. When this command is used from a Phase "Draw Atoms" tab rather than here, the structure plot is updated. The changes made here are temporary, unless the Save button is used to close the window. 
