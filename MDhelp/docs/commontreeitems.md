@@ -129,7 +129,49 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
 * **Add constraint** - If selected, a dialog box will appear with a list of the available parameters. Select one and press OK; a second dialog box will appear with only those parameters that can be used in a constraint with the first one. Choose those and press OK. Cancel in either dialog will cancel the operation. The equivalenced parameters will show as an equation of the form \(M1*P1+M2*P2+…=C\); the multipliers M1, M2, … and C can be changed via the 'Edit' button. The equation is shown in the window tagged by 'CONSTR' to mark it as a constraint equation assignment.
 * **Add New Var** - This behaves very much like the "Add constraint" menu command except that it defines a new parameter rather than define a value for the expression. That new var parameter can optionally have a named assigned. The expression is displayed with the keyword 'New Var' to mark its type. Note that a 'Refine?' box is included for this type of constraint.
 * **Make atoms equivalent** - This provides a shortcut for establishing constraints when two share a single site. Coordinates and Uiso values are constrained to be the same and site fractions are constrained to add to 1.
-   * **Show New Var modes** – When New Var constraints are present, this opens a window that shows the effect of the constraints to be seen. This is of particular value when representational analysis generated normal modes have been read from a CIF created with ISODISTORT.  From the created window,  the New Var parameters can be changed and the changes that the constraints make to the linked dependent parameters are shown. When this command is used from a Phase "Draw Atoms" tab rather than here, the structure plot is updated. The changes made here are temporary, unless the Save button is used to close the window. 
+* **Make atoms equivalent** - This provides a shortcut for establishing constraints
+* **Export constraints** - This writes the current constraints (Histogram, 
+    Phase and HAP) to a text file that can be used with the **Import constraints**
+    command (see below) to copy the constraints to another GSAS-II project.
+    The file extension for this is usually `.constr`.
+* **Import constraints** - This reads a text file and adds the constraints into the
+    current GSAS-II project. The type of contraint (Histogram vs. Phase vs. HAP) is
+    determined from the variable name. 
+    This can be used to copy constraints from one file to another or may be used
+    to generate a large number of constraints rather than using the GUI. It may be 
+    useful to generate and export a small number of constraints as a template 
+    and then use a text editor or script to generate what is needed. 
+    
+    The format for the file consists of a tag ("Equation", "Hold", "Equivalence" 
+    or "NewVar") followed by a "&" spacer and then 
+    the constraint. 
+    The file extension for this is usually `.constr`.
+    Examples are below:
+    ```
+    # Constraints from 4constr.gpx on 2026-08-11T20:50
+    Equation & 1.0 * 0:0:Scale + 1.0 * 1:0:Scale = 1.0
+    Hold & 0::dAz:2
+    Equivalence & 1.0 * 1::AUiso:0 = 1.0 * 1::AUiso:1
+    NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1
+    ```
+    Any line beginning with a "#" will be ignored as a comment.
+    Note that Equations are of form: `m1 * v1 + m2 * v2 + ... = m0`, and
+    Holds are simply a variable name. Equivalences are in form: 
+    `m1 * v1 = m2 * v2 = ...`. 
+    NewVar constraints are of form `m1 * v1 + m2 * v2 + ...`
+    
+    There are two variations for NewVar constraints. 
+    If the NewVar constraint is named, use this:
+    ```
+    NewVar & variable-name & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1
+    ```
+    and to specifiy that the variable should be refined, use this:
+    ```
+    NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1 & varied
+    ```
+    The two forms can be combined. 
+
+* **Show New Var modes** – When New Var constraints are present, this opens a window that shows the effect of the constraints to be seen. This is of particular value when representational analysis generated normal modes have been read from a CIF created with ISODISTORT.  From the created window,  the New Var parameters can be changed and the changes that the constraints make to the linked dependent parameters are shown. When this command is used from a Phase "Draw Atoms" tab rather than here, the structure plot is updated. The changes made here are temporary, unless the Save button is used to close the window. 
 
 In addition to menu commands, this window also offer the following actions by pressing buttons:
 
