@@ -146,7 +146,16 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
     or "NewVar") followed by a "&" spacer and then 
     the constraint. 
     The file extension for this is usually `.constr`.
-    Examples are below:
+    Examples are below. 
+    
+    Note that any line beginning with a "#" will be ignored as a comment.
+    Note that Equations are of form: `m1 * v1 + m2 * v2 + ... = m0`, and
+    Holds are simply a variable name. Equivalences are in form:  `m1 * v1 = m2 * v2 = ...`. 
+    NewVar constraints are of form `m1 * v1 + m2 * v2 + ...`
+    
+    There are other two variations for NewVar constraints. 
+    If the NewVar constraint is named, or to specifiy that the variable should be
+    refined (the two forms can be combined), use one of the subsequent examples. 
 
 ```
     # Constraints from 4constr.gpx on 2026-08-11T20:50
@@ -156,21 +165,9 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
     NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1
 ```
 
-   Any line beginning with a "#" will be ignored as a comment.
-   Note that Equations are of form: `m1 * v1 + m2 * v2 + ... = m0`, and
-   Holds are simply a variable name. Equivalences are in form: 
-   `m1 * v1 = m2 * v2 = ...`. 
-   NewVar constraints are of form `m1 * v1 + m2 * v2 + ...`
-    
-   There are two variations for NewVar constraints. 
-   If the NewVar constraint is named, use this:
-   
 ```
     NewVar & variable-name & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1
 ```
-
-   and to specifiy that the variable should be refined, use this (the two forms can be combined):
-)
 
 ```
     NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1 & varied
