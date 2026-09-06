@@ -153,9 +153,10 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
     Holds are simply a variable name. Equivalences are in form:  `m1 * v1 = m2 * v2 = ...`. 
     NewVar constraints are of form `m1 * v1 + m2 * v2 + ...`
     
-    There are other two variations for NewVar constraints. 
-    If the NewVar constraint is named, or to specifiy that the variable should be
-    refined (the two forms can be combined), use one of the subsequent examples. 
+    There are two other variations for NewVar constraints,
+    if the NewVar constraint is named, or to specifiy that the variable should be
+    refined. The two can be combined, as shown in the 
+    last example. 
 
 ```
     # Constraints from 4constr.gpx on 2026-08-11T20:50
@@ -173,6 +174,9 @@ Select the tab for the parameter type(s) you wish to constrain then create new p
     NewVar & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1 & varied
 ```
 
+```
+    NewVar & var-name & 1.0 * 0::Afrac:0 + 1.0 * 0::Afrac:1 & varied
+```
 
 * **Show New Var modes** – When New Var constraints are present, this opens a window that shows the effect of the constraints to be seen. This is of particular value when representational analysis generated normal modes have been read from a CIF created with ISODISTORT.  From the created window,  the New Var parameters can be changed and the changes that the constraints make to the linked dependent parameters are shown. When this command is used from a Phase "Draw Atoms" tab rather than here, the structure plot is updated. The changes made here are temporary, unless the Save button is used to close the window. 
 

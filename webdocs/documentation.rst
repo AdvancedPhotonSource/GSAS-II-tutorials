@@ -38,6 +38,23 @@ in GitHub in the MDhelp directory of the
 AdvancedPhotonSource/GSAS-II-tutorials repo (https://github.com/AdvancedPhotonSource/GSAS-II-tutorials/tree/main/MDhelp).
 Comments, corrections, additions and issue reports on Help content are most welcome. 
 
+.. index:: Textbook
+
+Textbook on Powder Diffraction Crystallography and GSAS-II
+---------------------------------------------------------------
+
+There is now an open-access textbook on powder diffraction
+crystallography and GSAS-II by Brian H. Toby, with title
+*Crystallographic Powder Diffraction Analysis with GSAS-II: 
+An Introduction to Rietveld Analysis* . At present this book is only a
+completed draft, and is posted as a "preview version" (edition 0.9). 
+
+To download a copy, open the textbook's `GitHub releases page
+<https://github.com/briantoby/PowderCrystallography/releases>`_ and
+download the PDF file. There is an `HTML version
+<https://briantoby.github.io/PowderCrystallography/HTML-template.html>`_
+but this is generated for machine-learning applications and is not as well formatted as the PDF.
+
 .. index:: Source code documentation
 
 Developer's Documentation
