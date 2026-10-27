@@ -3,8 +3,6 @@ title: "Tutorial: Sequential refinement of multiple datasets – CuCr2O4 from 7K
 ---
 <!--- Don't change the HTML version of this file; edit the .md version -->
 
-# Tutorial: Sequential refinement of multiple datasets – CuCr<sub>2</sub>O<sub>4</sub> from 7K to 300K
-
 * Exercise files are found [here](data/index.html)
 
 * A video version of this tutorial is available at [https://anl.box.com/v/SequentialTutorial](https://anl.box.com/v/SequentialTutorial)
@@ -71,8 +69,9 @@ offer to apply a shift to the coordinates that would convert from Origin 1 to Or
 
     <BR clear=all>
     
-<a name="I.3"></a>
+
 ### Prepare for fit: define phase fraction constraint
+<a name="I.3"></a>
 
 We want to fit the lattice parameters, background, and a phase fraction initially. While this could be avoided by only refining one phase fraction, to illustrate how constraints are used, we will refine both phase fractions, but constrain their sum to be one. Note that phase fractions are a property of both histograms and phases and are found in the Histogram/Phase section of the constraints. Knowing the variable name that GSAS-II assigns to the parameter to be constrained will make the process easier. In this case, the name assigned to a phase fraction is  `p:h:Scale` where `p` is the phase number and `h`is the histogram number. Somewhat confusingly, the name `:h:Scale` (with no phase number) is used for the histogram scale factor.
 
@@ -246,6 +245,7 @@ We want to minimize the chances for the background refinement to diverge signifi
 * Likewise, select the histogram Sample Parameters tree entry and on that window, turn off the refinement flag for "Sample X displ..."
 
 <BR clear=all>
+
 #### 3.1.E:  Optional: confirm model fit has not changed
 
 At this point the refinement can be repeated to show that the fit has not changed significantly. If this is done, one will see small non-zero values for the `Dij` terms, but the unit cell parameters displayed on the "Data" tab (or  "Hist/Phase" tree item) are not significantly different from those computed without the `Dij` values shown on the "General" tab, but due to the larger uncertainties on the CuO unit cell parameters, the `Dij` terms are much larger than for CuCr2O4.
