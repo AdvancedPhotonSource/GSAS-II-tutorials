@@ -159,11 +159,11 @@ The background has not been well-fit with 6 terms. This is only clear if you mag
 
    * Change the "Peaks in background value" dropdown from 0 to 1 and then change the values for that peak to pos=5.25 degrees, int=100.0 and sig=2000. Set the refinement flag for the intensity parameter (immediately to the right of the value) to refine it. 
 
-    ***Important: note that after clicking on a checkbox, you may need to click elsewhere in the window so that this input is recorded.***
+   ***Important: note that after clicking on a checkbox, you may need to click elsewhere in the window so that this input is recorded.***
 
-    *We will postpone refining this background peak position and width terms and since there is not very much intensity on the low-angle side of this peak and the Chebyschev polynomial terms and the background peak terms are highly correlated, so there is a chance that refining all the terms at one time might result in the peak drifting away from where it is needed. Waiting until the peak is better fit allows the refinement to proceed better.*
+   *We will postpone refining this background peak position and width terms and since there is not very much intensity on the low-angle side of this peak and the Chebyschev polynomial terms and the background peak terms are highly correlated, so there is a chance that refining all the terms at one time might result in the peak drifting away from where it is needed. Waiting until the peak is better fit allows the refinement to proceed better.*
 
-    *Note that as each number is changed, the background curve is updated, though you will have trouble seeing changes due to this very wide peak unless the intensity is raised to 500 or larger.* 
+   *Note that as each number is changed, the background curve is updated, though you will have trouble seeing changes due to this very wide peak unless the intensity is raised to 500 or larger.* 
 
 #### 2.2.C: Treat sample broadening.
 
@@ -295,9 +295,8 @@ In the fit to the initial histogram, we changed several things, such as the data
 * Use the menu command **Commands/"Copy params"**. This will open the window shown to the right, We need to duplicate the values in the Limits, Background and Sample Parameters sections between all histogram, so those entries should be selected. The Instrument Parameters were all read from the same instrument parameters file and have not been changed, so it does not matter if that section is selected or not. Press OK to make this change. 
 
 <BR clear=all>
- The next dialog window that is displayed asks which histogram(s) should receive the parameters, as seen to the right. 
-<BR clear=all>
 <A href="./imgs/image034.png" target="_blank" rel="noopener noreferrer"><img src="./imgs/image034.png" align="right" alt="" width="175px"></A>
+The next dialog window that is displayed asks which histogram(s) should receive the parameters, as seen to the right. 
 
 * Press Set All to select all remaining histograms and then press OK.
 
@@ -364,8 +363,7 @@ The refinement may take a few minutes as each of the 17 datasets will be fit in 
 
 <BR clear=all>
 <A href="./imgs/image041.png" target="_blank" rel="noopener noreferrer"><img src="./imgs/image041.png" align="right" alt="" width="175px"></A>
- When the refinement completes, a window will be displayed where you are asked if you want to load the results, as shown to the right.
-
+When the refinement completes, a window will be displayed where you are asked if you want to load the results, as is shown to the right.
 
 <BR clear=all>
 <A href="./imgs/image077.png" target="_blank" rel="noopener noreferrer"><img src="./imgs/image077.png" align="right" alt="" width="300px"></A>
@@ -389,11 +387,10 @@ Note that not all the refined parameters are included in this table by default. 
 <A href="./imgs/image078.png" target="_blank" rel="noopener noreferrer"><img src="./imgs/image078.png" align="right" alt="" width="300px"></A>
 Before going further, it is useful to review the trends in the lattice parameters as a sanity check. This can be done by double-clicking on a column of the table, such as the `0::b` parameter, which displays the plot to the right:
 
+* Pressing the “s” key (or using the “K” button below the plot and selecting the "s - select x-axis" entry) brings up a menu where the x-axis can be selected. 
 
 <BR clear=all>
 <A href="./imgs/image079.png" target="_blank" rel="noopener noreferrer"><img src="./imgs/image079.png" align="right" alt="" width="300px"></A>
-
-* Pressing the “s” key (or using the “K” button below the plot and selecting the "s - select x-axis" entry) brings up a menu where the x-axis can be selected. 
 
 * Select Temperature for the x-axis. The plot should appear as to the right, where the x-axis is now in K.
 
