@@ -120,7 +120,21 @@ have this code be executed only in debug mode::
             reload(G2gr)
         G2gr.UpdateGroup(G2frame,item)
 
+Spyder: Start with last .gpx file
+---------------------------------------------------
 
+For debugging in Spyder, the "File/Reopen recent" command is run
+automatically when Spyder starts GSAS-II (via the `G2.py`
+file). If the `GSASII-REOPEN-LAST` environment variable is set, then
+the dialog is not opened, but instead the first file in the list
+(which should be the last .gpx file that has been used) is opened
+automagically. From inside Python, use these commands::
+
+  import os; os.environ['GSASII-REOPEN-LAST'] = 'True'
+
+(Perhaps this capability should be implemented into other debuggers.)
+
+        
 Adding startup code
 ---------------------------------------------------
 
@@ -227,3 +241,17 @@ and GSAS-II is invoked with ``python G2.py /tmp/testG2G.py``::
   else:
         print("Cancel")
   dlg.Destroy()
+
+Alternately, modify the `testModule.py` file in the parent directory
+to `GSASII`. It contains lines like::
+
+  import runpy
+  import sys
+  sys.argv[1:] = ['/Users/toby/Scratch/GroupPWDR/2Px4G_copy2test.gpx']
+  runpy.run_module("GSASII.GSASIIstrMain", run_name="__main__")
+
+which emulate running a command like::
+
+  python GSASII/GSASIIstrMain.py /Users/.../2Px4G_copy2test.gpx
+
+  

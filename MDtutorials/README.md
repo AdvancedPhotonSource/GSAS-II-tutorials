@@ -115,3 +115,15 @@ So far this seems to be a very much manual operation, but pandocs can help remov
     If the new MD tutorial is in subdirectory of MDtutorials, it
     should be converted to HTML and moved to the correct location
     without any other changes needed. 
+
+
+Alternate. Use copilot prompt
+
+"I would like to convert this file to markdown, following the examples in the MDtutorials directory. Create a new directory for the tutorial at that location. 
+Please translate the links to figures to this MD code:
+
+	<BR clear=all><img src="./imgs/menu1.png" align="right" alt="" width="200px;">
+
+Do not change the 200px value in this line, as I will tune it manually for legibility, but move this line to before the paragraph where the figure is referenced from its current location of appearing after the paragraph."
+
+(Then modify the mkdocs.yml file and make a link in the docs area to the new directory. Initialize conda313 and run mkdocs serve to see the output.)

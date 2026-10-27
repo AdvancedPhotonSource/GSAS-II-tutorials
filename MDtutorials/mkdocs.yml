@@ -44,6 +44,9 @@ nav:
       - K-Vector Tutorial: k_vec_tutorial/k_vec_tutorial.md
       - K-Vector Non-Zero Tutorial: k_vec_tutorial_non_zero/k_vec_tutorial_non_zero.md
       - FindProfParamCW: CWInstDemo/FindProfParamCW.md
+      - RegisterBilbao: RegisterBilbao/RegisterBilbao.md 
+      - SeqRef: SeqRefine/SeqRefine.md
+# don't forget to add a link in docs: cd docs; ln -s ../SeqRefine .
 
 # Build directory
 site_dir: site
